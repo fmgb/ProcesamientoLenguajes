@@ -1,0 +1,41 @@
+
+program primos;
+
+ (* Este programa calcula los 'k' primeros numeros primos****)
+
+var k,nprimos,n,divisor:integer;
+    esprimo, seguirenbucle:integer;
+begin
+  k := 100;
+  nprimos := 0;
+  n := 1;
+
+  while nprimos < k do
+   begin
+     esprimo := 1;
+     seguirenbucle := 1;
+     divisor := n div 2;
+     while seguirenbucle = 1 do
+       if divisor <= 1 then
+         seguirenbucle := 0
+       else
+         begin
+          if divisor * (n div divisor) <> n then  (* division no exacta *)
+            divisor := divisor - 1
+          else
+            esprimo := 0
+          endif;
+          if esprimo = 0 then
+            seguirenbucle := 0 (* si no es primo salimos del bucle *)
+          endif
+         end
+       endif;
+     if esprimo = 1 then
+       begin
+        writeln(n);
+        nprimos := nprimos + 1
+       end
+     endif;
+     n := n+1        
+   end
+end

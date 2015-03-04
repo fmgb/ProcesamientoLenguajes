@@ -1,0 +1,11 @@
+program prueba;
+var a,b:integer;
+    c,d:real;
+begin
+  a := 7;
+  b := 8;
+  c := 1;
+  if a < b then
+    c := 0;
+  d := 2
+end
