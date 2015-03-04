@@ -1,7 +1,0 @@
-(**--------------------- 
- Este programa es una prueba
-----------------**)
-program prueba
-var a:integ;
-beg
-e

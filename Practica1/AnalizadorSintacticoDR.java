@@ -32,9 +32,9 @@ class AnalizadorSintacticoDR {
                 System.err.print("Error sintactico: encontrado fin de fichero, esperaba "); 
             }
         else 
-            System.err.print("Error sintactico (" +token.fila + "," + token.columna + "): encontrado " + token.getTipoString(token.tipo) + ", esperaba ");
+            System.err.print("Error sintactico (" +token.fila + "," + token.columna + "): encontrado \'" + token.lexema + "\', esperaba ");
         for(int a : tokEsperados)
-            System.err.print(token.getTipoString(a));
+            System.err.print(token.getTipoString(a)+ " ");
         System.err.println();
         
         System.exit(-1);
