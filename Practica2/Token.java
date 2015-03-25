@@ -1,3 +1,11 @@
+/**
+   Author: Francisco Manuel García Botella (fmgb3@alu.ua.es)
+   Objetivo: Procesamiento de Lenguajes 2014/2015(Universidad Alicante)
+   Práctica 2
+   Licencia: GPLv3
+   Creado el: 14/03/2015
+
+ */
 class Token {
     public int fila;
     public int columna;
@@ -6,10 +14,11 @@ class Token {
 
     public int tipo;
 
-    public static final int EOF = -1, PARI = 0, PARD = 1, MULOP = 2, ADDOP = 3, RELOP = 4, PYC = 5,
-        DOSP = 6, COMA = 7, ASIG = 8, VAR = 9, REAL = 10, INTEGER = 11, PROGRAM = 12, BEGIN = 13,
-        END = 14, FUNCTION = 15, IF = 16, THEN = 17, ELSE = 18, ENDIF = 19, WHILE = 20, DO = 21,
-        WRITELN = 22, NENTERO = 23, ID = 24, NREAL = 25;
+    public static final int EOF = 22, PARI = 0, PARD = 1, MULOP = 2, ADDOP = 3, PYC = 4,
+        DOSP = 5,  ASIG = 6, VAR = 7, REAL = 8, INTEGER = 9, PROGRAM = 10, BEGIN = 11,
+        END = 12, IF = 13, THEN = 14, ENDIF = 15, WHILE = 16, DO = 17,
+        WRITELN = 18, NENTERO = 19, ID = 20, NREAL = 21;
+    //,RELOP = 30, FUNCTION = 31,ELSE = 32,COMA = 33;
 
     public Token()
     {
@@ -90,17 +99,11 @@ class Token {
             case "end":
                 tipo = END;
                 break;
-            case "function":
-                tipo = FUNCTION;
-                break;
-            case "if":
+               case "if":
                 tipo = IF;
                 break;
             case "then":
                 tipo = THEN;
-                break;
-            case "else":
-                tipo = ELSE;
                 break;
             case "endif":
                 tipo = ENDIF;
@@ -117,7 +120,6 @@ class Token {
             case "div":
                 tipo = MULOP;
                 break;
-                
             default:
                 tipo = ID;
                 break;
@@ -137,15 +139,11 @@ class Token {
                 return "* / div";
             case ADDOP:
                 return "+ -";
-            case RELOP:
-                return "< > <= >= = <>";
-            case PYC:
+              case PYC:
                 return ";";
             case DOSP:
                 return ":";
-            case COMA:
-                return ",";
-            case ASIG:
+              case ASIG:
                 return ":=";
             case VAR:
                 return "\'var\'";
@@ -159,15 +157,11 @@ class Token {
                 return "\'begin\'";
             case END:
                 return "\'end\'";
-            case FUNCTION:
-                return "\'function\'";
             case IF:
                 return "\'if\'";
             case THEN:
                 return "\'then\'";
-            case ELSE:
-                return "\'else\'";
-            case ENDIF:
+              case ENDIF:
                 return "\'endif\'";
             case WHILE:
                 return "\'while\'";

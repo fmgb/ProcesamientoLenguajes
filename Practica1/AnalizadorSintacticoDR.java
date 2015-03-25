@@ -24,7 +24,6 @@ class AnalizadorSintacticoDR {
 
     public final void errorSintaxis(int... tokEsperados)
     {
-        
         Arrays.sort(tokEsperados);
         
         if(token.tipo == token.EOF)

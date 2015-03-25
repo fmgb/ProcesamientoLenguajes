@@ -1,3 +1,11 @@
+/**
+   Author: Francisco Manuel García Botella (fmgb3@alu.ua.es)
+   Objetivo: Procesamiento de Lenguajes 2014/2015(Universidad Alicante)
+   Práctica 2
+   Licencia: GPLv3
+   Creado el: 14/03/2015
+
+ */
 import java.io.RandomAccessFile;
 import java.util.Stack;
 import java.io.EOFException;
@@ -66,7 +74,7 @@ class AnalizadorLexico
                                     {
                                         tok.errorFinalFichero();
                                     }
-                                tok.setTipo(tok.EOF);
+                                tok.setTipo(Token.EOF);
                                 token = true;
                             }
                         catch(IOException e)
@@ -77,7 +85,7 @@ class AnalizadorLexico
                 else
                     {
                         //    System.out.println("Quito en la pila");
-                        Character c1 = (Character)_stack.pop();
+                        Character c1 = _stack.pop();
                         c = c1.charValue();
                           
                     }
@@ -110,32 +118,9 @@ class AnalizadorLexico
                                     estado = 7;
                                     tok.anyadirLetra(c);
                                 }
-                        
-                            else if(c == ',')
-                                {
-                                    estado =  10;
-                                    tok.anyadirLetra(c);
-                                }
-                        
                             else if(c == ';')
                                 {        
                                     estado = 11;
-                                    tok.anyadirLetra(c);
-                                }
-                            else if(c == '<')
-                                {
-                                    estado = 12;
-                                    tok.anyadirLetra(c);
-                                }
-                        
-                            else if(c == '>')
-                                {
-                                    estado = 13;
-                                    tok.anyadirLetra(c);
-                                }
-                            else if(c == '=')
-                                {
-                                    estado = 14;
                                     tok.anyadirLetra(c);
                                 }
                             else if(c == '*')
@@ -168,11 +153,8 @@ class AnalizadorLexico
                                     estado = 20;
                                     tok.anyadirLetra(c);
                                 }
-                            
                             else
                                 {
-                                    //                                   System.out.println("Fila: " + fila);
-                                    //                                    System.out.println("Columna: " + columna);
                                     tok.errorLexico(fila,columna, c);
                                 }                            
                             break;
@@ -224,7 +206,7 @@ class AnalizadorLexico
                             break;
                         case 4:
                             estado = 0;
-                            tok.setTipo(tok.NENTERO);
+                            tok.setTipo(Token.NENTERO);
                             token = true;
                             //Volvemos a colocar el caracter c en la pila para
                             //que lo lea cuando vuelva a por el siguiente token.
@@ -262,87 +244,44 @@ class AnalizadorLexico
                                 }
                             break;
                         case 8:
-                            //                            tok.anyadirLetra(c);
                             _stack.push(c);
                             
-                            tok.setTipo(tok.ASIG);
+                            tok.setTipo(Token.ASIG);
                             token = true;
                             estado = 0;
                             break;
                         case 9:
-                            tok.setTipo(tok.DOSP);
+                            tok.setTipo(Token.DOSP);
                             _stack.push(c);
                             token = true;
-                            estado = 0;
-                            break;
-                        case 10:
-                            tok.setTipo(tok.COMA);
-                            token = true;
-                            _stack.push(c);
                             estado = 0;
                             break;
                         case 11:
-                            tok.setTipo(tok.PYC);
-                            token = true;
-                            _stack.push(c);
-                            estado = 0;
-                            break;
-                        case 12:
-                            if(c == '=')
-                                {
-                                    tok.anyadirLetra(c);
-                                    estado = 21;
-                                }
-                            else if(c == '>')
-                                {
-                                    tok.anyadirLetra(c);
-                                    estado = 22;
-                                }
-                            else
-                                {
-                                    estado = 23;
-                                    _stack.push(c);
-                                }
-                            break;
-                        case 13:
-                            if(c == '=')
-                                {
-                                    tok.anyadirLetra(c);
-                                    estado = 24;
-                                }
-                            else
-                                {
-                                    estado = 25;
-                                    _stack.push(c);
-                                    
-                                }
-                            break;
-                        case 14:
-                            tok.setTipo(tok.RELOP);
+                            tok.setTipo(Token.PYC);
                             token = true;
                             _stack.push(c);
                             estado = 0;
                             break;
                         case 15:
-                            tok.setTipo(tok.MULOP);
+                            tok.setTipo(Token.MULOP);
                             token = true;
                             _stack.push(c);
                             estado = 0;
                             break;
                         case 16:
-                            tok.setTipo(tok.MULOP);
+                            tok.setTipo(Token.MULOP);
                             token = true;
                             _stack.push(c);
                             estado = 0;
                             break;
                         case 17:
-                            tok.setTipo(tok.ADDOP);
+                            tok.setTipo(Token.ADDOP);
                             token = true;
                             _stack.push(c);
                             estado = 0;
                             break;
                         case 18:
-                            tok.setTipo(tok.ADDOP);
+                            tok.setTipo(Token.ADDOP);
                             token = true;
                             _stack.push(c);
                             estado = 0;
@@ -356,56 +295,26 @@ class AnalizadorLexico
                                 }
                             else
                                 {
-                                    tok.setTipo(tok.PARI);
+                                    tok.setTipo(Token.PARI);
                                     token = true;
                                     _stack.push(c);
                                     estado = 0;
                                 }
                             break;
                         case 20:
-                            tok.setTipo(tok.PARD);
-                            token = true;
-                            _stack.push(c);
-                            estado = 0;
-                            break;
-                        case 21:
-                            tok.setTipo(tok.RELOP);
-                            token = true;
-                            _stack.push(c);
-                            estado = 0;
-                            break;
-                        case 22:
-                            tok.setTipo(tok.RELOP);
-                            token = true;
-                            _stack.push(c);
-                            estado = 0;
-                            break;
-                        case 23:
-                            tok.setTipo(tok.RELOP);
-                            token = true;
-                            _stack.push(c);
-                            estado = 0;
-                            break;
-                        case 24:
-                            tok.setTipo(tok.RELOP);
-                            token = true;
-                            _stack.push(c);
-                            estado = 0;
-                            break;
-                        case 25:
-                            tok.setTipo(tok.RELOP);
+                            tok.setTipo(Token.PARD);
                             token = true;
                             _stack.push(c);
                             estado = 0;
                             break;
                         case 26:
-                            tok.setTipo(tok.NENTERO);
+                            tok.setTipo(Token.NENTERO);
                             token = true;
                             _stack.push(c);
                             estado = 0;
                             break;
                         case 27:
-                            tok.setTipo(tok.NREAL);
+                            tok.setTipo(Token.NREAL);
                             token = true;
                             _stack.push(c);
                             estado = 0;
