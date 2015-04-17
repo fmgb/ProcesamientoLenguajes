@@ -67,7 +67,7 @@ class TraductorDR {
         reglasAplicadas = new StringBuilder();
         ambitos = new ArrayList<>();
         ts = new ArrayList<>();
-        nuevoAmbito("main");
+        //nuevoAmbito("main");
                 
     }
 
@@ -118,28 +118,85 @@ class TraductorDR {
     {
         System.out.println("CHECK AMBITO VARIABLE");
         String ambitoAux = "";
-        int i = ambitos.size();
-        while(i>= 0)
+        int i = ambitos.size()-1;
+        while(i> 0)
             {
-                ambitoAux += ambitos.get(i) + "_";
+                ambitoAux = ambitos.get(i) + "_" +ambitoAux;
+                
+                //System.out.println("AMBITO AUX " + ambitoAux);
                 i--;
             }
+        if(ambitoAux == "")
+            {
+                ambitoAux = "main_";
+                
+            }
+        System.out.println("Variable está en el ambito: " + ambitoAux);
         return ambitoAux;
+    }
+
+    private final String ambitoFuncion(String main)
+    {
+        System.out.println("CHECK AMBITO FUNCION");
+        String ambitoAux = "";
+        int i = ambitos.size()-1;
+        while(i> 0)
+            {
+                ambitoAux = ambitos.get(i) + "_" + ambitoAux;
+                
+                System.out.println(ambitoAux);
+                i--;
+            }
+        //PARCHEACO!!
+        if(main == "")
+            {
+                ambitoAux = "main";
+                
+            }
+        System.out.println("Función está en el ámbito: " + ambitoAux);
+        return ambitoAux;
+    }
+
+    private final void anyadirTS(String id, String tipo)
+    {
+        //System.out.println("CHECK AnyadirTS");
+        //        System.out.println(ts);
+        // Las nuevas variables son las primeras, así que hay que realizar
+        // alguna forma para que al salir de la TS, salgan en su orden correcto.
+        if(tipo == "")
+            ts.get(ambitos.size() -1).put(token.lexema,"VACIO");
+        else
+            ts.get(ambitos.size() -1).put(token.lexema,tipo);
+        //       System.out.println(ts);
     }
     //CHECK
     private final void nuevoAmbito(String nombreAmbito)
     {
-        System.out.println("CHECK NUEVO AMBITO");
+        // System.out.println("CHECK NUEVO AMBITO" + nombreAmbito);
+        // System.out.println(ts.toString());
         ambitos.add(nombreAmbito);
-        
-        ts.add(new Hashtable<String,String>());
+        // Inicio con 90 de tamanyo para que la tabla Hash no machaque y joda
+        // el orden de las variables. Dudo que Paco, se aburra tanto de anidar
+        // 90 variables en un mismo ámbito.
+        ts.add(new Hashtable<String,String>(90));
+        // System.out.println(ts.toString());
     }
 
+    private final void borrarAmbito()
+    {
+        System.out.println("CHECK BORRAR AMBITO");
+        int numAmbitos = ambitos.size()-1;
+        
+        ts.remove(numAmbitos);
+        ambitos.remove(numAmbitos);
+        
+        
+    }
     // CHECK
     private final String arregloHerenciaDerecha(String tipo)
     {
-        System.out.println("CHECK ARREGLO");
-        String resultado = tipo;
+        //System.out.println("CHECK ARREGLO\n" + ts);
+        String resultado ="";// tipo+" ";
         int numAmbito = ambitos.size() - 1;
         Set<String> auxiliarid = ts.get(numAmbito).keySet();
         int i = 0;
@@ -151,14 +208,18 @@ class TraductorDR {
                         String variableTipo = ts.get(numAmbito).get(s);
                         if(variableTipo == "VACIO")
                             {
-                                ts.get(numAmbito).remove(s);
                                 ts.get(numAmbito).put(s,tipo);
                             }
                     }
-                if(i < auxiliarid.size())
-                    resultado += s + ",";
-                
+                //System.out.println(i);
+                //Elimino la última coma
+                if(i == 0)
+                    resultado = ambitoVariable() +s + resultado;
+                else
+                    resultado = ambitoVariable() +s+ "," + resultado;
+                i++;
             }
+        //System.out.println("SALGO DE CHECK ARREGLO con: \n" + ts);
         return resultado;
     }
 
@@ -181,7 +242,7 @@ class TraductorDR {
         return resultado;
     }
     
-    public final String S() // S -> program id pyc Vsp Bloque
+    public final String S() // 1 S -> program id pyc Vsp Bloque
     {
         //Resultado final de la traduccion.
         String trad = "";
@@ -196,6 +257,8 @@ class TraductorDR {
                 emparejar(Token.ID);
                 trad += "";
                 emparejar(Token.PYC);
+                nuevoAmbito("main");
+                
                 trad += Vsp().trad + "\n";
                 trad += Bloque().trad;
                 
@@ -205,7 +268,7 @@ class TraductorDR {
         return trad;
     }
 
-    public final Atributos Vsp() // Vsp -> Unsp Vsp_prima
+    public final Atributos Vsp() // 2 Vsp -> Unsp Vsp_prima
     {
         Atributos resultado = new Atributos();
         
@@ -224,8 +287,8 @@ class TraductorDR {
         return resultado;
     }
 
-    public final Atributos  Vsp_prima() // Vsp_prima -> Unsp Vsp_prima ||
-                                        // Vsp_prima -> €
+    public final Atributos  Vsp_prima() // 3 Vsp_prima -> Unsp Vsp_prima ||
+                                        // 4 Vsp_prima -> €
     {
         Atributos resultado = new Atributos();
         
@@ -247,8 +310,8 @@ class TraductorDR {
         
     }
 
-    public final Atributos  Unsp() // Unsp -> function id dosp Tipo pyc Vsp
-                                   // Bloque pyc | Unsp -> var LV
+    public final Atributos  Unsp() // 5 Unsp -> function id dosp Tipo pyc Vsp
+                                   // Bloque pyc | 6 Unsp -> var LV
     {
         Atributos resultado = new Atributos();
         
@@ -258,7 +321,8 @@ class TraductorDR {
                 if(flag)
                     reglasAplicadas.append(" 5");
                 emparejar(Token.FUNCTION);
-                String idAuxFuncion = ambitoVariable() + token.lexema;
+                
+                String idAuxFuncion = ambitoFuncion(token.lexema) + token.lexema;
                 //Anyado un nuevo ambito.
                 nuevoAmbito(token.lexema);
                                 
@@ -269,7 +333,9 @@ class TraductorDR {
                 String VspAuxFuncion = Vsp().trad;
                 String BloqueAuxFuncion = Bloque().trad;
                 emparejar(Token.PYC);
-                resultado.trad += VspAuxFuncion + tipoFuncion + idAuxFuncion + BloqueAuxFuncion;
+                resultado.trad += VspAuxFuncion +"" + tipoFuncion+ " " + idAuxFuncion + "() " + BloqueAuxFuncion;
+          
+                
             }
         else if(token.tipo == Token.VAR)
             {
@@ -279,10 +345,11 @@ class TraductorDR {
                 resultado.trad += LV().trad;
             }
         else errorSintaxis(Token.FUNCTION,Token.VAR);
+        
         return resultado;
     }
 
-    public final Atributos LV()
+    public final Atributos LV() // 7 LV -> V LV_prima
     {
         Atributos resultado = new Atributos();
         
@@ -299,7 +366,7 @@ class TraductorDR {
         return resultado;
     }
 
-    public final Atributos LV_prima()
+    public final Atributos LV_prima() // 8 LV_prima -> V LV_prima || 9 LV_prima -> €
     {
         Atributos resultado = new Atributos();
         //System.out.println("Entro en LV_prima");
@@ -321,31 +388,36 @@ class TraductorDR {
         return resultado;
     }
 
-    public final Atributos  V()
+    public final Atributos  V() // 10 V -> id Lid dosp Tipo pyc
     {
         //System.out.println("Entro en V");
         Atributos resultado = new Atributos();
-        
         
         if(token.tipo == Token.ID)
             {
                 if(flag)
                     reglasAplicadas.append(" 10");
+                
+                anyadirTS(token.lexema, "");
+                
                 emparejar(Token.ID);
                 // WARNING!!
+                
                 String lidAux = Lid(new Atributos()).trad;
                 emparejar(Token.DOSP);
                 String tipoAux = Tipo().trad;
+                System.out.println(tipoAux);
                 emparejar(Token.PYC);
                 String arreglo = arregloHerenciaDerecha(tipoAux);
-                resultado.trad += tipoAux + arreglo + ";";
+                resultado.trad += tipoAux + " " + arreglo + ";" + "\n";
                 
             }
         else errorSintaxis(Token.ID);
         return resultado;
     }
     // Array.sort();
-    public final Atributos Lid(Atributos atributo)
+    public final Atributos Lid(Atributos atributo) // 11 Lid ->coma id Lid ||
+                                                   // 12 Lid -> €
     {
         Atributos resultado = new Atributos();
         
@@ -355,7 +427,8 @@ class TraductorDR {
                 if(flag)
                     reglasAplicadas.append(" 11");
                 emparejar(Token.COMA);
-                ts.get(ambitos.size()-1).put(token.lexema,"VACIO");
+                anyadirTS(token.lexema, "");
+                
                 emparejar(Token.ID);
 
                 //CHECK
@@ -371,7 +444,7 @@ class TraductorDR {
         return resultado;
     }
 
-    public final Atributos  Tipo()
+    public final Atributos  Tipo() // 13 Tipo -> Integer || 14 Tipo -> real
     {
         Atributos resultado = new Atributos();
         
@@ -396,7 +469,7 @@ class TraductorDR {
         return resultado;
     }
 
-    public final Atributos Bloque()
+    public final Atributos Bloque() // 15 Bloque -> begin SInstr end
     {
         Atributos resultado = new Atributos();
         
@@ -413,6 +486,7 @@ class TraductorDR {
             emparejar(Token.END);
         }
         else errorSintaxis(Token.BEGIN);
+        
         
         return resultado;
     }
@@ -586,7 +660,7 @@ class TraductorDR {
                     reglasAplicadas.append(" 26");
                 resultado.trad += atributos.th;
                 
-                resultado.trad += Expr().trad;
+                resultado.trad += Expr(atributos).trad;
                 
                 resultado.trad += E_prima(atributos).trad;
             }
@@ -648,15 +722,17 @@ class TraductorDR {
             {
                 if(flag)
                     reglasAplicadas.append(" 30");
-                emparejar(Token.ADDOP);
-                Term();
-                Expr_prima();
+                resultado.trad += token.lexema;
                 
+                emparejar(Token.ADDOP);
+                resultado.trad += Term().trad;
+                resultado.trad += Expr_prima(atributos).trad;
             }
         else if(token.tipo == Token.RELOP || token.tipo == Token.PYC || token.tipo == Token.ENDIF || token.tipo == Token.ELSE || token.tipo == Token.END || token.tipo == Token.THEN || token.tipo == Token.DO || token.tipo == Token.PARD)
             {
                 if(flag)
                     reglasAplicadas.append(" 31");
+                resultado.trad = "";
                 
             }
         else errorSintaxis(Token.ADDOP, Token.RELOP, Token.PYC, Token.ENDIF, Token.ELSE, Token.END, Token.THEN, Token.DO, Token.PARD);
@@ -667,36 +743,41 @@ class TraductorDR {
     public final Atributos  Term()
     {
         Atributos resultado = new Atributos();
+        Atributos atributo = new Atributos();
+        
         //System.out.println("Entro en Term");
         if(token.tipo == Token.ID || token.tipo == Token.NENTERO || token.tipo == Token.NREAL || token.tipo == Token.PARI)
             {
                 if(flag)
                     reglasAplicadas.append(" 32");
-                Factor();
-                Term_prima();
+                resultado.trad += Factor().trad;
+                resultado.trad += Term_prima(atributo).trad;
             }
               else errorSintaxis(Token.ID, Token.NENTERO, Token.NREAL, Token.PARI);
         return resultado;
-        
     }
 
 
-    public final Atributos  Term_prima()
+    public final Atributos  Term_prima(Atributos atributo)
     {
         Atributos resultado = new Atributos();
+        
         //System.out.println("Entro en Term_prima");
         if(token.tipo == Token.MULOP)
             {
                 if(flag)
                     reglasAplicadas.append(" 33");
+                resultado.trad += token.lexema;
                 emparejar(Token.MULOP);
-                Factor();
-                Term_prima();
+                
+                resultado.trad += Factor().trad;
+                resultado.trad += Term_prima(atributo).trad;
             }
         else if(token.tipo == Token.ADDOP || token.tipo == Token.RELOP || token.tipo == Token.PYC || token.tipo == Token.ENDIF || token.tipo == Token.ELSE || token.tipo == Token.END || token.tipo == Token.THEN || token.tipo == Token.DO || token.tipo == Token.PARD)
             {
                 if(flag)
                     reglasAplicadas.append(" 34");
+                resultado.trad = "";
                 
             }
         else errorSintaxis(Token.MULOP,Token.ADDOP, Token.RELOP, Token.PYC, Token.ENDIF, Token.ELSE, Token.END, Token.THEN, Token.DO, Token.PARD);
@@ -712,13 +793,18 @@ class TraductorDR {
             {
                 if(flag)
                     reglasAplicadas.append(" 35");
+                String idAux = ambitoVariable()+token.lexema;
+                
                 emparejar(Token.ID);
+                resultado.trad += idAux;
                 
             }
         else if(token.tipo == Token.NENTERO)
             {
                 if(flag)
                     reglasAplicadas.append(" 36");
+                resultado.trad += "i " +token.lexema;
+                
                 emparejar(Token.NENTERO);
                 
             }
@@ -726,6 +812,8 @@ class TraductorDR {
             {
                 if(flag)
                     reglasAplicadas.append(" 37");
+                resultado.trad += "r "+ token.lexema;
+                
                 emparejar(Token.NREAL);
                 
             }
@@ -733,8 +821,9 @@ class TraductorDR {
             {
                 if(flag)
                     reglasAplicadas.append(" 38");
+                
                 emparejar(Token.PARI);
-                Expr();
+                resultado.trad += "(" + Expr(new Atributos()).trad + ")";
                 emparejar(Token.PARD);
                 
             }

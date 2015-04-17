@@ -1,0 +1,12 @@
+program colores;
+function rojo:integer;
+var a,b,c:integer;
+begin (* rojo *)
+a := 7;
+b := a+3
+end;
+var a,b,c:integer;
+begin (* colores *)
+a := 77;
+writeln(a+3)
+end
