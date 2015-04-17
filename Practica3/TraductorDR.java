@@ -218,7 +218,7 @@ class TraductorDR {
                 else
                     resultado = ambitoVariable() +s+ "," + resultado;
                 i++;
-            }
+            } 
         //System.out.println("SALGO DE CHECK ARREGLO con: \n" + ts);
         return resultado;
     }
