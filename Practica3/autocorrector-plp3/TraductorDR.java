@@ -337,7 +337,7 @@ class TraductorDR {
                 emparejar(Token.PYC);
                 nuevoAmbito("main");
                 
-                trad += Vsp(new Atributos()).trad;
+                trad += Vsp().trad;
                 trad += Bloque(new Atributos("int main() ")).trad;
                 
             }
@@ -346,10 +346,10 @@ class TraductorDR {
         return trad;
     }
 
-    public final Atributos Vsp(Atributos atributos) // 2 Vsp -> Unsp Vsp_prima
+    public final Atributos Vsp() // 2 Vsp -> Unsp Vsp_prima
     {
         Atributos resultado = new Atributos();
-        /*
+        
         //System.out.println("Entro en Vsp");
         if(token.tipo == Token.FUNCTION || token.tipo == Token.VAR)
             {
@@ -360,16 +360,16 @@ class TraductorDR {
                 
             }
         else
-        errorSintaxis(Token.FUNCTION,Token.VAR);*/
+            errorSintaxis(Token.FUNCTION,Token.VAR);
         //WARNING!!
         return resultado;
     }
 
-    public final Atributos  Vsp_prima(Atributos atributos) // 3 Vsp_prima -> Unsp Vsp_prima ||
+    public final Atributos  Vsp_prima() // 3 Vsp_prima -> Unsp Vsp_prima ||
                                         // 4 Vsp_prima -> €
     {
         Atributos resultado = new Atributos();
-        /*
+        
         if(token.tipo == Token.FUNCTION || token.tipo == Token.VAR)
             {
                 if(flag)
@@ -383,16 +383,16 @@ class TraductorDR {
                     reglasAplicadas.append(" 4");
                 resultado.trad = "";
             }
-            else errorSintaxis(Token.FUNCTION,Token.VAR,Token.BEGIN);*/
+        else errorSintaxis(Token.FUNCTION,Token.VAR,Token.BEGIN);
         return resultado;
         
     }
 
-    public final Atributos  Unsp(Atributos atributos) // 5 Unsp -> function id dosp Tipo pyc Vsp
+    public final Atributos  Unsp() // 5 Unsp -> function id dosp Tipo pyc Vsp
                                    // Bloque pyc | 6 Unsp -> var LV
     {
         Atributos resultado = new Atributos();
-        /*
+        
         //System.out.println("Entro en Unsp");
         if(token.tipo == Token.FUNCTION)
             {
@@ -430,14 +430,14 @@ class TraductorDR {
                 resultado.trad += LV().trad;
             }
         else errorSintaxis(Token.FUNCTION,Token.VAR);
-        */
+        
         return resultado;
     }
 
-    public final Atributos LV(Atributos atributos) // 7 LV -> V LV_prima
+    public final Atributos LV() // 7 LV -> V LV_prima
     {
         Atributos resultado = new Atributos();
-        /*
+        
         //System.out.println("Entro en LV");
         if(token.tipo == Token.ID)
             {
@@ -448,14 +448,14 @@ class TraductorDR {
                 resultado.trad += LV_prima().trad;
                 //                System.out.println("LV \n " + resultado);
             }
-        else errorSintaxis(Token.ID);*/
+        else errorSintaxis(Token.ID);
         return resultado;
     }
 
-    public final Atributos LV_prima(Atributos atributos) // 8 LV_prima -> V LV_prima || 9 LV_prima -> €
+    public final Atributos LV_prima() // 8 LV_prima -> V LV_prima || 9 LV_prima -> €
     {
         Atributos resultado = new Atributos();
-        /*//System.out.println("Entro en LV_prima");
+        //System.out.println("Entro en LV_prima");
         if(token.tipo == Token.ID)
             {
                 if(flag)
@@ -470,15 +470,15 @@ class TraductorDR {
                     reglasAplicadas.append(" 9");
                 resultado.trad += "";
             }
-        else errorSintaxis(Token.ID,Token.FUNCTION, Token.VAR,Token.BEGIN);*/
+        else errorSintaxis(Token.ID,Token.FUNCTION, Token.VAR,Token.BEGIN);
         return resultado;
     }
 
-    public final Atributos  V(Atributos atributos) // 10 V -> id Lid dosp Tipo pyc
+    public final Atributos  V() // 10 V -> id Lid dosp Tipo pyc
     {
         //System.out.println("Entro en V");
         Atributos resultado = new Atributos();
-        /* 
+        
         if(token.tipo == Token.ID)
             {
                 if(flag)
@@ -498,15 +498,15 @@ class TraductorDR {
                 resultado.trad += tipoAux + " " + arreglo + "hoaaa;" + "\n";
                 
             }
-        else errorSintaxis(Token.ID);*/
+        else errorSintaxis(Token.ID);
         return resultado;
     }
     // Array.sort();
-    public final Atributos Lid(Atributos atributos) // 11 Lid ->coma id Lid ||
+    public final Atributos Lid(Atributos atributo) // 11 Lid ->coma id Lid ||
                                                    // 12 Lid -> €
     {
         Atributos resultado = new Atributos();
-        /*
+        
         //System.out.println("Entro en Lid");
         if(token.tipo == Token.COMA)
             {
@@ -528,15 +528,15 @@ class TraductorDR {
                     reglasAplicadas.append(" 12");
                 resultado.trad = "";
             }
-        else errorSintaxis(Token.COMA,Token.DOSP);*/
+        else errorSintaxis(Token.COMA,Token.DOSP);
         return resultado;
     }
 
-    public final Atributos  Tipo(Atributos atributos) // 13 Tipo -> Integer || 14 Tipo -> real
+    public final Atributos  Tipo() // 13 Tipo -> Integer || 14 Tipo -> real
     {
         Atributos resultado = new Atributos();
         
-        /*//System.out.println("Entro en Tipo");
+        //System.out.println("Entro en Tipo");
         if(token.tipo == Token.INTEGER)
             {
                 if(flag)
@@ -553,14 +553,14 @@ class TraductorDR {
                 resultado.trad = "double";
                 
             }
-        else errorSintaxis(Token.INTEGER,Token.REAL);*/
+        else errorSintaxis(Token.INTEGER,Token.REAL);
         return resultado;
     }
 
-    public final Atributos Bloque(Atributos atributos) // 15 Bloque -> begin SInstr end
+    public final Atributos Bloque(Atributos atributo) // 15 Bloque -> begin SInstr end
     {
         Atributos resultado = new Atributos();
-        /*
+        
         //System.out.println("Entro en Bloque");
         if (token.tipo == Token.BEGIN) {
             if(flag)
@@ -591,14 +591,14 @@ class TraductorDR {
         }
         else errorSintaxis(Token.BEGIN);
         
-        */
+        
         return resultado;
     }
 
-    public final Atributos SInstr(Atributos atributos) // 16 SInstr -> Instr SInstrp
+    public final Atributos SInstr(Atributos atributo) // 16 SInstr -> Instr SInstrp
     {
         Atributos resultado = new Atributos();
-        /*
+        
         //System.out.println("Entro en SInstr");
         //System.out.println(Token.tipo);
         if (token.tipo == Token.BEGIN || token.tipo == Token.ID || token.tipo == Token.IF || token.tipo == Token.WHILE || token.tipo == Token.WRITELN) {
@@ -638,15 +638,15 @@ class TraductorDR {
             
         }
         else
-            errorSintaxis(Token.BEGIN,Token.ID,Token.IF,Token.WHILE,Token.WRITELN);*/
+            errorSintaxis(Token.BEGIN,Token.ID,Token.IF,Token.WHILE,Token.WRITELN);
         return resultado;
     }
 
-    public final Atributos SInstrp(Atributos atributos) // 17 SInstrp -> pyc Instr SInstrp
+    public final Atributos SInstrp(Atributos atributo) // 17 SInstrp -> pyc Instr SInstrp
                                      // 18 SInstrp -> €
     {
         Atributos resultado = new Atributos();
-        /*
+        
         //  System.out.println("Entro en SInstrp");
         if(token.tipo == Token.PYC)
             {
@@ -723,18 +723,18 @@ class TraductorDR {
                 // resultado.trad = ";";
                 
             }
-        else errorSintaxis(Token.PYC,Token.END);*/
+        else errorSintaxis(Token.PYC,Token.END);
         return resultado;
     }
 
-    public final Atributos  Instr(Atributos atributos) // 19 Instr -> Bloque
+    public final Atributos  Instr(Atributos atribu) // 19 Instr -> Bloque
                                     // 20 Instr -> id asig E
                                     // 21 Instr -> if E then Instr Instr_prima
                                     // 24 Instr -> while E do Instr
                                     // 25 Instr -> writeln pari E pard
     {
         Atributos resultado = new Atributos();
-        /* Atributos atributo = new Atributos();
+        Atributos atributo = new Atributos();
         resultado.th = "pyc";
         
         //System.out.println("Entro en Instr");
@@ -896,16 +896,16 @@ class TraductorDR {
                 resultado.trad += ")";
                 
             }
-            else errorSintaxis(Token.BEGIN,Token.IF,Token.WHILE,Token.WRITELN,Token.ID);*/
+        else errorSintaxis(Token.BEGIN,Token.IF,Token.WHILE,Token.WRITELN,Token.ID);
         return resultado;
         
     }
 
-    public final Atributos  Instr_prima(Atributos atributos) // 22 Instr_prima -> endif
+    public final Atributos  Instr_prima() // 22 Instr_prima -> endif
                                           // 23 Instr_prima -> else Instr endif
     {
         Atributos resultado = new Atributos();
-        /*//System.out.println("Entro en Instr_prima");
+        //System.out.println("Entro en Instr_prima");
         //WARNING!
         
         if(token.tipo == Token.ENDIF)
@@ -951,14 +951,14 @@ class TraductorDR {
                 emparejar(Token.ENDIF);
             }
         else errorSintaxis(Token.ELSE, Token.ENDIF);
-        //resultado.th = "pyc";*/
+        //resultado.th = "pyc";
         return resultado;
     }
 
     public final Atributos E(Atributos atributos) // 26 E -> Expr E_prima
     {
         Atributos resultado = new Atributos();
-        /*//System.out.println("Entro en E");
+        //System.out.println("Entro en E");
         if(token.tipo == Token.ID || token.tipo == Token.NENTERO || token.tipo == Token.NREAL || token.tipo == Token.PARI)
             {
                 if(flag)
@@ -983,7 +983,7 @@ class TraductorDR {
                 
                 resultado.trad += resultadoAux2.trad;
             }
-        else errorSintaxis(Token.ID, Token.NENTERO, Token.NREAL, Token.PARI);*/
+        else errorSintaxis(Token.ID, Token.NENTERO, Token.NREAL, Token.PARI);
         return resultado;
         
     }
@@ -991,7 +991,7 @@ class TraductorDR {
                                                         // 28 E_prima -> € 
     {
         Atributos resultado = new Atributos();
-        /*//System.out.println("Entro en E_prima");
+        //System.out.println("Entro en E_prima");
         if(token.tipo == Token.RELOP)
             {
                 if(flag)
@@ -1029,7 +1029,7 @@ class TraductorDR {
                 resultado.trad = "";
                 
             }
-        else errorSintaxis(Token.RELOP, Token.PYC, Token.ENDIF, Token.ELSE, Token.END, Token.THEN, Token.DO, Token.PARD);*/
+        else errorSintaxis(Token.RELOP, Token.PYC, Token.ENDIF, Token.ELSE, Token.END, Token.THEN, Token.DO, Token.PARD);
         return resultado;
         
     }
@@ -1038,7 +1038,7 @@ class TraductorDR {
     {
         Atributos resultado = new Atributos();
  
-        /* if(token.tipo == Token.ID || token.tipo == Token.NENTERO || token.tipo == Token.NREAL || token.tipo == Token.PARI)
+        if(token.tipo == Token.ID || token.tipo == Token.NENTERO || token.tipo == Token.NREAL || token.tipo == Token.PARI)
             {
                 if(flag)
                     reglasAplicadas.append(" 29");
@@ -1139,15 +1139,15 @@ class TraductorDR {
                 
             }
         else errorSintaxis(Token.ADDOP, Token.RELOP, Token.PYC, Token.ENDIF, Token.ELSE, Token.END, Token.THEN, Token.DO, Token.PARD);
-        //System.out.println(resultado);*/
+        //System.out.println(resultado);
         return resultado;
         
     }
 
-    public final Atributos  Term(Atributos atributos) // 32 Term -> Factor Term_prima
+    public final Atributos  Term() // 32 Term -> Factor Term_prima
     {
         Atributos resultado = new Atributos();
-        /*Atributos atributo = new Atributos();
+        Atributos atributo = new Atributos();
         
         // System.out.println("Entro en Term");
         if(token.tipo == Token.ID || token.tipo == Token.NENTERO || token.tipo == Token.NREAL || token.tipo == Token.PARI)
@@ -1241,16 +1241,16 @@ class TraductorDR {
                 }
                 
             }
-            else errorSintaxis(Token.ID, Token.NENTERO, Token.NREAL, Token.PARI);*/
+              else errorSintaxis(Token.ID, Token.NENTERO, Token.NREAL, Token.PARI);
         return resultado;
     }
 
     //AQUÍ HAY MUCHA TELA. COMPROBACIONES por * / div
-    public final Atributos  Term_prima(Atributos atributos) // 33 Term_prima -> mulop Factor Term_prima
+    public final Atributos  Term_prima(Atributos atributo) // 33 Term_prima -> mulop Factor Term_prima
                                                            // 34 Term_prima -> €
     {
         Atributos resultado = new Atributos();
-        /*        
+        
         //System.out.println("Entro en Term_prima");
         if(token.tipo == Token.MULOP)
             {
@@ -1325,18 +1325,17 @@ class TraductorDR {
             }
         else errorSintaxis(Token.MULOP,Token.ADDOP, Token.RELOP, Token.PYC, Token.ENDIF, Token.ELSE, Token.END, Token.THEN, Token.DO, Token.PARD);
         //System.out.println("SALGO DE TERM_PRIMA");
-        */
         return resultado;
         
     }
 
-    public final Atributos  Factor(Atributos atributos) // 35 Factor -> id
+    public final Atributos  Factor() // 35 Factor -> id
                                      // 36 Factor -> nentero
                                      // 37 Factor -> nreal
                                      // 38 Factor -> pari Expr pard
     {
         Atributos resultado = new Atributos();
-        /* //System.out.println("Entro en Factor");
+        //System.out.println("Entro en Factor");
         if(token.tipo == Token.ID)
             {
                 if(flag)
@@ -1392,7 +1391,7 @@ class TraductorDR {
                 emparejar(Token.PARD);
                 //                System.out.println("ENTRO EN PARI" + resultado);
             }
-            else errorSintaxis(Token.ID, Token.NENTERO, Token.NREAL, Token.PARI);*/
+        else errorSintaxis(Token.ID, Token.NENTERO, Token.NREAL, Token.PARI);
         return resultado;
         
     }

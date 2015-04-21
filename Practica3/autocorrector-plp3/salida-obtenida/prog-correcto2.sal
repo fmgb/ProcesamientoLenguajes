@@ -1,0 +1,39 @@
+
+// program colores
+int rojo_a,rojo_b,rojo_choaaa;
+int rojo() {
+rojo_a =i 7  padd;
+rojo_b =i rojo_a +i 3 ADIOS1HOLA1;
+}
+double verde_fosfo_jhoaaa;
+int verde_fosfo_rito_khoaaa;
+double verde_fosfo_rito() {
+verde_fosfo_rito_k =i 643  padd;
+verde_fosfo_rito_j =r itor(verde_fosfo_rito_k)/r itor(10 ) ADIOS3padd;
+verde_fosfo_rito_j =r itor(verde_fosfo_rito_k/i 10  ADIOS2HOLA2HOLA3;
+}
+int verde_fosfo() {
+verde_fosfo_j =r 34.5 ;
+}
+double verde_m,verde_nhoaaa;
+int verde_o,verde_phoaaa;
+double verde() {
+verde_o =i (27  -i 20 )*i 3  padd;
+verde_m =r itor(verde_o ADIOS6padd;
+while ( verde_o >i 10  )
+{
+
+if(2 *i verde_o ==i 22  )
+verde_p =i 1  gato;
+else
+verde_p =i 0  delta;padd;
+verde_o =i verde_o -i 1 ADIOS4HOLA4;
+}
+ADIOS5HOLA5HOLA6;
+}
+int main_a,main_b,main_choaaa;
+int main() {
+main_a =i 77  padd;
+printf("%d\n",main_a +i 3 )ADIOS7HOLA7;
+}
+

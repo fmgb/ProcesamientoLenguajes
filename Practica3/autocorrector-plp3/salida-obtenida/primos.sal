@@ -1,0 +1,39 @@
+
+// program primos
+int main_nprimos,main_k,main_n,main_divisorhoaaa;
+int main_esprimo,main_seguirenbuclehoaaa;
+int main() {
+main_k =i 100  padd;
+main_nprimos =i 0  ADIOS10padd;
+main_n =i 1  ADIOS9padd;
+while ( main_nprimos <i main_k )
+{
+main_esprimo =i 1  padd;
+main_seguirenbucle =i 1  ADIOS7padd;
+main_divisor =i main_n/i 2  ADIOS6padd;
+while ( main_seguirenbucle ==i 1  )
+
+if(main_divisor <=i 1  )
+main_seguirenbucle =i 0  gato;
+else
+{
+
+if(main_divisor*i (main_n/i main_divisor ) !=i main_n )
+main_divisor =i main_divisor -i 1 gato;
+else
+main_esprimo =i 0  delta;
+if(main_esprimo ==i 0  )
+main_seguirenbucle =i 0  ADIOS1HOLA1;
+}
+delta;ADIOS5foto;
+if(main_esprimo ==i 1  )
+{
+printf("%d\n",main_n )padd;
+main_nprimos =i main_nprimos +i 1 ADIOS2HOLA2;
+}
+ADIOS4padd;
+main_n =i main_n +i 1 ADIOS3HOLA3HOLA4HOLA5HOLA6HOLA7;
+}
+ADIOS8HOLA8HOLA9HOLA10;
+}
+

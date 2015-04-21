@@ -1,0 +1,8 @@
+program pp;
+var a:integer;
+
+begin
+  a := 776
+end
+
+DespuesDelProgramaDebeIrEOF;

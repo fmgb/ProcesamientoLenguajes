@@ -1,0 +1,12 @@
+program p;
+var a:integer;
+begin
+ (* este es un programa con un
+  comentario 
+   de
+   varias lineas *)
+
+ (* y con otro comentario que
+   tiene el EOF despues del asterisco: *EOF
+
+  *

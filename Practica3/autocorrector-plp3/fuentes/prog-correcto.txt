@@ -1,0 +1,36 @@
+
+program programa;
+
+function f:real;
+  var a,b:integer;
+  function g:integer;
+    var f,g,k,l:real;
+    begin
+       f := 1+2+3+4+5-6+7-8+3.0;
+       a := 1+2+3+4+5+6+7-8+9;
+       if f < a then
+         writeln(a-f)
+       else
+         writeln(f-a)
+       endif
+    end;
+
+  var k,l:integer;
+      m,n:real;
+  begin
+    b := 7*3 div 2;
+    m := a/b
+  end;
+
+var i,j:integer;
+begin
+  i := 1;
+  j := 10;
+  while i<j*1.0 do
+   begin
+    writeln(i);
+    writeln(j);
+    i := i+1;
+    j := j-1
+   end
+end

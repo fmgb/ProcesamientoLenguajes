@@ -1,0 +1,13 @@
+
+program pruErrRelop;
+var a,b,c:integer;
+begin
+  a := 1+2+3;
+  b := a+4;
+  c := b+5;
+  if a<b<c then (* error sintactico en el segundo '<' *)
+    writeln(a+b+c)
+  else
+    writeln(a)
+  endif
+end

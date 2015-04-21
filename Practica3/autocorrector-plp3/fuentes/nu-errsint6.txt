@@ -1,0 +1,10 @@
+
+program paradislexicos;
+var a,b:integer;
+begin
+  a := 7 div 2;
+  b := a div 2;
+  if a =< b then  (* error sintactico en '<' , es '<=' no '=<'
+    writeln(a)
+  endif
+end
