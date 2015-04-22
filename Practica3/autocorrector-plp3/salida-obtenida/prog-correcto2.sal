@@ -23,13 +23,11 @@ int verde_o,verde_p;
 double verde() {
 verde_o =i (27  -i 20 )*i 3  ;
 verde_m =r itor(verde_o );
-;
 while ( verde_o >i 10  )
 {
 
 if(2 *i verde_o ==i 22  )
 verde_p =i 1  ;
-;
 else
 verde_p =i 0  ;
 verde_o =i verde_o -i 1 ;

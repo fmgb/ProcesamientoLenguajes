@@ -838,8 +838,8 @@ class TraductorDR {
                         //                        System.out.println(resultadoAux1);
                         //   resultado.trad += "\n";
                     }
-                    else */if(atributosAux.th.equals("pyc"))
-                    resultado.trad += ";" + "\n"; //; raton
+                    else if(atributosAux.th.equals("pyc"))
+                    resultado.trad += "raton;" + "\n"; //; raton*/
                 
                 //resultado.trad += "hoasdasfkjag\n";
                 resultado.trad += resultadoInstr.trad;
@@ -1100,7 +1100,7 @@ class TraductorDR {
                 if(flag)
                     reglasAplicadas.append(" 23");
                 emparejar(Token.ELSE);
-                resultado.trad += ";\n";  //; gato
+                //resultado.trad += "gato;\n";  //; gato
                 
                 resultado.trad += "else";
                 resultado.trad += "\n";
@@ -1119,7 +1119,7 @@ class TraductorDR {
                 if(resultadoInstr.th.equals("pyc") ) {
                     //                     System.out.println("HOLAS");
                     //                    System.out.println(atributoAuxiliar);
-                    resultado.trad += ";"; //; delta
+                    resultado.trad += "delta;"; //; delta
                     resultado.th = "nopyc";
                     //System.out.println("HASDAD");
                     //                    System.out.println(resultado);
