@@ -1,0 +1,259 @@
+*********************************************************
+Autocorrector plp3 
+ Generando ficheros auxiliares... 
+*********************************************************
+ Compilando...
+*********************************************************
+
+*********************************************************
+ Ejecutando y comprobando salida a la vez...
+*********************************************************
+Prueba: errlex1
+OK
+--------------------------
+Prueba: errlex2
+OK
+--------------------------
+Prueba: errlex3
+OK
+--------------------------
+Prueba: errlex4
+OK
+--------------------------
+Prueba: errsem11
+OK
+--------------------------
+Prueba: errsem12
+OK
+--------------------------
+Prueba: errsem1
+OK
+--------------------------
+Prueba: errsem2
+OK
+--------------------------
+Prueba: errsem3
+OK
+--------------------------
+Prueba: errsem4
+OK
+--------------------------
+Prueba: errsem5
+OK
+--------------------------
+Prueba: errsem7
+OK
+--------------------------
+Prueba: errsem8
+OK
+--------------------------
+Prueba: errsem9
+OK
+--------------------------
+Prueba: errsint1
+OK
+--------------------------
+Prueba: errsint2
+OK
+--------------------------
+Prueba: errsint3
+OK
+--------------------------
+Prueba: errsint4
+OK
+--------------------------
+Prueba: nu-correcto1
+--- Fallo en la traducción ----------
+2a2,4
+> 
+> 
+> int main_vara,main_varb;
+5c7,8
+< intdoubledoubledouble f_ff() {
+---
+> double f_f_f_elsea;
+> double f_f_f() {
+8c11,12
+< intint f_fg() {
+---
+> int f_f_g_endifa;
+> int f_f_g() {
+11c15
+< double ff() {
+---
+> double f_f() {
+13a18
+> int f_i,f_j,f_k;
+15c20
+< f_i =i fk +i fj;
+---
+> f_i =i f_k +i f_j;
+18c23,31
+< _vara =i 2 *i varb ;
+---
+> main_vara =i 2 *i main_varb;
+> main_realc =r 2.3;
+> if (main_realc <r itor(main_vara))
+> while ( itor(main_vara) >=r main_realc)
+> {
+> printf("%d\n",main_vara);
+> main_vara =i main_vara -i 1;
+> }
+> 
+--------------------------
+Prueba: nu-errlex1
+OK
+--------------------------
+Prueba: nu-errlex2
+OK
+--------------------------
+Prueba: nu-errsint1
+OK
+--------------------------
+Prueba: nu-errsint2
+OK
+--------------------------
+Prueba: nu-errsint3
+OK
+--------------------------
+Prueba: nu-errsint4
+OK
+--------------------------
+Prueba: nu-errsint5
+OK
+--------------------------
+Prueba: nu-errsint6
+OK
+--------------------------
+Prueba: nu-errsint7
+OK
+--------------------------
+Prueba: primos
+--- Fallo en la traducción ----------
+2a2,4
+> 
+> 
+> int main_k,main_nprimos,main_n,main_divisor;
+5c7,36
+< _k =i 100  ;
+---
+> main_k =i 100;
+> main_nprimos =i 0;
+> main_n =i 1;
+> while ( main_nprimos <i main_k)
+> {
+> main_esprimo =i 1;
+> main_seguirenbucle =i 1;
+> main_divisor =i main_n /i 2;
+> while ( main_seguirenbucle ==i 1)
+> if (main_divisor <=i 1)
+> main_seguirenbucle =i 0;
+> else
+> {
+> if (main_divisor *i (main_n /i main_divisor) !=i main_n)
+> main_divisor =i main_divisor -i 1;
+> else
+> main_esprimo =i 0;
+> if (main_esprimo ==i 0)
+> main_seguirenbucle =i 0;
+> }
+> 
+> if (main_esprimo ==i 1)
+> {
+> printf("%d\n",main_n);
+> main_nprimos =i main_nprimos +i 1;
+> }
+> 
+> main_n =i main_n +i 1;
+> }
+> 
+--------------------------
+Prueba: prog-correcto2
+--- Fallo en la traducción ----------
+3c2,4
+< intint rojo() {
+---
+> 
+> int rojo_a,rojo_b,rojo_c;
+> int rojo() {
+4a6
+> rojo_b =i rojo_a +i 3;
+6c8,10
+< doubleintdoubledouble verde_fosforito() {
+---
+> double verde_fosfo_j;
+> int verde_fosfo_rito_k;
+> double verde_fosfo_rito() {
+7a12,13
+> verde_fosfo_j =r itor(verde_fosfo_rito_k) /r itor(10);
+> verde_fosfo_j =r itor(verde_fosfo_rito_k /i 10);
+9c15
+< int verdefosfo() {
+---
+> int verde_fosfo() {
+11a18
+> double verde_m,verde_n;
+14a22,29
+> verde_m =r itor(verde_o);
+> while ( verde_o >i 10)
+> {
+> if (2 *i verde_o ==i 22)
+> verde_p =i 1;
+> else
+> verde_p =i 0;
+> verde_o =i verde_o -i 1;
+15a31,34
+> 
+> }
+> 
+> int main_a,main_b,main_c;
+17c36,37
+< _a =i 77  ;
+---
+> main_a =i 77;
+> printf("%d\n",main_a +i 3);
+--------------------------
+Prueba: prog-correcto
+--- Fallo en la traducción ----------
+0a1,33
+> // program programa
+> 
+> int f_a,f_b;
+> double f_g_f,f_g_g,f_g_k,f_g_l;
+> int f_g() {
+> f_g_f =r itor(1 +i 2 +i 3 +i 4 +i 5 -i 6 +i 7 -i 8) +r 3.0;
+> f_a =i 1 +i 2 +i 3 +i 4 +i 5 +i 6 +i 7 -i 8 +i 9;
+> if (f_g_f <r itor(f_a))
+> printf("%g\n",itor(f_a) -r f_g_f);
+> else
+> printf("%g\n",f_g_f -r itor(f_a));
+> }
+> int f_k,f_l;
+> double f_m,f_n;
+> double f() {
+> f_b =i 7 *i 3 /i 2;
+> f_m =r itor(f_a) /r itor(f_b);
+> }
+> 
+> int main_i,main_j;
+> int main() {
+> main_i =i 1;
+> main_j =i 10;
+> while ( itor(main_i) <r itor(main_j) *r 1.0)
+> {
+> printf("%d\n",main_i);
+> printf("%d\n",main_j);
+> main_i =i main_i +i 1;
+> main_j =i main_j -i 1;
+> }
+> 
+> }
+> 
+--------------------------
+
+OJO: FALLAN 4 PRUEBAS DEL AUTOCORRECTOR
+
+
+
+AVISO IMPORTANTE: este autocorrector NO prueba todos los casos posibles
+
