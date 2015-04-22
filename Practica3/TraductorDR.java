@@ -554,6 +554,7 @@ class TraductorDR {
                 Atributos resultadoBloque = Bloque(atributosAux);
                 emparejar(Token.PYC);
                 resultado.trad += resultadoVsp.trad + "" + resultadoTipo.trad + " " + idAuxFuncion + "() " + resultadoBloque.trad;
+                //                resultado.trad += "rrrrrrrrrrr"; //QUITAR
                 //Termina el ambito de la función.
                 borrarAmbito();
             }
@@ -564,6 +565,7 @@ class TraductorDR {
                 emparejar(Token.VAR);
                 Atributos resultadoLV = LV(atributos);
                 resultado.trad += resultadoLV.trad;
+                //                resultado.trad += "jjjjjjjjjjjjj"; //QUITAR
             }
         else errorSintaxis(Token.FUNCTION,Token.VAR);
         
@@ -640,7 +642,7 @@ class TraductorDR {
                 //System.out.println(tipoAux);
                 emparejar(Token.PYC);
                 String arreglo = arregloHerenciaDerecha(resultadoTipo.trad);
-                resultado.trad += resultadoTipo.trad + " " + arreglo + ";" + "\n";
+                resultado.trad += resultadoTipo.trad + " " + arreglo + ";" + "\n"; //; tirao
                 //                System.out.println("RESULTADO" + resultado.trad);
             }
         else errorSintaxis(Token.ID);
@@ -716,20 +718,32 @@ class TraductorDR {
             if(atributos.trad != "")
                 {
                     resultado.trad += atributos.trad;
+                    atributos.trad = ""; //CAMBIADO
+                    
                 }
             atributos.th = "2";
             //            System.out.println(ambitos);
+            //            resultado.trad += "zzzzzzzzz" + atributos.th; //QUITAR
             Atributos unaInstruccion = SInstr(atributos);
             //System.out.println("BLOQUE : " + unaInstruccion);
-            if(unaInstruccion.th == "1")
+            if(unaInstruccion.th == "1"){
+                //                resultado.trad += "kkkkkkkkk"; //QUITAR
                 resultado.trad += unaInstruccion.trad;
+                //                resultado.trad += "lllllllll";//QUITAR
+            }
             else{
-            //ESTO SI QUE ES UN PARCHE DE LOS BUENOS
+                //                resultado.trad +="wwwwwwww"; //QUITAR
+                //ESTO SI QUE ES UN PARCHE DE LOS BUENOS
                 if(unaInstruccion.trad.lastIndexOf('\n') == unaInstruccion.trad.length() -1)
                     resultado.trad += "{\n"+ unaInstruccion.trad + "\n}\n";
                 else
-                    resultado.trad += "{\n"+ unaInstruccion.trad + ";\n}\n";
+                    resultado.trad += "{\n"+ unaInstruccion.trad + ";\n}\n"; //;
+                                                                                  //cabra
+                //                resultado.trad +="iiiiiiiii"; //QUITAR
             }
+            //            resultado.trad += "pppppppppp" + unaInstruccion.th;//QUITAR
+            
+            //resultado.th = "nopyc";
             emparejar(Token.END);
         }
         else errorSintaxis(Token.BEGIN);
@@ -749,8 +763,10 @@ class TraductorDR {
                 reglasAplicadas.append(" 16");
             Atributos resultadoInstr = Instr(atributosAux);
             resultado.trad += resultadoInstr.trad;
+            //            resultado.trad += "fffffff" + atributosAux.th; //QUITAR
             
             atributosAux.th = resultadoInstr.th;
+            
             Atributos resultadoSInstrp = SInstrp(atributosAux);
             String comprobarUnaInstruccion = resultadoSInstrp.trad;
                         
@@ -767,7 +783,10 @@ class TraductorDR {
                 resultado.th = atributos.th;
             //resultado.trad+= " ejufj\n";
             //OJO!
+            //            resultado.trad+="bbbbbbbbbbbbb"; //QUITAR
             resultado.trad += comprobarUnaInstruccion;
+            //            resultado.trad += "oooooooooooooooo" + resultado.th;//QUITAR
+            
             //resultado.trad+= "hhggggg\n";
             //            System.out.println("HOAL");
             //            System.out.println(resultado.trad);
@@ -785,40 +804,43 @@ class TraductorDR {
         Atributos resultado = new Atributos();
         Atributos atributosAux = new Atributos();
         //  System.out.println("Entro en SInstrp");
+        //        resultado.trad+= "qqqqqqqq" + atributos.th; //QUITAR
         if(token.tipo == Token.PYC)
             {
                 if(flag)
                     reglasAplicadas.append(" 17");
                 emparejar(Token.PYC);
                 //Final de cada instruccion un \n
-                
-                //resultado.trad += " ;" + "\n";
-                
                 if(atributos.th.equals("pyc")){
-                    //resultado.trad += "p";
-                    //resultado.trad +=";";
-                    atributosAux.th = "nopyc"; //PROBLEMA DEL ; DEL IF ESTABA
+                    atributosAux.th = "pyc"; //PROBLEMA DEL ; DEL IF ESTABA
                                                //AQUI. ANTES: "pyc", la
                                                //solución "nopyc"
                 }
-                else
+                else if(atributos.th.equals("nopyc"))
                     atributosAux.th = "nopyc";
+                else
+                    System.out.println("HOLA" + atributos.th);
                 
-                //ARREGLADO EL PROBLEMA CON EL ; DEL IF. 
+                //ARREGLADO EL PROBLEMA CON EL ; DEL IF.
+                //resultado.trad += "xxxxxxxx" + atributosAux.th; //QUITAR
                 Atributos resultadoInstr = Instr(atributosAux);
+                //              resultado.trad += "uuuuuuuuu"; //QUITAR
+                //              resultado.trad += resultadoInstr.th;//QUITAR
+                
                 atributosAux.th = resultadoInstr.th;
                 
                 //System.out.println("HASDI" + resultadoAux1);
                 //if(resultadoAux1.th.equals("nopyc"))
-                if(atributosAux.th.equals("nopyc"))
+                /*if(atributosAux.th.equals("nopyc"))
                     {
                         // System.out.println("HOLA");
                         
                         //                        System.out.println(resultadoAux1);
                         //   resultado.trad += "\n";
                     }
-                else if(atributosAux.th.equals("pyc"))
-                    resultado.trad += ";" + "\n";
+                    else */if(atributosAux.th.equals("pyc"))
+                    resultado.trad += ";" + "\n"; //; raton
+                
                 //resultado.trad += "hoasdasfkjag\n";
                 resultado.trad += resultadoInstr.trad;
                 //resultado.trad+="jasfjd";
@@ -830,13 +852,17 @@ class TraductorDR {
                 else if (resultadoInstr.th.equals("pyc"))
                     atributosAux.th = "pyc";
                 else
-                    atributosAux.th = "pyc";
+                    atributosAux.th = "nopyc";
+                //ARREGLADO EL foto; antes del IF me ponía un ; que no correspondia
+                //atributosAux.th = "nopyc"; //QUITAR
                 
-                
-                Atributos resultadoSInstrp = SInstrp(atributos);
+                Atributos resultadoSInstrp = SInstrp(atributosAux);
                 // resultado.trad += "ADIOS" +debug;
-                
+                //                resultado.trad += "vvvvvvvv" + atributosAux.th + "   " + resultadoSInstrp.th + "OSTIA"; //QUITAR
                 resultado.trad += resultadoSInstrp.trad;
+                //                resultado.trad += "ccccccc"; //QUITAR
+                resultado.th = resultadoSInstrp.th;
+                
                 //resultado.trad += "HOLA"+ debug;
                 //resultado.th = resultadoAux2.th;
                 
@@ -850,7 +876,8 @@ class TraductorDR {
             {
                 if(flag)
                     reglasAplicadas.append(" 18");
-                //resultado.th = "pyc";
+                resultado.th = "nopyc";
+                resultado.trad = "";
                 
                 // SInstrp();
                 // resultado.trad = ";";
@@ -877,6 +904,8 @@ class TraductorDR {
                 Atributos resultadoBloque = Bloque(atributosAux);
                 
                 resultado.trad += resultadoBloque.trad;
+                resultado.th = "nopyc";
+                
             }
         else if(token.tipo == Token.ID)
             {
@@ -920,6 +949,9 @@ class TraductorDR {
                     errorSemanticoTipoRealAEntero();
                     
                 }
+                resultado.trad+=";\n";
+                resultado.th = "nopyc";
+                
                 // System.out.println("INSTR: " + resultado);
             }
         else if(token.tipo == Token.IF)
@@ -927,7 +959,7 @@ class TraductorDR {
                 if(flag)
                     reglasAplicadas.append(" 21");
                 emparejar(Token.IF);
-                if(atributos.th.equals("pyc")){
+                /*if(atributos.th.equals("pyc")){
                     //System.out.println("adio");
                     resultado.trad += "foto;\n"; // foto
                     //                    System.out.println("HOLA");
@@ -935,10 +967,10 @@ class TraductorDR {
                 else{
                     //                    System.out.println("quetal");
                     resultado.trad += "\n";
-                    }
+                    }*/
                 
                 
-                resultado.trad += "if";
+                resultado.trad += "\nif";
                 Atributos resultadoE = E(atributosAux);
                 //PARCHE PARENTESIS
                 //System.out.println(resultadoE.trad+ "k");
@@ -953,11 +985,19 @@ class TraductorDR {
                 resultado.trad += "\n";
                 //                System.out.println("IF!!!");
                 emparejar(Token.THEN);
+                //resultado.trad += "111111!"; //QUITAR
                 Atributos resultadoInstr = Instr(new Atributos());
                 resultado.trad += resultadoInstr.trad;
                 resultado.th = "nopyc";
+                //                resultado.trad += "222222"; //QUITAR
                 Atributos resultadoInstr_prima = Instr_prima(new Atributos());
                 resultado.trad += resultadoInstr_prima.trad;
+                //                resultado.trad += "aaaaa";//QUITAR
+                
+                
+                resultado.th = resultadoInstr_prima.th;
+                //                System.out.println(resultado.trad+ "TTEREDJSDEJE");
+                //                resultado.trad += "QQQQQQQQ" + resultadoInstr_prima.th;//QUITAR
                 //System.out.println(resultado);
             }
         else if(token.tipo == Token.WHILE)
@@ -1023,7 +1063,8 @@ class TraductorDR {
                     }
                 
                 emparejar(Token.PARD);
-                resultado.trad += ")";
+                resultado.trad += ");\n";
+                resultado.th = "nopyc";
                 
             }
             else errorSintaxis(Token.BEGIN,Token.IF,Token.WHILE,Token.WRITELN,Token.ID);
@@ -1046,6 +1087,10 @@ class TraductorDR {
                     reglasAplicadas.append(" 22");
                 emparejar(Token.ENDIF);
                 resultado.trad = "";
+                //                resultado.trad += "yyyyyy"; //QUITAR
+                
+                //resultado.th = atributos.th; CAMBIADO
+                resultado.th = "nopyc";
                 //resultado.th = "pyc";
                 //System.out.println("aad");
             }
@@ -1055,23 +1100,27 @@ class TraductorDR {
                 if(flag)
                     reglasAplicadas.append(" 23");
                 emparejar(Token.ELSE);
-                resultado.trad += ";\n";  //gato
+                resultado.trad += ";\n";  //; gato
                 
                 resultado.trad += "else";
                 resultado.trad += "\n";
                 // resultado.th = "pyc";
                 Atributos atributoAuxiliar = new Atributos();
                 // atributoAuxiliar.th = "pyc";
-                Atributos resultadoInstr = Instr(atributos);
+                //                resultado.trad += "ggggg"; //QUITAR
                 
+                Atributos resultadoInstr = Instr(atributos);
+                //                resultado.trad += "hhhh" + resultadoInstr.th; //QUITAR
+                 
                 resultado.trad += resultadoInstr.trad;
                 resultado.th = resultadoInstr.th;
+                //                resultado.trad += "ttttt" ; //QUITAR
                 
                 if(resultadoInstr.th.equals("pyc") ) {
-                    // System.out.println("HOLAS");
+                    //                     System.out.println("HOLAS");
                     //                    System.out.println(atributoAuxiliar);
-                    //resultado.trad += "delta;"; // delta
-                    resultado.th = "pyc";
+                    resultado.trad += ";"; //; delta
+                    resultado.th = "nopyc";
                     //System.out.println("HASDAD");
                     //                    System.out.println(resultado);
                 }
@@ -1137,8 +1186,7 @@ class TraductorDR {
                     resultado.trad += "!=";
                 else
                     resultado.trad += token.lexema;
-                //                 System.out.println("SOUT" + resultado.trad);
-                 emparejar(Token.RELOP);
+                emparejar(Token.RELOP);
                  Atributos resultadoExpr = Expr(atributos);
                  if(resultadoExpr.tipo.equals("int")){
                      resultado.th = "int";
@@ -1154,7 +1202,6 @@ class TraductorDR {
                      resultado.trad += "r " +resultadoExpr.trad;
                  }
                  
-                 //System.out.println("HOLAAAAAAA");
                  resultado.tipo = "booleano";
             }
         else if(token.tipo == Token.PYC || token.tipo == Token.ENDIF || token.tipo == Token.ELSE || token.tipo == Token.END || token.tipo == Token.THEN || token.tipo == Token.DO || token.tipo == Token.PARD)
