@@ -39,7 +39,6 @@ class Simbolo
     public String toString()
     {
         return "Nombre Variable: " + nombreVariable + "\nTipo: " + tipoVariable;
-        
     }
 }
 
@@ -86,13 +85,9 @@ class Ambito
             ambito = "main_";
         else
             ambito = nombre+"_";
-        //        System.out.println("AAAAAA" + nombre);
-        //       System.out.println("ENTRO CON : " + variable + "\n" + ambito);
-        //        System.out.println(tablaSimbolos);
+    
         for(Simbolo simbolo : tablaSimbolos) {
-            //            System.out.println("DAS"+  ambito+variable+ "\n " + simbolo);
             if(simbolo.nombreVariable.equals(ambito + variable) || simbolo.nombreVariable.equals(variable)) {
-                //  System.out.println(simbolo+ "\n hola");
                 return simbolo.tipoVariable;
             }
             
@@ -103,8 +98,6 @@ class Ambito
     public boolean anyadirTS(Simbolo nuevoSimbolo)
     {
         Simbolo auxiliar = new Simbolo();
-        /*if(buscaTS(nuevoSimbolo.nombreVariable))
-          errorSemanticoIdRepetido();*/
         
         if(nombre.equals("") && !nuevoSimbolo.tipoVariable.equals("funcion")) {
             auxiliar.nombreVariable = "main_" + nuevoSimbolo.nombreVariable;
@@ -117,7 +110,6 @@ class Ambito
             auxiliar.nombreVariable = nuevoSimbolo.nombreVariable;
             auxiliar.tipoVariable = nuevoSimbolo.tipoVariable;
         } else {
-            //            System.out.println("HOLA");
             auxiliar.nombreVariable = nombre + "_" + nuevoSimbolo.nombreVariable;
             if(nuevoSimbolo.tipoVariable.equals("VACIO"))
                 auxiliar.tipoVariable = "VACIO";
@@ -132,12 +124,11 @@ class Ambito
     {
         String resultado = "";
         boolean primeraVariable = true;
-        //System.out.println("ENTRO CON: " + tipo);
+
         for(Simbolo s : tablaSimbolos)
             {
                 if(s.tipoVariable.equals("VACIO"))
                     {
-                        // System.out.println("ENTRO ALGUNA VEZ?");
                         s.tipoVariable = tipo;
                         if(primeraVariable) {
                             resultado = s.nombreVariable;
@@ -147,9 +138,6 @@ class Ambito
                         }
                     }
             }
-        //PARCHE PARA EVITAR LA COMA DEL FINAL
-        /*if(resultado.charAt(resultado.length() -1) == ',')
-          resultado = resultado.substring(0,resultado.length()-1);*/
         return resultado;        
     }
 
@@ -207,10 +195,11 @@ class TraductorDR {
     StringBuilder reglasAplicadas;
     boolean flag;
     int debug = 1;
-    
+    Token auxToken;
+        
     //Variable que se utiliza para saber el nombre de los ámbitos a los que
     //pertecene la variable guardada en la TS.
-        // Tabla de Símbolos. Cada posición determinará como un ámbito anidado. La
+    // Tabla de Símbolos. Cada posición determinará como un ámbito anidado. La
     // posición inicial, 0, será el ámbito del main.
     ArrayDeque<Ambito> ambitos;
     //    Hashtable<String,String> ts = new Hashtable<String,String>();
@@ -229,7 +218,7 @@ class TraductorDR {
         flag = false;
         reglasAplicadas = new StringBuilder();
         ambitos = new ArrayDeque<>();
-        //  ambitos.push(new Ambito());
+        
     }
 
     public final void errorSintaxis(int... tokEsperados)
@@ -257,14 +246,12 @@ class TraductorDR {
 
     public final void errorSemanticoNoDeclarado()
     {
-        // System.out.println(ambitos);
         System.err.println("Error semantico (" + token.fila + "," + token.columna + "): \'" + token.lexema + "\' no ha sido declarado");
         System.exit(-1);
     }
 
     public final void errorSemanticoIdRepetido()
     {
-        // System.out.println(ambitos);
         System.err.println("Error semantico (" + token.fila + "," + token.columna + "): \'" + token.lexema + "\' ya existe en este ambito");
         System.exit(-1);
     }
@@ -277,7 +264,6 @@ class TraductorDR {
     
     public final void errorSemanticoTipoRealAEntero()
     {
-        //System.out.println(ambitos);
         System.err.println("Error semantico (" + token.fila + "," + token.columna + "): \'" + token.lexema + "\' debe ser de tipo real");
         System.exit(-1);
     }
@@ -341,37 +327,25 @@ class TraductorDR {
     
     private final boolean buscarSimboloTS(String id)
     {
-        //        System.out.println("entro y busco: " + id);
         int i = 0;
         
-        /*for(Ambito ambito : ambitos)
-            {
-        */      //System.out.println("HHH"+i + "    " +ambito);
         if(ambitos.peek().buscaTS(id))
                     return true;
-                i++;
+        i++;
                 
-                // }
         return false;
     }
 
     private final String getSimboloTS(String id)
     {
-        //System.out.println("ENTRO CON: " + id);
         for(Ambito ambito : ambitos)
             if(!ambito.buscaTSTipo(id).equals(""))
                 {
-                    /* if(id.equals("verde")){
-                        System.out.println("HOALAAS");
-                        System.out.println(ambito);
-                        }*/
-                    
-                    if(ambito.buscaTSTipo(id).equals("funcion"))
+                    if(ambito.buscaTSTipo(id).equals("funcion")) {
                         errorSemanticoNoEsVariable();
-                    
+                    }
                     return ambito.buscaTSTipo(id);
                 }
-        
         return "";
     }
 
@@ -379,9 +353,8 @@ class TraductorDR {
     {
         for(Ambito ambito : ambitos)
             {
-                //if(ambito.buscaTS(id))
-                    if(ambito.buscaTSTipo(id).equals("funcion"))
-                        return true;
+                if(ambito.buscaTSTipo(id).equals("funcion"))
+                    return true;
             }
         return false;
     }
@@ -389,7 +362,6 @@ class TraductorDR {
     private final void anyadirTS(String id, String tipo)
     {
         Simbolo auxiliar = new Simbolo();
-        //        System.out.println("Anyadir TS: ID: " + id + "\n TIpo: " + tipo);
         if(buscarSimboloTS(id)){//} || buscarFuncionTS(id)) {
             errorSemanticoIdRepetido();
         }
@@ -405,39 +377,30 @@ class TraductorDR {
     //CHECK
     private final void nuevoAmbito(String nombreAmbito)
     {
-        //       System.out.println("TENGO: " + ambitos);
        if(ambitos.isEmpty()){
            ambitos.push(new Ambito());
-           //           System.out.println("ENTRO ASDALJFGAG");
        }
        else
             ambitos.push(new Ambito(ambitoActual(), nombreAmbito));
-       //        System.out.println("SALGO CON: " + ambitos);
     }
 
     private final void borrarAmbito()
     {
-        //        System.out.println("ENTRO A BORRAR: " + ambitos.size());//        System.out.println("aaaaaaaa");
         ambitos.pop();
-        // System.out.println("SALGO CON: " + ambitos.size());
     }
 
     // CHECK
     private final String arregloHerenciaDerecha(String tipo)
     {
         String resultado ="";
-        //        System.out.println("HASDASDFW" + tipo);
         resultado = ambitos.peek().arregloHerenciaDerecha(tipo);
-        
         return resultado;
     }
 
     private final String buscaTS(String id)
     {
         String resultado = "";
-        if(buscarFuncionTS(id)) {
-            errorSemanticoNoEsVariable();
-        }
+
         resultado = getSimboloTS(id);
         
         if(resultado.equals(""))
@@ -471,7 +434,6 @@ class TraductorDR {
                 
                 trad += Vsp(new Atributos()).trad;
                 trad += Bloque(new Atributos("int main() ")).trad;
-                //System.out.println(trad);
             }
         else
             errorSintaxis(Token.PROGRAM);
@@ -546,7 +508,6 @@ class TraductorDR {
                 emparejar(Token.ID);
                 emparejar(Token.DOSP);
                 Atributos resultadoTipo = Tipo(atributosAux);
-                //resultado.trad += resultadoTipo.trad;
                 emparejar(Token.PYC);
                 Atributos resultadoVsp = Vsp(atributosAux);
                 atributosAux.th = "2"; //Parche para que en las funciones
@@ -554,7 +515,6 @@ class TraductorDR {
                 Atributos resultadoBloque = Bloque(atributosAux);
                 emparejar(Token.PYC);
                 resultado.trad += resultadoVsp.trad + "" + resultadoTipo.trad + " " + idAuxFuncion + "() " + resultadoBloque.trad;
-                //                resultado.trad += "rrrrrrrrrrr"; //QUITAR
                 //Termina el ambito de la función.
                 borrarAmbito();
             }
@@ -565,7 +525,6 @@ class TraductorDR {
                 emparejar(Token.VAR);
                 Atributos resultadoLV = LV(atributos);
                 resultado.trad += resultadoLV.trad;
-                //                resultado.trad += "jjjjjjjjjjjjj"; //QUITAR
             }
         else errorSintaxis(Token.FUNCTION,Token.VAR);
         
@@ -577,13 +536,11 @@ class TraductorDR {
         Atributos resultado = new Atributos();
         Atributos atributosAux = new Atributos();
         
-        //System.out.println("Entro en LV");
         if(token.tipo == Token.ID)
             {
                 if(flag)
                     reglasAplicadas.append(" 7");
                 Atributos resultadoV = V(atributosAux);
-                //CUIDADO
                 resultado.trad += resultadoV.trad;
                 Atributos resultadoLV_prima = LV_prima(atributosAux);
                 resultado.trad += resultadoLV_prima.trad;
@@ -597,7 +554,6 @@ class TraductorDR {
         Atributos resultado = new Atributos();
         Atributos atributosAux = new Atributos();
         
-        //System.out.println("Entro en LV_prima");
         if(token.tipo == Token.ID)
             {
                 if(flag)
@@ -619,7 +575,6 @@ class TraductorDR {
 
     public final Atributos  V(Atributos atributos) // 10 V -> id Lid dosp Tipo pyc
     {
-        //System.out.println("Entro en V");
         Atributos resultado = new Atributos();
         Atributos atributosAux = new Atributos();
         
@@ -631,19 +586,14 @@ class TraductorDR {
                 anyadirTS(token.lexema, "VACIO");
                 
                 emparejar(Token.ID);
-                // WARNING!!
+
                 Atributos resultadoLid = Lid(atributosAux);
-                
-                
-                //String lidAux = Lid(atributosAux).trad;
                 emparejar(Token.DOSP);
+
                 Atributos resultadoTipo = Tipo(atributosAux);
-                //String tipoAux = Tipo();
-                //System.out.println(tipoAux);
                 emparejar(Token.PYC);
                 String arreglo = arregloHerenciaDerecha(resultadoTipo.trad);
                 resultado.trad += resultadoTipo.trad + " " + arreglo + ";" + "\n"; //; tirao
-                //                System.out.println("RESULTADO" + resultado.trad);
             }
         else errorSintaxis(Token.ID);
         return resultado;
@@ -654,8 +604,7 @@ class TraductorDR {
     {
         Atributos resultado = new Atributos();
         Atributos atributosAux = new Atributos();
-        
-        //System.out.println("Entro en Lid");
+
         if(token.tipo == Token.COMA)
             {
                 if(flag)
@@ -683,14 +632,12 @@ class TraductorDR {
         Atributos resultado = new Atributos();
         Atributos atributosAux = new Atributos();
         
-        //System.out.println("Entro en Tipo");
         if(token.tipo == Token.INTEGER)
             {
                 if(flag)
                     reglasAplicadas.append(" 13");
                 emparejar(Token.INTEGER);
                 resultado.trad = "int";
-                //resultado.tipo = "int";
             }
         else if(token.tipo == Token.REAL)
             {
@@ -698,18 +645,16 @@ class TraductorDR {
                     reglasAplicadas.append(" 14");
                 emparejar(Token.REAL);
                 resultado.trad = "double";
-            //    resultado.tipo = "double";
             }
         else errorSintaxis(Token.INTEGER,Token.REAL);
         return resultado;
     }
-    //CHECK
+
     public final Atributos Bloque(Atributos atributos) // 15 Bloque -> begin SInstr end
     {
         Atributos resultado = new Atributos();
         Atributos atributosAux = new Atributos();
-        
-        //System.out.println("Entro en Bloque");
+
         if (token.tipo == Token.BEGIN) {
             if(flag)
                 reglasAplicadas.append(" 15");
@@ -722,28 +667,18 @@ class TraductorDR {
                     
                 }
             atributos.th = "2";
-            //            System.out.println(ambitos);
-            //            resultado.trad += "zzzzzzzzz" + atributos.th; //QUITAR
             Atributos unaInstruccion = SInstr(atributos);
-            //System.out.println("BLOQUE : " + unaInstruccion);
+
             if(unaInstruccion.th == "1"){
-                //                resultado.trad += "kkkkkkkkk"; //QUITAR
                 resultado.trad += unaInstruccion.trad;
-                //                resultado.trad += "lllllllll";//QUITAR
             }
             else{
-                //                resultado.trad +="wwwwwwww"; //QUITAR
                 //ESTO SI QUE ES UN PARCHE DE LOS BUENOS
                 if(unaInstruccion.trad.lastIndexOf('\n') == unaInstruccion.trad.length() -1)
                     resultado.trad += "{\n"+ unaInstruccion.trad + "\n}\n";
                 else
                     resultado.trad += "{\n"+ unaInstruccion.trad + ";\n}\n"; //;
-                                                                                  //cabra
-                //                resultado.trad +="iiiiiiiii"; //QUITAR
             }
-            //            resultado.trad += "pppppppppp" + unaInstruccion.th;//QUITAR
-            
-            //resultado.th = "nopyc";
             emparejar(Token.END);
         }
         else errorSintaxis(Token.BEGIN);
@@ -755,15 +690,12 @@ class TraductorDR {
     {
         Atributos resultado = new Atributos();
         Atributos atributosAux = new Atributos();
-        
-        //System.out.println("Entro en SInstr");
-        //System.out.println(Token.tipo);
+
         if (token.tipo == Token.BEGIN || token.tipo == Token.ID || token.tipo == Token.IF || token.tipo == Token.WHILE || token.tipo == Token.WRITELN) {
             if(flag)
                 reglasAplicadas.append(" 16");
             Atributos resultadoInstr = Instr(atributosAux);
             resultado.trad += resultadoInstr.trad;
-            //            resultado.trad += "fffffff" + atributosAux.th; //QUITAR
             
             atributosAux.th = resultadoInstr.th;
             
@@ -781,15 +713,9 @@ class TraductorDR {
             //PARCHEACO FUNCIONES PARA QUE SIEMPRE TENGAN { }
             if(resultado.th != atributos.th)
                 resultado.th = atributos.th;
-            //resultado.trad+= " ejufj\n";
-            //OJO!
-            //            resultado.trad+="bbbbbbbbbbbbb"; //QUITAR
-            resultado.trad += comprobarUnaInstruccion;
-            //            resultado.trad += "oooooooooooooooo" + resultado.th;//QUITAR
             
-            //resultado.trad+= "hhggggg\n";
-            //            System.out.println("HOAL");
-            //            System.out.println(resultado.trad);
+            resultado.trad += comprobarUnaInstruccion;
+            
             if(resultado.trad.equals(";"))
                 resultado.trad = "";
         }
@@ -803,8 +729,7 @@ class TraductorDR {
     {
         Atributos resultado = new Atributos();
         Atributos atributosAux = new Atributos();
-        //  System.out.println("Entro en SInstrp");
-        //        resultado.trad+= "qqqqqqqq" + atributos.th; //QUITAR
+
         if(token.tipo == Token.PYC)
             {
                 if(flag)
@@ -821,56 +746,25 @@ class TraductorDR {
                 else
                     System.out.println("HOLA" + atributos.th);
                 
-                //ARREGLADO EL PROBLEMA CON EL ; DEL IF.
-                //resultado.trad += "xxxxxxxx" + atributosAux.th; //QUITAR
                 Atributos resultadoInstr = Instr(atributosAux);
-                //              resultado.trad += "uuuuuuuuu"; //QUITAR
-                //              resultado.trad += resultadoInstr.th;//QUITAR
-                
                 atributosAux.th = resultadoInstr.th;
                 
-                //System.out.println("HASDI" + resultadoAux1);
-                //if(resultadoAux1.th.equals("nopyc"))
-                /*if(atributosAux.th.equals("nopyc"))
-                    {
-                        // System.out.println("HOLA");
-                        
-                        //                        System.out.println(resultadoAux1);
-                        //   resultado.trad += "\n";
-                    }
-                    else if(atributosAux.th.equals("pyc"))
-                    resultado.trad += "raton;" + "\n"; //; raton*/
-                
-                //resultado.trad += "hoasdasfkjag\n";
                 resultado.trad += resultadoInstr.trad;
-                //resultado.trad+="jasfjd";
+                
                 if(resultadoInstr.th.equals("nopyc"))
                     {
                         atributosAux.th = "nopyc";
-                        //atributo.th = "";
                     }
                 else if (resultadoInstr.th.equals("pyc"))
                     atributosAux.th = "pyc";
                 else
                     atributosAux.th = "nopyc";
-                //ARREGLADO EL foto; antes del IF me ponía un ; que no correspondia
-                //atributosAux.th = "nopyc"; //QUITAR
-                
                 Atributos resultadoSInstrp = SInstrp(atributosAux);
-                // resultado.trad += "ADIOS" +debug;
-                //                resultado.trad += "vvvvvvvv" + atributosAux.th + "   " + resultadoSInstrp.th + "OSTIA"; //QUITAR
+
                 resultado.trad += resultadoSInstrp.trad;
-                //                resultado.trad += "ccccccc"; //QUITAR
                 resultado.th = resultadoSInstrp.th;
                 
-                //resultado.trad += "HOLA"+ debug;
-                //resultado.th = resultadoAux2.th;
-                
                 ++debug;
-                
-                //resultado.th += resultadoAux2.th;
-                
-                //System.out.println(resultadoAux1);
             }
         else if(token.tipo == Token.END)
             {
@@ -878,10 +772,6 @@ class TraductorDR {
                     reglasAplicadas.append(" 18");
                 resultado.th = "nopyc";
                 resultado.trad = "";
-                
-                // SInstrp();
-                // resultado.trad = ";";
-                
             }
         else errorSintaxis(Token.PYC,Token.END);
         return resultado;
@@ -924,18 +814,14 @@ class TraductorDR {
                 emparejar(Token.ID);
                 Token tokenAuxAsig = token;
                 emparejar(Token.ASIG);
-                                
-                Atributos resultadoE = E(new Atributos());
+
+                Atributos resultadoE = E(atributosAux);
                 if(atributosAux.tipo == "double" && resultadoE.tipo == "int")
                     {
                         resultado.trad += idAux + " " + "=" + "r itor(" + resultadoE.trad +")" ;
-                        if(resultado.trad.contains("))"))
-                            {
-                                resultado.trad = resultado.trad.substring(0,resultado.trad.indexOf("))"))+")";
-                            }
                     }
                 else if(atributosAux.tipo == "double" && resultadoE.tipo == "double") {
-                    resultado.trad += idAux + " " + "=" + "r "+ resultadoE.trad;
+                    resultado.trad += idAux + " " + "=" + "r "  + resultadoE.trad;
                 }
                 else if(atributosAux.tipo == "int" && resultadoE.tipo == "int") {
                     resultado.trad += idAux + " " + "=" + "i " + resultadoE.trad;
@@ -952,28 +838,15 @@ class TraductorDR {
                 resultado.trad+=";\n";
                 resultado.th = "nopyc";
                 
-                // System.out.println("INSTR: " + resultado);
             }
         else if(token.tipo == Token.IF)
             { //TODO CUIDADO CON LOS { } NO SÉ SI HAY QUE PONERLOS O NO.
                 if(flag)
                     reglasAplicadas.append(" 21");
                 emparejar(Token.IF);
-                /*if(atributos.th.equals("pyc")){
-                    //System.out.println("adio");
-                    resultado.trad += "foto;\n"; // foto
-                    //                    System.out.println("HOLA");
-                }
-                else{
-                    //                    System.out.println("quetal");
-                    resultado.trad += "\n";
-                    }*/
-                
-                
-                resultado.trad += "\nif";
+                resultado.trad += "\n" + "if";
                 Atributos resultadoE = E(atributosAux);
                 //PARCHE PARENTESIS
-                //System.out.println(resultadoE.trad+ "k");
                 if(resultadoE.trad.charAt(0) != '(') {
                     resultado.trad += "(";
                     resultado.trad += resultadoE.trad;
@@ -983,22 +856,15 @@ class TraductorDR {
                 else
                     resultado.trad += resultadoE.trad;
                 resultado.trad += "\n";
-                //                System.out.println("IF!!!");
                 emparejar(Token.THEN);
-                //resultado.trad += "111111!"; //QUITAR
+
                 Atributos resultadoInstr = Instr(new Atributos());
                 resultado.trad += resultadoInstr.trad;
                 resultado.th = "nopyc";
-                //                resultado.trad += "222222"; //QUITAR
+
                 Atributos resultadoInstr_prima = Instr_prima(new Atributos());
                 resultado.trad += resultadoInstr_prima.trad;
-                //                resultado.trad += "aaaaa";//QUITAR
-                
-                
                 resultado.th = resultadoInstr_prima.th;
-                //                System.out.println(resultado.trad+ "TTEREDJSDEJE");
-                //                resultado.trad += "QQQQQQQQ" + resultadoInstr_prima.th;//QUITAR
-                //System.out.println(resultado);
             }
         else if(token.tipo == Token.WHILE)
             {
@@ -1008,21 +874,17 @@ class TraductorDR {
                 Token tokenAux = token;
                 emparejar(Token.WHILE);
                 resultado.trad += "while ";
-                //                System.out.println("WHILE");
+
                 Atributos resultadoE = E(atributos);
                 if(!resultadoE.tipo.equals("booleano"))
                     {
                         token = tokenAux;
                         errorSemanticoTipoRelacional();
                     }
-                
-                
-                
+
                 if(resultadoE.trad.charAt(0) != '(') {
                     resultado.trad += "( ";
                     resultado.trad += resultadoE.trad;
-                    //resultado.th = "nopyc";
-                    
                     resultado.trad += ")\n";
                 }
                 else
@@ -1031,12 +893,6 @@ class TraductorDR {
                 
                 Atributos resultadoInstr = Instr(new Atributos());
                 resultado.trad += resultadoInstr.trad;
-                //cuidado esto!
-                // ESTE ES EL DOBLE ;
-                //resultado.th = resultadoInstr.th;
-                //                if(resultadoInstr.th.equals("pyc"))
-                
-                //System.out.println("WHILE" + resultado.trad);
             }
         else if(token.tipo == Token.WRITELN)
             {
@@ -1050,26 +906,22 @@ class TraductorDR {
                 emparejar(Token.PARI);
                 resultado.trad += "(";
                 
-                
                 Atributos resultadoE = E(atributosAux);
-                if(resultadoE.tipo == "int")
+                if(resultadoE.tipo.equals("int"))
                     resultado.trad += "\"%d" +"\\" + "n"+ "\"" + "," +resultadoE.trad;
-                else if(resultadoE.tipo == "double")
+                else if(resultadoE.tipo.equals("double"))
                     resultado.trad += "\"%g" + "\\" + "n" + "\"" + "," + resultadoE.trad;
                 else
                     {
                         token = tokenAux;
                         errorSemanticoImprimirBool();
                     }
-                
                 emparejar(Token.PARD);
                 resultado.trad += ");\n";
                 resultado.th = "nopyc";
-                
             }
             else errorSintaxis(Token.BEGIN,Token.IF,Token.WHILE,Token.WRITELN,Token.ID);
         return resultado;
-        
     }
 
     public final Atributos  Instr_prima(Atributos atributos) // 22 Instr_prima -> endif
@@ -1077,22 +929,14 @@ class TraductorDR {
     {
         Atributos resultado = new Atributos();
         Atributos atributosAux = new Atributos();
-        
-        //System.out.println("Entro en Instr_prima");
-        //WARNING!
-        
+
         if(token.tipo == Token.ENDIF)
             {
                 if(flag)
                     reglasAplicadas.append(" 22");
                 emparejar(Token.ENDIF);
                 resultado.trad = "";
-                //                resultado.trad += "yyyyyy"; //QUITAR
-                
-                //resultado.th = atributos.th; CAMBIADO
                 resultado.th = "nopyc";
-                //resultado.th = "pyc";
-                //System.out.println("aad");
             }
         else if(token.tipo == Token.ELSE)
             {
@@ -1100,34 +944,20 @@ class TraductorDR {
                 if(flag)
                     reglasAplicadas.append(" 23");
                 emparejar(Token.ELSE);
-                //resultado.trad += "gato;\n";  //; gato
-                
+                            
                 resultado.trad += "else";
                 resultado.trad += "\n";
-                // resultado.th = "pyc";
                 Atributos atributoAuxiliar = new Atributos();
-                // atributoAuxiliar.th = "pyc";
-                //                resultado.trad += "ggggg"; //QUITAR
-                
                 Atributos resultadoInstr = Instr(atributos);
-                //                resultado.trad += "hhhh" + resultadoInstr.th; //QUITAR
-                 
+                                 
                 resultado.trad += resultadoInstr.trad;
                 resultado.th = resultadoInstr.th;
-                //                resultado.trad += "ttttt" ; //QUITAR
-                
+                                
                 if(resultadoInstr.th.equals("pyc") ) {
-                    //                     System.out.println("HOLAS");
-                    //                    System.out.println(atributoAuxiliar);
-                    resultado.trad += "delta;"; //; delta
+                    resultado.trad += ";"; //; delta
                     resultado.th = "nopyc";
-                    //System.out.println("HASDAD");
-                    //                    System.out.println(resultado);
                 }
-                
-                
-                
-                // System.out.println(resultado);
+
                 emparejar(Token.ENDIF);
             }
         else errorSintaxis(Token.ELSE, Token.ENDIF);
@@ -1139,77 +969,108 @@ class TraductorDR {
     {
         Atributos resultado = new Atributos();
         Atributos atributosAux = new Atributos();
-        
-        //System.out.println("Entro en E");
         if(token.tipo == Token.ID || token.tipo == Token.NENTERO || token.tipo == Token.NREAL || token.tipo == Token.PARI)
             {
                 if(flag)
                     reglasAplicadas.append(" 26");
-                // resultado.trad += atributos.th;
-                Atributos resultadoExpr = Expr(atributos);
-                if(resultadoExpr.tipo.equals("double"))
-                    atributos.th = "double";
+                Atributos resultadoExpr = Expr(atributosAux);
+                Atributos resultadoE_prima = E_prima(resultadoExpr);
+                if(resultadoE_prima.tipo.equals(""))
+                    return resultadoExpr;
                 
-                Atributos resultadoE_prima = E_prima(atributos);
-                
-                //System.out.println("E\n" + resultadoAux1.tipo);
-                if(resultadoE_prima.th.equals("double")){
-                    resultado.trad += "itor(" + resultadoExpr.trad + ")";
+                if(resultadoE_prima.tipo.equals("booleano")){
+                    resultado.tipo = "booleano";
+                    if(resultadoExpr.tipo.equals("int") && resultadoE_prima.th.equals("double"))
+                        resultado.trad += "itor(" + resultadoExpr.trad + ")";
+                    else
+                        resultado.trad += resultadoExpr.trad;
+                    resultado.trad += resultadoE_prima.trad;
                 }
-                else 
+                else if(resultadoExpr.tipo.equals("int") && resultadoE_prima.tipo.equals("double")) {
+                        resultado.trad += "itor(" + resultadoExpr.trad + ")";
+                        resultado.trad += resultadoE_prima.trad;
+                        resultado.tipo = "double";
+                }
+                else if(resultadoExpr.tipo.equals("double") && resultadoE_prima.tipo.equals("double")) {
+                        resultado.trad += resultadoExpr.trad;
+                        resultado.trad += resultadoE_prima.trad;
+                        resultado.tipo = "double";
+                }
+                else if(resultadoExpr.tipo.equals("int") && resultadoE_prima.tipo.equals("int")) {
+                    resultado.trad += resultadoExpr.trad;
+                    resultado.trad += resultadoE_prima.trad;
+                    resultado.tipo = "int";
+                } else if(resultadoExpr.tipo.equals("double") && resultadoE_prima.tipo.equals("int")) {
                     resultado.trad +=  resultadoExpr.trad;
-                if(resultadoE_prima.tipo.equals("booleano"))
-                    resultado.tipo = resultadoE_prima.tipo;
-                else
-                    resultado.tipo = resultadoExpr.tipo;
-                
-                resultado.trad += resultadoE_prima.trad;
+                    resultado.trad += resultadoE_prima;
+                    
+                    resultado.tipo = "double";
+                }
+                else //case booleano
+                    {
+                        resultado.tipo = "notipo";
+                        resultado.trad += resultadoExpr.trad;
+                        resultado.trad += resultadoE_prima.trad;
+                    }
             }
         else errorSintaxis(Token.ID, Token.NENTERO, Token.NREAL, Token.PARI);
         return resultado;
-        
     }
+    
     public final Atributos E_prima(Atributos atributos) // 27 E_prima -> relop Expr
                                                         // 28 E_prima -> € 
     {
         Atributos resultado = new Atributos();
         Atributos atributosAux = new Atributos();
-        
-        //System.out.println("Entro en E_prima");
+        //DEBUG        System.out.println("Entro en E_prima");
         if(token.tipo == Token.RELOP)
             {
                 if(flag)
                     reglasAplicadas.append(" 27");
+                String signo = "";
+                //Traducciones de diferencia de lenguajes
                 if(token.lexema.equals("="))
-                    resultado.trad += "==";
+                    signo = "==";
                 else if(token.lexema.equals("<>"))
-                    resultado.trad += "!=";
+                    signo = "!=";
                 else
-                    resultado.trad += token.lexema;
+                    signo = token.lexema;
+                //System.out.println("SIGNO: " + signo);
                 emparejar(Token.RELOP);
-                 Atributos resultadoExpr = Expr(atributos);
-                 if(resultadoExpr.tipo.equals("int")){
-                     resultado.th = "int";
-                     
-                     if(atributos.th.equals("double"))
-                         resultado.trad += "r itor(" + resultadoExpr.trad+ ")";
-                     else
-                         resultado.trad += "i " +resultadoExpr.trad;
-                 }
-                 
-                 else{
-                     resultado.th = "double";
-                     resultado.trad += "r " +resultadoExpr.trad;
-                 }
-                 
-                 resultado.tipo = "booleano";
+                Atributos resultadoExpr = Expr(atributos);
+                resultado.trad += signo;
+                //System.out.println(resultadoExpr);
+                if(atributos.tipo.equals("double") && resultadoExpr.tipo.equals("int"))
+                    {
+                        resultado.th = "double";
+                        resultado.trad += "r itor(" + resultadoExpr.trad + ")";
+                    }
+                else if(atributos.tipo.equals("double") && resultadoExpr.tipo.equals("double"))
+                    {
+                        resultado.th = "double";
+                        resultado.trad += "r "+ resultadoExpr.trad;
+                    }
+                else if(atributos.tipo.equals("int") && resultadoExpr.tipo.equals("double"))
+                    {
+                        resultado.th = "double";
+                        resultado.tipo = "double";
+                        //PARCHEEEEEEEE PONER UN "r " +
+                        resultado.trad += "r " +resultadoExpr.trad;
+                    }
+                else
+                    {
+                        resultado.th = "int";
+                        resultado.trad += "i " + resultadoExpr.trad;
+                    }
+                resultado.tipo = "booleano";
+                //System.out.println(resultado.trad);
             }
         else if(token.tipo == Token.PYC || token.tipo == Token.ENDIF || token.tipo == Token.ELSE || token.tipo == Token.END || token.tipo == Token.THEN || token.tipo == Token.DO || token.tipo == Token.PARD)
             {
                 if(flag)
                     reglasAplicadas.append(" 28");
-                resultado.trad = "";
-                
+                resultado.trad += "";//atributos.trad;
+                //resultado.tipo = atributos.tipo;
             }
         else errorSintaxis(Token.RELOP, Token.PYC, Token.ENDIF, Token.ELSE, Token.END, Token.THEN, Token.DO, Token.PARD);
         return resultado;
@@ -1220,25 +1081,39 @@ class TraductorDR {
     {
         Atributos resultado = new Atributos();
         Atributos atributosAux = new Atributos();
-        
+
         if(token.tipo == Token.ID || token.tipo == Token.NENTERO || token.tipo == Token.NREAL || token.tipo == Token.PARI)
             {
                 if(flag)
                     reglasAplicadas.append(" 29");
- 
-                Atributos resultadoTerm = Term(atributosAux);
-                if(resultadoTerm.tipo.equals("double"))
-                    atributos.th = "double";
                 
-                Atributos resultadoExpr_prima = Expr_prima(atributos);
-                
-                if(resultadoTerm.trad.indexOf("(*i ") != -1){
-                    resultadoTerm.trad = resultadoTerm.trad.replace("(*i ", "(");
+                Atributos resultadoTerm = Term(new Atributos());
+
+                if(resultadoTerm.tipo.equals("int") && atributosAux.tipo.equals("double")) {
+                    atributosAux.trad +=  resultadoTerm.trad;
+                    atributosAux.trad += atributosAux.trad;
+                    atributosAux.tipo = "double";
                 }
-                resultado.trad += resultadoTerm.trad + " ";
-                resultado.tipo = resultadoTerm.tipo;
+                else if(resultadoTerm.tipo.equals("double") && atributosAux.tipo.equals("double")) {
+                        atributosAux.trad +=  resultadoTerm.trad;
+                        atributosAux.trad += atributosAux.trad;
+                        atributosAux.tipo = "double";
+                }
+                else if(resultadoTerm.tipo.equals("int") && atributosAux.tipo.equals("int")) {
+                    atributosAux.trad +=  resultadoTerm.trad;
+                    atributosAux.trad += atributosAux.trad;
+                    atributosAux.tipo = "int";
+                } else if(resultadoTerm.tipo.equals("double") && atributosAux.tipo.equals("int")) {
+                    atributosAux.trad +=  resultadoTerm.trad;
+                    atributosAux.trad += atributosAux.trad;
+                    atributosAux.tipo = "double";
+                }
+                else {
+                    atributosAux = resultadoTerm;
+                }
+                Atributos resultadoExpr_prima = Expr_prima(atributosAux);
+                resultado = resultadoExpr_prima;
                 
-                resultado.trad += resultadoExpr_prima.trad;
             }
         else errorSintaxis(Token.ID, Token.NENTERO, Token.NREAL, Token.PARI);
         return resultado;
@@ -1250,183 +1125,117 @@ class TraductorDR {
     {
         Atributos resultado = new Atributos();
         Atributos atributosAux = new Atributos();
-        
+
         if(token.tipo == Token.ADDOP)
             {
                 if(flag)
                     reglasAplicadas.append(" 30");
                 //Guardamos para posible error.
                 Token tokenAux = token;
-
+                                
                 emparejar(Token.ADDOP);
-                Atributos resultadoTerm = Term(atributosAux);
-                Atributos resultadoExpr_prima = Expr_prima(atributos);
-                //System.out.println("HOLA");
-                if(resultadoTerm.tipo.equals("double") && resultadoExpr_prima.tipo.equals("double")) {
-                    resultado.trad += tokenAux.lexema;
-                    resultado.tipo = "double";
-                    resultado.trad += resultadoTerm.trad;
-                    resultado.trad += resultadoExpr_prima.trad;
-                }
-                else if(atributos.th.equals("double")) {
-                    resultado.trad +=tokenAux.lexema;
-                    resultado.tipo = "double";
-                    resultado.trad += "r itor(" + resultadoTerm.trad + ")";
-                    resultado.trad += resultadoExpr_prima.trad;
-                    
-                      }
-                else if(resultadoTerm.tipo.equals("double") && resultadoExpr_prima.tipo.equals("int")) {
-                    resultado.trad += tokenAux.lexema;
-                    resultado.tipo = "double";
-                    resultado.trad += resultadoTerm.trad;
-                    resultado.trad += "r itor(" + resultadoExpr_prima.trad + ")";
+                Atributos auxiliar = atributos;
+                atributos.th = tokenAux.lexema;
+                Atributos resultadoTerm = Term(atributos);
+                atributos.th = "";
 
+                if(resultadoTerm.tipo.equals("int") && atributos.tipo.equals("double")) {
+                    atributosAux.trad += "itor( " + resultadoTerm.trad+ ")";
+                    atributosAux.tipo = "double";
                 }
-                else if(resultadoTerm.tipo.equals("int") && resultadoExpr_prima.tipo.equals("int")) {
-                    resultado.trad += tokenAux.lexema;
-                    resultado.tipo = "int";
-                    resultado.trad += "i " +resultadoTerm.trad + " ";
-                    
-                    resultado.trad += resultadoExpr_prima.trad;
+                else if(resultadoTerm.tipo.equals("double") && atributos.tipo.equals("double")) {
+                    atributosAux.trad += resultadoTerm.trad;
+                        atributosAux.tipo = "double";
                 }
-                else if(resultadoTerm.tipo.equals("int") && resultadoExpr_prima.tipo.equals("double")) {
-                    resultado.tipo = "int";
-                    resultado.trad += tokenAux.lexema;
-                    resultado.trad += "i " + resultadoTerm.trad;
-                    //PARCHEACO XD realizar itor( con varios int)
-                    resultado.trad += ")";
-                                        
-                    resultado.trad += resultadoExpr_prima.trad;
+                else if(resultadoTerm.tipo.equals("int") && atributos.tipo.equals("int")) {
+                    atributosAux.trad += resultadoTerm.trad;
+                    atributosAux.tipo = "int";
+                } else if(resultadoTerm.tipo.equals("double") && atributos.tipo.equals("int")) {
+                    atributosAux.trad += resultadoTerm.trad;
+                    atributosAux.tipo = "double";
                 }
-                else
+                else{
                     if(resultadoTerm.tipo.equals("double"))
-                        {
-                            resultado.trad += tokenAux.lexema;
-                            resultado.tipo = "double";
-                            resultado.trad += "r "+resultadoTerm.trad;
-                            resultado.trad += resultadoExpr_prima.trad;
-                            
-                        }
-                    else {
-                        resultado.trad += tokenAux.lexema;
-                        resultado.tipo = "int";
-                        resultado.trad += "i " +resultadoTerm.trad;
-                        resultado.trad += resultadoExpr_prima.trad;
-                        
-                    }
-                //System.out.println("ALGO FALLA");
+                        atributosAux.trad += resultadoTerm.trad;
+                    else if(resultadoTerm.tipo.equals("int"))
+                        atributosAux.trad += resultadoTerm.trad;
+                    
+                    atributosAux.th = resultadoTerm.th;
+                    atributosAux.tipo = resultadoTerm.tipo;
+                }
+                Atributos resultadoExpr_prima = Expr_prima(atributosAux);
+                resultado = resultadoExpr_prima;
+                
             }
         else if(token.tipo == Token.RELOP || token.tipo == Token.PYC || token.tipo == Token.ENDIF || token.tipo == Token.ELSE || token.tipo == Token.END || token.tipo == Token.THEN || token.tipo == Token.DO || token.tipo == Token.PARD)
             {
                 if(flag)
                     reglasAplicadas.append(" 31");
-                resultado.trad = "";
+                resultado.trad = atributos.trad;
+                resultado.tipo = atributos.tipo;
+                resultado.th = atributos.th;
                 
             }
         else errorSintaxis(Token.ADDOP, Token.RELOP, Token.PYC, Token.ENDIF, Token.ELSE, Token.END, Token.THEN, Token.DO, Token.PARD);
-        //System.out.println(resultado);
         return resultado;
-        
     }
 
-    public final Atributos  Term(Atributos atributos) // 32 Term -> Factor Term_prima
+    public final Atributos Term(Atributos atributos) // 32 Term -> Factor Term_prima
     {
         Atributos resultado = new Atributos();
         Atributos atributosAux = new Atributos();
+        boolean division = true;
         
-        // System.out.println("Entro en Term");
         if(token.tipo == Token.ID || token.tipo == Token.NENTERO || token.tipo == Token.NREAL || token.tipo == Token.PARI)
             {
                 if(flag)
                     reglasAplicadas.append(" 32");
-                Atributos resultadoFactor = Factor(atributosAux);
-                Token auxToken = token;
                 
+                Atributos resultadoFactor = Factor(atributos);
+                auxToken = token;
+                if(token.lexema.equals("/"))
+                    {
+                        if(atributos.tipo.equals("int") && resultadoFactor.tipo.equals("int"))
+                            {
+                                atributosAux.trad = "itor(" + atributos.trad + ")" + atributos.th + "r itor(" + resultadoFactor.trad + ")";
+                                atributosAux.th = "division";
+                                atributosAux.tipo = "double";
+                                division = false;
+                            }
+                    }
+                if(atributos.tipo.equals("int") && resultadoFactor.tipo.equals("double")) {
+                    atributosAux.trad = " itor(" + atributos.trad + ")"+ atributos.th +"r "+ resultadoFactor.trad;
+                    atributosAux.tipo = "double";
+                }
+                else if(atributos.tipo.equals("double") && resultadoFactor.tipo.equals("double")) {
+                    atributosAux.trad = "r " + atributos.trad +atributos.th + resultadoFactor.trad;
+                    atributosAux.tipo = "double";
+                }
+                else if(division && atributos.tipo.equals("int") && resultadoFactor.tipo.equals("int")) {
+                    atributosAux.trad =  atributos.trad + atributos.th +"i "+ resultadoFactor.trad;
+                    atributosAux.tipo = "int";
+                } else if(atributos.tipo.equals("double") && resultadoFactor.tipo.equals("int")) {
+                    atributosAux.trad = atributos.trad + atributos.th +"r itor( " + resultadoFactor.trad + ")";
+                    atributosAux.tipo = "double";
+                } else {
+                    if(division) {
+                        atributosAux.trad = resultadoFactor.trad;
+                        atributosAux.th = resultadoFactor.th;
+                        atributosAux.tipo = resultadoFactor.tipo;
+                    }
+                }
                 Atributos resultadoTerm_prima = Term_prima(atributosAux);
-                //System.out.println("TERM\n" + resultadoFactor);
-                if(resultadoTerm_prima.th.equals("/")) {
-                    resultado.tipo = "double";
-                        
-                    if(resultadoFactor.tipo.equals("int") )
-                        resultado.trad += "itor(" + resultadoFactor.trad + ")"+resultadoTerm_prima.trad;
-                    else if(resultadoFactor.tipo.equals("double"))
-                        resultado.trad += resultadoFactor.trad + resultadoTerm_prima.trad;
-                    else
-                        resultado.trad += "YA SE ME OCURRIRÁ ALGO";
-                        
-                }
-                else if(resultadoTerm_prima.th.equals("div")){
-                    resultado.tipo = "int";
-                    if(resultadoFactor.tipo.equals("int") && resultadoTerm_prima.tipo.equals("int"))
-                        {
-                            resultado.trad += resultadoFactor.trad + resultadoTerm_prima.trad;
+                if(resultadoTerm_prima.th.equals("div"))
+                    {
+                        if(!resultadoFactor.tipo.equals("int") || !resultadoTerm_prima.tipo.equals("int")) {
+                            token = auxToken;
+                            errorSemanticoDivEntero();
                         }
-                    else{
-                        //System.out.println(auxToken);
-                        token = auxToken;
-                        errorSemanticoDivEntero();
-                    }  
-                }
-                else if(resultadoTerm_prima.th.equals("*")){
-                    //System.out.println("HOALDDADASD");
-                    if(resultadoFactor.tipo.equals("double") && resultadoTerm_prima.tipo.equals("double")){
-                        resultado.trad += resultadoFactor.trad;
-                        resultado.trad += resultadoTerm_prima.trad;
-                        resultado.tipo = "double";
                     }
-                    else if(resultadoFactor.tipo.equals("double") && resultadoTerm_prima.tipo.equals("int")) {
-                        resultado.trad += resultadoFactor.trad + " ";
-                        resultado.trad += "*r itor(" + resultadoTerm_prima.trad + ")";
-                        resultado.tipo = "double";
-                    }
-                    else if(resultadoFactor.tipo.equals("int") && resultadoTerm_prima.tipo.equals("double")) {
-                        resultado.trad += "itor(" + resultadoFactor.trad + ")";
-                        resultado.trad += resultadoTerm_prima.trad;
-                        resultado.tipo = "double";
-                        
-                    }
-                    
-                    else{
-                        resultado.tipo = "int";
-                        resultado.trad += resultadoFactor.trad + resultadoTerm_prima.trad;
-                        
-                    }
-                }
-                else {
-                    //System.out.println("HOAA" + resultadoFactor + resultadoTerm_prima);
-                    if(resultadoFactor.tipo == resultadoTerm_prima.tipo)
-                    {
-                        resultado.trad += resultadoFactor.trad;
-                        resultado.tipo = resultadoFactor.tipo;
-                        resultado.trad += resultadoTerm_prima.trad;
-                    }
-                    else
-                    {
-                        if(resultadoFactor.tipo == "int" && resultadoTerm_prima.tipo == "double")
-                            {
-                                resultado.tipo = "double";
-                                resultado.trad = "itor(" + resultadoFactor.trad;
-                                resultado.trad = ")";
-                                resultado.trad = resultadoTerm_prima.trad;
-                            }
-                        else if(resultadoFactor.tipo == "double" && resultadoTerm_prima.tipo == "int")
-                            {
-                                resultado.tipo = "double";
-                                //System.out.println("NETRO");
-                            }
-                        else
-                            {
-                                resultado.trad += resultadoFactor.trad;
-                                resultado.tipo = resultadoFactor.tipo;
-                                resultado.trad += resultadoTerm_prima.trad;
-                                
-                            }
-                    }
-                
-                }
-                
+                resultado = resultadoTerm_prima;
             }
             else errorSintaxis(Token.ID, Token.NENTERO, Token.NREAL, Token.PARI);
+       
         return resultado;
     }
 
@@ -1436,84 +1245,139 @@ class TraductorDR {
     {
         Atributos resultado = new Atributos();
         Atributos atributosAux = new Atributos();
-        
-        //System.out.println("Entro en Term_prima");
+        //        System.out.println("Entro en term_prima");
         if(token.tipo == Token.MULOP)
             {
                 if(flag)
                     reglasAplicadas.append(" 33");
                 String idAux = token.lexema;
                 emparejar(Token.MULOP);
-                Atributos resultadoFactor = Factor(atributosAux);
-                Atributos resultadoTerm_prima = Term_prima(atributos);
-                //
-                
+                Atributos resultadoFactor = Factor(atributos);
+               
                 if(idAux.equals("/")) {
-                    resultado.trad += idAux;
-                    resultado.th = "/";
-                    
-                    if(resultadoFactor.tipo == "double")
+                    atributosAux.th = "/";
+                    atributosAux.tipo = "double";
+                    // ResultadoFactor es el Divisor
+                    // Los atributos son el dividendo
+                    if(resultadoFactor.tipo.equals("int") && atributos.tipo.equals("double")) {
+                        atributosAux.trad = "itor(" + resultadoFactor.trad+ ")"  + atributosAux.trad;
+                        if(atributos.th.equals("division"))
+                            atributosAux.trad =  atributos.trad + "/" + "r " + atributosAux.trad;
+                        else
+                            atributosAux.trad =  "r " +atributos.trad + "/" + "r " + atributosAux.trad;
+                    }
+                    else if(resultadoFactor.tipo.equals("double") && atributos.tipo.equals("double")) {
+                        atributosAux.trad = "r " +resultadoFactor.trad + atributosAux.trad;
+                        atributosAux.trad = "r " + atributos.trad + "/" + atributosAux.trad;
+                    }
+                    else if(resultadoFactor.tipo.equals("int") && atributos.tipo.equals("int")) {
+                        atributosAux.trad = "itor(" + resultadoFactor.trad + ")"+ atributosAux.trad;
+                        atributosAux.trad = "itor(" + atributos.trad + ")" + "/"+ "r " + atributosAux.trad; 
+                    } else if(resultadoFactor.tipo.equals("double") && atributos.tipo.equals("int")) {
+                        atributosAux.trad = "r " +resultadoFactor.trad + atributosAux.trad;
+                        atributosAux.trad = "itor(" + atributos.trad + ")" + "/" + atributosAux.trad;
+                    }
+                    else if (atributos.tipo.equals(""))
                         {
-                            resultado.trad += resultadoFactor.trad;
-                            resultado.tipo = resultadoFactor.tipo;
-                        }
-                    else if(resultadoFactor.tipo == "int")
-                        {
-                            resultado.trad += "r itor(" + resultadoFactor.trad + ")";
-                            resultado.tipo = "double";
+                            if(resultadoFactor.tipo.equals("int"))
+                                atributosAux.trad += "itor(" + resultadoFactor.trad + ")";
+                            else if(resultadoFactor.tipo.equals("double"))
+                                atributosAux.trad +="r " + resultadoFactor.trad;
+                            atributosAux.tipo = "double";
                         }
                     else
-                        System.out.println("ESTOY JODIDO");
+                        System.out.println("ERROR DIVISION");
                 }
-                else if( idAux.equals("div"))
+                else if(idAux.equals("div"))
                     {
-                        resultado.th = "div";
-                        resultado.trad += "/";
-                        
-                        if(resultadoFactor.tipo == "int") {// && resultadoTerm_prima.tipo == "int")
-                            resultado.tipo = "int";
-                            resultado.trad += "i "+ resultadoFactor.trad;
+                        atributosAux.th = "div";
+
+                        atributosAux.tipo = "int";
+
+                        if(resultadoFactor.tipo.equals("int") && atributos.tipo.equals("double")) {
+                            atributosAux.trad = "itor(" + resultadoFactor.trad+ ")"  + atributosAux.trad;
+                            atributosAux.trad = "r " + atributos.trad + "/" + atributosAux.trad;
+                            token = auxToken;
+
+                            errorSemanticoDivEntero();
                         }
-                        //else
-                        //  errorSemanticoDivEntero();
-                        
+                        else if(resultadoFactor.tipo.equals("double") && atributos.tipo.equals("double")) {
+                            atributosAux.trad = "r " +resultadoFactor.trad + atributosAux.trad;
+                            atributosAux.trad = "r " + atributos.trad + "/" +atributosAux.trad;
+                            token = auxToken;
+                            
+                            errorSemanticoDivEntero();
+                        }
+                        else if(resultadoFactor.tipo.equals("int") && atributos.tipo.equals("int")) {
+                            atributosAux.trad =  resultadoFactor.trad + atributosAux.trad;
+                            atributosAux.trad =  atributos.trad + "/" + "i " +atributosAux.trad;
+                            
+                        } else if(resultadoFactor.tipo.equals("double") && atributos.tipo.equals("int")) {
+                            atributosAux.trad = "r " + resultadoFactor.trad + atributosAux.trad;
+                            atributosAux.trad = "itor(" + atributos.trad + ")" + "/" + atributosAux.trad;
+                            token = auxToken;
+                            
+                            errorSemanticoDivEntero();
+                        }
+                        else if (atributos.tipo.equals(""))
+                            {
+                                if(resultadoFactor.tipo.equals("int"))
+                                    atributosAux.trad += "itor(" + resultadoFactor.trad + ")";
+                                else if(resultadoFactor.tipo.equals("double"))
+                                    atributosAux.trad += "r " + resultadoFactor.trad;
+                                atributosAux.tipo = "double";
+                                token = auxToken;
+                                errorSemanticoDivEntero();
+                            }                        
                     }
                 else if(idAux.equals("*"))
                     {
-                       resultado.trad += idAux;
-                        //                        System.out.println("VOY A MULTIPLICAR");
-                        resultado.th = "*";
-                        if(resultadoFactor.tipo == "double")
+                        if(resultadoFactor.tipo.equals("int") && atributos.tipo.equals("double")) {
+                            atributosAux.trad = "r itor(" + resultadoFactor.trad+ ")"  + atributosAux.trad;
+                            atributosAux.trad =  atributos.trad + "*" + atributosAux.trad;
+                            atributosAux.tipo = "double";
+                        }
+                        else if(resultadoFactor.tipo.equals("double") && atributos.tipo.equals("double")) {
+                            atributosAux.trad = "r " +resultadoFactor.trad + atributosAux.trad;
+                            atributosAux.trad = "r " + atributos.trad + "*" + atributosAux.trad;
+                            atributosAux.tipo = "double";
+                        }
+                        else if(resultadoFactor.tipo.equals("int") && atributos.tipo.equals("int")) {
+                            atributosAux.tipo = "int";
+                            atributosAux.trad = resultadoFactor.trad+ atributosAux.trad;
+                            atributosAux.trad = atributos.trad + "*"+ "i " + atributosAux.trad; 
+                        } else if(resultadoFactor.tipo.equals("double") && atributos.tipo.equals("int")) {
+                            atributosAux.tipo = "double";
+                            atributosAux.trad = "r " + resultadoFactor.trad + atributosAux.trad;
+                            atributosAux.trad = "itor(" + atributos.trad + ")" + "*" + atributosAux.trad;
+                        }
+                        else if (atributos.tipo.equals(""))
                             {
-                                
-                                resultado.tipo = "double";
-                                resultado.trad += "r " +resultadoFactor.trad;
-                                resultado.trad += resultadoTerm_prima.trad;
+                                if(resultadoFactor.tipo.equals("int"))
+                                    atributosAux.trad += "itor(" + resultadoFactor.trad + ")";
+                                else if(resultadoFactor.tipo.equals("double"))
+                                    atributosAux.trad += "r " + resultadoFactor.trad;
+                                atributosAux.tipo = "double";
                             }
-                        else if (resultadoFactor.tipo == "int")
-                            {
-                                resultado.tipo = "int";
-                                resultado.trad += "i " + resultadoFactor.trad;
-                                resultado.trad += resultadoTerm_prima.trad;
-                            }
-                        // System.out.println(resultado);
+                        else
+                            System.out.println("ERROR MULTIPLICACION");
+                         
                     }
-                else
-                    System.out.println("A TOMAR POR CULO"+idAux);
                 
+                Atributos resultadoTerm_prima = Term_prima(atributosAux);
+                resultado.trad += resultadoTerm_prima.trad;
+                resultado.tipo = resultadoTerm_prima.tipo;
+                resultado.th = resultadoTerm_prima.th;
             }
         else if(token.tipo == Token.ADDOP || token.tipo == Token.RELOP || token.tipo == Token.PYC || token.tipo == Token.ENDIF || token.tipo == Token.ELSE || token.tipo == Token.END || token.tipo == Token.THEN || token.tipo == Token.DO || token.tipo == Token.PARD)
             {
                 if(flag)
                     reglasAplicadas.append(" 34");
-                resultado.trad = "";
-                
+                resultado = atributos;
+                return resultado;
             }
         else errorSintaxis(Token.MULOP,Token.ADDOP, Token.RELOP, Token.PYC, Token.ENDIF, Token.ELSE, Token.END, Token.THEN, Token.DO, Token.PARD);
-        //System.out.println("SALGO DE TERM_PRIMA");
-        
         return resultado;
-        
     }
 
     public final Atributos  Factor(Atributos atributos) // 35 Factor -> id
@@ -1524,7 +1388,6 @@ class TraductorDR {
         Atributos resultado = new Atributos();
         Atributos atributosAux = new Atributos();
         
-         //System.out.println("Entro en Factor");
         if(token.tipo == Token.ID)
             {
                 if(flag)
@@ -1532,52 +1395,39 @@ class TraductorDR {
                 String idAux = "";
                 String nombreAmbito = nombreAmbitoVariable(token.lexema);
 
-                /*if(!nombreAmbito.equals(""))
-                    {
-                        System.out.println("HASFDJASFJA"+nombreAmbito);
-                        }*/
                 if(nombreAmbito.equals(""))
                     idAux = "main_" + token.lexema;
                 else 
                     idAux = nombreAmbito +"_"+ token.lexema;
                 if(buscaTS(token.lexema) == "int")
                     {
-                        resultado.trad += idAux;
+                        resultado.trad +=  idAux;
                         resultado.tipo = "int";
-                        
                     }
                 else if(buscaTS(token.lexema) == "double")
                     {
-                        resultado.trad += idAux;
+                        resultado.trad +=  idAux;
                         resultado.tipo = "double";
                     }
-                /*else if(buscaTS(token.lexema) == "funcion")
-                    {
-                        errorSemantic
-                        }*/
                 emparejar(Token.ID);
-                //resultado.trad += idAux + " ";
-                
             }
         else if(token.tipo == Token.NENTERO)
             {
                 if(flag)
                     reglasAplicadas.append(" 36");
-                resultado.trad +=token.lexema+ " ";
+                resultado.trad += token.lexema+ " ";
                 resultado.tipo = "int";
                 
                 emparejar(Token.NENTERO);
-                
             }
         else if(token.tipo == Token.NREAL)
             {
                 if(flag)
                     reglasAplicadas.append(" 37");
-                resultado.trad += token.lexema;
+                resultado.trad +=  token.lexema+ " ";
                 resultado.tipo = "double";
                 
                 emparejar(Token.NREAL);
-                
             }
         else if(token.tipo == Token.PARI)
             {
@@ -1591,7 +1441,6 @@ class TraductorDR {
                 resultado.tipo = resultadoExpr.tipo;
                 
                 emparejar(Token.PARD);
-                //                System.out.println("ENTRO EN PARI" + resultado);
             }
             else errorSintaxis(Token.ID, Token.NENTERO, Token.NREAL, Token.PARI);
         return resultado;

@@ -1,6 +1,0 @@
-
-program p;
-var a,b : real;
-begin
-  a := 3.(* este comentario debe ignorarse, pero parte el token *)5
-end
