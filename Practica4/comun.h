@@ -18,8 +18,8 @@ typedef struct
 
 typedef struct 
 {
-    vector<Simbolo> simbolos;
     string nombre;
+    vector<Simbolo> simbolos;
 } Ambito;
 
 #define YYSTYPE MITIPO

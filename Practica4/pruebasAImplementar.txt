@@ -1,0 +1,3 @@
+Funciones en el mismo ambito con el mismo nombre
+a := 3.5 div // Tiene que dar NOESENTERO
+Operaciones aritmeticas con booleanos

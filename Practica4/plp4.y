@@ -36,7 +36,7 @@
 #include <vector>
 
 
-#define DEBUG 0
+//#define DEBUG 0
 using namespace std;
 
 #include "comun.h"
@@ -53,19 +53,25 @@ extern FILE *yyin;
 int yyerror(char *s);
 void anyadirAmbito(string nombreAmbito);
 void anyadirSimbolo(Simbolo simboloAux);
+void anyadirSimbolo(string nombre, int tipo);
+Simbolo buscaSimboloEnAmbito(Ambito ambitoAux, string simbolo);
+void borrarAmbito();
+void asignarTipo(int tipo);
+void imprimirAmbito(Ambito ambito);
+void imprimirTablaSimbolos();
 //void anyadirTS(MITIPO variable);
 //void anyadirTSLexema(string lexema);
 //void anyadirTS(string lexema, int nlin,int ncol, int tipo, string trad);
-int buscaTS(string variable);
+//int buscaTS(string variable);
  
- void borrarAmbito();
+// void borrarAmbito();
  
 
 const int NENTERO=1;
 const int NREAL=2;
 const int BOOL = 3;
 const int NVACIO = 0;
- 
+const int NFUNCION = 4;
 
 string operador, s1, s2;  // string auxiliares
 
@@ -77,12 +83,10 @@ string operador, s1, s2;  // string auxiliares
 
 S : tprogram tid tpyc Vsp Bloque    { /* comprobar que después del programa
                                             no hay ningún token más */
-    //fprintf(stdout,"No puedo abrir el fichero\n");
-    std::cout <<"HOLA" <<std::endl;
     int tk = yylex();
 
     $$.trad = "// program" + $2.lexema + "\n" + $4.trad + "\nint main()" + $5.trad;
-    std::cout<<"ESTOY EN S: " <<std::endl;
+    //    std::cout<<"ESTOY EN S: " <<std::endl;
     
     if (tk != 0) yyerror("");
  };
@@ -105,15 +109,20 @@ Vsp : Unsp
     
 };
 
-Unsp : tfunction tid tdosp Tipo tpyc Vsp Bloque tpyc
+Unsp : tfunction tid { buscaSimboloEnAmbito(tablaSimbolos.back(), $2.lexema).nombre == "" ? anyadirSimbolo($2.lexema, NFUNCION) : msgError(ERRSEMMISMO,0,0,"");  anyadirAmbito($2.lexema);} tdosp Tipo tpyc Vsp Bloque tpyc
 {
     // CREAR AMBITO
     #ifdef DEBUG
     std::cout <<"Entro en Unsp : Function tid tdosp" <<std::endl;
-    #endif
+#endif    
+    //std::cout<<"TAMANYO AMBITOS " <<tablaSimbolos.size() <<std::endl;
+    
+     //tablaSimbolos[0].nombre = "HOLAAAA";
+   /* std::cout<<"VECTOR CAMBIADO " <<tablaSimbolos.size() <<std::endl;
+    for(int i = 0; i < tablaSimbolos.size(); i++)
+        std::cout<<"Nombre: " <<tablaSimbolos[i].nombre <<std::endl;*/
     $$.trad = $6.trad + "\n" + $4.trad + $2.trad + "()" + $7.trad;
     borrarAmbito();
-    // BORRAR AMBITOS
 };
 
 Unsp :  tvar LV
@@ -121,7 +130,6 @@ Unsp :  tvar LV
     #ifdef DEBUG
     std::cout <<"Entro en Unsp : Unsp : tvar LV" <<std::endl;
     #endif
-    // CONTROLAR AMBITOS
     $$.trad = $2.trad;
 }  ;
 
@@ -147,7 +155,7 @@ V : Lid tdosp Tipo tpyc
     std::cout <<"Entro en V : Lid dosp Tipo pyc" <<std::endl;
 #endif
     $$.trad = $3.trad + $1.trad + ";";
-    //    asignarTipo($3.tipo);
+    asignarTipo($3.tipo);
 };
 
 Lid : Lid tcoma tid
@@ -155,10 +163,10 @@ Lid : Lid tcoma tid
 #ifdef DEBUG
     std::cout <<"Entro en Lid : Lid coma tid" <<std::endl;
 #endif
-    /*if(buscaTS($1.lexema) == -1)
-        msgError(ERRSEMNOVAR); // ERROR NO ENCONTRADA VARIABLE
-    */
-    anyadirTSLexema($1.lexema);
+    //if(strcmp(buscarSimboloEnAmbito(tablaSimbolos.back(),)))
+      //  msgError(ERRSEMNOVAR); // ERROR NO ENCONTRADA VARIABLE
+    
+//    anyadirTSLexema($1.lexema);
     $$.trad = $1.trad + "," + $3.lexema;
 };
 
@@ -167,7 +175,7 @@ Lid : tid
 #ifdef DEBUG
     std::cout <<"Entro en Lid : id" <<std::endl;
 #endif
-    if(buscaTS($1.lexema) == -1)
+   /* if(buscaTS($1.lexema) == -1)
         {
             int i = 0;
             //            std::cout<<"No he encontrado nada" <<std::endl;
@@ -177,9 +185,9 @@ Lid : tid
         {
             //   std::cout<<"Anyaddddo" <<std::endl;
             
-            anyadirTSLexema($1.lexema);
+//            anyadirTSLexema($1.lexema);
             $$.trad = $1.lexema;
-        }
+        }*/
 };
 
 Tipo : tinteger
@@ -237,7 +245,7 @@ Instr : tid tasig E
 #ifdef DEBUG
     std::cout <<"Entro en Instr : id asig E" <<std::endl;
 #endif
-    if(buscaTS($1.trad) != -1)
+    /*if(buscaTS($1.trad) != -1)
         {
             $$.trad = $1.lexema;
         }
@@ -246,7 +254,7 @@ Instr : tid tasig E
             std::cout<<"TENGO QUE COLOCAR EL ERROR QUE NO ENCUENTRA VARIABLE" <<std::endl;
             
             //ERROR MENSAJE NO ENCONTRADA VARIABLE
-        }
+        }*/
     $$.trad += "=";
     if($3.tipo == NREAL && $1.tipo == NENTERO)
         {
@@ -428,8 +436,8 @@ Factor : tid
 #ifdef DEBUG
     std::cout <<"Entro en Factor : id" <<std::endl;
 #endif
-    $$.trad = ambitoActual + "_" + $1.lexema;
-    $$.tipo = buscaTS($1.lexema);
+    //    $$.trad = ambitoActual + "_" + $1.lexema;
+    // $$.tipo = buscaTS($1.lexema);
 };
 
 Factor : tnentero
@@ -461,86 +469,6 @@ Factor : tpari Expr tpard
 
 %%
 
-         //Funcion para anyadir un nuevo ambito pasandole el id de la funcion
-         //que vamos a empezar.
-void anyadirAmbito(string ambito)
-{
-    
-    ambitoActual += "_"+ ambito;
-}
-
-// Funcion que anyade un MITIPO 
-void anyadirTS(MITIPO variable)
-{
-    tablaSimbolos.push_back(variable);
-}
-
-void anyadirTSLexema(string lexema)
-{
-    //    std::cout <<"Entro en anyadirTSLexema con: " <<lexema <<std::endl;
-    MITIPO simbolo;
-    simbolo.lexema = ambitoActual + lexema;
-    simbolo.ambito = ambitoActual;
-    simbolo.tipo = NVACIO;
-    tablaSimbolos.push_back(simbolo);
-}
-
-void anyadirTS(string lexema, int nlin,int ncol, int tipo, string trad)
-{
-    MITIPO simbolo;
-    simbolo.lexema = ambitoActual+lexema;
-    simbolo.nlin = nlin;
-    simbolo.ncol = ncol;
-    simbolo.tipo = tipo;
-    simbolo.trad = trad;
-    simbolo.ambito = ambitoActual;
-    tablaSimbolos.push_back(simbolo);
-}
-
-void borrarAmbito()
-{
-    std::size_t posUltimoAmbito = ambitoActual.find_last_of("_");
-    ambitoActual = ambitoActual.substr(0,posUltimoAmbito);
-    tablaSimbolos.pop_back();
-}
-
-//Buscara entre los ambitos. Buscará desde la última posicion del vector 
-int buscaTS(string variable)
-{
-    int i = tablaSimbolos.size();
-    //    std::cout<<"ENTRO EN BUSCATS"<<i <<"\n" <<std::endl;
-    
-
-    for(std::vector<MITIPO>::iterator it = tablaSimbolos.end(); it != tablaSimbolos.begin(); --it)
-        {
-            //std::cout<<"ITERATOR: " <<(*it).lexema <<std::endl;
-            if(variable.compare((*it).lexema) == 0)
-                {
-                    return i;
-                }
-            --i;
-        }
-    return -1;
-}
-
-/*int buscaEnAmbito(string ambito, string variable)
-{
-    std::size_t posUltimoAmbito = ambito.find_last_of("_");
-    string ambitoAuxiliar = ambito.substr(0,posUltimoAmbito);
-    if(posUltimoAmbito != std::string::npos)
-        {
-            int posVectorTS = buscaVariable(ambitoAuxiliar,variable);
-            if(posVectorTS != -1)
-                return posVectorTS;
-            else
-                buscaEnAmbito(ambitoAuxiliar, variable);
-        }
-    else
-        return -1;
-        }*/
-
-
-
 void msgError(int nerror,int nlin,int ncol,const char *s)
 {
      switch (nerror) {
@@ -548,7 +476,7 @@ void msgError(int nerror,int nlin,int ncol,const char *s)
          break;
      case ERRSINT: fprintf(stderr,"Error sintactico (%d,%d): en '%s'\n",nlin,ncol,s);
          break;
-     case ERREOF: fprintf(stderr,"Error lexico: fin de fichero inesperado\n");
+     case ERREOF: fprintf(stderr,"Error sintactico: fin de fichero inesperado\n");
          break;
      case ERRLEXEOF: fprintf(stderr,"Error lexico: fin de fichero inesperado\n");
          break;
@@ -573,7 +501,82 @@ void msgError(int nerror,int nlin,int ncol,const char *s)
      exit(1);
 }
 
+//CHECK
+void anyadirAmbito(string nombreAmbito)
+{
+    Ambito nuevoAmbito;
+    if(tablaSimbolos.back().nombre == "")
+        nuevoAmbito.nombre = nombreAmbito;
+    else 
+        nuevoAmbito.nombre = tablaSimbolos[tablaSimbolos.size() -1].nombre + "_" + nombreAmbito;
+    tablaSimbolos.push_back(nuevoAmbito);
+}
 
+//CHECK
+void anyadirSimbolo(Simbolo simboloAux)
+{
+    tablaSimbolos[tablaSimbolos.size() -1].simbolos.push_back(simboloAux);
+}
+
+void anyadirSimbolo(string nombre, int tipo)
+{
+    Simbolo s;
+    s.nombre = nombre;
+    s.tipo = tipo;
+    tablaSimbolos.back().simbolos.push_back(s);
+}
+
+//CHECK
+Simbolo buscaSimboloEnAmbito(Ambito ambitoAux, string simbolo)
+{
+    for(int i = 0; i < ambitoAux.simbolos.size();i++)
+        {
+            if(ambitoAux.simbolos[i].nombre == simbolo)
+                return ambitoAux.simbolos[i];
+        }
+     Simbolo s;
+     return s;
+}
+
+Simbolo buscaSimbolo(string simbolo)
+{
+    Simbolo simboloAux;
+    // Recorremos la tabla de simbolos desde el ultimo ambito introducido hasta
+    // el inicial.
+    for(int i = tablaSimbolos.size()-1; i >=0; i--)
+        {
+            simboloAux = buscaSimboloEnAmbito(tablaSimbolos[i],simbolo);
+            if(simboloAux.nombre != "")
+                {
+                    return simboloAux;
+                }
+        }
+     simboloAux.nombre = "";
+     return simboloAux;
+}
+
+void asignarTipo(int tipo)
+{
+     std::cout<<"FALTA IMPLEMENTAR ASIGNARTIPO" <<std::endl;
+}
+void borrarAmbito()
+{
+    tablaSimbolos.pop_back();
+}
+
+void imprimirAmbito(Ambito ambito)
+{
+     std::cout <<"Ambito: \n\tNombre:\t " <<ambito.nombre <<std::endl;
+     std::cout <<"\tSimbolos:" <<std::endl;
+     for(int i = 0; i < ambito.simbolos.size(); i++)
+          std::cout<< "\t\t" <<i <<": " <<ambito.simbolos[i].nombre <<"\t" <<ambito.simbolos[i].tipo <<std::endl; 
+}
+
+void imprimirTablaSimbolos()
+{
+     for(int i = 0; i < tablaSimbolos.size(); i++)
+        imprimirAmbito(tablaSimbolos[i]);
+}
 int yyerror(char *s)
 {
     if (findefichero) 
@@ -595,6 +598,9 @@ int main(int argc,char *argv[])
         fent = fopen(argv[1],"rt");
         if (fent)
         {
+            Ambito ambitoMain;
+            ambitoMain.nombre = "";
+            tablaSimbolos.push_back(ambitoMain);
             yyin = fent;
             yyparse();
             fclose(fent);
