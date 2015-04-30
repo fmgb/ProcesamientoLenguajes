@@ -36,7 +36,7 @@
 #include <vector>
 
 
-//#define DEBUG 0
+    //#define DEBUG 0
 using namespace std;
 
 #include "comun.h"
@@ -54,6 +54,8 @@ int yyerror(char *s);
 void anyadirAmbito(string nombreAmbito);
 void anyadirSimbolo(Simbolo simboloAux);
 void anyadirSimbolo(string nombre, int tipo);
+Simbolo buscaSimbolo(string simbolo);
+ 
 Simbolo buscaSimboloEnAmbito(Ambito ambitoAux, string simbolo);
 void borrarAmbito();
 void asignarTipo(int tipo);
@@ -74,7 +76,7 @@ const int NVACIO = 0;
 const int NFUNCION = 4;
 
 string operador, s1, s2;  // string auxiliares
-
+ Simbolo simboloAux1, simboloAux2; // Simbolos Auxiliares
  std::vector<Ambito> tablaSimbolos;
  %}
 
@@ -83,6 +85,9 @@ string operador, s1, s2;  // string auxiliares
 
 S : tprogram tid tpyc Vsp Bloque    { /* comprobar que después del programa
                                             no hay ningún token más */
+    #ifdef DEBUG
+    std::cout<<"Entero en S" <<std::endl;
+    #endif
     int tk = yylex();
 
     $$.trad = "// program" + $2.lexema + "\n" + $4.trad + "\nint main()" + $5.trad;
@@ -94,7 +99,7 @@ S : tprogram tid tpyc Vsp Bloque    { /* comprobar que después del programa
 Vsp : Vsp Unsp
 {
     #ifdef DEBUG
-    std::cout <<"entro en Vsp: Vsp Unsp" <<std::endl;
+    std::cout <<"Entro en Vsp: Vsp Unsp" <<std::endl;
     #endif
     $$.trad = $1.trad + $2.trad;
 };
@@ -109,7 +114,7 @@ Vsp : Unsp
     
 };
 
-Unsp : tfunction tid { buscaSimboloEnAmbito(tablaSimbolos.back(), $2.lexema).nombre == "" ? anyadirSimbolo($2.lexema, NFUNCION) : msgError(ERRSEMMISMO,0,0,"");  anyadirAmbito($2.lexema);} tdosp Tipo tpyc Vsp Bloque tpyc
+Unsp : tfunction tid { buscaSimboloEnAmbito(tablaSimbolos.back(), $2.lexema).nombre == "" ? anyadirSimbolo($2.lexema, NFUNCION) : msgError(ERRSEMMISMO,$2.nlin,$2.ncol,$2.lexema);  anyadirAmbito($2.lexema);} tdosp Tipo tpyc Vsp Bloque tpyc
 {
     // CREAR AMBITO
     #ifdef DEBUG
@@ -163,10 +168,15 @@ Lid : Lid tcoma tid
 #ifdef DEBUG
     std::cout <<"Entro en Lid : Lid coma tid" <<std::endl;
 #endif
-    //if(strcmp(buscarSimboloEnAmbito(tablaSimbolos.back(),)))
-      //  msgError(ERRSEMNOVAR); // ERROR NO ENCONTRADA VARIABLE
+    //imprimirTablaSimbolos();
+    //Si no está declarada la variable en el ambito actual la anyadimos, sino
+    //damos error. 
+    if(buscaSimboloEnAmbito(tablaSimbolos.back(),$3.lexema).nombre != "")
+        msgError(ERRSEMMISMO,$3.nlin,$3.ncol,$3.lexema); // ERROR YA EXISTE ESA VARIABLE
     
-//    anyadirTSLexema($1.lexema);
+    anyadirSimbolo($3.lexema,NVACIO);
+    //std::cout<<"ANYADDIDOOO" <<std::endl;
+    //imprimirTablaSimbolos();
     $$.trad = $1.trad + "," + $3.lexema;
 };
 
@@ -175,19 +185,11 @@ Lid : tid
 #ifdef DEBUG
     std::cout <<"Entro en Lid : id" <<std::endl;
 #endif
-   /* if(buscaTS($1.lexema) == -1)
-        {
-            int i = 0;
-            //            std::cout<<"No he encontrado nada" <<std::endl;
-            
-        }
-    else
-        {
-            //   std::cout<<"Anyaddddo" <<std::endl;
-            
-//            anyadirTSLexema($1.lexema);
-            $$.trad = $1.lexema;
-        }*/
+    if(buscaSimboloEnAmbito(tablaSimbolos.back(),$1.lexema).nombre != "")
+        msgError(ERRSEMMISMO,$1.nlin,$1.ncol,$1.lexema); //ERROR YA EXISTE ESA VARIABLE
+    
+    anyadirSimbolo($1.lexema,NVACIO);
+    $$.trad = $1.lexema;
 };
 
 Tipo : tinteger
@@ -245,20 +247,14 @@ Instr : tid tasig E
 #ifdef DEBUG
     std::cout <<"Entro en Instr : id asig E" <<std::endl;
 #endif
-    /*if(buscaTS($1.trad) != -1)
-        {
-            $$.trad = $1.lexema;
-        }
-    else
-        {
-            std::cout<<"TENGO QUE COLOCAR EL ERROR QUE NO ENCUENTRA VARIABLE" <<std::endl;
-            
-            //ERROR MENSAJE NO ENCONTRADA VARIABLE
-        }*/
-    $$.trad += "=";
+    simboloAux1 = buscaSimbolo($1.lexema);
+    if(simboloAux1.nombre == "")
+        msgError(ERRSEMNOVAR,$1.nlin,$1.ncol,$1.lexema); // NO SE HA DECLARADO ESA VARIABLE.
+
+    $$.trad += $1.trad + "=";
     if($3.tipo == NREAL && $1.tipo == NENTERO)
         {
-            //ERRORSEM REAL
+            msgError(ERRSEMREAL,$1.nlin,$1.ncol,$1.lexema);
         }
     
     if($3.tipo == NENTERO && $1.tipo == NREAL)
@@ -281,9 +277,11 @@ Instr : tif E tthen Instr ColaIf
 #ifdef DEBUG
     std::cout <<"Entro en Instr : if E then Instr ColaIf" <<std::endl;
 #endif
-    //TODO
-    /* if(buscaTS($1.trad) != -1)
-       $$.trad = $1.lexema*/
+    //simboloAux1 = buscaSimbolo($1.lexema);
+    //POSIBLE
+    if($2.tipo != BOOL)
+        msgError(ERRSEMBOOL,$2.nlin,$2.ncol,""); // NO SE HA DECLARADO ESA VARIABLE.
+    $$.trad = "if(" + $2.trad + ")\n" + "{" + $4.trad + $5.trad + "\n}";
 };
 
 ColaIf : tendif  {
@@ -298,7 +296,7 @@ ColaIf : telse Instr tendif
 #ifdef DEBUG
     std::cout <<"Entro en ColaIf : else Instr endif" <<std::endl;
 #endif
-    $$.trad = $1.lexema + $2.trad;
+    $$.trad = $1.lexema +"\n"+ $2.trad;
 };
 
 Instr : twhile E tdo Instr
@@ -308,9 +306,9 @@ Instr : twhile E tdo Instr
 #endif
     if($2.tipo != BOOL) 
         {
-            //ERROR SEM BOOL
+            msgError(ERRSEMBOOL,$2.nlin,$2.ncol,"");
         }
-    $$.trad = $1.lexema + "(" + $2.trad + ")\n" + $4.trad;
+    $$.trad = $1.lexema + "(" + $2.trad + ")\n{\n" + $4.trad + "\n}";
 };
 
 Instr : twriteln tpari E tpard
@@ -325,7 +323,7 @@ Instr : twriteln tpari E tpard
         $$.trad += "%g\n,";
     else
         {
-            //ERRSEMWRLN
+            msgError(ERRSEMWRLN,$3.nlin,$3.ncol,"");
         }
     $$.trad += $3.trad + ")";
 };
@@ -387,37 +385,38 @@ Term : Term tmulop Factor
 #endif
     if($2.lexema == "div")
         {
-            if($1.tipo == NREAL || $3.tipo == NREAL )
+            if($1.tipo == NREAL)
                 {
-
-                                //TODO GENERAR ERROR
+                    msgError(ERRSEMDIV,$1.nlin,$1.ncol,"");
                 }
+            else if($3.tipo == NREAL)
+                msgError(ERRSEMDIV,$3.nlin,$3.ncol,"");
             else
                 $$.trad = $1.trad + "/i" + $3.trad;
+            $$.tipo = NENTERO;
         }
     else if($2.lexema == "/")
         {
             $$.trad = $1.tipo == NENTERO ? "itor("+$1.trad+")" : $1.trad;
             $$.trad += "/r";
-            
-                $$.trad += $3.tipo == NENTERO ? "itor("+$3.trad+")" : $3.trad;
+            $$.trad += $3.tipo == NENTERO ? "itor("+$3.trad+")" : $3.trad;
+            $$.tipo = NREAL;
         }
     else if($2.lexema == "*")
         {
-
             if($1.tipo == NREAL || $3.tipo == NREAL)
                 {
                     $$.trad = $1.tipo == NENTERO ? "itor("+$1.trad+")" : $1.trad;
                     $$.trad += "*r";
-                    
-                        $$.trad += $3.tipo == NENTERO ? "itor("+$3.trad+")" : $3.trad;
+                    $$.trad += $3.tipo == NENTERO ? "itor("+$3.trad+")" : $3.trad;
+                    $$.tipo = NREAL;
                 }
             else
                 {
                     $$.trad = $1.trad;
                     $$.trad += "*i";
-                    
-                        $$.trad += $3.trad;        
+                    $$.trad += $3.trad;
+                    $$.tipo = NENTERO;
                 }
         }
 };
@@ -436,8 +435,8 @@ Factor : tid
 #ifdef DEBUG
     std::cout <<"Entro en Factor : id" <<std::endl;
 #endif
-    //    $$.trad = ambitoActual + "_" + $1.lexema;
-    // $$.tipo = buscaTS($1.lexema);
+    $$.trad = tablaSimbolos.back().nombre + "_" + $1.lexema;
+    $$.tipo = buscaSimbolo($1.lexema).tipo;
 };
 
 Factor : tnentero
@@ -469,39 +468,39 @@ Factor : tpari Expr tpard
 
 %%
 
-void msgError(int nerror,int nlin,int ncol,const char *s)
+void msgError(int nerror,int nlin,int ncol,const string s)
 {
      switch (nerror) {
-     case ERRLEXICO: fprintf(stderr,"Error lexico (%d,%d): caracter '%s' incorrecto\n",nlin,ncol,s);
+     case ERRLEXICO: fprintf(stderr,"Error lexico (%d,%d): caracter '%s' incorrecto\n",nlin,ncol,s.c_str());
          break;
-     case ERRSINT: fprintf(stderr,"Error sintactico (%d,%d): en '%s'\n",nlin,ncol,s);
+     case ERRSINT: fprintf(stderr,"Error sintactico (%d,%d): en '%s'\n",nlin,ncol,s.c_str());
          break;
      case ERREOF: fprintf(stderr,"Error sintactico: fin de fichero inesperado\n");
          break;
      case ERRLEXEOF: fprintf(stderr,"Error lexico: fin de fichero inesperado\n");
          break;
-     case ERRSEMMISMO: fprintf(stderr,"Error semantico (%d,%d): \'%s\' ya existe en este ambito\n",nlin,ncol,s);
+     case ERRSEMMISMO: fprintf(stderr,"Error semantico (%d,%d): \'%s\' ya existe en este ambito\n",nlin,ncol,s.c_str());
          break;
-     case ERRSEMASIG: fprintf(stderr,"Error semantico (%d,%d):\'%s\' no ha sido declarado\n",nlin,ncol,s);
+     case ERRSEMASIG: fprintf(stderr,"Error semantico (%d,%d):\'%s\' no ha sido declarado\n",nlin,ncol,s.c_str());
          break;
-     case ERRSEMNOVAR: fprintf(stderr,"Error semantico (%d,%d):\'%s\' no es una variabla\n",nlin,ncol,s);
+     case ERRSEMNOVAR: fprintf(stderr,"Error semantico (%d,%d):\'%s\' no es una variabla\n",nlin,ncol,s.c_str());
          break;
-     case ERRSEMREAL: fprintf(stderr,"Error semantico (%d,%d):\'%s\' debe ser de tipo real\n",nlin,ncol,s);
+     case ERRSEMREAL: fprintf(stderr,"Error semantico (%d,%d):\'%s\' debe ser de tipo real\n",nlin,ncol,s.c_str());
          break;
      case ERRSEMBOOL: fprintf(stderr,"Error semantico (%d,%d): el operador \':=\' no admite expresiones relacionales\n",nlin,ncol);
          break;
-     case ERRSEMREL: fprintf(stderr,"Error semantico (%d,%d):en la instrucción \'%s\' la expresión debe ser relacional\n",nlin,ncol,s);
+     case ERRSEMREL: fprintf(stderr,"Error semantico (%d,%d):en la instrucción \'%s\' la expresión debe ser relacional\n",nlin,ncol,s.c_str());
          break;
-     case ERRSEMDIV: fprintf(stderr,"Error semantico (%d,%d):lso dos operandos de \'div\' deben ser enteros\n",nlin,ncol);
+     case ERRSEMDIV: fprintf(stderr,"Error semantico (%d,%d):los dos operandos de \'div\' deben ser enteros\n",nlin,ncol-strlen(yytext));
          break;
-     case ERRSEMWRLN: fprintf(stderr,"Error semantico (%d,%d): \'writeln\' no admite expresiones booleanas\n",nlin,ncol);
+     case ERRSEMWRLN: fprintf(stderr,"Error semantico (%d,%d): \'writeln\' no admite expresiones booleanas\n",nlin,ncol);//-strlen("writeln "));
          break;
      }
         
      exit(1);
 }
 
-//CHECK
+// CHECKED
 void anyadirAmbito(string nombreAmbito)
 {
     Ambito nuevoAmbito;
@@ -512,12 +511,13 @@ void anyadirAmbito(string nombreAmbito)
     tablaSimbolos.push_back(nuevoAmbito);
 }
 
-//CHECK
+// CHECK
 void anyadirSimbolo(Simbolo simboloAux)
 {
     tablaSimbolos[tablaSimbolos.size() -1].simbolos.push_back(simboloAux);
 }
 
+//CHECKED
 void anyadirSimbolo(string nombre, int tipo)
 {
     Simbolo s;
@@ -557,7 +557,7 @@ Simbolo buscaSimbolo(string simbolo)
 
 void asignarTipo(int tipo)
 {
-     std::cout<<"FALTA IMPLEMENTAR ASIGNARTIPO" <<std::endl;
+    //     std::cout<<"FALTA IMPLEMENTAR ASIGNARTIPO" <<std::endl;
 }
 void borrarAmbito()
 {

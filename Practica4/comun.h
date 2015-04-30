@@ -38,4 +38,4 @@ typedef struct
 #define ERRSEMDIV   11
 #define ERRSEMWRLN  12
 
-void msgError(int nerror,int nlin,int ncol,const char *s);
+void msgError(int nerror,int nlin,int ncol,const string s);

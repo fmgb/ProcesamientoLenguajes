@@ -32,7 +32,7 @@ int findefichero = 0;
 int ret(int token);  
 // funciÃ³n que actualiza 'nlin' y 'ncol' y devuelve el token
 
-void msgError(int nerror, int nlin,int ncol,const char *s);
+void msgError(int nerror, int nlin,int ncol,const string s);
 // funciÃ³n para producir mensajes de error
 
 %}
@@ -43,7 +43,6 @@ void msgError(int nerror, int nlin,int ncol,const char *s);
 %{
 /* codigo local */
 %}
-
 " "                {ncol++;}
 [\t]               {ncol++;}
 [\n]               {nlin++;ncol=1;}
@@ -92,7 +91,6 @@ void msgError(int nerror, int nlin,int ncol,const char *s);
 {D}+               {return ret(tnentero);}
 {L}({LD})*         {return ret(tid);}
 {D}+(\.){D}+       {return ret(tnreal);}
-
 .                  {msgError(ERRLEXICO,nlin,ncol,yytext);}
 
 %%
