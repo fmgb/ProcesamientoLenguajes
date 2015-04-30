@@ -1,3 +1,11 @@
+/**
+   Autor: Francisco Manuel García Botella (fmgb3@alu.ua.es)
+   Objetivo: Procesamiento de Lenguajes 2014/2015(Universidad Alicante)
+   Práctica 4
+   Licencia: GPLv3
+   Creado el: 25/04/2015
+*/
+
 /*------------------------------ plp4.l -------------------------------*/
 D    [0-9]
 L    [a-zA-Z]

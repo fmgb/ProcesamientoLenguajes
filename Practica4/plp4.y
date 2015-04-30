@@ -1,4 +1,12 @@
-/*------------------------------ ejemplo.y -------------------------------*/
+/**
+   Autor: Francisco Manuel García Botella (fmgb3@alu.ua.es)
+   Objetivo: Procesamiento de Lenguajes 2014/2015(Universidad Alicante)
+   Práctica 4
+   Licencia: GPLv3
+   Creado el: 25/04/2015
+*/
+
+/*------------------------------ plp4.y -------------------------------*/
 %token tpari
 %token tpard
 %token tmulop
@@ -61,21 +69,12 @@ void borrarAmbito();
 void asignarTipo(int tipo);
 void imprimirAmbito(Ambito ambito);
 void imprimirTablaSimbolos();
-//void anyadirTS(MITIPO variable);
-//void anyadirTSLexema(string lexema);
-//void anyadirTS(string lexema, int nlin,int ncol, int tipo, string trad);
-//int buscaTS(string variable);
- 
-// void borrarAmbito();
- 
 
 const int NENTERO=1;
 const int NREAL=2;
 const int BOOL = 3;
 const int NVACIO = 0;
 const int NFUNCION = 4;
-
-// bool asignacion = false;
  
 string operador, s1, s2;  // string auxiliares
  Simbolo simboloAux1, simboloAux2; // Simbolos Auxiliares
@@ -87,15 +86,15 @@ string operador, s1, s2;  // string auxiliares
 
 S : tprogram tid tpyc Vsp Bloque    { /* comprobar que después del programa
                                             no hay ningún token más */
-    #ifdef DEBUG
-    std::cout<<"Entero en S" <<std::endl;
-    #endif
+#ifdef DEBUG
+  std::cout<<"Entero en S" <<std::endl;
+#endif
     
-    int tk = yylex();
-    if (tk != 0) yyerror("");
-    $$.trad = "// program " + $2.lexema + "\n" + $4.trad + "\nint main()" + $5.trad;
-    //    std::cout<<"ESTOY EN S: " <<std::endl;
-    std::cout << $$.trad << std::endl;
+  int tk = yylex();
+  if (tk != 0) yyerror("");
+  $$.trad = "// program " + $2.lexema + "\n" + $4.trad + "\nint main()" + $5.trad;
+  
+  std::cout << $$.trad << std::endl;
 
  };
 
@@ -113,8 +112,6 @@ Vsp : Unsp
     std::cout <<"Entro en Vsp : Unsp" <<std::endl;
     #endif
     $$.trad = $1.trad;
-    //   std::cout<<"SALGO DE VSP: UNSP " <<std::endl;
-    
 };
 
 Unsp : tfunction tid { buscaSimboloEnAmbito(tablaSimbolos.back(), $2.lexema).nombre == "" ? anyadirSimbolo($2.lexema, NFUNCION) : msgError(ERRSEMMISMO,$2.nlin,$2.ncol,$2.lexema);  anyadirAmbito($2.lexema);} tdosp Tipo tpyc Vsp Bloque tpyc
@@ -123,23 +120,16 @@ Unsp : tfunction tid { buscaSimboloEnAmbito(tablaSimbolos.back(), $2.lexema).nom
     #ifdef DEBUG
     std::cout <<"Entro en Unsp : Function tid tdosp" <<std::endl;
 #endif    
-    //std::cout<<"TAMANYO AMBITOS " <<tablaSimbolos.size() <<std::endl;
-    
-     //tablaSimbolos[0].nombre = "HOLAAAA";
-   /* std::cout<<"VECTOR CAMBIADO " <<tablaSimbolos.size() <<std::endl;
-    for(int i = 0; i < tablaSimbolos.size(); i++)
-        std::cout<<"Nombre: " <<tablaSimbolos[i].nombre <<std::endl;*/
     $$.trad = $7.trad + "\n" + $5.trad;
-    // imprimirTablaSimbolos();
     
     if(tablaSimbolos.back().nombre == "")
         $$.trad += "main";
     else
         $$.trad += tablaSimbolos.back().nombre;
     $$.trad += "()" + $8.trad;
-    // std::cout << "BORRO AMBITO" << std::endl;
+
     borrarAmbito();
-    //    std::cout << tablaSimbolos.back().nombre << std::endl;
+
 };
 
 Unsp :  tvar LV
@@ -193,7 +183,6 @@ Lid : Lid tcoma tid
     else
         $$.trad += tablaSimbolos.back().nombre + "_";
     $$.trad +=$3.lexema;
-    
 };
 
 Lid : tid
@@ -202,7 +191,7 @@ Lid : tid
     std::cout <<"Entro en Lid : id" <<std::endl;
 #endif
     if(buscaSimboloEnAmbito(tablaSimbolos.back(),$1.lexema).nombre != "")
-        msgError(ERRSEMMISMO,$1.nlin,$1.ncol,$1.lexema); //ERROR YA EXISTE ESA VARIABLE
+      msgError(ERRSEMMISMO,$1.nlin,$1.ncol,$1.lexema); //ERROR YA EXISTE ESA VARIABLE
     
     anyadirSimbolo($1.lexema,NVACIO);
     if(tablaSimbolos.back().nombre == "")
@@ -272,14 +261,12 @@ Instr : tid {if(buscaSimbolo($1.lexema).nombre == "") msgError(ERRSEMASIG,$1.nli
         {
             msgError(ERRSEMBOOL,$3.nlin,$3.ncol,"");
         }
-    //std::cout << "ASIG: " <<$4.trad << " n" <<$4.tipo << std::endl;
-    
     if($4.tipo == NREAL && simboloAux1.tipo == NENTERO)
         {
             msgError(ERRSEMREAL,$1.nlin,$1.ncol,$1.lexema);
         }
     $$.trad = simboloAux1.ambito + "_" + simboloAux1.nombre + "=";
-    //$$.trad +="\n" + simboloAux1.nombre;
+    
     if($4.tipo == NENTERO && simboloAux1.tipo == NREAL)
         {
             $$.trad += "r itor(" + $4.trad + ")";
@@ -306,10 +293,8 @@ Instr : tif E tthen Instr ColaIf
 #ifdef DEBUG
     std::cout <<"Entro en Instr : if E then Instr ColaIf" <<std::endl;
 #endif
-    //simboloAux1 = buscaSimbolo($1.lexema);
-    //POSIBLE
     if($2.tipo != BOOL)
-        msgError(ERRSEMBOOL,$2.nlin,$2.ncol,""); // NO SE HA DECLARADO ESA VARIABLE.
+        msgError(ERRSEMBOOL,$2.nlin,$2.ncol,""); // TIENE QUE SER OPERACION BOOLEANA
     $$.trad = "if(" + $2.trad + ")\n" + $4.trad + "\n" + $5.trad ;
 };
 
@@ -349,7 +334,7 @@ Instr : twriteln tpari E tpard
         $$.trad += "\"%g\\n\", ";
     else
         {
-            msgError(ERRSEMWRLN,$3.nlin,$3.ncol,"");
+            msgError(ERRSEMWRLN,$1.nlin,$1.ncol,"");
         }
     $$.trad += $3.trad + ");\n";
 };
@@ -383,7 +368,6 @@ E : Expr
 #ifdef DEBUG
     std::cout <<"Entro en E : Expr" <<std::endl;
 #endif
-    //std::cout << "E : Expr" <<"\n" <<$1.trad << "  " <<$1.tipo << std::endl;
     $$.trad = $1.trad;
     $$.tipo = $1.tipo;
 };
@@ -421,7 +405,7 @@ Expr : Term
     $$.tipo = $1.tipo;
 };
 
-Term : Term tmulop Factor
+Term : Term tmulop {if($2.lexema == "div" && $1.tipo == NREAL) msgError(ERRSEMDIV,$2.nlin,$2.ncol,"");} Factor
 {
 #ifdef DEBUG
     std::cout <<"Entro en Term : Term mulop Factor" <<std::endl;
@@ -430,50 +414,50 @@ Term : Term tmulop Factor
         {
             if($1.tipo == NREAL)
                 {
-                    msgError(ERRSEMDIV,$1.nlin,$1.ncol,"");
+                    msgError(ERRSEMDIV,$2.nlin,$2.ncol,"");
                 }
-            else if($3.tipo == NREAL)
-                msgError(ERRSEMDIV,$3.nlin,$3.ncol,"");
+            else if($4.tipo == NREAL)
+                msgError(ERRSEMDIV,$2.nlin,$2.ncol,"");
             else
-                $$.trad = $1.trad + "/i" + $3.trad;
+                $$.trad = $1.trad + "/i" + $4.trad;
             $$.tipo = NENTERO;
         }
     else if($2.lexema == "/")
         {
             $$.trad = $1.tipo == NENTERO ? "itor("+$1.trad+")" : $1.trad;
             $$.trad += "/r ";
-            $$.trad += $3.tipo == NENTERO ? "itor("+$3.trad+")" : $3.trad;
+            $$.trad += $4.tipo == NENTERO ? "itor("+$4.trad+")" : $4.trad;
             $$.tipo = NREAL;
         }
     else if($2.lexema == "*")
         {
-            if($1.tipo == NREAL && $3.tipo == NREAL)
+            if($1.tipo == NREAL && $4.tipo == NREAL)
                 {
-                    $$.trad = $1.trad + "*r " + $3.trad;
+                    $$.trad = $1.trad + "*r " + $4.trad;
                     $$.tipo = NREAL;
                     /*std::cout << "MULTIPLICACION REAL TOTAL" << std::endl;
                     std::cout << $$.trad << std::endl;
                     std::cout << "TERMINA" << std::endl;*/
                 }
-            else if($1.tipo == NREAL && $3.tipo == NENTERO)
+            else if($1.tipo == NREAL && $4.tipo == NENTERO)
                 {
-                    $$.trad = $1.trad + "*r itor(" + $3.trad + ")";
+                    $$.trad = $1.trad + "*r itor(" + $4.trad + ")";
                     $$.tipo = NREAL;
                     /*std::cout << "MULTIPLICACION PARCIAL 1" << std::endl;
                     std::cout << $$.trad << std::endl;
                     std::cout << "TERMINA" << std::endl;*/
                 }
-            else if($1.tipo == NENTERO && $3.tipo == NREAL)
+            else if($1.tipo == NENTERO && $4.tipo == NREAL)
                 {
-                    $$.trad = "itor(" + $1.trad + ")" + "*r" + $3.trad;
+                    $$.trad = "itor(" + $1.trad + ")" + "*r" + $4.trad;
                     $$.tipo = NREAL;
                     /*std::cout << "MULTIPLICACION PARCIAL 2" << std::endl;
                     std::cout << $$.trad << std::endl;
                     std::cout << "TERMINA" << std::endl;*/
                 }
-            else if($1.tipo == NENTERO && $3.tipo == NENTERO)
+            else if($1.tipo == NENTERO && $4.tipo == NENTERO)
                 {
-                    $$.trad = $1.trad + "*i " + $3.trad;
+                    $$.trad = $1.trad + "*i " + $4.trad;
                     $$.tipo = NENTERO;
                     /* std::cout << "MULTIPLICACION ENTERA TOTAL" << std::endl;
                     std::cout << $$.trad << std::endl;
@@ -483,7 +467,7 @@ Term : Term tmulop Factor
                 {
                     $$.trad = $1.trad;
                     $$.trad += "*i";
-                    $$.trad += $3.trad;
+                    $$.trad += $4.trad;
                     $$.tipo = NENTERO;
                 }
         }
@@ -565,16 +549,15 @@ void msgError(int nerror,int nlin,int ncol,const string s)
          break;
      case ERRSEMREL: fprintf(stderr,"Error semantico (%d,%d): en la instruccion \'%s\' la expresion debe ser relacional\n",nlin,ncol,s.c_str());
          break;
-     case ERRSEMDIV: fprintf(stderr,"Error semantico (%d,%d):los dos operandos de \'div\' deben ser enteros\n",nlin,ncol-strlen(yytext));
+     case ERRSEMDIV: fprintf(stderr,"Error semantico (%d,%d): los dos operandos de \'div\' deben ser enteros\n",nlin,ncol);
          break;
-     case ERRSEMWRLN: fprintf(stderr,"Error semantico (%d,%d): \'writeln\' no admite expresiones booleanas\n",nlin,ncol-strlen("writeln("));
+     case ERRSEMWRLN: fprintf(stderr,"Error semantico (%d,%d): \'writeln\' no admite expresiones booleanas\n",nlin,ncol);
          break;
      }
         
      exit(1);
 }
 
-// CHECKED
 void anyadirAmbito(string nombreAmbito)
 {
     Ambito nuevoAmbito;
@@ -585,13 +568,11 @@ void anyadirAmbito(string nombreAmbito)
     tablaSimbolos.push_back(nuevoAmbito);
 }
 
-// CHECK
 void anyadirSimbolo(Simbolo simboloAux)
 {
     tablaSimbolos[tablaSimbolos.size() -1].simbolos.push_back(simboloAux);
 }
 
-//CHECKED
 void anyadirSimbolo(string nombre, int tipo)
 {
     Simbolo s;
@@ -635,22 +616,15 @@ Simbolo buscaSimbolo(string simbolo)
 
 void asignarTipo(int tipo)
 {
-    //std::cout << "ANTES: "  << std::endl;
-    //    imprimirAmbito(tablaSimbolos.back());
-    for(int i = 0; i < tablaSimbolos.back().simbolos.size(); i++)
+  for(int i = 0; i < tablaSimbolos.back().simbolos.size(); i++)
         {
             if(tablaSimbolos.back().simbolos[i].tipo == 0)
                 {
-               
-                    
-                    tablaSimbolos.back().simbolos[i].tipo = tipo;
+                  tablaSimbolos.back().simbolos[i].tipo = tipo;
                 }
         }
-    //std::cout << "DESPUES" << std::endl;
-    //    imprimirAmbito(tablaSimbolos.back());
-    
-    //     std::cout<<"FALTA IMPLEMENTAR ASIGNARTIPO" <<std::endl;
 }
+
 void borrarAmbito()
 {
     tablaSimbolos.pop_back();
@@ -669,6 +643,7 @@ void imprimirTablaSimbolos()
      for(int i = 0; i < tablaSimbolos.size(); i++)
         imprimirAmbito(tablaSimbolos[i]);
 }
+
 int yyerror(char *s)
 {
     if (findefichero) 
