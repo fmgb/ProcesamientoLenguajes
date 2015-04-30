@@ -1,11 +1,4 @@
-/* Author: Francisco Manuel García Botella
-   License: GNU GPLv3
-   Subject: Procesamiento de Lenguajes(PL)
-   Target: Practice 4
-*/
-
 /*------------------------------ plp4.l -------------------------------*/
-/*   -------  Definiciones regulares  -------- */
 D    [0-9]
 L    [a-zA-Z]
 LD   [0-9a-zA-Z]
@@ -25,9 +18,7 @@ using namespace std;
 int ncol = 1,
     nlin = 1;
 
- bool comentario = false;
- 
-int findefichero = 0;
+ int findefichero = 0;
 
 int ret(int token);  
 // funciÃ³n que actualiza 'nlin' y 'ncol' y devuelve el token
@@ -43,16 +34,17 @@ void msgError(int nerror, int nlin,int ncol,const string s);
 %{
 /* codigo local */
 %}
+
 " "                {ncol++;}
 [\t]               {ncol++;}
 [\n]               {nlin++;ncol=1;}
 
 "(*" {ncol += strlen(yytext); BEGIN(COMENTARIO);}
-<COMENTARIO>[^(*\n]+ {ncol += strlen(yytext);}
+<COMENTARIO>[^\(\*\n]+ {ncol += strlen(yytext);}
 <COMENTARIO>\n {nlin++;ncol=1;}
-<COMENTARIO>«EOF» {msgError(ERRLEXEOF,-1,-1,"");}
+<COMENTARIO><<EOF>> {msgError(ERRLEXEOF,-1,-1,"");}
 <COMENTARIO>"*)" {ncol+=strlen(yytext); BEGIN(INITIAL);}
-<COMENTARIO>[*)] {ncol += strlen(yytext);}
+<COMENTARIO>[*\)] {ncol += strlen(yytext);}
         /* Las palabras reservadas deben aparecer antes de la regla que
           reconoce los identificadores, para evitar que sean reconocidas
           como identificadores en lugar de como palabras reservadas */            
@@ -103,10 +95,10 @@ int ret(int token)
 {
   if(token == trelop)
     {
-      if(strcmp(yytext,"=")){
+      if(strcmp(yytext,"=") == 0){
         yylval.lexema=strdup("==");
       }
-      else if (strcmp(yytext,"<>")) {
+      else if (strcmp(yytext,"<>") == 0) {
         yylval.lexema=strdup("!=");
       }
       else {

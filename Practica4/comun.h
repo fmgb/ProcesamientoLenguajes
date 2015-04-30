@@ -14,6 +14,7 @@ typedef struct
 {
     string nombre;
     int tipo;
+    string ambito;
 } Simbolo;
 
 typedef struct 
