@@ -235,7 +235,7 @@ SInstr : SInstr tpyc Instr
     $$.trad = $1.trad + "\n" + $3.trad;
 };
 
-SInstr :  Instr
+SInstr : Instr
 {
 #ifdef DEBUG
     std::cout <<"Entro en SInstr : Instr" <<std::endl;
@@ -288,14 +288,14 @@ Instr : tid {if(buscaSimbolo($1.lexema).nombre == "") msgError(ERRSEMASIG,$1.nli
 
 };
 
-Instr : tif E tthen Instr ColaIf
+Instr : tif E {if($2.tipo != BOOL) msgError(ERRSEMREL,$1.nlin,$1.ncol,$1.lexema);} tthen Instr ColaIf
 {
 #ifdef DEBUG
     std::cout <<"Entro en Instr : if E then Instr ColaIf" <<std::endl;
 #endif
     if($2.tipo != BOOL)
         msgError(ERRSEMBOOL,$2.nlin,$2.ncol,""); // TIENE QUE SER OPERACION BOOLEANA
-    $$.trad = "if(" + $2.trad + ")\n" + $4.trad + "\n" + $5.trad ;
+    $$.trad = "if(" + $2.trad + ")\n" + $5.trad + "\n" + $6.trad ;
 };
 
 ColaIf : tendif  {
