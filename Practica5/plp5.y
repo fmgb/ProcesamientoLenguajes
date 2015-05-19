@@ -41,6 +41,7 @@
 %token tdo
 %token twriteln
 %token tnentero
+%token tid
 %token tnreal
 
 %{
@@ -91,6 +92,7 @@ string operador, s1, s2;  // string auxiliares
  %}
 
 %%
+
 
 
 S : FVM    { /* comprobar que después del programa
@@ -150,7 +152,6 @@ BDecl :
 #ifdef DEBUG
     std::cout <<"Entro en V : Lid dosp Tipo pyc" <<std::endl;
 #endif
- 
 };
 
 DVar : Tipo LIdent tpyc

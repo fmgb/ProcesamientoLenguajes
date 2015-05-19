@@ -6,7 +6,7 @@
    Creado el: 19/05/2015
 */
 
-/*------------------------------ plp5.l -------------------------------*/
+/*------------------------------ plp4.l -------------------------------*/
 D    [0-9]
 L    [a-zA-Z]
 LD   [0-9a-zA-Z]
@@ -23,6 +23,7 @@ using namespace std;
 
 #include "comun.h"
 #include "plp5.tab.h"
+
 
 int ncol = 1,
     nlin = 1;
@@ -90,9 +91,9 @@ void msgError(int nerror, int nlin,int ncol,const string s);
 "else"            {return ret(telse);}
 "while"           {return ret(twhile);}
 
-{D}+              {return ret(tint);}
+{D}+              {return ret(tnentero);}
 {L}({LD})*        {return ret(tid);}
-{D}+(\.){D}+      {return ret(tfloat);}
+{D}+(\.){D}+      {return ret(tnreal);}
 .                 {msgError(ERRLEXICO,nlin,ncol,yytext);}
 
 %%
@@ -103,6 +104,7 @@ int yywrap(void) {findefichero=1; return 1;} /* para no tener que linkar con la
 
 int ret(int token)
 {
+
     yylval.lexema=strdup(yytext);
   yylval.nlin=nlin;
   yylval.ncol=ncol;
