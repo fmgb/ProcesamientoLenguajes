@@ -41,7 +41,6 @@
 %token tdo
 %token twriteln
 %token tnentero
-%token tid
 %token tnreal
 
 %{
@@ -69,26 +68,30 @@ extern FILE *yyin;
 
 
 int yyerror(char *s);
+/* Tabla de Simbolos */
 void anyadirAmbito(string nombreAmbito);
 void anyadirSimbolo(Simbolo simboloAux);
 void anyadirSimbolo(string nombre, int tipo);
 Simbolo buscaSimbolo(string simbolo);
- 
 Simbolo buscaSimboloEnAmbito(Ambito ambitoAux, string simbolo);
 void borrarAmbito();
 void asignarTipo(int tipo);
 void imprimirAmbito(Ambito ambito);
 void imprimirTablaSimbolos();
 
-const int NENTERO=1;
-const int NREAL=2;
-const int BOOL = 3;
-const int NVACIO = 0;
-const int NFUNCION = 4;
+/* Fin Tabla de simbolos */
+/* Tabla de Tipos */
+ void anyadirTTipos(string nombre, int tipo, int tam, int tbase);
+ TTipo sacarTTipo(string lexema);
+ /* Fin Tabla de Tipos */
+
+int nTmp();
  
 string operador, s1, s2;  // string auxiliares
  Simbolo simboloAux1, simboloAux2; // Simbolos Auxiliares
  std::vector<Ambito> tablaSimbolos;
+ std::vector<TTipo> tablaTipos;
+ 
  %}
 
 %%
@@ -227,11 +230,44 @@ Instr : Bloque
 #endif
 };
 
-Instr : Ref tasig Expr tpyc
+//FALTA LOS ERRORES DE LOS ARRAY
+Instr : Ref {if(buscaSimbolo($1.lexema).tipo == NFUNCION) msgError(ERRSEMNOVAR),$1.nlin,$1.ncol,$1.lexema); if(buscaSimbolo($1.lexema).tipo == NARRAY) msgError(ERRSEMNOVAR,$1.nlin,$1.ncol, $1.lexema);} tasig Expr {if (buscaSimbolo($4.lexema).tipo == NARRAY) msgError(ERRSEMNOVAR,$1.nlin,$1.ncol, $1.lexema);} tpyc
 {
 #ifdef DEBUG
-    std::cout <<"Entro en ColaIf : endif " <<std::endl;
+    std::cout <<"Entro en Instr : Ref tasig Expr tpyc " <<std::endl;
 #endif
+    int tmp = nTmp();
+    $$.dir = tmp;
+    $$.cod += $4.cod; //Anyadir el codigo que viene de la expresion que
+                      //queremos evaluar.
+    if($1.tipo == NREAL && $4.tipo == NENTERO)
+      {
+        $$.tipo = NREAL;
+        int tmpAux = nTmp();
+        $$.cod += "mov " + $4.dir + " A; Empezamos la asignacion ENTERO a REAL\n";
+        $$.cod += "itor\n";
+        $$.cod += "mov A " + tmpAux + "\n";
+        $$.cod += "mov " + tmpAux + " " + $1.dir + ";Asignamos el valor\n";
+      }
+    else if($1.tipo == NENTERO && $4.tipo == NREAL)
+      {
+        $$.tipo = NENTERO;
+        int tmpAux = nTmp();
+        $$.cod += "mov " + $4.dir + " A; Empezamos la asignacion REAL a ENTERO\n";
+        $$.cod += "rtoi\n";
+        $$.cod += "mov A " + tmpAux + "\n";
+        $$.cod += "mov " + tmpAux + " " + $1.dir + ";Asignamos el valor\n";
+      }
+    else if($1.tipo == NENTERO && $4.tipo == NENTERO)
+      {
+        $$.tipo = NENTERO;
+        $$.cod += "mov " + $4.dir + " " + $1.dir + "; Asignamos el valor ENTERO a ENTERO";
+      }
+    else
+      {
+        $$.tipo = NREAL;
+        $$.cod += "mov " + $4.dir + " " + $1.dir + "; Asignamos el valor REAL a REAL";
+      }
 };
 
 Instr : tprintf tpari tformato tcoma Expr tpard tpyc
@@ -248,24 +284,28 @@ Instr : tscanf tpari tformato tcoma treferencia Ref tpard tpyc
 #endif
 };
 
-Instr : tif tpari Expr tpard Instr_prima
+Instr : tif tpari Expr tpard Instr Instr_prima
 {
 #ifdef DEBUG
     std::cout <<"Entro en Instr : writeln pari E pard" <<std::endl;
 #endif
 };
 
-Instr_prima : Expr tpard tpyc
+Instr_prima : telse Instr
 {
-
+#ifdef DEBUG
+  std::cout<<"Entro e Instr_prima : telse Instr"
+    #endif
+    
 
 }
 
-Instr_prima : treferencia Ref tpard tpyc
+Instr_prima : 
 {
 #ifdef DEBUG
-    std::cout <<"Entro en E : Expr relop Expr" <<std::endl;
+    std::cout <<"Entro en Instr_prima : " <<std::endl;
 #endif
+    $$.cod = "";
 };
 
 Instr : twhile tpari Expr tpard Instr
@@ -273,81 +313,276 @@ Instr : twhile tpari Expr tpard Instr
 #ifdef DEBUG
     std::cout <<"Entro en E : Expr" <<std::endl;
 #endif
+    
 };
 
 Expr : Expr trelop Esimple
 {
 #ifdef DEBUG
-    std::cout <<"Entro en Expr : Expr addop Term" <<std::endl;
+    std::cout <<"Entro en Expr : Expr trelop Esimple" <<std::endl;
 #endif
+    if($2.lexema == "==")
+      {
+        operacion = "eql";
+      }
+    else if($2.lexema == "!=")
+      {
+        operacion = "neq";
+      }
+    else if($2.lexema == ">")
+      {
+        operacion = "gtr";
+      }
+    else if($2.lexema == "<")
+      {
+        operacion = "lss";
+      }
+    else if($2.lexema == ">=")
+      {
+        operacion = "geq";
+      }
+    else if($2.lexema == "<=")
+      {
+        operacion = "leq";
+      }
+    $$.tipo = NENTERO;
+    
+    $$.cod += $1.cod + $3.cod;
+    if($1.tipo == NENTERO && $3.tipo == NENTERO)
+      {
+        $$.cod += "mov " + $1.dir + " A; Cargo el primer termino en A\n";
+        $$.cod += operacion;
+        $$.cod += "i " + $3.dir + "; Realizamos la operacion entera total.\n";
+      }
+    else if($1.tipo == NENTERO && $3.tipo == NREAL)
+      {
+        $$.cod += "mov " + $1.dir + " A; Cargo el primer termino en A\n";
+        $$.cod += "itor; Realizo la conversión del primer termino\n";
+        $$.cod += operacion;
+        $$.cod += "r " + $3.dir + ";Realizamos la operacion entera- real\n";
+      }
+    else if($1.tipo == NREAL && $3.tipo == NENTERO)
+      {
+        int tmpAux = nTmp();
+        $$.cod += "mov " + $3.dir + " A; Cargamos el segundo operando.\n";
+        $$.cod += "itor\n";
+        $$.cod += "mov A " + tmpAux + "; Guardamos el segundo termino convertido.\n";
+        $$.cod += "mov " + $1.dir + " A\n";
+        $$.cod += operacion;
+        $$.cod += "r " + tmpAux + "; Realizamos la operacion real.\n";
+      }
+    else // REAL && REAL
+      {
+        $$.cod += "mov " + $1.dir + " A;Cargamos el primer operando.";
+        $$.cod += operacion;
+        $$.cod += "r " + $3.dir + "\n";
+      }
+    $$.cod += "mov A " + tmp + "; Lo cargamos en la dir correspondiente.\n";
+
+    
 };
 
 Expr : Esimple
 {
 #ifdef DEBUG
-    std::cout <<"Entro en Expr : Term" <<std::endl;
+    std::cout <<"Entro en Expr : ESimple" <<std::endl;
 #endif
+    $$.cod = $1.cod;
+    $$.tipo = $1.tipo;
+    $$.dir = $1.dir;
 };
 
+//CHECK
+//Bajo mi punto de vista esta regla es la misma que la de Term : Term mulop Factor
 Esimple : Esimple taddop Term
 {
 #ifdef DEBUG
-    std::cout <<"Entro en Term : Term mulop Factor" <<std::endl;
+    std::cout <<"Entro en Esimple : Esimple taddop Term" <<std::endl;
 #endif
+    int tmp = nTmp();
+    $$.dir = tmp;
+    String operacion = "";
+    
+     if($2.lexema == "+")
+          {
+            operacion = "add";
+          }
+        else
+          operacion = "sub";
+     
+     $$.cod += $1.cod + $3.cod;
+     if($1.tipo == NENTERO && $3.tipo == NENTERO)
+      {
+        $$.cod += "mov " + $1.dir + " A; Cargo el primer termino en A\n";
+        $$.cod += operacion;
+        $$.cod += "i " + $3.dir + "; Realizamos la operacion entera total.\n";
+        $$.tipo = NENTERO;
+      }
+    else if($1.tipo == NENTERO && $3.tipo == NREAL)
+      {
+        $$.cod += "mov " + $1.dir + " A; Cargo el primer termino en A\n";
+        $$.cod += "itor; Realizo la conversión del primer termino\n";
+        $$.cod += operacion;
+        $$.cod += "r " + $3.dir + ";Realizamos la operacion entera- real\n";
+        $$.tipo = NREAL;
+      }
+    else if($1.tipo == NREAL && $3.tipo == NENTERO)
+      {
+        int tmpAux = nTmp();
+        $$.cod += "mov " + $3.dir + " A; Cargamos el segundo operando.\n";
+        $$.cod += "itor\n";
+        $$.cod += "mov A " + tmpAux + "; Guardamos el segundo termino convertido.\n";
+        $$.cod += "mov " + $1.dir + " A\n";
+        $$.cod += operacion;
+        $$.cod += "r " + tmpAux + "; Realizamos la operacion real.\n";
+        $$.tipo = NREAL;
+      }
+    else // REAL && REAL
+      {
+        $$.cod += "mov " + $1.dir + " A;Cargamos el primer operando.";
+        $$.cod += operacion;
+        $$.cod += "r " + $3.dir + "\n";
+        $$.tipo = NREAL;
+      }
+    $$.cod += "mov A " + tmp + "; Lo cargamos en la dir correspondiente.\n";
 };
 
 Esimple : Term
 {
 #ifdef DEBUG
-    std::cout <<"Entro en Term : Factor" <<std::endl;
+    std::cout <<"Entro en Esimple : Term" <<std::endl;
 #endif
+    $$.cod = $1.cod;
+    $$.tipo = $1.tipo;
+    $$.dir = $1.dir;
 };
 
 Term : Term tmulop Factor
 {
 #ifdef DEBUG
-    std::cout <<"Entro en Factor : id" <<std::endl;
+    std::cout <<"Entro en Term : Term tmulop Factor" <<std::endl;
 #endif
+    int tmp = nTmp();
+    $$.dir = tmp;
+    String operacion = "";
+    
+     if($2.lexema == "*")
+          {
+            operacion = "mul";
+          }
+        else
+          operacion = "div";
+     $$.cod += $1.cod + $2.cod;
+     if($1.tipo == NENTERO && $3.tipo == NENTERO)
+      {
+        $$.cod += "mov " + $1.dir + " A; Cargo el primer termino en A\n";
+        $$.cod += operacion;
+        $$.cod += "i " + $3.dir + "; Realizamos la operacion entera total.\n";
+        $$.tipo = NENTERO;
+      }
+    else if($1.tipo == NENTERO && $3.tipo == NREAL)
+      {
+        $$.cod += "mov " + $1.dir + " A; Cargo el primer termino en A\n";
+        $$.cod += "itor; Realizo la conversión del primer termino\n";
+        $$.cod += operacion;
+        $$.cod += "r " + $3.dir + ";Realizamos la operacion entera- real\n";
+        $$.tipo = NREAL;
+      }
+    else if($1.tipo == NREAL && $3.tipo == NENTERO)
+      {
+        int tmpAux = nTmp();
+        $$.cod += "mov " + $3.dir + " A; Cargamos el segundo operando.\n";
+        $$.cod += "itor\n";
+        $$.cod += "mov A " + tmpAux + "; Guardamos el segundo termino convertido.\n";
+        $$.cod += "mov " + $1.dir + " A\n";
+        $$.cod += operacion;
+        $$.cod += "r " + tmpAux + "; Realizamos la operacion real.\n";
+        $$.tipo = NREAL;
+      }
+    else // REAL && REAL
+      {
+        $$.cod += "mov " + $1.dir + " A;Cargamos el primer operando.";
+        $$.cod += operacion;
+        $$.cod += "r " + $3.dir + "\n";
+        $$.tipo = NREAL;
+      }
+     $$.cod += "mov A " + tmp + "; Lo cargamos en la dir correspondiente.\n";
 };
 
 Term : Factor
 {
 #ifdef DEBUG
-    std::cout <<"Entro en Factor : nentero" <<std::endl;
+    std::cout <<"Entro en Term : Factor" <<std::endl;
 #endif
+    $$.cod = $1.cod;
+    $$.dir = $1.dir;
+    $$.tipo = $1.tipo;
 };
 
 Factor : Ref
 {
 #ifdef DEBUG
-    std::cout <<"Entro en Factor : real" <<std::endl;
+    std::cout <<"Entro en Factor : Ref" <<std::endl;
 #endif
 };
 
 Factor : tnentero
 {
 #ifdef DEBUG
-    std::cout <<"Entro en Factor : pari Expr pard" <<std::endl;
+    std::cout <<"Entro en Factor : tnentero" <<std::endl;
 #endif
+
+    $$.tipo = NENTERO;
+    tmp = nTemp();
+    
+    $$.dir = tmp;
+    $$.cod = "mov #" + $1.lexema + " " + tmp + "; Guardo un numero Entero\n";
 };
 
 Factor : tnreal
 {
+#ifdef DEBUG
+  std::cout <<"Entro en Factor: tnreal" <<std::endl;
+  #endif
+  $$.tipo = NREAL;
+  tmp = nTemp();
+  $$.dir = tmp;
+  $$.cod = "mov $" + $1.lexema + " " + tmp + "; Guardo un numero Real\n";
+}
 
+//No estoy muy convencido de esto.
+Factor : tpari Expr tpard
+{
+#ifdef DEBUG
+  std::cout <<"Entro en Factor: tpari Expr tard" <<std::endl;
+#endif
+  $$.tipo = $2.tipo;
+  $$.dir = nTmp();
+  $$.cod = $2.cod;
+  $$.cod += "\n";
+  
 
 
 }
 
 Ref : tid
 {
-
-
+  Simbolo sim  = buscarSimbolo(id.lexema);
+  int tmp = nTmp();
+  $$.tipo = sim.tipo;
+  $$.dbase = sim.dir;
+  $$.cod = "mov #0 " + tmp;
 }
 
-Ref : Ref tcori Esimple tcord
+//TODO Cambiar Error
+Ref : Ref tcori {if(!esArray($1.tipo)) msgError(ERRSEMNOVAR, $1.nlin, $1.ncol, $1.lexema); } Esimple tcord 
 {
-
-
+  if ($4.tipo != NENTERO)
+    msgError(ERRSEMASIG,$4.nlin,$4.ncol,$4.lexema); //TODO Cambiar error
+  TTipo ttipo = sacarTTipo($1.lexema);
+  
+  $$.tipo = ttipo.tbase;
+  
 }
 
 %%
@@ -356,31 +591,39 @@ void msgError(int nerror,int nlin,int ncol,const string s)
 {
      switch (nerror) {
      case ERRLEXICO: fprintf(stderr,"Error lexico (%d,%d): caracter '%s' incorrecto\n",nlin,ncol,s.c_str());
-         break;
+            break;
      case ERRSINT: fprintf(stderr,"Error sintactico (%d,%d): en '%s'\n",nlin,ncol,s.c_str());
-         break;
-     case ERREOF: fprintf(stderr,"Error sintactico: fin de fichero inesperado\n");
-         break;
-     case ERRLEXEOF: fprintf(stderr,"Error lexico: fin de fichero inesperado\n");
-         break;
-     case ERRSEMMISMO: fprintf(stderr,"Error semantico (%d,%d): \'%s\' ya existe en este ambito\n",nlin,ncol,s.c_str());
-         break;
-     case ERRSEMASIG: fprintf(stderr,"Error semantico (%d,%d): \'%s\' no ha sido declarado\n",nlin,ncol,s.c_str());
-         break;
-     case ERRSEMNOVAR: fprintf(stderr,"Error semantico (%d,%d): \'%s\' no es una variable\n",nlin,ncol,s.c_str());
-         break;
-     case ERRSEMREAL: fprintf(stderr,"Error semantico (%d,%d) :\'%s\' debe ser de tipo real\n",nlin,ncol,s.c_str());
-         break;
-     case ERRSEMBOOL: fprintf(stderr,"Error semantico (%d,%d): el operador \':=\' no admite expresiones relacionales\n",nlin,ncol);
-         break;
-     case ERRSEMREL: fprintf(stderr,"Error semantico (%d,%d): en la instruccion \'%s\' la expresion debe ser relacional\n",nlin,ncol,s.c_str());
-         break;
-     case ERRSEMDIV: fprintf(stderr,"Error semantico (%d,%d): los dos operandos de \'div\' deben ser enteros\n",nlin,ncol);
-         break;
-     case ERRSEMWRLN: fprintf(stderr,"Error semantico (%d,%d): \'writeln\' no admite expresiones booleanas\n",nlin,ncol);
-         break;
-     }
-        
+            break;
+         case ERREOF: fprintf(stderr,"Error sintactico: fin de fichero inesperado\n");
+            break;
+         case ERRLEXEOF: fprintf(stderr,"Error lexico: fin de fichero inesperado\n");
+            break;
+         default:
+            fprintf(stderr,"Error semantico (%d,%d): ", nlin,ncol);
+            switch(nerror) {
+            case ERRYADECL: fprintf(stderr,"simbolo '%s' ya declarado\n",s.c_str());
+               break;
+            case ERRNODECL: fprintf(stderr,"identificador '%s' no declarado\n",s.c_str());
+               break;
+             case ERRDIM: fprintf(stderr,"la dimension debe ser mayor que cero\n");
+               break;
+             case ERRFALTAN: fprintf(stderr,"faltan indices\n");
+               break;
+             case ERRSOBRAN: fprintf(stderr,"sobran indices\n");
+               break;
+             case ERR_EXP_ENT: fprintf(stderr,"la expresion entre corchetes debe ser de tipo entero\n");
+               break;
+
+            case ERR_NOCABE:fprintf(stderr,"la variable '%s' ya no cabe en memoria\n",s.c_str());
+               break;
+            case ERR_MAXVAR:fprintf(stderr,"en la variable '%s', hay demasiadas variables declaradas\n",s.c_str());
+               break;
+             case ERR_MAXTIPOS:fprintf(stderr,"hay demasiados tipos definidos\n");
+               break;
+             case ERR_MAXTMP:fprintf(stderr,"no hay espacio para variables temporales\n");
+               break;
+            }
+        }
      exit(1);
 }
 
@@ -412,9 +655,9 @@ void anyadirSimbolo(string nombre, int tipo)
 }
 
 //CHECK
-Simbolo buscaSimboloEnAmbito(Ambito ambitoAux, string simbolo)
+/*Simbolo buscaSimboloEnAmbito(Ambito ambitoAux, string simbolo)
 {
-    for(int i = 0; i < ambitoAux.simbolos.size();i++)
+     for(int i = 0; i < ambitoAux.simbolos.size();i++)
         {
             if(ambitoAux.simbolos[i].nombre == simbolo)
                 return ambitoAux.simbolos[i];
@@ -469,7 +712,7 @@ void imprimirTablaSimbolos()
      for(int i = 0; i < tablaSimbolos.size(); i++)
         imprimirAmbito(tablaSimbolos[i]);
 }
-
+*/
 int yyerror(char *s)
 {
     if (findefichero) 

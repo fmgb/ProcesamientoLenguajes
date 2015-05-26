@@ -20,9 +20,10 @@ typedef struct {
 
 typedef struct 
 {
-    string nombre;
-    int tipo;
-    string ambito;
+  string nombre;
+  int tipo;
+  int dir;
+  string ambito;
 } Simbolo;
 
 typedef struct 
@@ -31,20 +32,41 @@ typedef struct
     vector<Simbolo> simbolos;
 } Ambito;
 
+typedef struct
+{
+  int tipo;
+  int tam;
+  int tbase;
+} TTipo;
+
 #define YYSTYPE MITIPO
 
+/* Tipos posibles en la gramática */
+const int NVACIO = 0;
+const int NENTERO=1;
+const int NREAL=2;
+const int BOOL = 3;
+
+const int ARRAY = 4;
+const int FUNCION = 5;
+
+/* Tipo de erorres en la gramática */
 
 #define ERRLEXICO    1
 #define ERRSINT      2
 #define ERREOF       3
 #define ERRLEXEOF    4
-#define ERRSEMMISMO  5
-#define ERRSEMASIG   6
-#define ERRSEMNOVAR  7
-#define ERRSEMREAL   8
-#define ERRSEMBOOL   9
-#define ERRSEMREL   10
-#define ERRSEMDIV   11
-#define ERRSEMWRLN  12
+
+#define ERRYADECL       10
+#define ERRNODECL       11
+#define ERRDIM          12
+#define ERRFALTAN       13
+#define ERRSOBRAN       14
+#define ERR_EXP_ENT     15
+
+#define ERR_NOCABE     100
+#define ERR_MAXVAR     101
+#define ERR_MAXTIPOS   102
+#define ERR_MAXTMP     103
 
 void msgError(int nerror,int nlin,int ncol,const string s);
