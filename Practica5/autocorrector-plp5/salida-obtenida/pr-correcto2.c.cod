@@ -1,1552 +1,1872 @@
-rorrormov #5 "; Guardo un numero Entero
-ENTERO a REAL
- A
-uli #
-i #TERO a REAL
- @A
-mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-uli #
-ddi #O a REAL
- @A
+mov #0 33;Estoy en Ref:tid
+mov #0 33;Estoy en Ref:tid
+mov #5 34; Guardo un numero Entero
+mov 33 A
+muli #1
+addi #3; Instr: Ref asig
+mov 35 @A
+mov #0 36;Estoy en Ref:tid
+mov #0 36;Estoy en Ref:tid
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #1
+addi #1; Instr: Ref asig
+mov 38 @A
 A; Realizamos el if
 :
-ror: discardingror: discardingmov ' A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov #0 39;Estoy en Ref:tid
+mov #0 39;Estoy en Ref:tid
 
-ror: discardingror: discardingmov ' A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov 39 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 40
+mov #0 39;Estoy en Ref:tid
+mov #0 39;Estoy en Ref:tid
 
-r: discardingr: discardingmov ) A; Factor : Ref 
-uli #
-;Le sumo un tipo
-ov $
-a REAL
- A; Cargo el primer termino en A
-lssal.
-; Realizamos la operacion entera total.
-REAL a ENTERO
-; Lo cargamos en la dir correspondiente.
-a REAL
- A
+mov 39 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 40
+mov #0 41;Estoy en Ref:tid
+mov #0 41;Estoy en Ref:tid
+
+mov 41 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 42
+mov 40 A; Cargo el primer termino en A
+lssi 42; Realizamos la operacion entera total.
+mov A 43; Lo cargamos en la dir correspondiente.
+mov 40 A
 jz ; Realizamos el if
-discardingdiscardingmov #0 -; Guardo un numero Entero
-AL
- A
-uli #
-di #
- @A
+mov #0 44;Estoy en Ref:tid
+mov #0 44;Estoy en Ref:tid
+mov #0 45; Guardo un numero Entero
+mov 44 A
+muli #1
+addi #2; Instr: Ref asig
+mov 46 @A
 :
-cardingcardingmov / A; Factor : Ref 
-uli #
-;Le sumo un tipo
- Guardo un numero Real
+mov #0 47;Estoy en Ref:tid
+mov #0 47;Estoy en Ref:tid
 
-cardingcardingmov / A; Factor : Ref 
-uli #
-;Le sumo un tipo
- Guardo un numero Real
+mov 47 A; Factor : Ref 
+muli #1
+addi #2;Le sumo un tipo
+mov @A 48
+mov #0 47;Estoy en Ref:tid
+mov #0 47;Estoy en Ref:tid
 
-rdingrdingmov 1 A; Factor : Ref 
-uli #
-;Le sumo un tipo
-uardo un numero Real
+mov 47 A; Factor : Ref 
+muli #1
+addi #2;Le sumo un tipo
+mov @A 48
+mov #0 49;Estoy en Ref:tid
+mov #0 49;Estoy en Ref:tid
 
-itor
- A; Cargo el primer termino en A
-lss; Realizamos la operacion entera total.
-NTERO
-; Lo cargamos en la dir correspondiente.
-itor
- A
+mov 49 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 50
+mov 48 A; Cargo el primer termino en A
+lssi 50; Realizamos la operacion entera total.
+mov A 51; Lo cargamos en la dir correspondiente.
+mov 48 A
 jz  A; Realizamos el if
-ngngggmov 5 A; Factor : Ref 
-uli #
-;Le sumo un tipo
-o un numero Real
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53;Estoy en Ref:tid
+mov #0 53;Estoy en Ref:tid
 
+mov 53 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 54
+mov 52 A
+muli #5
+addi 54; 
+mov A 55
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53;Estoy en Ref:tid
+mov #0 53;Estoy en Ref:tid
 
- A
-#g; 
-mov A 7ngngggmov 5 A; Factor : Ref 
-uli #
-;Le sumo un tipo
-o un numero Real
+mov 53 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 54
+mov 52 A
+muli #5
+addi 54; 
+mov A 55
+mov #0 56;Estoy en Ref:tid
+mov #0 56;Estoy en Ref:tid
 
+mov 56 A; Factor : Ref 
+muli #1
+addi #2;Le sumo un tipo
+mov @A 57
+mov 55 A
+muli #5
+addi 57; 
+mov A 58
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53;Estoy en Ref:tid
+mov #0 53;Estoy en Ref:tid
 
- A
-#g; 
-mov A 7rror: poppingrror: poppingmov 8 A; Factor : Ref 
-uli #
-;Le sumo un tipo
-n numero Real
+mov 53 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 54
+mov 52 A
+muli #5
+addi 54; 
+mov A 55
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53;Estoy en Ref:tid
+mov #0 53;Estoy en Ref:tid
 
-ov A  A
-#emory exhausted; 
-mov A :ngngggmov 5 A; Factor : Ref 
-uli #
-;Le sumo un tipo
-o un numero Real
+mov 53 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 54
+mov 52 A
+muli #5
+addi 54; 
+mov A 55
+mov #0 56;Estoy en Ref:tid
+mov #0 56;Estoy en Ref:tid
 
+mov 56 A; Factor : Ref 
+muli #1
+addi #2;Le sumo un tipo
+mov @A 57
+mov 55 A
+muli #5
+addi 57; 
+mov A 58
+mov #0 59; Guardo un numero Entero
+mov 58 A
+muli #1
+addi #4; Instr: Ref asig
+mov 60 @A
+mov #0 61;Estoy en Ref:tid
+mov #0 61;Estoy en Ref:tid
+mov #0 62;Estoy en Ref:tid
+mov #0 62;Estoy en Ref:tid
 
- A
-#g; 
-mov A 7ngngggmov 5 A; Factor : Ref 
-uli #
-;Le sumo un tipo
-o un numero Real
+mov 62 A; Factor : Ref 
+muli #1
+addi #2;Le sumo un tipo
+mov @A 63
+mov #0 62;Estoy en Ref:tid
+mov #0 62;Estoy en Ref:tid
 
-
- A
-#g; 
-mov A 7rror: poppingrror: poppingmov 8 A; Factor : Ref 
-uli #
-;Le sumo un tipo
-n numero Real
-
-ov A  A
-#emory exhausted; 
-mov A :mov #0 ;; Guardo un numero Entero
-A  A
-uli #
- # @A
- popping poppingpoppingpoppingmov > A; Factor : Ref 
-uli #
-;Le sumo un tipo
-ro Real
-
-poppingpoppingmov > A; Factor : Ref 
-uli #
-;Le sumo un tipo
-ro Real
-
-mov #1 @; Guardo un numero Entero
- A; Cargo el primer termino en A
-addizo la conversiÃ³n del primer termino
-; Realizamos la operacion entera total.
-A
-; Lo cargamos en la dir correspondiente.
-
- A
-uli #
-di # @A
+mov 62 A; Factor : Ref 
+muli #1
+addi #2;Le sumo un tipo
+mov @A 63
+mov #1 64; Guardo un numero Entero
+mov 63 A; Cargo el primer termino en A
+addi 64; Realizamos la operacion entera total.
+mov A 65; Lo cargamos en la dir correspondiente.
+mov 61 A
+muli #1
+addi #2; Instr: Ref asig
+mov 66 @A
 jmp  A; Realizamos el if
 :
-ngngggmov D A; Factor : Ref 
-uli #
-;Le sumo un tipo
-l
+mov #0 67;Estoy en Ref:tid
+mov #0 67;Estoy en Ref:tid
+mov #0 68;Estoy en Ref:tid
+mov #0 68;Estoy en Ref:tid
 
-ggmov D A; Factor : Ref 
-uli #
-;Le sumo un tipo
-l
+mov 68 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 69
+mov #0 68;Estoy en Ref:tid
+mov #0 68;Estoy en Ref:tid
 
-mov #1 F; Guardo un numero Entero
- A; Empezamos la asignacion REAL a ENTERO
- A; Cargo el primer termino en A
-add conversiÃ³n del primer termino
-; Realizamos la operacion entera total.
-i #; Lo cargamos en la dir correspondiente.
- A
-uli #
-ddi # Empezamos la asignacion REAL a ENTERO
- @A
+mov 68 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 69
+mov #1 70; Guardo un numero Entero
+mov 69 A; Cargo el primer termino en A
+addi 70; Realizamos la operacion entera total.
+mov A 71; Lo cargamos en la dir correspondiente.
+mov 67 A
+muli #1
+addi #1; Instr: Ref asig
+mov 72 @A
 jmp A; Realizamos el if
 ; Realizamos el if
 :
-ory exhaustedory exhaustedmov #0 J; Guardo un numero Entero
-Empezamos la asignacion REAL a ENTERO
- A
-uli #
-ddi #pezamos la asignacion REAL a ENTERO
- @A
+mov #0 73;Estoy en Ref:tid
+mov #0 73;Estoy en Ref:tid
+mov #0 74; Guardo un numero Entero
+mov 73 A
+muli #1
+addi #1; Instr: Ref asig
+mov 75 @A
  Realizamos el if
 :
- exhausted exhaustedmov L A; Factor : Ref 
-uli #
-;Le sumo un tipo
-0 
- exhausted exhaustedmov L A; Factor : Ref 
-uli #
-;Le sumo un tipo
-0 
-xhaustedxhaustedmov N A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov #0 76;Estoy en Ref:tid
+mov #0 76;Estoy en Ref:tid
 
-zamos la asignacion REAL a ENTERO
- A; Cargo el primer termino en A
-lssÃ³n del primer termino
-; Realizamos la operacion entera total.
-#; Lo cargamos en la dir correspondiente.
-zamos la asignacion REAL a ENTERO
- A
+mov 76 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 77
+mov #0 76;Estoy en Ref:tid
+mov #0 76;Estoy en Ref:tid
+
+mov 76 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 77
+mov #0 78;Estoy en Ref:tid
+mov #0 78;Estoy en Ref:tid
+
+mov 78 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 79
+mov 77 A; Cargo el primer termino en A
+lssi 79; Realizamos la operacion entera total.
+mov A 80; Lo cargamos en la dir correspondiente.
+mov 77 A
 jz Realizamos el if
-ustedustedstedstedmov R A; Factor : Ref 
-uli #
-;Le sumo un tipo
-i 
-s la asignacion REAL a ENTERO
- A
-#iscarding lookahead; 
-mov A Tustedustedstedstedmov R A; Factor : Ref 
-uli #
-;Le sumo un tipo
-i 
-s la asignacion REAL a ENTERO
- A
-#iscarding lookahead; 
-mov A Tddmov U A; Factor : Ref 
-uli #
-;Le sumo un tipo
-addi 
-a asignacion REAL a ENTERO
- A
-#arding lookahead; 
-mov A Wustedustedstedstedmov R A; Factor : Ref 
-uli #
-;Le sumo un tipo
-i 
-s la asignacion REAL a ENTERO
- A
-#iscarding lookahead; 
-mov A Tustedustedstedstedmov R A; Factor : Ref 
-uli #
-;Le sumo un tipo
-i 
-s la asignacion REAL a ENTERO
- A
-#iscarding lookahead; 
-mov A Tddmov U A; Factor : Ref 
-uli #
-;Le sumo un tipo
-addi 
-a asignacion REAL a ENTERO
- A
-#arding lookahead; 
-mov A Wmov #1 X; Guardo un numero Entero
-signacion REAL a ENTERO
- A
-uli #
- #gnacion REAL a ENTERO
- @A
-anup: discarding lookaheadanup: discarding lookaheadnup: discarding lookaheadnup: discarding lookaheadmov [ A; Factor : Ref 
-uli #
-;Le sumo un tipo
-; 
+mov #0 81;Estoy en Ref:tid
+mov #0 81;Estoy en Ref:tid
+mov #0 82;Estoy en Ref:tid
+mov #0 82;Estoy en Ref:tid
 
-nup: discarding lookaheadnup: discarding lookaheadmov [ A; Factor : Ref 
-uli #
-;Le sumo un tipo
-; 
+mov 82 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 83
+mov 81 A
+muli #5
+addi 83; 
+mov A 84
+mov #0 81;Estoy en Ref:tid
+mov #0 81;Estoy en Ref:tid
+mov #0 82;Estoy en Ref:tid
+mov #0 82;Estoy en Ref:tid
 
-mov #1 ]; Guardo un numero Entero
-cion REAL a ENTERO
- A; Cargo el primer termino en A
-add termino
-; Realizamos la operacion entera total.
-RINT; Lo cargamos en la dir correspondiente.
-nacion REAL a ENTERO
- A
-uli #
-ddi #n REAL a ENTERO
- @A
+mov 82 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 83
+mov 81 A
+muli #5
+addi 83; 
+mov A 84
+mov #0 85;Estoy en Ref:tid
+mov #0 85;Estoy en Ref:tid
+
+mov 85 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 86
+mov 84 A
+muli #5
+addi 86; 
+mov A 87
+mov #0 81;Estoy en Ref:tid
+mov #0 81;Estoy en Ref:tid
+mov #0 82;Estoy en Ref:tid
+mov #0 82;Estoy en Ref:tid
+
+mov 82 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 83
+mov 81 A
+muli #5
+addi 83; 
+mov A 84
+mov #0 81;Estoy en Ref:tid
+mov #0 81;Estoy en Ref:tid
+mov #0 82;Estoy en Ref:tid
+mov #0 82;Estoy en Ref:tid
+
+mov 82 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 83
+mov 81 A
+muli #5
+addi 83; 
+mov A 84
+mov #0 85;Estoy en Ref:tid
+mov #0 85;Estoy en Ref:tid
+
+mov 85 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 86
+mov 84 A
+muli #5
+addi 86; 
+mov A 87
+mov #1 88; Guardo un numero Entero
+mov 87 A
+muli #1
+addi #4; Instr: Ref asig
+mov 89 @A
+mov #0 90;Estoy en Ref:tid
+mov #0 90;Estoy en Ref:tid
+mov #0 91;Estoy en Ref:tid
+mov #0 91;Estoy en Ref:tid
+
+mov 91 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 92
+mov #0 91;Estoy en Ref:tid
+mov #0 91;Estoy en Ref:tid
+
+mov 91 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 92
+mov #1 93; Guardo un numero Entero
+mov 92 A; Cargo el primer termino en A
+addi 93; Realizamos la operacion entera total.
+mov A 94; Lo cargamos en la dir correspondiente.
+mov 90 A
+muli #1
+addi #1; Instr: Ref asig
+mov 95 @A
 jmp  Realizamos el if
 Realizamos el if
 :
-discarding lookaheaddiscarding lookaheadmov #0 a; Guardo un numero Entero
- REAL a ENTERO
- A
-uli #
-ddi #EAL a ENTERO
- @A
+mov #0 96;Estoy en Ref:tid
+mov #0 96;Estoy en Ref:tid
+mov #0 97; Guardo un numero Entero
+mov 96 A
+muli #1
+addi #1; Instr: Ref asig
+mov 98 @A
 ealizamos el if
 :
-carding lookaheadcarding lookaheadmov c A; Factor : Ref 
-uli #
-;Le sumo un tipo
-ax error
-carding lookaheadcarding lookaheadmov c A; Factor : Ref 
-uli #
-;Le sumo un tipo
-ax error
-rding lookaheadrding lookaheadmov e A; Factor : Ref 
-uli #
-;Le sumo un tipo
- error
-L a ENTERO
- A; Cargo el primer termino en A
-lss; Realizamos la operacion entera total.
- A; Realizo la conversion antes de imprimir REAL a ENT
-; Lo cargamos en la dir correspondiente.
-L a ENTERO
- A
+mov #0 99;Estoy en Ref:tid
+mov #0 99;Estoy en Ref:tid
+
+mov 99 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 100
+mov #0 99;Estoy en Ref:tid
+mov #0 99;Estoy en Ref:tid
+
+mov 99 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 100
+mov #0 101;Estoy en Ref:tid
+mov #0 101;Estoy en Ref:tid
+
+mov 101 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 102
+mov 100 A; Cargo el primer termino en A
+lssi 102; Realizamos la operacion entera total.
+mov A 103; Lo cargamos en la dir correspondiente.
+mov 100 A
 jz alizamos el if
-ng lookaheadng lookaheadg lookaheadg lookaheadmov i A; Factor : Ref 
-uli #
-;Le sumo un tipo
-or
-ENTERO
- A
-#anup: popping; 
-mov A kng lookaheadng lookaheadg lookaheadg lookaheadmov i A; Factor : Ref 
-uli #
-;Le sumo un tipo
-or
-ENTERO
- A
-#anup: popping; 
-mov A kmov #0 l; Guardo un numero Entero
-ERO
- A
-#up: popping; 
-mov A mng lookaheadng lookaheadg lookaheadg lookaheadmov i A; Factor : Ref 
-uli #
-;Le sumo un tipo
-or
-ENTERO
- A
-#anup: popping; 
-mov A kng lookaheadng lookaheadg lookaheadg lookaheadmov i A; Factor : Ref 
-uli #
-;Le sumo un tipo
-or
-ENTERO
- A
-#anup: popping; 
-mov A kmov #0 l; Guardo un numero Entero
-ERO
- A
-#up: popping; 
-mov A mmov #1 n; Guardo un numero Entero
-O
- A
-uli #
- # @A
-headheadeadeadmov q A; Factor : Ref 
-uli #
-;Le sumo un tipo
-: discarding
-eadeadmov q A; Factor : Ref 
-uli #
-;Le sumo un tipo
-: discarding
-mov #1 s; Guardo un numero Entero
-oi
- A; Cargo el primer termino en A
-addizamos la operacion entera- real
-; Realizamos la operacion entera total.
-a conversion antes de imprimir REAL a ENT
-; Lo cargamos en la dir correspondiente.
-rtoi
- A
-uli #
-ddi # @A
+mov #0 104;Estoy en Ref:tid
+mov #0 104;Estoy en Ref:tid
+mov #0 105;Estoy en Ref:tid
+mov #0 105;Estoy en Ref:tid
+
+mov 105 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 106
+mov 104 A
+muli #5
+addi 106; 
+mov A 107
+mov #0 104;Estoy en Ref:tid
+mov #0 104;Estoy en Ref:tid
+mov #0 105;Estoy en Ref:tid
+mov #0 105;Estoy en Ref:tid
+
+mov 105 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 106
+mov 104 A
+muli #5
+addi 106; 
+mov A 107
+mov #0 108; Guardo un numero Entero
+mov 107 A
+muli #5
+addi 108; 
+mov A 109
+mov #0 104;Estoy en Ref:tid
+mov #0 104;Estoy en Ref:tid
+mov #0 105;Estoy en Ref:tid
+mov #0 105;Estoy en Ref:tid
+
+mov 105 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 106
+mov 104 A
+muli #5
+addi 106; 
+mov A 107
+mov #0 104;Estoy en Ref:tid
+mov #0 104;Estoy en Ref:tid
+mov #0 105;Estoy en Ref:tid
+mov #0 105;Estoy en Ref:tid
+
+mov 105 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 106
+mov 104 A
+muli #5
+addi 106; 
+mov A 107
+mov #0 108; Guardo un numero Entero
+mov 107 A
+muli #5
+addi 108; 
+mov A 109
+mov #1 110; Guardo un numero Entero
+mov 109 A
+muli #1
+addi #4; Instr: Ref asig
+mov 111 @A
+mov #0 112;Estoy en Ref:tid
+mov #0 112;Estoy en Ref:tid
+mov #0 113;Estoy en Ref:tid
+mov #0 113;Estoy en Ref:tid
+
+mov 113 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 114
+mov #0 113;Estoy en Ref:tid
+mov #0 113;Estoy en Ref:tid
+
+mov 113 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 114
+mov #1 115; Guardo un numero Entero
+mov 114 A; Cargo el primer termino en A
+addi 115; Realizamos la operacion entera total.
+mov A 116; Lo cargamos en la dir correspondiente.
+mov 112 A
+muli #1
+addi #1; Instr: Ref asig
+mov 117 @A
 jmp ealizamos el if
 alizamos el if
 :
-leanup: poppingleanup: poppingmov #1 w; Guardo un numero Entero
- A
- A
-uli #
-ddi #
- @A
+mov #0 118;Estoy en Ref:tid
+mov #0 118;Estoy en Ref:tid
+mov #1 119; Guardo un numero Entero
+mov 118 A
+muli #1
+addi #1; Instr: Ref asig
+mov 120 @A
 lizamos el if
 :
-nup: poppingnup: poppingmov y A; Factor : Ref 
-uli #
-;Le sumo un tipo
-ding
-nup: poppingnup: poppingmov y A; Factor : Ref 
-uli #
-;Le sumo un tipo
-ding
-p: poppingp: poppingmov { A; Factor : Ref 
-uli #
-;Le sumo un tipo
-ng
-muli # A; Cargo el primer termino en A
-lss operacion entera- real
-; Realizamos la operacion entera total.
-ion antes de imprimir REAL a ENT
-; Lo cargamos en la dir correspondiente.
-muli # A
-jz izamos el if
-poppingpoppingoppingoppingmov  A; Factor : Ref 
-uli #
-;Le sumo un tipo
-rror: popping
-oppingoppingmov  A; Factor : Ref 
-uli #
-;Le sumo un tipo
-rror: popping
-mov #1 ; Guardo un numero Entero
- A; Cargo el primer termino en A
-subacion entera- real
-; Realizamos la operacion entera total.
-ntes de imprimir REAL a ENT
-; Lo cargamos en la dir correspondiente.
- # A
-#@; 
-mov A ƒpoppingpoppingoppingoppingmov  A; Factor : Ref 
-uli #
-;Le sumo un tipo
-rror: popping
-oppingoppingmov  A; Factor : Ref 
-uli #
-;Le sumo un tipo
-rror: popping
-mov #1 ; Guardo un numero Entero
- A; Cargo el primer termino en A
-subacion entera- real
-; Realizamos la operacion entera total.
-ntes de imprimir REAL a ENT
-; Lo cargamos en la dir correspondiente.
- # A
-#@; 
-mov A ƒggmov „ A; Factor : Ref 
-uli #
-;Le sumo un tipo
- popping
-di # A
-#; 
-mov A †poppingpoppingoppingoppingmov  A; Factor : Ref 
-uli #
-;Le sumo un tipo
-rror: popping
-oppingoppingmov  A; Factor : Ref 
-uli #
-;Le sumo un tipo
-rror: popping
-mov #1 ; Guardo un numero Entero
- A; Cargo el primer termino en A
-subacion entera- real
-; Realizamos la operacion entera total.
-ntes de imprimir REAL a ENT
-; Lo cargamos en la dir correspondiente.
- # A
-#@; 
-mov A ƒpoppingpoppingoppingoppingmov  A; Factor : Ref 
-uli #
-;Le sumo un tipo
-rror: popping
-oppingoppingmov  A; Factor : Ref 
-uli #
-;Le sumo un tipo
-rror: popping
-mov #1 ; Guardo un numero Entero
- A; Cargo el primer termino en A
-subacion entera- real
-; Realizamos la operacion entera total.
-ntes de imprimir REAL a ENT
-; Lo cargamos en la dir correspondiente.
- # A
-#@; 
-mov A ƒggmov „ A; Factor : Ref 
-uli #
-;Le sumo un tipo
- popping
-di # A
-#; 
-mov A †mov #1 ‡; Guardo un numero Entero
-# A
-uli #
- # @A
- @A
-mov Š A; Factor : Ref 
-uli #
-;Le sumo un tipo
-ng
-mov Š A; Factor : Ref 
-uli #
-;Le sumo un tipo
-ng
-mov #1 Œ; Guardo un numero Entero
+mov #0 121;Estoy en Ref:tid
+mov #0 121;Estoy en Ref:tid
 
- A; Cargo el primer termino en A
-adda- real
-; Realizamos la operacion entera total.
-rimir REAL a ENT
-; Lo cargamos en la dir correspondiente.
-@A
- A
-uli #
-ddi #NTR: PRINT @A
+mov 121 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 122
+mov #0 121;Estoy en Ref:tid
+mov #0 121;Estoy en Ref:tid
+
+mov 121 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 122
+mov #0 123;Estoy en Ref:tid
+mov #0 123;Estoy en Ref:tid
+
+mov 123 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 124
+mov 122 A; Cargo el primer termino en A
+lssi 124; Realizamos la operacion entera total.
+mov A 125; Lo cargamos en la dir correspondiente.
+mov 122 A
+jz izamos el if
+mov #0 126;Estoy en Ref:tid
+mov #0 126;Estoy en Ref:tid
+mov #0 127;Estoy en Ref:tid
+mov #0 127;Estoy en Ref:tid
+
+mov 127 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 128
+mov #0 127;Estoy en Ref:tid
+mov #0 127;Estoy en Ref:tid
+
+mov 127 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 128
+mov #1 129; Guardo un numero Entero
+mov 128 A; Cargo el primer termino en A
+subi 129; Realizamos la operacion entera total.
+mov A 130; Lo cargamos en la dir correspondiente.
+mov 126 A
+muli #5
+addi 130; 
+mov A 131
+mov #0 126;Estoy en Ref:tid
+mov #0 126;Estoy en Ref:tid
+mov #0 127;Estoy en Ref:tid
+mov #0 127;Estoy en Ref:tid
+
+mov 127 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 128
+mov #0 127;Estoy en Ref:tid
+mov #0 127;Estoy en Ref:tid
+
+mov 127 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 128
+mov #1 129; Guardo un numero Entero
+mov 128 A; Cargo el primer termino en A
+subi 129; Realizamos la operacion entera total.
+mov A 130; Lo cargamos en la dir correspondiente.
+mov 126 A
+muli #5
+addi 130; 
+mov A 131
+mov #0 132;Estoy en Ref:tid
+mov #0 132;Estoy en Ref:tid
+
+mov 132 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 133
+mov 131 A
+muli #5
+addi 133; 
+mov A 134
+mov #0 126;Estoy en Ref:tid
+mov #0 126;Estoy en Ref:tid
+mov #0 127;Estoy en Ref:tid
+mov #0 127;Estoy en Ref:tid
+
+mov 127 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 128
+mov #0 127;Estoy en Ref:tid
+mov #0 127;Estoy en Ref:tid
+
+mov 127 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 128
+mov #1 129; Guardo un numero Entero
+mov 128 A; Cargo el primer termino en A
+subi 129; Realizamos la operacion entera total.
+mov A 130; Lo cargamos en la dir correspondiente.
+mov 126 A
+muli #5
+addi 130; 
+mov A 131
+mov #0 126;Estoy en Ref:tid
+mov #0 126;Estoy en Ref:tid
+mov #0 127;Estoy en Ref:tid
+mov #0 127;Estoy en Ref:tid
+
+mov 127 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 128
+mov #0 127;Estoy en Ref:tid
+mov #0 127;Estoy en Ref:tid
+
+mov 127 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 128
+mov #1 129; Guardo un numero Entero
+mov 128 A; Cargo el primer termino en A
+subi 129; Realizamos la operacion entera total.
+mov A 130; Lo cargamos en la dir correspondiente.
+mov 126 A
+muli #5
+addi 130; 
+mov A 131
+mov #0 132;Estoy en Ref:tid
+mov #0 132;Estoy en Ref:tid
+
+mov 132 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 133
+mov 131 A
+muli #5
+addi 133; 
+mov A 134
+mov #1 135; Guardo un numero Entero
+mov 134 A
+muli #1
+addi #4; Instr: Ref asig
+mov 136 @A
+mov #0 137;Estoy en Ref:tid
+mov #0 137;Estoy en Ref:tid
+mov #0 138;Estoy en Ref:tid
+mov #0 138;Estoy en Ref:tid
+
+mov 138 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 139
+mov #0 138;Estoy en Ref:tid
+mov #0 138;Estoy en Ref:tid
+
+mov 138 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 139
+mov #1 140; Guardo un numero Entero
+mov 139 A; Cargo el primer termino en A
+addi 140; Realizamos la operacion entera total.
+mov A 141; Lo cargamos en la dir correspondiente.
+mov 137 A
+muli #1
+addi #1; Instr: Ref asig
+mov 142 @A
 jmp lizamos el if
 izamos el if
 :
-S@S@mov #1 ; Guardo un numero Entero
-TR: PRINT A
-uli #
-; Realizo la conversion antes de imprimir REAL a ENT
-: PRINT @A
-mov #0 “; Guardo un numero Entero
- PRINT A
-uli #
- Realizo la conversion antes de imprimir REAL a ENT
-RINT @A
-mov #0 –; Guardo un numero Entero
-INT A
-uli #
-Realizo la conversion antes de imprimir REAL a ENT
-T @A
-@@mov #0 ™; Guardo un numero Entero
- A
-uli #
-ddi #d @A
-mov #0 œ; Guardo un numero Entero
- A
-uli #
-di # A; Realizo la conversion antes de imprimir REAL a ENT
- @A
-wrr=
+mov #0 143;Estoy en Ref:tid
+mov #0 143;Estoy en Ref:tid
+mov #1 144; Guardo un numero Entero
+mov 143 A
+muli #1
+addi #30; Instr: Ref asig
+mov 145 @A
+mov #0 146;Estoy en Ref:tid
+mov #0 146;Estoy en Ref:tid
+mov #0 147; Guardo un numero Entero
+mov 146 A
+muli #1
+addi #31; Instr: Ref asig
+mov 148 @A
+mov #0 149;Estoy en Ref:tid
+mov #0 149;Estoy en Ref:tid
+mov #0 150; Guardo un numero Entero
+mov 149 A
+muli #1
+addi #32; Instr: Ref asig
+mov 151 @A
+mov #0 152;Estoy en Ref:tid
+mov #0 152;Estoy en Ref:tid
+mov #0 153; Guardo un numero Entero
+mov 152 A
+muli #1
+addi #1; Instr: Ref asig
+mov 154 @A
+mov #0 155;Estoy en Ref:tid
+mov #0 155;Estoy en Ref:tid
+mov #0 156; Guardo un numero Entero
+mov 155 A
+muli #1
+addi #2; Instr: Ref asig
+mov 157 @A
+wrr 159
 wrl
-wrrql
+wrr 162
 wrl
+mp :
+mov #0 164;Estoy en Ref:tid
+mov #0 164;Estoy en Ref:tid
 
-:
-mov ¤ A; Factor : Ref 
-uli #
-;Le sumo un tipo
-p: discarding lookahead
-mov ¤ A; Factor : Ref 
-uli #
-;Le sumo un tipo
-p: discarding lookahead
-ê @ê @mov ¦ A; Factor : Ref 
-uli #
-;Le sumo un tipo
- discarding lookahead
-izo la conversion antes de imprimir REAL a ENT
- A; Cargo el primer termino en A
-lssegundo operando.
-; Realizamos la operacion entera total.
-; Lo cargamos en la dir correspondiente.
+mov 164 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 165
+mov #0 164;Estoy en Ref:tid
+mov #0 164;Estoy en Ref:tid
 
-mov ¤ A; Factor : Ref 
-uli #
-;Le sumo un tipo
-p: discarding lookahead
-mov ¤ A; Factor : Ref 
-uli #
-;Le sumo un tipo
-p: discarding lookahead
-ê @ê @mov ¦ A; Factor : Ref 
-uli #
-;Le sumo un tipo
- discarding lookahead
-izo la conversion antes de imprimir REAL a ENT
- A; Cargo el primer termino en A
-lssegundo operando.
-; Realizamos la operacion entera total.
-; Lo cargamos en la dir correspondiente.
+mov 164 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 165
+mov #0 166;Estoy en Ref:tid
+mov #0 166;Estoy en Ref:tid
 
-la conversion antes de imprimir REAL a ENT
- A; Cargo el primer termino en A
-mulperando.
-; Realizamos la operacion entera total.
-A; Realizo la conversion antes de imprimir ENT a R
-; Lo cargamos en la dir correspondiente.
-mov ¤ A; Factor : Ref 
-uli #
-;Le sumo un tipo
-p: discarding lookahead
-mov ¤ A; Factor : Ref 
-uli #
-;Le sumo un tipo
-p: discarding lookahead
-ê @ê @mov ¦ A; Factor : Ref 
-uli #
-;Le sumo un tipo
- discarding lookahead
-izo la conversion antes de imprimir REAL a ENT
- A; Cargo el primer termino en A
-lssegundo operando.
-; Realizamos la operacion entera total.
-; Lo cargamos en la dir correspondiente.
+mov 166 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 167
+mov 165 A; Cargo el primer termino en A
+lssi 167; Realizamos la operacion entera total.
+mov A 168; Lo cargamos en la dir correspondiente.
 
-mov ¤ A; Factor : Ref 
-uli #
-;Le sumo un tipo
-p: discarding lookahead
-mov ¤ A; Factor : Ref 
-uli #
-;Le sumo un tipo
-p: discarding lookahead
-ê @ê @mov ¦ A; Factor : Ref 
-uli #
-;Le sumo un tipo
- discarding lookahead
-izo la conversion antes de imprimir REAL a ENT
- A; Cargo el primer termino en A
-lssegundo operando.
-; Realizamos la operacion entera total.
-; Lo cargamos en la dir correspondiente.
+mov #0 164;Estoy en Ref:tid
+mov #0 164;Estoy en Ref:tid
 
-la conversion antes de imprimir REAL a ENT
- A; Cargo el primer termino en A
-mulperando.
-; Realizamos la operacion entera total.
-A; Realizo la conversion antes de imprimir ENT a R
-; Lo cargamos en la dir correspondiente.
-ersion antes de imprimir REAL a ENT
- A; Cargo el primer termino en A
-mulo.
-; Realizamos la operacion entera total.
-lizo la conversion antes de imprimir ENT a R
-; Lo cargamos en la dir correspondiente.
-mov ¤ A; Factor : Ref 
-uli #
-;Le sumo un tipo
-p: discarding lookahead
-mov ¤ A; Factor : Ref 
-uli #
-;Le sumo un tipo
-p: discarding lookahead
-ê @ê @mov ¦ A; Factor : Ref 
-uli #
-;Le sumo un tipo
- discarding lookahead
-izo la conversion antes de imprimir REAL a ENT
- A; Cargo el primer termino en A
-lssegundo operando.
-; Realizamos la operacion entera total.
-; Lo cargamos en la dir correspondiente.
+mov 164 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 165
+mov #0 164;Estoy en Ref:tid
+mov #0 164;Estoy en Ref:tid
 
-mov ¤ A; Factor : Ref 
-uli #
-;Le sumo un tipo
-p: discarding lookahead
-mov ¤ A; Factor : Ref 
-uli #
-;Le sumo un tipo
-p: discarding lookahead
-ê @ê @mov ¦ A; Factor : Ref 
-uli #
-;Le sumo un tipo
- discarding lookahead
-izo la conversion antes de imprimir REAL a ENT
- A; Cargo el primer termino en A
-lssegundo operando.
-; Realizamos la operacion entera total.
-; Lo cargamos en la dir correspondiente.
+mov 164 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 165
+mov #0 166;Estoy en Ref:tid
+mov #0 166;Estoy en Ref:tid
 
-la conversion antes de imprimir REAL a ENT
- A; Cargo el primer termino en A
-mulperando.
-; Realizamos la operacion entera total.
-A; Realizo la conversion antes de imprimir ENT a R
-; Lo cargamos en la dir correspondiente.
-mov ¤ A; Factor : Ref 
-uli #
-;Le sumo un tipo
-p: discarding lookahead
-mov ¤ A; Factor : Ref 
-uli #
-;Le sumo un tipo
-p: discarding lookahead
-ê @ê @mov ¦ A; Factor : Ref 
-uli #
-;Le sumo un tipo
- discarding lookahead
-izo la conversion antes de imprimir REAL a ENT
- A; Cargo el primer termino en A
-lssegundo operando.
-; Realizamos la operacion entera total.
-; Lo cargamos en la dir correspondiente.
+mov 166 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 167
+mov 165 A; Cargo el primer termino en A
+lssi 167; Realizamos la operacion entera total.
+mov A 168; Lo cargamos en la dir correspondiente.
 
-mov ¤ A; Factor : Ref 
-uli #
-;Le sumo un tipo
-p: discarding lookahead
-mov ¤ A; Factor : Ref 
-uli #
-;Le sumo un tipo
-p: discarding lookahead
-ê @ê @mov ¦ A; Factor : Ref 
-uli #
-;Le sumo un tipo
- discarding lookahead
-izo la conversion antes de imprimir REAL a ENT
- A; Cargo el primer termino en A
-lssegundo operando.
-; Realizamos la operacion entera total.
-; Lo cargamos en la dir correspondiente.
+mov 169 A; Cargo el primer termino en A
+muli 175; Realizamos la operacion entera total.
+mov A 176; Lo cargamos en la dir correspondiente.
+mov #0 164;Estoy en Ref:tid
+mov #0 164;Estoy en Ref:tid
 
-la conversion antes de imprimir REAL a ENT
- A; Cargo el primer termino en A
-mulperando.
-; Realizamos la operacion entera total.
-A; Realizo la conversion antes de imprimir ENT a R
-; Lo cargamos en la dir correspondiente.
-ersion antes de imprimir REAL a ENT
- A; Cargo el primer termino en A
-mulo.
-; Realizamos la operacion entera total.
-lizo la conversion antes de imprimir ENT a R
-; Lo cargamos en la dir correspondiente.
- antes de imprimir REAL a ENT
- A; Cargo el primer termino en A
-mul; Realizamos la operacion entera total.
-a conversion antes de imprimir ENT a R
-; Lo cargamos en la dir correspondiente.
- de imprimir REAL a ENT
- A
-jz !@!@mov · A; Factor : Ref 
-uli #
-;Le sumo un tipo
-head
-!@!@mov · A; Factor : Ref 
-uli #
-;Le sumo un tipo
-head
-mov #0 ¹; Guardo un numero Entero
-ntes de imprimir REAL a ENT
- A; Cargo el primer termino en A
-eql; Realizamos la operacion entera total.
- la conversion antes de imprimir ENT a R
-; Lo cargamos en la dir correspondiente.
-imir REAL a ENT
- A; Realizamos el if
-jz 
-Œ!@Œ!@mov #0 Ç; Guardo un numero Entero
-ir REAL a ENT
- A
-uli #
-nversion antes de leer REAL a ENT
- REAL a ENT
- @A
+mov 164 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 165
+mov #0 164;Estoy en Ref:tid
+mov #0 164;Estoy en Ref:tid
 
- A; Realizamos el if
-jz mos el if
+mov 164 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 165
+mov #0 166;Estoy en Ref:tid
+mov #0 166;Estoy en Ref:tid
 
-mov Ó A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov 166 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 167
+mov 165 A; Cargo el primer termino en A
+lssi 167; Realizamos la operacion entera total.
+mov A 168; Lo cargamos en la dir correspondiente.
 
-mov Ó A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov #0 164;Estoy en Ref:tid
+mov #0 164;Estoy en Ref:tid
 
-mov #1 Õ; Guardo un numero Entero
- A; Cargo el primer termino en A
-subtermino convertido.
-; Realizamos la operacion entera total.
-imir ENT a R
-; Lo cargamos en la dir correspondiente.
- A; Realizo la conversion antes de imprimir ENT a R
- A; Realizamos el if
-jz zamos el if
+mov 164 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 165
+mov #0 164;Estoy en Ref:tid
+mov #0 164;Estoy en Ref:tid
 
-mov #1 â; Guardo un numero Entero
-U"@U"@"@"@mov ç A; Factor : Ref 
-uli #
-;Le sumo un tipo
-@
-"@"@mov ç A; Factor : Ref 
-uli #
-;Le sumo un tipo
-@
-mov #1 é; Guardo un numero Entero
- Realizo la conversion antes de imprimir ENT a R
- A; Cargo el primer termino en A
-add; Realizamos la operacion entera total.
-; Lo cargamos en la dir correspondiente.
-A; Realizo la conversion antes de imprimir ENT a R
- A
-uli #
-ddi #alizo la conversion antes de imprimir ENT a R
- @A
-mov í A; Factor : Ref 
-uli #
-;Le sumo un tipo
-ê @
-mov í A; Factor : Ref 
-uli #
-;Le sumo un tipo
-ê @
-mov #1 ï; Guardo un numero Entero
-zo la conversion antes de imprimir ENT a R
- A; Cargo el primer termino en A
-add Realizamos la operacion real.
-; Realizamos la operacion entera total.
+mov 164 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 165
+mov #0 166;Estoy en Ref:tid
+mov #0 166;Estoy en Ref:tid
 
-; Lo cargamos en la dir correspondiente.
-lizo la conversion antes de imprimir ENT a R
- A
-uli #
-di #la conversion antes de imprimir ENT a R
- @A
-mov ó A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov 166 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 167
+mov 165 A; Cargo el primer termino en A
+lssi 167; Realizamos la operacion entera total.
+mov A 168; Lo cargamos en la dir correspondiente.
 
-mov ó A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov 169 A; Cargo el primer termino en A
+muli 175; Realizamos la operacion entera total.
+mov A 176; Lo cargamos en la dir correspondiente.
+mov 176 A; Cargo el primer termino en A
+muli 181; Realizamos la operacion entera total.
+mov A 182; Lo cargamos en la dir correspondiente.
+mov #0 164;Estoy en Ref:tid
+mov #0 164;Estoy en Ref:tid
 
-mov #1 õ; Guardo un numero Entero
-conversion antes de imprimir ENT a R
- A; Cargo el primer termino en A
-addzamos la operacion real.
-; Realizamos la operacion entera total.
-F; Lo cargamos en la dir correspondiente.
-a conversion antes de imprimir ENT a R
- A
-uli #
-; Realizo la conversion antes de imprimir REAL a ENT
-version antes de imprimir ENT a R
- @A
-@@mov #1 ù; Guardo un numero Entero
-ersion antes de imprimir ENT a R
- A
-uli #
-nversion antes de leer REAL a ENT
-sion antes de imprimir ENT a R
- @A
-jmp amos el if
+mov 164 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 165
+mov #0 164;Estoy en Ref:tid
+mov #0 164;Estoy en Ref:tid
 
-zamos el if
-:
-; Realizamos con else.amos el if
-:
-jmp os el if
+mov 164 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 165
+mov #0 166;Estoy en Ref:tid
+mov #0 166;Estoy en Ref:tid
 
-mos el if
-:
-; Realizamos con else.os el if
-:
-; Realizo la conversion antes de imprimir ENT a R
- A; Realizamos el if
-jz el if
+mov 166 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 167
+mov 165 A; Cargo el primer termino en A
+lssi 167; Realizamos la operacion entera total.
+mov A 168; Lo cargamos en la dir correspondiente.
 
-la conversion antes de imprimir ENT a R
- A; Realizamos el if
-jz s el if
+mov #0 164;Estoy en Ref:tid
+mov #0 164;Estoy en Ref:tid
 
-mov #1 ë; Guardo un numero Entero
-mov ó A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov 164 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 165
+mov #0 164;Estoy en Ref:tid
+mov #0 164;Estoy en Ref:tid
 
-mov ó A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov 164 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 165
+mov #0 166;Estoy en Ref:tid
+mov #0 166;Estoy en Ref:tid
 
-mov #1 õ; Guardo un numero Entero
-conversion antes de imprimir ENT a R
- A; Cargo el primer termino en A
-addzamos la operacion real.
-; Realizamos la operacion entera total.
-F; Lo cargamos en la dir correspondiente.
-a conversion antes de imprimir ENT a R
- A
-uli #
-ddi #version antes de imprimir ENT a R
- @A
-@@mov ù A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov 166 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 167
+mov 165 A; Cargo el primer termino en A
+lssi 167; Realizamos la operacion entera total.
+mov A 168; Lo cargamos en la dir correspondiente.
 
-mov ù A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov 169 A; Cargo el primer termino en A
+muli 175; Realizamos la operacion entera total.
+mov A 176; Lo cargamos en la dir correspondiente.
+mov #0 164;Estoy en Ref:tid
+mov #0 164;Estoy en Ref:tid
 
-mov #1 û; Guardo un numero Entero
-sion antes de imprimir ENT a R
- A; Cargo el primer termino en A
-addla operacion real.
-; Realizamos la operacion entera total.
-; Lo cargamos en la dir correspondiente.
-ersion antes de imprimir ENT a R
- A
-uli #
-; Realizo la conversion antes de imprimir REAL a ENT
-n antes de imprimir ENT a R
- @A
-$@$@mov #1 ÿ; Guardo un numero Entero
- antes de imprimir ENT a R
- A
-uli #
-nversion antes de leer REAL a ENT
-ntes de imprimir ENT a R
- @A
-jmp  el if
+mov 164 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 165
+mov #0 164;Estoy en Ref:tid
+mov #0 164;Estoy en Ref:tid
 
-s el if
-:
-; Realizamos con else. el if
-:
-jmp l if
+mov 164 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 165
+mov #0 166;Estoy en Ref:tid
+mov #0 166;Estoy en Ref:tid
 
-el if
-:
-; Realizamos con else.l if
-:
-onversion antes de imprimir ENT a R
- A; Realizamos el if
-jz f
+mov 166 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 167
+mov 165 A; Cargo el primer termino en A
+lssi 167; Realizamos la operacion entera total.
+mov A 168; Lo cargamos en la dir correspondiente.
 
-antes de imprimir ENT a R
- A; Realizamos el if
-jz  if
+mov #0 164;Estoy en Ref:tid
+mov #0 164;Estoy en Ref:tid
 
-mov #1 ü; Guardo un numero Entero
-@@mov  A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov 164 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 165
+mov #0 164;Estoy en Ref:tid
+mov #0 164;Estoy en Ref:tid
 
-mov  A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov 164 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 165
+mov #0 166;Estoy en Ref:tid
+mov #0 166;Estoy en Ref:tid
 
-mov #1 ; Guardo un numero Entero
-es de imprimir ENT a R
- A; Cargo el primer termino en A
-addcion real.
-; Realizamos la operacion entera total.
-ealizo la conversion antes de leer REAL a ENT
-; Lo cargamos en la dir correspondiente.
-ntes de imprimir ENT a R
- A
-uli #
-di #de imprimir ENT a R
- @A
-	&@	&@&@&@mov  A; Factor : Ref 
-uli #
-;Le sumo un tipo
-@
-&@&@mov  A; Factor : Ref 
-uli #
-;Le sumo un tipo
-@
-mov #1 	; Guardo un numero Entero
-imprimir ENT a R
- A; Cargo el primer termino en A
-addeal.
-; Realizamos la operacion entera total.
- la conversion antes de leer REAL a ENT
-; Lo cargamos en la dir correspondiente.
-e imprimir ENT a R
- A
-uli #
-; Realizo la conversion antes de imprimir REAL a ENT
-rimir ENT a R
- @A
-mov #1 ; Guardo un numero Entero
-imir ENT a R
- A
-uli #
-nversion antes de leer REAL a ENT
-ir ENT a R
- @A
-jmp if
+mov 166 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 167
+mov 165 A; Cargo el primer termino en A
+lssi 167; Realizamos la operacion entera total.
+mov A 168; Lo cargamos en la dir correspondiente.
 
- if
-:
-; Realizamos con else.if
-:
-jmp 
+mov 169 A; Cargo el primer termino en A
+muli 175; Realizamos la operacion entera total.
+mov A 176; Lo cargamos en la dir correspondiente.
+mov 176 A; Cargo el primer termino en A
+muli 181; Realizamos la operacion entera total.
+mov A 182; Lo cargamos en la dir correspondiente.
+mov 182 A; Cargo el primer termino en A
+muli 187; Realizamos la operacion entera total.
+mov A 188; Lo cargamos en la dir correspondiente.
+mov 188 A
+jz p mov #0 183;Estoy en Ref:tid
+mov #0 183;Estoy en Ref:tid
 
-f
-:
-; Realizamos con else.
-:
-version antes de imprimir ENT a R
- A; Realizamos el if
-jz z 
-wrrzamos la operacion entera total.
+mov 183 A; Factor : Ref 
+muli #1
+addi #32;Le sumo un tipo
+mov @A 184
+mov #0 183;Estoy en Ref:tid
+mov #0 183;Estoy en Ref:tid
 
+mov 183 A; Factor : Ref 
+muli #1
+addi #32;Le sumo un tipo
+mov @A 184
+mov #0 185; Guardo un numero Entero
+mov 184 A; Cargo el primer termino en A
+eqli 185; Realizamos la operacion entera total.
+mov A 186; Lo cargamos en la dir correspondiente.
+mov 196 A; Realizamos el if
+jz L27
+mov #0 198;Estoy en Ref:tid
+mov #0 198;Estoy en Ref:tid
+mov #0 199; Guardo un numero Entero
+mov 198 A
+muli #1
+addi #197; Instr: Ref asig
+mov 200 @A
+mov 217 A; Realizamos el if
+jz L13
+mov #0 211;Estoy en Ref:tid
+mov #0 211;Estoy en Ref:tid
+
+mov 211 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 212
+mov #0 211;Estoy en Ref:tid
+mov #0 211;Estoy en Ref:tid
+
+mov 211 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 212
+mov #1 213; Guardo un numero Entero
+mov 212 A; Cargo el primer termino en A
+subi 213; Realizamos la operacion entera total.
+mov A 214; Lo cargamos en la dir correspondiente.
+mov 229 A; Realizamos el if
+jz L11
+mov #1 226; Guardo un numero Entero
+mov #0 230;Estoy en Ref:tid
+mov #0 230;Estoy en Ref:tid
+mov #0 231;Estoy en Ref:tid
+mov #0 231;Estoy en Ref:tid
+
+mov 231 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 232
+mov #0 231;Estoy en Ref:tid
+mov #0 231;Estoy en Ref:tid
+
+mov 231 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 232
+mov #1 233; Guardo un numero Entero
+mov 232 A; Cargo el primer termino en A
+addi 233; Realizamos la operacion entera total.
+mov A 234; Lo cargamos en la dir correspondiente.
+mov 230 A
+muli #1
+addi #1; Instr: Ref asig
+mov 235 @A
+mov #0 236;Estoy en Ref:tid
+mov #0 236;Estoy en Ref:tid
+mov #0 237;Estoy en Ref:tid
+mov #0 237;Estoy en Ref:tid
+
+mov 237 A; Factor : Ref 
+muli #1
+addi #2;Le sumo un tipo
+mov @A 238
+mov #0 237;Estoy en Ref:tid
+mov #0 237;Estoy en Ref:tid
+
+mov 237 A; Factor : Ref 
+muli #1
+addi #2;Le sumo un tipo
+mov @A 238
+mov #1 239; Guardo un numero Entero
+mov 238 A; Cargo el primer termino en A
+addi 239; Realizamos la operacion entera total.
+mov A 240; Lo cargamos en la dir correspondiente.
+mov 236 A
+muli #1
+addi #2; Instr: Ref asig
+mov 241 @A
+mov #0 242;Estoy en Ref:tid
+mov #0 242;Estoy en Ref:tid
+mov #0 243;Estoy en Ref:tid
+mov #0 243;Estoy en Ref:tid
+
+mov 243 A; Factor : Ref 
+muli #1
+addi #30;Le sumo un tipo
+mov @A 244
+mov #0 243;Estoy en Ref:tid
+mov #0 243;Estoy en Ref:tid
+
+mov 243 A; Factor : Ref 
+muli #1
+addi #30;Le sumo un tipo
+mov @A 244
+mov #1 245; Guardo un numero Entero
+mov 244 A; Cargo el primer termino en A
+addi 245; Realizamos la operacion entera total.
+mov A 246; Lo cargamos en la dir correspondiente.
+mov 242 A
+muli #1
+addi #30; Instr: Ref asig
+mov 247 @A
+mov #0 248;Estoy en Ref:tid
+mov #0 248;Estoy en Ref:tid
+mov #1 249; Guardo un numero Entero
+mov 248 A
+muli #1
+addi #197; Instr: Ref asig
+mov 250 @A
+jmp L12
+L11
+; Realizamos con else.L12
+jmp L14
+L13
+; Realizamos con else.L14
+mov 231 A; Realizamos el if
+jz L17
+mov 241 A; Realizamos el if
+jz L15
+mov #1 235; Guardo un numero Entero
+mov #0 242;Estoy en Ref:tid
+mov #0 242;Estoy en Ref:tid
+mov #0 243;Estoy en Ref:tid
+mov #0 243;Estoy en Ref:tid
+
+mov 243 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 244
+mov #0 243;Estoy en Ref:tid
+mov #0 243;Estoy en Ref:tid
+
+mov 243 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 244
+mov #1 245; Guardo un numero Entero
+mov 244 A; Cargo el primer termino en A
+addi 245; Realizamos la operacion entera total.
+mov A 246; Lo cargamos en la dir correspondiente.
+mov 242 A
+muli #1
+addi #1; Instr: Ref asig
+mov 247 @A
+mov #0 248;Estoy en Ref:tid
+mov #0 248;Estoy en Ref:tid
+mov #0 249;Estoy en Ref:tid
+mov #0 249;Estoy en Ref:tid
+
+mov 249 A; Factor : Ref 
+muli #1
+addi #30;Le sumo un tipo
+mov @A 250
+mov #0 249;Estoy en Ref:tid
+mov #0 249;Estoy en Ref:tid
+
+mov 249 A; Factor : Ref 
+muli #1
+addi #30;Le sumo un tipo
+mov @A 250
+mov #1 251; Guardo un numero Entero
+mov 250 A; Cargo el primer termino en A
+addi 251; Realizamos la operacion entera total.
+mov A 252; Lo cargamos en la dir correspondiente.
+mov 248 A
+muli #1
+addi #30; Instr: Ref asig
+mov 253 @A
+mov #0 254;Estoy en Ref:tid
+mov #0 254;Estoy en Ref:tid
+mov #1 255; Guardo un numero Entero
+mov 254 A
+muli #1
+addi #197; Instr: Ref asig
+mov 256 @A
+jmp L16
+L15
+; Realizamos con else.L16
+jmp L18
+L17
+; Realizamos con else.L18
+mov 245 A; Realizamos el if
+jz L21
+mov 255 A; Realizamos el if
+jz L19
+mov #1 252; Guardo un numero Entero
+mov #0 256;Estoy en Ref:tid
+mov #0 256;Estoy en Ref:tid
+mov #0 257;Estoy en Ref:tid
+mov #0 257;Estoy en Ref:tid
+
+mov 257 A; Factor : Ref 
+muli #1
+addi #2;Le sumo un tipo
+mov @A 258
+mov #0 257;Estoy en Ref:tid
+mov #0 257;Estoy en Ref:tid
+
+mov 257 A; Factor : Ref 
+muli #1
+addi #2;Le sumo un tipo
+mov @A 258
+mov #1 259; Guardo un numero Entero
+mov 258 A; Cargo el primer termino en A
+addi 259; Realizamos la operacion entera total.
+mov A 260; Lo cargamos en la dir correspondiente.
+mov 256 A
+muli #1
+addi #2; Instr: Ref asig
+mov 261 @A
+mov #0 262;Estoy en Ref:tid
+mov #0 262;Estoy en Ref:tid
+mov #0 263;Estoy en Ref:tid
+mov #0 263;Estoy en Ref:tid
+
+mov 263 A; Factor : Ref 
+muli #1
+addi #30;Le sumo un tipo
+mov @A 264
+mov #0 263;Estoy en Ref:tid
+mov #0 263;Estoy en Ref:tid
+
+mov 263 A; Factor : Ref 
+muli #1
+addi #30;Le sumo un tipo
+mov @A 264
+mov #1 265; Guardo un numero Entero
+mov 264 A; Cargo el primer termino en A
+addi 265; Realizamos la operacion entera total.
+mov A 266; Lo cargamos en la dir correspondiente.
+mov 262 A
+muli #1
+addi #30; Instr: Ref asig
+mov 267 @A
+mov #0 268;Estoy en Ref:tid
+mov #0 268;Estoy en Ref:tid
+mov #1 269; Guardo un numero Entero
+mov 268 A
+muli #1
+addi #197; Instr: Ref asig
+mov 270 @A
+jmp L20
+L19
+; Realizamos con else.L20
+jmp L22
+L21
+; Realizamos con else.L22
+mov 247 A; Realizamos el if
+jz L25
+wrr 251
 wrl
-wrros la operacion entera total.
-
+wrr 254
 wrl
-jmp  
-z :
-; Realizamos con else.primir ENT a R
- A; Realizamos el if
-jz 
-mov #1 ; Guardo un numero Entero
-rimir ENT a R
- A
-uli #
- Realizo la conversion antes de imprimir REAL a ENT
-mir ENT a R
- @A
-jmp jz 
-:
-; Realizamos con else.mov #2 ; Guardo un numero Entero
-rimir ENT a R
- A
-uli #
-Realizo la conversion antes de imprimir REAL a ENT
-mir ENT a R
- @A
+jmp L26
+L25
+; Realizamos con else.mov 266 A; Realizamos el if
+jz L23
+mov #0 267;Estoy en Ref:tid
+mov #0 267;Estoy en Ref:tid
+mov #1 268; Guardo un numero Entero
+mov 267 A
+muli #1
+addi #31; Instr: Ref asig
+mov 269 @A
+jmp L24
+L23
+; Realizamos con else.mov #0 267;Estoy en Ref:tid
+mov #0 267;Estoy en Ref:tid
+mov #2 268; Guardo un numero Entero
+mov 267 A
+muli #1
+addi #32; Instr: Ref asig
+mov 269 @A
 
-jz :
+L24
 
- :
-jmp :
-
-:
-; Realizamos con else.:
-:
-jmp 
-:
-ir REAL a ENT
- A; Realizamos el if
-jz jmp 
-!@!@mov #0 È; Guardo un numero Entero
-mov #0 È; Guardo un numero Entero
-mov #1 É; Guardo un numero Entero
- REAL a ENT
- A; Cargo el primer termino en A
-sub el segundo termino convertido.
-; Realizamos la operacion entera total.
-ntes de imprimir ENT a R
-; Lo cargamos en la dir correspondiente.
-r REAL a ENT
- A
-uli #
-; Realizo la conversion antes de imprimir REAL a ENT
-AL a ENT
- @A
-jmp mp 
-jmp :
-; Realizamos con else.mp :
-wrr
+L26
+jmp L28
+L27
+; Realizamos con else.L28
+jmp mp p :
+mov 198 A; Realizamos el if
+jz L31
+mov #0 199;Estoy en Ref:tid
+mov #0 199;Estoy en Ref:tid
+mov #0 200; Guardo un numero Entero
+mov #0 200; Guardo un numero Entero
+mov #1 201; Guardo un numero Entero
+mov 200 A; Cargo el primer termino en A
+subi 201; Realizamos la operacion entera total.
+mov A 202; Lo cargamos en la dir correspondiente.
+mov 199 A
+muli #1
+addi #30; Instr: Ref asig
+mov 203 @A
+jmp L32
+L31
+; Realizamos con else.L32
+wrr 200
 wrl
-mov #1 Ë; Guardo un numero Entero
-EAL a ENT
- A
-#; 
-mov A Ìmov #1 Ë; Guardo un numero Entero
-EAL a ENT
- A
-#; 
-mov A Ìmov #1 Í; Guardo un numero Entero
-L a ENT
- A
-#; 
-mov A Îmov #1 Ë; Guardo un numero Entero
-EAL a ENT
- A
-#; 
-mov A Ìmov #1 Ë; Guardo un numero Entero
-EAL a ENT
- A
-#; 
-mov A Ìmov #1 Í; Guardo un numero Entero
-L a ENT
- A
-#; 
-mov A Îmov #0 Ï; Guardo un numero Entero
-a ENT
- A
-uli #
- #ENT
- @A
-mov #1 Ò; Guardo un numero Entero
-NT
- A
-uli #
-; Realizo la conversion antes de imprimir REAL a ENT
-
- @A
-mov #0 Õ; Guardo un numero Entero
- A
-uli #
- Realizo la conversion antes de imprimir REAL a ENT
-toi
- @A
-S@S@mov #0 Ø; Guardo un numero Entero
-oi
- A
-uli #
-Realizo la conversion antes de imprimir REAL a ENT
-
- @A
-mov #0 Û; Guardo un numero Entero
- A
-uli #
-ddi #g @A
-mov #0 Þ; Guardo un numero Entero
- A
-uli #
-di # @A
-wrrermino en A
-
+mov #0 202;Estoy en Ref:tid
+mov #0 202;Estoy en Ref:tid
+mov #1 203; Guardo un numero Entero
+mov 202 A
+muli #5
+addi 203; 
+mov A 204
+mov #0 202;Estoy en Ref:tid
+mov #0 202;Estoy en Ref:tid
+mov #1 203; Guardo un numero Entero
+mov 202 A
+muli #5
+addi 203; 
+mov A 204
+mov #1 205; Guardo un numero Entero
+mov 204 A
+muli #5
+addi 205; 
+mov A 206
+mov #0 202;Estoy en Ref:tid
+mov #0 202;Estoy en Ref:tid
+mov #1 203; Guardo un numero Entero
+mov 202 A
+muli #5
+addi 203; 
+mov A 204
+mov #0 202;Estoy en Ref:tid
+mov #0 202;Estoy en Ref:tid
+mov #1 203; Guardo un numero Entero
+mov 202 A
+muli #5
+addi 203; 
+mov A 204
+mov #1 205; Guardo un numero Entero
+mov 204 A
+muli #5
+addi 205; 
+mov A 206
+mov #0 207; Guardo un numero Entero
+mov 206 A
+muli #1
+addi #4; Instr: Ref asig
+mov 208 @A
+mov #0 209;Estoy en Ref:tid
+mov #0 209;Estoy en Ref:tid
+mov #1 210; Guardo un numero Entero
+mov 209 A
+muli #1
+addi #30; Instr: Ref asig
+mov 211 @A
+mov #0 212;Estoy en Ref:tid
+mov #0 212;Estoy en Ref:tid
+mov #0 213; Guardo un numero Entero
+mov 212 A
+muli #1
+addi #31; Instr: Ref asig
+mov 214 @A
+mov #0 215;Estoy en Ref:tid
+mov #0 215;Estoy en Ref:tid
+mov #0 216; Guardo un numero Entero
+mov 215 A
+muli #1
+addi #32; Instr: Ref asig
+mov 217 @A
+mov #0 218;Estoy en Ref:tid
+mov #0 218;Estoy en Ref:tid
+mov #0 219; Guardo un numero Entero
+mov 218 A
+muli #1
+addi #1; Instr: Ref asig
+mov 220 @A
+mov #0 221;Estoy en Ref:tid
+mov #0 221;Estoy en Ref:tid
+mov #0 222; Guardo un numero Entero
+mov 221 A
+muli #1
+addi #2; Instr: Ref asig
+mov 223 @A
+wrr 225
 wrl
-wrrino en A
-
+wrr 228
 wrl
-con else.:
-U"@U"@mov æ A; Factor : Ref 
-uli #
-;Le sumo un tipo
- @
-U"@U"@mov æ A; Factor : Ref 
-uli #
-;Le sumo un tipo
- @
-@@mov è A; Factor : Ref 
-uli #
-;Le sumo un tipo
+else.:
+mov #0 230;Estoy en Ref:tid
+mov #0 230;Estoy en Ref:tid
 
-; Realizo la conversion antes de imprimir ENT a R
- A; Cargo el primer termino en A
-lss; Realizamos la operacion entera total.
-; Lo cargamos en la dir correspondiente.
+mov 230 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 231
+mov #0 230;Estoy en Ref:tid
+mov #0 230;Estoy en Ref:tid
 
-U"@U"@mov æ A; Factor : Ref 
-uli #
-;Le sumo un tipo
- @
-U"@U"@mov æ A; Factor : Ref 
-uli #
-;Le sumo un tipo
- @
-@@mov è A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov 230 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 231
+mov #0 232;Estoy en Ref:tid
+mov #0 232;Estoy en Ref:tid
 
-; Realizo la conversion antes de imprimir ENT a R
- A; Cargo el primer termino en A
-lss; Realizamos la operacion entera total.
-; Lo cargamos en la dir correspondiente.
+mov 232 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 233
+mov 231 A; Cargo el primer termino en A
+lssi 233; Realizamos la operacion entera total.
+mov A 234; Lo cargamos en la dir correspondiente.
 
-alizo la conversion antes de imprimir ENT a R
- A; Cargo el primer termino en A
-mulealizamos la operacion real.
-; Realizamos la operacion entera total.
-SCANF; Lo cargamos en la dir correspondiente.
-U"@U"@mov æ A; Factor : Ref 
-uli #
-;Le sumo un tipo
- @
-U"@U"@mov æ A; Factor : Ref 
-uli #
-;Le sumo un tipo
- @
-@@mov è A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov #0 230;Estoy en Ref:tid
+mov #0 230;Estoy en Ref:tid
 
-; Realizo la conversion antes de imprimir ENT a R
- A; Cargo el primer termino en A
-lss; Realizamos la operacion entera total.
-; Lo cargamos en la dir correspondiente.
+mov 230 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 231
+mov #0 230;Estoy en Ref:tid
+mov #0 230;Estoy en Ref:tid
 
-U"@U"@mov æ A; Factor : Ref 
-uli #
-;Le sumo un tipo
- @
-U"@U"@mov æ A; Factor : Ref 
-uli #
-;Le sumo un tipo
- @
-@@mov è A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov 230 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 231
+mov #0 232;Estoy en Ref:tid
+mov #0 232;Estoy en Ref:tid
 
-; Realizo la conversion antes de imprimir ENT a R
- A; Cargo el primer termino en A
-lss; Realizamos la operacion entera total.
-; Lo cargamos en la dir correspondiente.
+mov 232 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 233
+mov 231 A; Cargo el primer termino en A
+lssi 233; Realizamos la operacion entera total.
+mov A 234; Lo cargamos en la dir correspondiente.
 
-alizo la conversion antes de imprimir ENT a R
- A; Cargo el primer termino en A
-mulealizamos la operacion real.
-; Realizamos la operacion entera total.
-SCANF; Lo cargamos en la dir correspondiente.
-a conversion antes de imprimir ENT a R
- A; Cargo el primer termino en A
-mulmos la operacion real.
-; Realizamos la operacion entera total.
-"%d"; Lo cargamos en la dir correspondiente.
-U"@U"@mov æ A; Factor : Ref 
-uli #
-;Le sumo un tipo
- @
-U"@U"@mov æ A; Factor : Ref 
-uli #
-;Le sumo un tipo
- @
-@@mov è A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov 235 A; Cargo el primer termino en A
+muli 241; Realizamos la operacion entera total.
+mov A 242; Lo cargamos en la dir correspondiente.
+mov #0 230;Estoy en Ref:tid
+mov #0 230;Estoy en Ref:tid
 
-; Realizo la conversion antes de imprimir ENT a R
- A; Cargo el primer termino en A
-lss; Realizamos la operacion entera total.
-; Lo cargamos en la dir correspondiente.
+mov 230 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 231
+mov #0 230;Estoy en Ref:tid
+mov #0 230;Estoy en Ref:tid
 
-U"@U"@mov æ A; Factor : Ref 
-uli #
-;Le sumo un tipo
- @
-U"@U"@mov æ A; Factor : Ref 
-uli #
-;Le sumo un tipo
- @
-@@mov è A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov 230 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 231
+mov #0 232;Estoy en Ref:tid
+mov #0 232;Estoy en Ref:tid
 
-; Realizo la conversion antes de imprimir ENT a R
- A; Cargo el primer termino en A
-lss; Realizamos la operacion entera total.
-; Lo cargamos en la dir correspondiente.
+mov 232 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 233
+mov 231 A; Cargo el primer termino en A
+lssi 233; Realizamos la operacion entera total.
+mov A 234; Lo cargamos en la dir correspondiente.
 
-alizo la conversion antes de imprimir ENT a R
- A; Cargo el primer termino en A
-mulealizamos la operacion real.
-; Realizamos la operacion entera total.
-SCANF; Lo cargamos en la dir correspondiente.
-U"@U"@mov æ A; Factor : Ref 
-uli #
-;Le sumo un tipo
- @
-U"@U"@mov æ A; Factor : Ref 
-uli #
-;Le sumo un tipo
- @
-@@mov è A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov #0 230;Estoy en Ref:tid
+mov #0 230;Estoy en Ref:tid
 
-; Realizo la conversion antes de imprimir ENT a R
- A; Cargo el primer termino en A
-lss; Realizamos la operacion entera total.
-; Lo cargamos en la dir correspondiente.
+mov 230 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 231
+mov #0 230;Estoy en Ref:tid
+mov #0 230;Estoy en Ref:tid
 
-U"@U"@mov æ A; Factor : Ref 
-uli #
-;Le sumo un tipo
- @
-U"@U"@mov æ A; Factor : Ref 
-uli #
-;Le sumo un tipo
- @
-@@mov è A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov 230 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 231
+mov #0 232;Estoy en Ref:tid
+mov #0 232;Estoy en Ref:tid
 
-; Realizo la conversion antes de imprimir ENT a R
- A; Cargo el primer termino en A
-lss; Realizamos la operacion entera total.
-; Lo cargamos en la dir correspondiente.
+mov 232 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 233
+mov 231 A; Cargo el primer termino en A
+lssi 233; Realizamos la operacion entera total.
+mov A 234; Lo cargamos en la dir correspondiente.
 
-alizo la conversion antes de imprimir ENT a R
- A; Cargo el primer termino en A
-mulealizamos la operacion real.
-; Realizamos la operacion entera total.
-SCANF; Lo cargamos en la dir correspondiente.
-a conversion antes de imprimir ENT a R
- A; Cargo el primer termino en A
-mulmos la operacion real.
-; Realizamos la operacion entera total.
-"%d"; Lo cargamos en la dir correspondiente.
-ersion antes de imprimir ENT a R
- A; Cargo el primer termino en A
-mul operacion real.
-; Realizamos la operacion entera total.
-; Lo cargamos en la dir correspondiente.
- antes de imprimir ENT a R
- A
-jz on else.mov ù A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov 235 A; Cargo el primer termino en A
+muli 241; Realizamos la operacion entera total.
+mov A 242; Lo cargamos en la dir correspondiente.
+mov 242 A; Cargo el primer termino en A
+muli 247; Realizamos la operacion entera total.
+mov A 248; Lo cargamos en la dir correspondiente.
+mov #0 230;Estoy en Ref:tid
+mov #0 230;Estoy en Ref:tid
 
-mov ù A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov 230 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 231
+mov #0 230;Estoy en Ref:tid
+mov #0 230;Estoy en Ref:tid
 
-mov #0 û; Guardo un numero Entero
-sion antes de imprimir ENT a R
- A; Cargo el primer termino en A
-eqlla operacion real.
-; Realizamos la operacion entera total.
-; Lo cargamos en la dir correspondiente.
-e imprimir ENT a R
- A; Realizamos el if
-jz s con else.
-@@mov #0 	; Guardo un numero Entero
-imprimir ENT a R
- A
-uli #
-zamos el if
-primir ENT a R
- @A
-r A; Realizamos el if
-jz 
-mov  A; Factor : Ref 
-uli #
-;Le sumo un tipo
-ç!@
-mov  A; Factor : Ref 
-uli #
-;Le sumo un tipo
-ç!@
-mov #1 ; Guardo un numero Entero
- R
- A; Cargo el primer termino en A
-subA;Cargamos el primer operando.; Realizamos la operacion entera total.
- antes de leer REAL a ENT
-; Lo cargamos en la dir correspondiente.
- A; Realizamos el if
-jz p 
-mov #1 $; Guardo un numero Entero
-@@mov ) A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov 230 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 231
+mov #0 232;Estoy en Ref:tid
+mov #0 232;Estoy en Ref:tid
 
-mov ) A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov 232 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 233
+mov 231 A; Cargo el primer termino en A
+lssi 233; Realizamos la operacion entera total.
+mov A 234; Lo cargamos en la dir correspondiente.
 
-mov #1 +; Guardo un numero Entero
-ANF A; Cargo el primer termino en A
-add operando.; Realizamos la operacion entera total.
-a ENT
-; Lo cargamos en la dir correspondiente.
-SCANF A
-uli #
-ddi # @A
-Ó'@Ó'@'@'@mov / A; Factor : Ref 
-uli #
-;Le sumo un tipo
-@
-'@'@mov / A; Factor : Ref 
-uli #
-;Le sumo un tipo
-@
-mov #1 1; Guardo un numero Entero
-d" A; Cargo el primer termino en A
-addndo.; Realizamos la operacion entera total.
-; Lo cargamos en la dir correspondiente.
-"%d" A
-uli #
-di # @A
-mov 5 A; Factor : Ref 
-uli #
-;Le sumo un tipo
-Ý"@
-mov 5 A; Factor : Ref 
-uli #
-;Le sumo un tipo
-Ý"@
-mov #1 7; Guardo un numero Entero
-A; Realizo la conversion antes de leer REAL a ENT
- A; Cargo el primer termino en A
-add Lo cargamos en la dir correspondiente.
-; Realizamos la operacion entera total.
-rd; Lo cargamos en la dir correspondiente.
- A
-uli #
-; Realizo la conversion antes de imprimir REAL a ENT
-Realizo la conversion antes de leer REAL a ENT
- @A
-mov #1 ;; Guardo un numero Entero
-ealizo la conversion antes de leer REAL a ENT
- A
-uli #
-zamos el if
-lizo la conversion antes de leer REAL a ENT
- @A
-jmp  
-p :
-; Realizamos con else. :
-jmp :
-; Realizamos con else.
-:
-; Realizamos con else.:
-; Realizamos con else.:
-CANF A; Realizamos el if
-jz  Realizamos con else.
- A; Realizamos el if
-jz 
-; Realizamos con else.
-mov #1 -; Guardo un numero Entero
-mov 5 A; Factor : Ref 
-uli #
-;Le sumo un tipo
-Ý"@
-mov 5 A; Factor : Ref 
-uli #
-;Le sumo un tipo
-Ý"@
-mov #1 7; Guardo un numero Entero
-A; Realizo la conversion antes de leer REAL a ENT
- A; Cargo el primer termino en A
-add Lo cargamos en la dir correspondiente.
-; Realizamos la operacion entera total.
-rd; Lo cargamos en la dir correspondiente.
- A
-uli #
-ddi #Realizo la conversion antes de leer REAL a ENT
- @A
-mov ; A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov #0 230;Estoy en Ref:tid
+mov #0 230;Estoy en Ref:tid
 
-mov ; A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov 230 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 231
+mov #0 230;Estoy en Ref:tid
+mov #0 230;Estoy en Ref:tid
 
-mov #1 =; Guardo un numero Entero
-lizo la conversion antes de leer REAL a ENT
- A; Cargo el primer termino en A
-addrgamos en la dir correspondiente.
-; Realizamos la operacion entera total.
-R: IF; Lo cargamos en la dir correspondiente.
-ealizo la conversion antes de leer REAL a ENT
- A
-uli #
-; Realizo la conversion antes de imprimir REAL a ENT
-o la conversion antes de leer REAL a ENT
- @A
-@@mov #1 A; Guardo un numero Entero
- la conversion antes de leer REAL a ENT
- A
-uli #
-zamos el if
-a conversion antes de leer REAL a ENT
- @A
-jmp ; Realizamos con else.
+mov 230 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 231
+mov #0 232;Estoy en Ref:tid
+mov #0 232;Estoy en Ref:tid
 
-; Realizamos con else.:
-; Realizamos con else.; Realizamos con else.:
-jmp Realizamos con else.
- Realizamos con else.:
-; Realizamos con else.Realizamos con else.:
-; Realizo la conversion antes de leer REAL a ENT
- A; Realizamos el if
-jz lizamos con else.
-la conversion antes de leer REAL a ENT
- A; Realizamos el if
-jz ealizamos con else.
-mov #1 >; Guardo un numero Entero
-mov C A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov 232 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 233
+mov 231 A; Cargo el primer termino en A
+lssi 233; Realizamos la operacion entera total.
+mov A 234; Lo cargamos en la dir correspondiente.
 
-mov C A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov 235 A; Cargo el primer termino en A
+muli 241; Realizamos la operacion entera total.
+mov A 242; Lo cargamos en la dir correspondiente.
+mov #0 230;Estoy en Ref:tid
+mov #0 230;Estoy en Ref:tid
 
-mov #1 E; Guardo un numero Entero
-conversion antes de leer REAL a ENT
- A; Cargo el primer termino en A
-addn la dir correspondiente.
-; Realizamos la operacion entera total.
-; Lo cargamos en la dir correspondiente.
-a conversion antes de leer REAL a ENT
- A
-uli #
-di #version antes de leer REAL a ENT
- @A
-@@mov I A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov 230 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 231
+mov #0 230;Estoy en Ref:tid
+mov #0 230;Estoy en Ref:tid
 
-mov I A; Factor : Ref 
-uli #
-;Le sumo un tipo
+mov 230 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 231
+mov #0 232;Estoy en Ref:tid
+mov #0 232;Estoy en Ref:tid
 
-mov #1 K; Guardo un numero Entero
-sion antes de leer REAL a ENT
- A; Cargo el primer termino en A
-addir correspondiente.
-; Realizamos la operacion entera total.
- Realizamos el if
-; Lo cargamos en la dir correspondiente.
-ersion antes de leer REAL a ENT
- A
-uli #
-; Realizo la conversion antes de imprimir REAL a ENT
-n antes de leer REAL a ENT
- @A
-«-@«-@mov #1 O; Guardo un numero Entero
- antes de leer REAL a ENT
- A
-uli #
-zamos el if
-ntes de leer REAL a ENT
- @A
-jmp alizamos con else.
-ealizamos con else.:
-; Realizamos con else.alizamos con else.:
-jmp izamos con else.
-lizamos con else.:
-; Realizamos con else.izamos con else.:
-Realizo la conversion antes de leer REAL a ENT
- A; Realizamos el if
-jz mos con else.
-wrrÃ³n del primer termino
+mov 232 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 233
+mov 231 A; Cargo el primer termino en A
+lssi 233; Realizamos la operacion entera total.
+mov A 234; Lo cargamos en la dir correspondiente.
 
+mov #0 230;Estoy en Ref:tid
+mov #0 230;Estoy en Ref:tid
+
+mov 230 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 231
+mov #0 230;Estoy en Ref:tid
+mov #0 230;Estoy en Ref:tid
+
+mov 230 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 231
+mov #0 232;Estoy en Ref:tid
+mov #0 232;Estoy en Ref:tid
+
+mov 232 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 233
+mov 231 A; Cargo el primer termino en A
+lssi 233; Realizamos la operacion entera total.
+mov A 234; Lo cargamos en la dir correspondiente.
+
+mov 235 A; Cargo el primer termino en A
+muli 241; Realizamos la operacion entera total.
+mov A 242; Lo cargamos en la dir correspondiente.
+mov 242 A; Cargo el primer termino en A
+muli 247; Realizamos la operacion entera total.
+mov A 248; Lo cargamos en la dir correspondiente.
+mov 248 A; Cargo el primer termino en A
+muli 253; Realizamos la operacion entera total.
+mov A 254; Lo cargamos en la dir correspondiente.
+mov 254 A
+jz lse.mov #0 249;Estoy en Ref:tid
+mov #0 249;Estoy en Ref:tid
+
+mov 249 A; Factor : Ref 
+muli #1
+addi #32;Le sumo un tipo
+mov @A 250
+mov #0 249;Estoy en Ref:tid
+mov #0 249;Estoy en Ref:tid
+
+mov 249 A; Factor : Ref 
+muli #1
+addi #32;Le sumo un tipo
+mov @A 250
+mov #0 251; Guardo un numero Entero
+mov 250 A; Cargo el primer termino en A
+eqli 251; Realizamos la operacion entera total.
+mov A 252; Lo cargamos en la dir correspondiente.
+mov 262 A; Realizamos el if
+jz L49
+mov #0 264;Estoy en Ref:tid
+mov #0 264;Estoy en Ref:tid
+mov #0 265; Guardo un numero Entero
+mov 264 A
+muli #1
+addi #263; Instr: Ref asig
+mov 266 @A
+mov 283 A; Realizamos el if
+jz L35
+mov #0 277;Estoy en Ref:tid
+mov #0 277;Estoy en Ref:tid
+
+mov 277 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 278
+mov #0 277;Estoy en Ref:tid
+mov #0 277;Estoy en Ref:tid
+
+mov 277 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 278
+mov #1 279; Guardo un numero Entero
+mov 278 A; Cargo el primer termino en A
+subi 279; Realizamos la operacion entera total.
+mov A 280; Lo cargamos en la dir correspondiente.
+mov 295 A; Realizamos el if
+jz L33
+mov #1 292; Guardo un numero Entero
+mov #0 296;Estoy en Ref:tid
+mov #0 296;Estoy en Ref:tid
+mov #0 297;Estoy en Ref:tid
+mov #0 297;Estoy en Ref:tid
+
+mov 297 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 298
+mov #0 297;Estoy en Ref:tid
+mov #0 297;Estoy en Ref:tid
+
+mov 297 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 298
+mov #1 299; Guardo un numero Entero
+mov 298 A; Cargo el primer termino en A
+addi 299; Realizamos la operacion entera total.
+mov A 300; Lo cargamos en la dir correspondiente.
+mov 296 A
+muli #1
+addi #1; Instr: Ref asig
+mov 301 @A
+mov #0 302;Estoy en Ref:tid
+mov #0 302;Estoy en Ref:tid
+mov #0 303;Estoy en Ref:tid
+mov #0 303;Estoy en Ref:tid
+
+mov 303 A; Factor : Ref 
+muli #1
+addi #2;Le sumo un tipo
+mov @A 304
+mov #0 303;Estoy en Ref:tid
+mov #0 303;Estoy en Ref:tid
+
+mov 303 A; Factor : Ref 
+muli #1
+addi #2;Le sumo un tipo
+mov @A 304
+mov #1 305; Guardo un numero Entero
+mov 304 A; Cargo el primer termino en A
+addi 305; Realizamos la operacion entera total.
+mov A 306; Lo cargamos en la dir correspondiente.
+mov 302 A
+muli #1
+addi #2; Instr: Ref asig
+mov 307 @A
+mov #0 308;Estoy en Ref:tid
+mov #0 308;Estoy en Ref:tid
+mov #0 309;Estoy en Ref:tid
+mov #0 309;Estoy en Ref:tid
+
+mov 309 A; Factor : Ref 
+muli #1
+addi #30;Le sumo un tipo
+mov @A 310
+mov #0 309;Estoy en Ref:tid
+mov #0 309;Estoy en Ref:tid
+
+mov 309 A; Factor : Ref 
+muli #1
+addi #30;Le sumo un tipo
+mov @A 310
+mov #1 311; Guardo un numero Entero
+mov 310 A; Cargo el primer termino en A
+addi 311; Realizamos la operacion entera total.
+mov A 312; Lo cargamos en la dir correspondiente.
+mov 308 A
+muli #1
+addi #30; Instr: Ref asig
+mov 313 @A
+mov #0 314;Estoy en Ref:tid
+mov #0 314;Estoy en Ref:tid
+mov #1 315; Guardo un numero Entero
+mov 314 A
+muli #1
+addi #263; Instr: Ref asig
+mov 316 @A
+jmp L34
+L33
+; Realizamos con else.L34
+jmp L36
+L35
+; Realizamos con else.L36
+mov 297 A; Realizamos el if
+jz L39
+mov 307 A; Realizamos el if
+jz L37
+mov #1 301; Guardo un numero Entero
+mov #0 308;Estoy en Ref:tid
+mov #0 308;Estoy en Ref:tid
+mov #0 309;Estoy en Ref:tid
+mov #0 309;Estoy en Ref:tid
+
+mov 309 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 310
+mov #0 309;Estoy en Ref:tid
+mov #0 309;Estoy en Ref:tid
+
+mov 309 A; Factor : Ref 
+muli #1
+addi #1;Le sumo un tipo
+mov @A 310
+mov #1 311; Guardo un numero Entero
+mov 310 A; Cargo el primer termino en A
+addi 311; Realizamos la operacion entera total.
+mov A 312; Lo cargamos en la dir correspondiente.
+mov 308 A
+muli #1
+addi #1; Instr: Ref asig
+mov 313 @A
+mov #0 314;Estoy en Ref:tid
+mov #0 314;Estoy en Ref:tid
+mov #0 315;Estoy en Ref:tid
+mov #0 315;Estoy en Ref:tid
+
+mov 315 A; Factor : Ref 
+muli #1
+addi #30;Le sumo un tipo
+mov @A 316
+mov #0 315;Estoy en Ref:tid
+mov #0 315;Estoy en Ref:tid
+
+mov 315 A; Factor : Ref 
+muli #1
+addi #30;Le sumo un tipo
+mov @A 316
+mov #1 317; Guardo un numero Entero
+mov 316 A; Cargo el primer termino en A
+addi 317; Realizamos la operacion entera total.
+mov A 318; Lo cargamos en la dir correspondiente.
+mov 314 A
+muli #1
+addi #30; Instr: Ref asig
+mov 319 @A
+mov #0 320;Estoy en Ref:tid
+mov #0 320;Estoy en Ref:tid
+mov #1 321; Guardo un numero Entero
+mov 320 A
+muli #1
+addi #263; Instr: Ref asig
+mov 322 @A
+jmp L38
+L37
+; Realizamos con else.L38
+jmp L40
+L39
+; Realizamos con else.L40
+mov 311 A; Realizamos el if
+jz L43
+mov 321 A; Realizamos el if
+jz L41
+mov #1 318; Guardo un numero Entero
+mov #0 322;Estoy en Ref:tid
+mov #0 322;Estoy en Ref:tid
+mov #0 323;Estoy en Ref:tid
+mov #0 323;Estoy en Ref:tid
+
+mov 323 A; Factor : Ref 
+muli #1
+addi #2;Le sumo un tipo
+mov @A 324
+mov #0 323;Estoy en Ref:tid
+mov #0 323;Estoy en Ref:tid
+
+mov 323 A; Factor : Ref 
+muli #1
+addi #2;Le sumo un tipo
+mov @A 324
+mov #1 325; Guardo un numero Entero
+mov 324 A; Cargo el primer termino en A
+addi 325; Realizamos la operacion entera total.
+mov A 326; Lo cargamos en la dir correspondiente.
+mov 322 A
+muli #1
+addi #2; Instr: Ref asig
+mov 327 @A
+mov #0 328;Estoy en Ref:tid
+mov #0 328;Estoy en Ref:tid
+mov #0 329;Estoy en Ref:tid
+mov #0 329;Estoy en Ref:tid
+
+mov 329 A; Factor : Ref 
+muli #1
+addi #30;Le sumo un tipo
+mov @A 330
+mov #0 329;Estoy en Ref:tid
+mov #0 329;Estoy en Ref:tid
+
+mov 329 A; Factor : Ref 
+muli #1
+addi #30;Le sumo un tipo
+mov @A 330
+mov #1 331; Guardo un numero Entero
+mov 330 A; Cargo el primer termino en A
+addi 331; Realizamos la operacion entera total.
+mov A 332; Lo cargamos en la dir correspondiente.
+mov 328 A
+muli #1
+addi #30; Instr: Ref asig
+mov 333 @A
+mov #0 334;Estoy en Ref:tid
+mov #0 334;Estoy en Ref:tid
+mov #1 335; Guardo un numero Entero
+mov 334 A
+muli #1
+addi #263; Instr: Ref asig
+mov 336 @A
+jmp L42
+L41
+; Realizamos con else.L42
+jmp L44
+L43
+; Realizamos con else.L44
+mov 313 A; Realizamos el if
+jz L47
+wrr 317
 wrl
-wrr del primer termino
-
+wrr 320
 wrl
-jmp os con else.
-mos con else.:
-; Realizamos con else.on antes de leer REAL a ENT
- A; Realizamos el if
-jz zamos con else.
-mov #1 N; Guardo un numero Entero
-n antes de leer REAL a ENT
- A
-uli #
- Realizo la conversion antes de imprimir REAL a ENT
-antes de leer REAL a ENT
- @A
-jmp amos con else.
-zamos con else.:
-; Realizamos con else.mov #2 N; Guardo un numero Entero
-n antes de leer REAL a ENT
- A
-uli #
-Realizo la conversion antes de imprimir REAL a ENT
-antes de leer REAL a ENT
- @A
+jmp L48
+L47
+; Realizamos con else.mov 332 A; Realizamos el if
+jz L45
+mov #0 333;Estoy en Ref:tid
+mov #0 333;Estoy en Ref:tid
+mov #1 334; Guardo un numero Entero
+mov 333 A
+muli #1
+addi #31; Instr: Ref asig
+mov 335 @A
+jmp L46
+L45
+; Realizamos con else.mov #0 333;Estoy en Ref:tid
+mov #0 333;Estoy en Ref:tid
+mov #2 334; Guardo un numero Entero
+mov 333 A
+muli #1
+addi #32; Instr: Ref asig
+mov 335 @A
 
-amos con else.:
+L46
 
-os con else.:
-jmp  con else.
-s con else.:
-; Realizamos con else. con else.:
-jmp con else.on else.:
-imprimir ENT a R
- A; Realizamos el if
-jz n else.
-mov #0 
-; Guardo un numero Entero
-mov #0 
-; Guardo un numero Entero
-mov #1 ; Guardo un numero Entero
-primir ENT a R
- A; Cargo el primer termino en A
-subl.
-; Realizamos la operacion entera total.
-a conversion antes de leer REAL a ENT
-; Lo cargamos en la dir correspondiente.
-mprimir ENT a R
- A
-uli #
-; Realizo la conversion antes de imprimir REAL a ENT
-mir ENT a R
- @A
-jmp  else.
-n else.:
-; Realizamos con else. else.:
-wrrion entera total.
-
+L48
+jmp L50
+L49
+; Realizamos con else.L50
+jmp else.lse.:
+mov 264 A; Realizamos el if
+jz L53
+mov #0 265;Estoy en Ref:tid
+mov #0 265;Estoy en Ref:tid
+mov #0 266; Guardo un numero Entero
+mov #0 266; Guardo un numero Entero
+mov #1 267; Guardo un numero Entero
+mov 266 A; Cargo el primer termino en A
+subi 267; Realizamos la operacion entera total.
+mov A 268; Lo cargamos en la dir correspondiente.
+mov 265 A
+muli #1
+addi #30; Instr: Ref asig
+mov 269 @A
+jmp L54
+L53
+; Realizamos con else.L54
+wrr 266
 wrl
 halt
 

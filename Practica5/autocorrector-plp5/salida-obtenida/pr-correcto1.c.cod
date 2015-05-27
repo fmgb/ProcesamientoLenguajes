@@ -1,110 +1,105 @@
-  mov $7.5 7; Guardo un numero Real
-A; Empezamos la asignacion ENTERO a REAL
- A
-uli #
- # Empezamos la asignacion ENTERO a REAL
- @A
-ori ori ri ri mov 
- A; Factor : Ref 
-uli #
-;Le sumo un tipo
- #
-pezamos la asignacion ENTERO a REAL
- A; Empezamos la asignacion REAL a ENTERO
+mov #0 6;Estoy en Ref:tid
+mov #0 6;Estoy en Ref:tid
+mov $7.5 7; Guardo un numero Real
+mov 6 A
+muli #1
+addi #4; Instr: Ref asig
+mov 8 @A
+mov #0 9;Estoy en Ref:tid
+mov #0 9;Estoy en Ref:tid
+mov #0 10;Estoy en Ref:tid
+mov #0 10;Estoy en Ref:tid
+
+mov 10 A; Factor : Ref 
+muli #1
+addi #4;Le sumo un tipo
+mov @A 11
+mov 11 A; Empezamos la asignacion REAL a ENTERO
 rtoi
+mov A 12
+mov 9 A
+muli #1
+addi #3; Instr: Ref asig
+mov 12 @A
+mov 14 A; Realizamos el if
+jz L1
+mov #0 19;Estoy en Ref:tid
+mov #0 19;Estoy en Ref:tid
+mov #0 20;Estoy en Ref:tid
+mov #0 20;Estoy en Ref:tid
 
-Empezamos la asignacion ENTERO a REAL
- A
-uli #
-i #ezamos la asignacion ENTERO a REAL
- @A
-amos la asignacion ENTERO a REAL
- A; Realizamos el if
-jz 
-; 
-; 
-mov  A; Factor : Ref 
-uli #
-;Le sumo un tipo
-o un numero Entero
+mov 20 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 21
+mov #0 20;Estoy en Ref:tid
+mov #0 20;Estoy en Ref:tid
 
-; 
-; 
-mov  A; Factor : Ref 
-uli #
-;Le sumo un tipo
-o un numero Entero
+mov 20 A; Factor : Ref 
+muli #1
+addi #3;Le sumo un tipo
+mov @A 21
+mov #3 22; Guardo un numero Entero
+mov #3 22; Guardo un numero Entero
+mov 22 A; Cargo el primer termino en A
+muli 26; Realizamos la operacion entera total.
+mov A 27; Lo cargamos en la dir correspondiente.
+mov 21 A; Cargo el primer termino en A
+addi 27; Realizamos la operacion entera total.
+mov A 28; Lo cargamos en la dir correspondiente.
+mov 19 A
+muli #1
+addi #17; Instr: Ref asig
+mov 29 @A
+mov #0 30;Estoy en Ref:tid
+mov #0 30;Estoy en Ref:tid
+mov #0 31;Estoy en Ref:tid
+mov #0 31;Estoy en Ref:tid
 
-mov #3 ; Guardo un numero Entero
-mov #3 ; Guardo un numero Entero
-asignacion ENTERO a REAL
- A; Cargo el primer termino en A
-mulacion entera total.
-; Realizamos la operacion entera total.
-s la asignacion REAL a ENTERO
-; Lo cargamos en la dir correspondiente.
- asignacion ENTERO a REAL
- A; Cargo el primer termino en A
-addcion entera total.
-; Realizamos la operacion entera total.
- la asignacion REAL a ENTERO
-; Lo cargamos en la dir correspondiente.
-la asignacion ENTERO a REAL
- A
-uli #
- PRINTion ENTERO a REAL
- @A
- error errorerrorerrormov  A; Factor : Ref 
-uli #
-;Le sumo un tipo
- Entero
+mov 31 A; Factor : Ref 
+muli #1
+addi #17;Le sumo un tipo
+mov @A 32
+mov #0 31;Estoy en Ref:tid
+mov #0 31;Estoy en Ref:tid
 
-errorerrormov  A; Factor : Ref 
-uli #
-;Le sumo un tipo
- Entero
+mov 31 A; Factor : Ref 
+muli #1
+addi #17;Le sumo un tipo
+mov @A 32
+mov 32 A; Cargo el primer termino en A
+divi 33; Realizamos la operacion entera total.
+mov A 34; Lo cargamos en la dir correspondiente.
+mov #0 31;Estoy en Ref:tid
+mov #0 31;Estoy en Ref:tid
 
- ENTERO a REAL
- A; Cargo el primer termino en A
-divntera total.
-; Realizamos la operacion entera total.
-ignacion REAL a ENTERO
-; Lo cargamos en la dir correspondiente.
-errorerrormov  A; Factor : Ref 
-uli #
-;Le sumo un tipo
- Entero
+mov 31 A; Factor : Ref 
+muli #1
+addi #17;Le sumo un tipo
+mov @A 32
+mov #0 31;Estoy en Ref:tid
+mov #0 31;Estoy en Ref:tid
 
-errorerrormov  A; Factor : Ref 
-uli #
-;Le sumo un tipo
- Entero
-
- ENTERO a REAL
- A; Cargo el primer termino en A
-divntera total.
-; Realizamos la operacion entera total.
-ignacion REAL a ENTERO
-; Lo cargamos en la dir correspondiente.
-NTERO a REAL
- A; Cargo el primer termino en A
-divera total.
-; Realizamos la operacion entera total.
-nacion REAL a ENTERO
-; Lo cargamos en la dir correspondiente.
-on ENTERO a REAL
- A
-uli #
-PRINTRO a REAL
- @A
-wrrersion antes de leer REAL a ENT
-
+mov 31 A; Factor : Ref 
+muli #1
+addi #17;Le sumo un tipo
+mov @A 32
+mov 32 A; Cargo el primer termino en A
+divi 33; Realizamos la operacion entera total.
+mov A 34; Lo cargamos en la dir correspondiente.
+mov 34 A; Cargo el primer termino en A
+divi 35; Realizamos la operacion entera total.
+mov A 36; Lo cargamos en la dir correspondiente.
+mov 30 A
+muli #1
+addi #18; Instr: Ref asig
+mov 37 @A
+wrr 39
 wrl
-:
-wrr
+L1
+wrr 18
 wrl
-wrrA; Realizo la conversion antes de leer REAL a ENT
-
+wrr 21
 wrl
 halt
 

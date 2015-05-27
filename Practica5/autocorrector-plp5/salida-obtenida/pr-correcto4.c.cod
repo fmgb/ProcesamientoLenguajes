@@ -1,2076 +1,3149 @@
-mov #1 ; Guardo un numero Entero
-mov #1 ; Guardo un numero Entero
-mov #3 	; Guardo un numero Entero
- Empezamos la asignacion ENTERO a REAL
- A; Cargo el primer termino en A
-subealizamos la operacion entera total.
-; Realizamos la operacion entera total.
-; Lo cargamos en la dir correspondiente.
-mov #1 ; Guardo un numero Entero
-mov #1 ; Guardo un numero Entero
-mov #3 	; Guardo un numero Entero
- Empezamos la asignacion ENTERO a REAL
- A; Cargo el primer termino en A
-subealizamos la operacion entera total.
-; Realizamos la operacion entera total.
-; Lo cargamos en la dir correspondiente.
-mov #2 ; Guardo un numero Entero
-mov #2 ; Guardo un numero Entero
-pezamos la asignacion ENTERO a REAL
- A; Cargo el primer termino en A
-mulizamos la operacion entera total.
-; Realizamos la operacion entera total.
-; Lo cargamos en la dir correspondiente.
-mov #2 ; Guardo un numero Entero
-mov #2 ; Guardo un numero Entero
-pezamos la asignacion ENTERO a REAL
- A; Cargo el primer termino en A
-mulizamos la operacion entera total.
-; Realizamos la operacion entera total.
-; Lo cargamos en la dir correspondiente.
-zamos la asignacion ENTERO a REAL
- A; Cargo el primer termino en A
-divamos la operacion entera total.
-; Realizamos la operacion entera total.
- A; Empezamos la asignacion REAL a ENTERO
-; Lo cargamos en la dir correspondiente.
-mpezamos la asignacion ENTERO a REAL
- A; Cargo el primer termino en A
-addmos la operacion entera total.
-; Realizamos la operacion entera total.
-A; Empezamos la asignacion REAL a ENTERO
-; Lo cargamos en la dir correspondiente.
-; Empezamos la asignacion ENTERO a REAL
- A
-uli #
-s la asignacion ENTERO a REAL
- @A
-  mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A mov #0 ; Guardo un numero Entero
-asignacion ENTERO a REAL
- A
-uli #Error: discarding; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A mov #0 ; Guardo un numero Entero
-asignacion ENTERO a REAL
- A
-uli #Error: discarding; 
-mov A mov #0 ; Guardo un numero Entero
-ignacion ENTERO a REAL
- A
-uli #ror: discarding; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A mov #0 ; Guardo un numero Entero
-asignacion ENTERO a REAL
- A
-uli #Error: discarding; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A mov #0 ; Guardo un numero Entero
-asignacion ENTERO a REAL
- A
-uli #Error: discarding; 
-mov A mov #0 ; Guardo un numero Entero
-ignacion ENTERO a REAL
- A
-uli #ror: discarding; 
-mov A mov #1 ; Guardo un numero Entero
-nacion ENTERO a REAL
- A
-li #r: discarding; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A mov #0 ; Guardo un numero Entero
-asignacion ENTERO a REAL
- A
-uli #Error: discarding; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A mov #0 ; Guardo un numero Entero
-asignacion ENTERO a REAL
- A
-uli #Error: discarding; 
-mov A mov #0 ; Guardo un numero Entero
-ignacion ENTERO a REAL
- A
-uli #ror: discarding; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A mov #0 ; Guardo un numero Entero
-asignacion ENTERO a REAL
- A
-uli #Error: discarding; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A mov #0 ; Guardo un numero Entero
-asignacion ENTERO a REAL
- A
-uli #Error: discarding; 
-mov A mov #0 ; Guardo un numero Entero
-ignacion ENTERO a REAL
- A
-uli #ror: discarding; 
-mov A mov #1 ; Guardo un numero Entero
-nacion ENTERO a REAL
- A
-li #r: discarding; 
-mov A mov #0 ; Guardo un numero Entero
-cion ENTERO a REAL
- A
-uli # discarding; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A mov #0 ; Guardo un numero Entero
-asignacion ENTERO a REAL
- A
-uli #Error: discarding; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A mov #0 ; Guardo un numero Entero
-asignacion ENTERO a REAL
- A
-uli #Error: discarding; 
-mov A mov #0 ; Guardo un numero Entero
-ignacion ENTERO a REAL
- A
-uli #ror: discarding; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A mov #0 ; Guardo un numero Entero
-asignacion ENTERO a REAL
- A
-uli #Error: discarding; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A mov #0 ; Guardo un numero Entero
-asignacion ENTERO a REAL
- A
-uli #Error: discarding; 
-mov A mov #0 ; Guardo un numero Entero
-ignacion ENTERO a REAL
- A
-uli #ror: discarding; 
-mov A mov #1 ; Guardo un numero Entero
-nacion ENTERO a REAL
- A
-li #r: discarding; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A mov #0 ; Guardo un numero Entero
-asignacion ENTERO a REAL
- A
-uli #Error: discarding; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A mov #0 ; Guardo un numero Entero
-asignacion ENTERO a REAL
- A
-uli #Error: discarding; 
-mov A mov #0 ; Guardo un numero Entero
-ignacion ENTERO a REAL
- A
-uli #ror: discarding; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A mov #0 ; Guardo un numero Entero
-asignacion ENTERO a REAL
- A
-uli #Error: discarding; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A   mov #0 ; Guardo un numero Entero
- la asignacion ENTERO a REAL
- A
-uli #ror; 
-mov A mov #1 ; Guardo un numero Entero
-a asignacion ENTERO a REAL
- A
-li #r; 
-mov A mov #0 ; Guardo un numero Entero
-asignacion ENTERO a REAL
- A
-uli #Error: discarding; 
-mov A mov #0 ; Guardo un numero Entero
-ignacion ENTERO a REAL
- A
-uli #ror: discarding; 
-mov A mov #1 ; Guardo un numero Entero
-nacion ENTERO a REAL
- A
-li #r: discarding; 
-mov A mov #0 ; Guardo un numero Entero
-cion ENTERO a REAL
- A
-uli # discarding; 
-mov A errorerrormov  A; Factor : Ref 
-uli #
-;Le sumo un tipo
- Entero
-
-on ENTERO a REAL
- A
-uli #
-ddi #ENTERO a REAL
- @A
-orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &mov #0 '; Guardo un numero Entero
-O a REAL
- A
-uli #g; 
-mov A (orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &mov #0 '; Guardo un numero Entero
-O a REAL
- A
-uli #g; 
-mov A (mov #0 ); Guardo un numero Entero
-a REAL
- A
-uli #Error: popping; 
-mov A *orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &mov #0 '; Guardo un numero Entero
-O a REAL
- A
-uli #g; 
-mov A (orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &mov #0 '; Guardo un numero Entero
-O a REAL
- A
-uli #g; 
-mov A (mov #0 ); Guardo un numero Entero
-a REAL
- A
-uli #Error: popping; 
-mov A *mov #0 +; Guardo un numero Entero
-REAL
- A
-li #ror: popping; 
-mov A ,orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &mov #0 '; Guardo un numero Entero
-O a REAL
- A
-uli #g; 
-mov A (orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &mov #0 '; Guardo un numero Entero
-O a REAL
- A
-uli #g; 
-mov A (mov #0 ); Guardo un numero Entero
-a REAL
- A
-uli #Error: popping; 
-mov A *orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &mov #0 '; Guardo un numero Entero
-O a REAL
- A
-uli #g; 
-mov A (orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &mov #0 '; Guardo un numero Entero
-O a REAL
- A
-uli #g; 
-mov A (mov #0 ); Guardo un numero Entero
-a REAL
- A
-uli #Error: popping; 
-mov A *mov #0 +; Guardo un numero Entero
-REAL
- A
-li #ror: popping; 
-mov A ,mov #0 -; Guardo un numero Entero
-AL
- A
-uli #r: popping; 
-mov A .orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &mov #0 '; Guardo un numero Entero
-O a REAL
- A
-uli #g; 
-mov A (orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &mov #0 '; Guardo un numero Entero
-O a REAL
- A
-uli #g; 
-mov A (mov #0 ); Guardo un numero Entero
-a REAL
- A
-uli #Error: popping; 
-mov A *orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &mov #0 '; Guardo un numero Entero
-O a REAL
- A
-uli #g; 
-mov A (orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &mov #0 '; Guardo un numero Entero
-O a REAL
- A
-uli #g; 
-mov A (mov #0 ); Guardo un numero Entero
-a REAL
- A
-uli #Error: popping; 
-mov A *mov #0 +; Guardo un numero Entero
-REAL
- A
-li #ror: popping; 
-mov A ,orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &mov #0 '; Guardo un numero Entero
-O a REAL
- A
-uli #g; 
-mov A (orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &mov #0 '; Guardo un numero Entero
-O a REAL
- A
-uli #g; 
-mov A (mov #0 ); Guardo un numero Entero
-a REAL
- A
-uli #Error: popping; 
-mov A *orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &mov #0 '; Guardo un numero Entero
-O a REAL
- A
-uli #g; 
-mov A (orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $orormov #0 #; Guardo un numero Entero
-NTERO a REAL
- A
-uli #rding; 
-mov A $mov #0 %; Guardo un numero Entero
-ERO a REAL
- A
-li #ing; 
-mov A &mov #0 '; Guardo un numero Entero
-O a REAL
- A
-uli #g; 
-mov A (mov #0 ); Guardo un numero Entero
-a REAL
- A
-uli #Error: popping; 
-mov A *mov #0 +; Guardo un numero Entero
-REAL
- A
-li #ror: popping; 
-mov A ,mov #0 -; Guardo un numero Entero
-AL
- A
-uli #r: popping; 
-mov A .cardingcardingmov / A; Factor : Ref 
-uli #
-;Le sumo un tipo
- Guardo un numero Real
-
-cardingcardingmov / A; Factor : Ref 
-uli #
-;Le sumo un tipo
- Guardo un numero Real
-
-mov #1 1; Guardo un numero Entero
-itor
- A; Cargo el primer termino en A
-add; Realizamos la operacion entera total.
-ENTERO
-; Lo cargamos en la dir correspondiente.
-
- A
-uli #
-ddi #r
- @A
-ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8mov #0 9; Guardo un numero Entero
-v A  A
-uli #emory exhausted; 
-mov A :ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8mov #0 9; Guardo un numero Entero
-v A  A
-uli #emory exhausted; 
-mov A :mov #0 ;; Guardo un numero Entero
-A  A
-uli #ory exhausted; 
-mov A <ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8mov #0 9; Guardo un numero Entero
-v A  A
-uli #emory exhausted; 
-mov A :ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8mov #0 9; Guardo un numero Entero
-v A  A
-uli #emory exhausted; 
-mov A :mov #0 ;; Guardo un numero Entero
-A  A
-uli #ory exhausted; 
-mov A <mov #0 =; Guardo un numero Entero
- A
-li #y exhausted; 
-mov A >ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8mov #0 9; Guardo un numero Entero
-v A  A
-uli #emory exhausted; 
-mov A :ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8mov #0 9; Guardo un numero Entero
-v A  A
-uli #emory exhausted; 
-mov A :mov #0 ;; Guardo un numero Entero
-A  A
-uli #ory exhausted; 
-mov A <ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8mov #0 9; Guardo un numero Entero
-v A  A
-uli #emory exhausted; 
-mov A :ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8mov #0 9; Guardo un numero Entero
-v A  A
-uli #emory exhausted; 
-mov A :mov #0 ;; Guardo un numero Entero
-A  A
-uli #ory exhausted; 
-mov A <mov #0 =; Guardo un numero Entero
- A
-li #y exhausted; 
-mov A >mov #0 ?; Guardo un numero Entero
- A
-uli #exhausted; 
-mov A @ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8mov #0 9; Guardo un numero Entero
-v A  A
-uli #emory exhausted; 
-mov A :ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8mov #0 9; Guardo un numero Entero
-v A  A
-uli #emory exhausted; 
-mov A :mov #0 ;; Guardo un numero Entero
-A  A
-uli #ory exhausted; 
-mov A <ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8mov #0 9; Guardo un numero Entero
-v A  A
-uli #emory exhausted; 
-mov A :ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8mov #0 9; Guardo un numero Entero
-v A  A
-uli #emory exhausted; 
-mov A :mov #0 ;; Guardo un numero Entero
-A  A
-uli #ory exhausted; 
-mov A <mov #0 =; Guardo un numero Entero
- A
-li #y exhausted; 
-mov A >ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8mov #0 9; Guardo un numero Entero
-v A  A
-uli #emory exhausted; 
-mov A :ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8mov #0 9; Guardo un numero Entero
-v A  A
-uli #emory exhausted; 
-mov A :mov #0 ;; Guardo un numero Entero
-A  A
-uli #ory exhausted; 
-mov A <ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8mov #0 9; Guardo un numero Entero
-v A  A
-uli #emory exhausted; 
-mov A :ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6ngngmov #0 5; Guardo un numero Entero
-
- A
-uli #ng; 
-mov A 6mov #1 7; Guardo un numero Entero
-mov A  A
-li #; 
-mov A 8mov #0 9; Guardo un numero Entero
-v A  A
-uli #emory exhausted; 
-mov A :mov #0 ;; Guardo un numero Entero
-A  A
-uli #ory exhausted; 
-mov A <mov #0 =; Guardo un numero Entero
- A
-li #y exhausted; 
-mov A >mov #0 ?; Guardo un numero Entero
- A
-uli #exhausted; 
-mov A @pingpingmov A A; Factor : Ref 
-uli #
-;Le sumo un tipo
-Real
-
-pingpingmov A A; Factor : Ref 
-uli #
-;Le sumo un tipo
-Real
-
-mov #2 C; Guardo un numero Entero
- A; Cargo el primer termino en A
-add la conversión del primer termino
-; Realizamos la operacion entera total.
-muli #; Lo cargamos en la dir correspondiente.
- A
-uli #
-ddi # A; Empezamos la asignacion REAL a ENTERO
- @A
-memory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmov #0 K; Guardo un numero Entero
-mpezamos la asignacion REAL a ENTERO
- A
-uli #eanup: discarding lookahead; 
-mov A Lmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmov #0 K; Guardo un numero Entero
-mpezamos la asignacion REAL a ENTERO
- A
-uli #eanup: discarding lookahead; 
-mov A Lmov #0 M; Guardo un numero Entero
-ezamos la asignacion REAL a ENTERO
- A
-uli #nup: discarding lookahead; 
-mov A Nmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmov #0 K; Guardo un numero Entero
-mpezamos la asignacion REAL a ENTERO
- A
-uli #eanup: discarding lookahead; 
-mov A Lmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmov #0 K; Guardo un numero Entero
-mpezamos la asignacion REAL a ENTERO
- A
-uli #eanup: discarding lookahead; 
-mov A Lmov #0 M; Guardo un numero Entero
-ezamos la asignacion REAL a ENTERO
- A
-uli #nup: discarding lookahead; 
-mov A Nmov #1 O; Guardo un numero Entero
-amos la asignacion REAL a ENTERO
- A
-li #p: discarding lookahead; 
-mov A Pmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmov #0 K; Guardo un numero Entero
-mpezamos la asignacion REAL a ENTERO
- A
-uli #eanup: discarding lookahead; 
-mov A Lmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmov #0 K; Guardo un numero Entero
-mpezamos la asignacion REAL a ENTERO
- A
-uli #eanup: discarding lookahead; 
-mov A Lmov #0 M; Guardo un numero Entero
-ezamos la asignacion REAL a ENTERO
- A
-uli #nup: discarding lookahead; 
-mov A Nmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmov #0 K; Guardo un numero Entero
-mpezamos la asignacion REAL a ENTERO
- A
-uli #eanup: discarding lookahead; 
-mov A Lmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmov #0 K; Guardo un numero Entero
-mpezamos la asignacion REAL a ENTERO
- A
-uli #eanup: discarding lookahead; 
-mov A Lmov #0 M; Guardo un numero Entero
-ezamos la asignacion REAL a ENTERO
- A
-uli #nup: discarding lookahead; 
-mov A Nmov #1 O; Guardo un numero Entero
-amos la asignacion REAL a ENTERO
- A
-li #p: discarding lookahead; 
-mov A Pmov #0 Q; Guardo un numero Entero
-os la asignacion REAL a ENTERO
- A
-uli # discarding lookahead; 
-mov A Rmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmov #0 K; Guardo un numero Entero
-mpezamos la asignacion REAL a ENTERO
- A
-uli #eanup: discarding lookahead; 
-mov A Lmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmov #0 K; Guardo un numero Entero
-mpezamos la asignacion REAL a ENTERO
- A
-uli #eanup: discarding lookahead; 
-mov A Lmov #0 M; Guardo un numero Entero
-ezamos la asignacion REAL a ENTERO
- A
-uli #nup: discarding lookahead; 
-mov A Nmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmov #0 K; Guardo un numero Entero
-mpezamos la asignacion REAL a ENTERO
- A
-uli #eanup: discarding lookahead; 
-mov A Lmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmov #0 K; Guardo un numero Entero
-mpezamos la asignacion REAL a ENTERO
- A
-uli #eanup: discarding lookahead; 
-mov A Lmov #0 M; Guardo un numero Entero
-ezamos la asignacion REAL a ENTERO
- A
-uli #nup: discarding lookahead; 
-mov A Nmov #1 O; Guardo un numero Entero
-amos la asignacion REAL a ENTERO
- A
-li #p: discarding lookahead; 
-mov A Pmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmov #0 K; Guardo un numero Entero
-mpezamos la asignacion REAL a ENTERO
- A
-uli #eanup: discarding lookahead; 
-mov A Lmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmov #0 K; Guardo un numero Entero
-mpezamos la asignacion REAL a ENTERO
- A
-uli #eanup: discarding lookahead; 
-mov A Lmov #0 M; Guardo un numero Entero
-ezamos la asignacion REAL a ENTERO
- A
-uli #nup: discarding lookahead; 
-mov A Nmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmov #0 K; Guardo un numero Entero
-mpezamos la asignacion REAL a ENTERO
- A
-uli #eanup: discarding lookahead; 
-mov A Lmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmemory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
-A; Empezamos la asignacion REAL a ENTERO
- A
-uli #d; 
-mov A Hmov #0 I; Guardo un numero Entero
- Empezamos la asignacion REAL a ENTERO
- A
-li #Cleanup: discarding lookahead; 
-mov A Jmov #0 K; Guardo un numero Entero
-mpezamos la asignacion REAL a ENTERO
- A
-uli #eanup: discarding lookahead; 
-mov A Lmov #0 M; Guardo un numero Entero
-ezamos la asignacion REAL a ENTERO
- A
-uli #nup: discarding lookahead; 
-mov A Nmov #1 O; Guardo un numero Entero
-amos la asignacion REAL a ENTERO
- A
-li #p: discarding lookahead; 
-mov A Pmov #0 Q; Guardo un numero Entero
-os la asignacion REAL a ENTERO
- A
-uli # discarding lookahead; 
-mov A Rtedtedmov S A; Factor : Ref 
-uli #
-;Le sumo un tipo
- 
-tedtedmov S A; Factor : Ref 
-uli #
-;Le sumo un tipo
- 
-mov #3 U; Guardo un numero Entero
-a asignacion REAL a ENTERO
- A; Cargo el primer termino en A
-addl primer termino
-; Realizamos la operacion entera total.
-; Lo cargamos en la dir correspondiente.
- la asignacion REAL a ENTERO
- A
-uli #
-ddi #signacion REAL a ENTERO
- @A
-wrrIF
+mov #0 7;Estoy en Ref:tid
+mov #0 7;Estoy en Ref:tid
+mov #1 8; Guardo un numero Entero
+mov #1 8; Guardo un numero Entero
+mov #3 9; Guardo un numero Entero
+mov 8 A; Cargo el primer termino en A
+subi 9; Realizamos la operacion entera total.
+mov A 10; Lo cargamos en la dir correspondiente.
+mov #1 8; Guardo un numero Entero
+mov #1 8; Guardo un numero Entero
+mov #3 9; Guardo un numero Entero
+mov 8 A; Cargo el primer termino en A
+subi 9; Realizamos la operacion entera total.
+mov A 10; Lo cargamos en la dir correspondiente.
+mov #2 11; Guardo un numero Entero
+mov #2 11; Guardo un numero Entero
+mov 11 A; Cargo el primer termino en A
+muli 12; Realizamos la operacion entera total.
+mov A 13; Lo cargamos en la dir correspondiente.
+mov #2 11; Guardo un numero Entero
+mov #2 11; Guardo un numero Entero
+mov 11 A; Cargo el primer termino en A
+muli 12; Realizamos la operacion entera total.
+mov A 13; Lo cargamos en la dir correspondiente.
+mov 13 A; Cargo el primer termino en A
+divi 14; Realizamos la operacion entera total.
+mov A 15; Lo cargamos en la dir correspondiente.
+mov 10 A; Cargo el primer termino en A
+addi 15; Realizamos la operacion entera total.
+mov A 16; Lo cargamos en la dir correspondiente.
+mov 7 A
+muli #1
+addi #6; Instr: Ref asig
+mov 17 @A
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 23; Guardo un numero Entero
+mov 22 A
+muli #1
+addi 23; 
+mov A 24
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 23; Guardo un numero Entero
+mov 22 A
+muli #1
+addi 23; 
+mov A 24
+mov #0 25; Guardo un numero Entero
+mov 24 A
+muli #1
+addi 25; 
+mov A 26
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 23; Guardo un numero Entero
+mov 22 A
+muli #1
+addi 23; 
+mov A 24
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 23; Guardo un numero Entero
+mov 22 A
+muli #1
+addi 23; 
+mov A 24
+mov #0 25; Guardo un numero Entero
+mov 24 A
+muli #1
+addi 25; 
+mov A 26
+mov #1 27; Guardo un numero Entero
+mov 26 A
+muli #2
+addi 27; 
+mov A 28
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 23; Guardo un numero Entero
+mov 22 A
+muli #1
+addi 23; 
+mov A 24
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 23; Guardo un numero Entero
+mov 22 A
+muli #1
+addi 23; 
+mov A 24
+mov #0 25; Guardo un numero Entero
+mov 24 A
+muli #1
+addi 25; 
+mov A 26
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 23; Guardo un numero Entero
+mov 22 A
+muli #1
+addi 23; 
+mov A 24
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 23; Guardo un numero Entero
+mov 22 A
+muli #1
+addi 23; 
+mov A 24
+mov #0 25; Guardo un numero Entero
+mov 24 A
+muli #1
+addi 25; 
+mov A 26
+mov #1 27; Guardo un numero Entero
+mov 26 A
+muli #2
+addi 27; 
+mov A 28
+mov #0 29; Guardo un numero Entero
+mov 28 A
+muli #1
+addi 29; 
+mov A 30
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 23; Guardo un numero Entero
+mov 22 A
+muli #1
+addi 23; 
+mov A 24
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 23; Guardo un numero Entero
+mov 22 A
+muli #1
+addi 23; 
+mov A 24
+mov #0 25; Guardo un numero Entero
+mov 24 A
+muli #1
+addi 25; 
+mov A 26
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 23; Guardo un numero Entero
+mov 22 A
+muli #1
+addi 23; 
+mov A 24
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 23; Guardo un numero Entero
+mov 22 A
+muli #1
+addi 23; 
+mov A 24
+mov #0 25; Guardo un numero Entero
+mov 24 A
+muli #1
+addi 25; 
+mov A 26
+mov #1 27; Guardo un numero Entero
+mov 26 A
+muli #2
+addi 27; 
+mov A 28
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 23; Guardo un numero Entero
+mov 22 A
+muli #1
+addi 23; 
+mov A 24
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 23; Guardo un numero Entero
+mov 22 A
+muli #1
+addi 23; 
+mov A 24
+mov #0 25; Guardo un numero Entero
+mov 24 A
+muli #1
+addi 25; 
+mov A 26
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 23; Guardo un numero Entero
+mov 22 A
+muli #1
+addi 23; 
+mov A 24
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #0 18;Estoy en Ref:tid
+mov #0 18;Estoy en Ref:tid
+mov #0 19; Guardo un numero Entero
+mov 18 A
+muli #1
+addi 19; 
+mov A 20
+mov #1 21; Guardo un numero Entero
+mov 20 A
+muli #2
+addi 21; 
+mov A 22
+mov #0 23; Guardo un numero Entero
+mov 22 A
+muli #1
+addi 23; 
+mov A 24
+mov #0 25; Guardo un numero Entero
+mov 24 A
+muli #1
+addi 25; 
+mov A 26
+mov #1 27; Guardo un numero Entero
+mov 26 A
+muli #2
+addi 27; 
+mov A 28
+mov #0 29; Guardo un numero Entero
+mov 28 A
+muli #1
+addi 29; 
+mov A 30
+mov #0 31;Estoy en Ref:tid
+mov #0 31;Estoy en Ref:tid
+
+mov 31 A; Factor : Ref 
+muli #1
+addi #6;Le sumo un tipo
+mov @A 32
+mov 30 A
+muli #1
+addi #1; Instr: Ref asig
+mov 33 @A
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 39; Guardo un numero Entero
+mov 38 A
+muli #1
+addi 39; 
+mov A 40
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 39; Guardo un numero Entero
+mov 38 A
+muli #1
+addi 39; 
+mov A 40
+mov #0 41; Guardo un numero Entero
+mov 40 A
+muli #1
+addi 41; 
+mov A 42
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 39; Guardo un numero Entero
+mov 38 A
+muli #1
+addi 39; 
+mov A 40
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 39; Guardo un numero Entero
+mov 38 A
+muli #1
+addi 39; 
+mov A 40
+mov #0 41; Guardo un numero Entero
+mov 40 A
+muli #1
+addi 41; 
+mov A 42
+mov #0 43; Guardo un numero Entero
+mov 42 A
+muli #2
+addi 43; 
+mov A 44
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 39; Guardo un numero Entero
+mov 38 A
+muli #1
+addi 39; 
+mov A 40
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 39; Guardo un numero Entero
+mov 38 A
+muli #1
+addi 39; 
+mov A 40
+mov #0 41; Guardo un numero Entero
+mov 40 A
+muli #1
+addi 41; 
+mov A 42
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 39; Guardo un numero Entero
+mov 38 A
+muli #1
+addi 39; 
+mov A 40
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 39; Guardo un numero Entero
+mov 38 A
+muli #1
+addi 39; 
+mov A 40
+mov #0 41; Guardo un numero Entero
+mov 40 A
+muli #1
+addi 41; 
+mov A 42
+mov #0 43; Guardo un numero Entero
+mov 42 A
+muli #2
+addi 43; 
+mov A 44
+mov #0 45; Guardo un numero Entero
+mov 44 A
+muli #1
+addi 45; 
+mov A 46
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 39; Guardo un numero Entero
+mov 38 A
+muli #1
+addi 39; 
+mov A 40
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 39; Guardo un numero Entero
+mov 38 A
+muli #1
+addi 39; 
+mov A 40
+mov #0 41; Guardo un numero Entero
+mov 40 A
+muli #1
+addi 41; 
+mov A 42
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 39; Guardo un numero Entero
+mov 38 A
+muli #1
+addi 39; 
+mov A 40
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 39; Guardo un numero Entero
+mov 38 A
+muli #1
+addi 39; 
+mov A 40
+mov #0 41; Guardo un numero Entero
+mov 40 A
+muli #1
+addi 41; 
+mov A 42
+mov #0 43; Guardo un numero Entero
+mov 42 A
+muli #2
+addi 43; 
+mov A 44
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 39; Guardo un numero Entero
+mov 38 A
+muli #1
+addi 39; 
+mov A 40
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 39; Guardo un numero Entero
+mov 38 A
+muli #1
+addi 39; 
+mov A 40
+mov #0 41; Guardo un numero Entero
+mov 40 A
+muli #1
+addi 41; 
+mov A 42
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 39; Guardo un numero Entero
+mov 38 A
+muli #1
+addi 39; 
+mov A 40
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 34;Estoy en Ref:tid
+mov #0 34;Estoy en Ref:tid
+mov #0 35; Guardo un numero Entero
+mov 34 A
+muli #1
+addi 35; 
+mov A 36
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #2
+addi 37; 
+mov A 38
+mov #0 39; Guardo un numero Entero
+mov 38 A
+muli #1
+addi 39; 
+mov A 40
+mov #0 41; Guardo un numero Entero
+mov 40 A
+muli #1
+addi 41; 
+mov A 42
+mov #0 43; Guardo un numero Entero
+mov 42 A
+muli #2
+addi 43; 
+mov A 44
+mov #0 45; Guardo un numero Entero
+mov 44 A
+muli #1
+addi 45; 
+mov A 46
+mov #0 47;Estoy en Ref:tid
+mov #0 47;Estoy en Ref:tid
+
+mov 47 A; Factor : Ref 
+muli #1
+addi #6;Le sumo un tipo
+mov @A 48
+mov #0 47;Estoy en Ref:tid
+mov #0 47;Estoy en Ref:tid
+
+mov 47 A; Factor : Ref 
+muli #1
+addi #6;Le sumo un tipo
+mov @A 48
+mov #1 49; Guardo un numero Entero
+mov 48 A; Cargo el primer termino en A
+addi 49; Realizamos la operacion entera total.
+mov A 50; Lo cargamos en la dir correspondiente.
+mov 46 A
+muli #1
+addi #1; Instr: Ref asig
+mov 51 @A
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 57; Guardo un numero Entero
+mov 56 A
+muli #1
+addi 57; 
+mov A 58
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 57; Guardo un numero Entero
+mov 56 A
+muli #1
+addi 57; 
+mov A 58
+mov #0 59; Guardo un numero Entero
+mov 58 A
+muli #1
+addi 59; 
+mov A 60
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 57; Guardo un numero Entero
+mov 56 A
+muli #1
+addi 57; 
+mov A 58
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 57; Guardo un numero Entero
+mov 56 A
+muli #1
+addi 57; 
+mov A 58
+mov #0 59; Guardo un numero Entero
+mov 58 A
+muli #1
+addi 59; 
+mov A 60
+mov #0 61; Guardo un numero Entero
+mov 60 A
+muli #2
+addi 61; 
+mov A 62
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 57; Guardo un numero Entero
+mov 56 A
+muli #1
+addi 57; 
+mov A 58
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 57; Guardo un numero Entero
+mov 56 A
+muli #1
+addi 57; 
+mov A 58
+mov #0 59; Guardo un numero Entero
+mov 58 A
+muli #1
+addi 59; 
+mov A 60
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 57; Guardo un numero Entero
+mov 56 A
+muli #1
+addi 57; 
+mov A 58
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 57; Guardo un numero Entero
+mov 56 A
+muli #1
+addi 57; 
+mov A 58
+mov #0 59; Guardo un numero Entero
+mov 58 A
+muli #1
+addi 59; 
+mov A 60
+mov #0 61; Guardo un numero Entero
+mov 60 A
+muli #2
+addi 61; 
+mov A 62
+mov #0 63; Guardo un numero Entero
+mov 62 A
+muli #1
+addi 63; 
+mov A 64
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 57; Guardo un numero Entero
+mov 56 A
+muli #1
+addi 57; 
+mov A 58
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 57; Guardo un numero Entero
+mov 56 A
+muli #1
+addi 57; 
+mov A 58
+mov #0 59; Guardo un numero Entero
+mov 58 A
+muli #1
+addi 59; 
+mov A 60
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 57; Guardo un numero Entero
+mov 56 A
+muli #1
+addi 57; 
+mov A 58
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 57; Guardo un numero Entero
+mov 56 A
+muli #1
+addi 57; 
+mov A 58
+mov #0 59; Guardo un numero Entero
+mov 58 A
+muli #1
+addi 59; 
+mov A 60
+mov #0 61; Guardo un numero Entero
+mov 60 A
+muli #2
+addi 61; 
+mov A 62
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 57; Guardo un numero Entero
+mov 56 A
+muli #1
+addi 57; 
+mov A 58
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 57; Guardo un numero Entero
+mov 56 A
+muli #1
+addi 57; 
+mov A 58
+mov #0 59; Guardo un numero Entero
+mov 58 A
+muli #1
+addi 59; 
+mov A 60
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 57; Guardo un numero Entero
+mov 56 A
+muli #1
+addi 57; 
+mov A 58
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #0 52;Estoy en Ref:tid
+mov #0 52;Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi 53; 
+mov A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A
+muli #2
+addi 55; 
+mov A 56
+mov #0 57; Guardo un numero Entero
+mov 56 A
+muli #1
+addi 57; 
+mov A 58
+mov #0 59; Guardo un numero Entero
+mov 58 A
+muli #1
+addi 59; 
+mov A 60
+mov #0 61; Guardo un numero Entero
+mov 60 A
+muli #2
+addi 61; 
+mov A 62
+mov #0 63; Guardo un numero Entero
+mov 62 A
+muli #1
+addi 63; 
+mov A 64
+mov #0 65;Estoy en Ref:tid
+mov #0 65;Estoy en Ref:tid
+
+mov 65 A; Factor : Ref 
+muli #1
+addi #6;Le sumo un tipo
+mov @A 66
+mov #0 65;Estoy en Ref:tid
+mov #0 65;Estoy en Ref:tid
+
+mov 65 A; Factor : Ref 
+muli #1
+addi #6;Le sumo un tipo
+mov @A 66
+mov #2 67; Guardo un numero Entero
+mov 66 A; Cargo el primer termino en A
+addi 67; Realizamos la operacion entera total.
+mov A 68; Lo cargamos en la dir correspondiente.
+mov 64 A
+muli #1
+addi #1; Instr: Ref asig
+mov 69 @A
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 75; Guardo un numero Entero
+mov 74 A
+muli #1
+addi 75; 
+mov A 76
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 75; Guardo un numero Entero
+mov 74 A
+muli #1
+addi 75; 
+mov A 76
+mov #0 77; Guardo un numero Entero
+mov 76 A
+muli #1
+addi 77; 
+mov A 78
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 75; Guardo un numero Entero
+mov 74 A
+muli #1
+addi 75; 
+mov A 76
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 75; Guardo un numero Entero
+mov 74 A
+muli #1
+addi 75; 
+mov A 76
+mov #0 77; Guardo un numero Entero
+mov 76 A
+muli #1
+addi 77; 
+mov A 78
+mov #1 79; Guardo un numero Entero
+mov 78 A
+muli #2
+addi 79; 
+mov A 80
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 75; Guardo un numero Entero
+mov 74 A
+muli #1
+addi 75; 
+mov A 76
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 75; Guardo un numero Entero
+mov 74 A
+muli #1
+addi 75; 
+mov A 76
+mov #0 77; Guardo un numero Entero
+mov 76 A
+muli #1
+addi 77; 
+mov A 78
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 75; Guardo un numero Entero
+mov 74 A
+muli #1
+addi 75; 
+mov A 76
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 75; Guardo un numero Entero
+mov 74 A
+muli #1
+addi 75; 
+mov A 76
+mov #0 77; Guardo un numero Entero
+mov 76 A
+muli #1
+addi 77; 
+mov A 78
+mov #1 79; Guardo un numero Entero
+mov 78 A
+muli #2
+addi 79; 
+mov A 80
+mov #0 81; Guardo un numero Entero
+mov 80 A
+muli #1
+addi 81; 
+mov A 82
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 75; Guardo un numero Entero
+mov 74 A
+muli #1
+addi 75; 
+mov A 76
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 75; Guardo un numero Entero
+mov 74 A
+muli #1
+addi 75; 
+mov A 76
+mov #0 77; Guardo un numero Entero
+mov 76 A
+muli #1
+addi 77; 
+mov A 78
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 75; Guardo un numero Entero
+mov 74 A
+muli #1
+addi 75; 
+mov A 76
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 75; Guardo un numero Entero
+mov 74 A
+muli #1
+addi 75; 
+mov A 76
+mov #0 77; Guardo un numero Entero
+mov 76 A
+muli #1
+addi 77; 
+mov A 78
+mov #1 79; Guardo un numero Entero
+mov 78 A
+muli #2
+addi 79; 
+mov A 80
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 75; Guardo un numero Entero
+mov 74 A
+muli #1
+addi 75; 
+mov A 76
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 75; Guardo un numero Entero
+mov 74 A
+muli #1
+addi 75; 
+mov A 76
+mov #0 77; Guardo un numero Entero
+mov 76 A
+muli #1
+addi 77; 
+mov A 78
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 75; Guardo un numero Entero
+mov 74 A
+muli #1
+addi 75; 
+mov A 76
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 70;Estoy en Ref:tid
+mov #0 70;Estoy en Ref:tid
+mov #0 71; Guardo un numero Entero
+mov 70 A
+muli #1
+addi 71; 
+mov A 72
+mov #0 73; Guardo un numero Entero
+mov 72 A
+muli #2
+addi 73; 
+mov A 74
+mov #0 75; Guardo un numero Entero
+mov 74 A
+muli #1
+addi 75; 
+mov A 76
+mov #0 77; Guardo un numero Entero
+mov 76 A
+muli #1
+addi 77; 
+mov A 78
+mov #1 79; Guardo un numero Entero
+mov 78 A
+muli #2
+addi 79; 
+mov A 80
+mov #0 81; Guardo un numero Entero
+mov 80 A
+muli #1
+addi 81; 
+mov A 82
+mov #0 83;Estoy en Ref:tid
+mov #0 83;Estoy en Ref:tid
+
+mov 83 A; Factor : Ref 
+muli #1
+addi #6;Le sumo un tipo
+mov @A 84
+mov #0 83;Estoy en Ref:tid
+mov #0 83;Estoy en Ref:tid
+
+mov 83 A; Factor : Ref 
+muli #1
+addi #6;Le sumo un tipo
+mov @A 84
+mov #3 85; Guardo un numero Entero
+mov 84 A; Cargo el primer termino en A
+addi 85; Realizamos la operacion entera total.
+mov A 86; Lo cargamos en la dir correspondiente.
+mov 82 A
+muli #1
+addi #1; Instr: Ref asig
+mov 87 @A
+wrr 89
 wrl
-wrrse.
+wrr 149
 wrl
 halt
 
