@@ -150,14 +150,16 @@ FVM : DVar FVM
     #ifdef DEBUG
     std::cout <<"Entro en Vsp: Vsp Unsp" <<std::endl;
     #endif
+    $$.cod = $1.cod + $2.cod;
 };
 
-FVM : tint tmain tpari tpard Bloque
+FVM : tint tmain tpari tpard { anyadirAmbito("main");} Bloque
 {
     #ifdef DEBUG
     std::cout <<"Entro en Vsp : Unsp" <<std::endl;
     #endif
-    //    std::cout<<"HOLA" <<endl;
+    $$.cod = $5.cod;
+    borrarAmbito();
     
 };
 
@@ -183,6 +185,7 @@ Bloque : tllavei BDecl SeqInstr tllaved
 #ifdef DEBUG
     std::cout <<"Entro en LV : LV V" <<std::endl;
 #endif
+    $$.cod = $2.cod + $3.cod;
 };
 
 BDecl : BDecl DVar
@@ -190,6 +193,8 @@ BDecl : BDecl DVar
 #ifdef DEBUG
     std::cout <<"Entro en LV : V" <<std::endl;
 #endif
+    $$.cod = $1.cod + $2.cod;
+    
 };
 
 BDecl : 
@@ -324,7 +329,8 @@ Instr : Bloque
 };
 
 //FALTA LOS ERRORES DE LOS ARRAY
-Instr : Ref {if(obtenerSimbolo($1.lexema).tipo == FUNCION || obtenerSimbolo($1.lexema).tipo == ARRAY) msgError(ERREOF,$1.nlin,$1.ncol,$1.lexema);} tasig Expr {if (obtenerSimbolo($4.lexema).tipo == ARRAY) msgError(ERREOF,$1.nlin,$1.ncol, $1.lexema);} tpyc
+//CHECK Posibilidades ASIG
+Instr : Ref {if(obtenerTipoBasico(obtenerSimbolo($1.lexema).tipo).tipo == FUNCION || obtenerTipoBasico(obtenerSimbolo($1.lexema).tipo).tipo == ARRAY) { /*imprimirTablaTipos(); std::cout <<"INTR: ASIG" <<$1.nlin <<std::endl <<$1.lexema <<std::endl;*/ msgError(ERREOF,$1.nlin,$1.ncol,$1.lexema);}} tasig Expr {if (obtenerSimbolo($4.lexema).tipo == ARRAY){std::cout <<"INTR: ASIG 2" <<std::endl; msgError(ERREOF,$1.nlin,$1.ncol, $1.lexema);}} tpyc
 {
 #ifdef DEBUG
     std::cout <<"Entro en Instr : Ref tasig Expr tpyc " <<std::endl;
@@ -361,7 +367,7 @@ Instr : Ref {if(obtenerSimbolo($1.lexema).tipo == FUNCION || obtenerSimbolo($1.l
 };
 
 //CHECK ERRORS
-Instr : tprintf tpari tformato tcoma Expr { if(esArray($5.tipo)) msgError(ERREOF,$5.nlin,$5.ncol,$5.lexema);} tpard tpyc
+Instr : tprintf tpari tformato tcoma Expr { if(esArray($5.tipo)){ std::cout <<"INTR: PRINT" <<std::endl; msgError(ERREOF,$5.nlin,$5.ncol,$5.lexema);} } tpard tpyc
 {
 #ifdef DEBUG
     std::cout <<"Entro en Instr : tprintf tpari tformato tcoma Expr tpard tpyc" <<std::endl;
@@ -399,13 +405,13 @@ Instr : tprintf tpari tformato tcoma Expr { if(esArray($5.tipo)) msgError(ERREOF
 };
 
 //CHECK ERRORRRRS
-Instr : tscanf tpari tformato tcoma treferencia Ref { if(esArray($6.tipo)) msgError(ERREOF,$6.nlin,$6.ncol,$6.lexema);} tpard tpyc
+Instr : tscanf tpari tformato tcoma treferencia Ref { if(esArray($6.tipo)){std::cout<<"SCANF" <<std::endl; msgError(ERREOF,$6.nlin,$6.ncol,$6.lexema); }} tpard tpyc
 {
 #ifdef DEBUG
     std::cout <<"Entro en Instr : while E do Instr" <<std::endl;
 #endif
         int tmp = nTmp();
-    if($3.lexema == "%d" && $6.tipo == NREAL)
+    if($3.lexema == "\"%d\"" && $6.tipo == NREAL)
       {
         $$.cod += "mov " + $6.dir;
         $$.cod += " A; Realizo la conversion antes de leer REAL a ENT\n";
@@ -413,7 +419,7 @@ Instr : tscanf tpari tformato tcoma treferencia Ref { if(esArray($6.tipo)) msgEr
         $$.cod += "mov A " + tmp;
         $$.cod += "\n";
       }
-    else if($3.lexema == "%g" && $6.tipo == NENTERO)
+    else if($3.lexema == "\"%g\"" && $6.tipo == NENTERO)
       {
         $$.cod += "mov " + $6.dir;
         $$.cod += " A; Realizo la conversion antes de imprimir ENT a R\n";
@@ -436,7 +442,7 @@ Instr : tscanf tpari tformato tcoma treferencia Ref { if(esArray($6.tipo)) msgEr
 
 //TODO :Realizar comprobaciones oportunas
 // TODO QUITAR ERROR
-Instr : tif tpari Expr {if($3.tipo != BOOL) msgError(ERREOF,$3.nlin, $3.ncol,$3.lexema);} tpard Instr Instr_prima
+Instr : tif tpari Expr {if($3.tipo != NENTERO){std::cout <<"INTR: IF" <<std::endl; msgError(ERREOF,$3.nlin, $3.ncol,$3.lexema);} } tpard {anyadirAmbito("IF"+numMemoria);} Instr Instr_prima
 {
 #ifdef DEBUG
     std::cout <<"Entro en Instr : tif tpari Expr tpard Instr Instr_prima" <<std::endl;
@@ -741,6 +747,7 @@ Factor : Ref
 #ifdef DEBUG
     std::cout <<"Entro en Factor : Ref" <<std::endl;
 #endif
+    // std::cout<<"FACTOR: " <<$1.lexema <<std::endl;
     
     if(ARRAY == obtenerTipoTTipos($1.tipo))
       {
@@ -756,6 +763,7 @@ Factor : Ref
     $$.cod += "muli #" + tipoTmp.tam;
     $$.cod += "\n";
     $$.cod += "addi #" + tipoTmp.tbase;
+    $$.cod += ";Le sumo un tipo";
     $$.cod += "\n";
     $$.cod += "mov @A " + tmp;
     $$.cod += "\n";
@@ -804,6 +812,7 @@ Factor : tpari Expr tpard
 
 Ref : tid
 {
+  //std::cout<<"REF: tid " <<$1.lexema <<std::endl;
   Simbolo sim  = obtenerSimbolo($1.lexema);
   if(sim.nombre == "")
     msgError(ERRNODECL,$1.nlin,$1.ncol,$1.lexema);
@@ -814,8 +823,8 @@ Ref : tid
   $$.dir = tmp;
   $$.tipo =sim.tipo;// obtenerTipoTTipos(sim.tipo);
   //    std::cerr<<"TIPO: "<< "Hasd" <<$$.tipo <<std::endl;
-  imprimirTablaTipos();
-  imprimirTablaSimbolos();
+  //  imprimirTablaTipos();
+  //  imprimirTablaSimbolos();
   
   $$.dbase = sim.dir;
   $$.cod = "mov #0 " + tmp;
@@ -825,6 +834,7 @@ Ref : tid
 //TODO Cambiar Error
 Ref : Ref tcori {if(ARRAY != obtenerTipoTTipos($1.tipo)){std::cout <<"cori " <<$1.tipo <<std::endl; msgError(ERRSOBRAN, $2.nlin, $2.ncol, $1.lexema);} } Esimple tcord 
 {
+  //std::cout<<"REF: REF cori: " <<$1.lexema <<std::endl;
   if ($4.tipo != NENTERO)
     {
       msgError(ERR_EXP_ENT,$5.nlin,$5.ncol,$5.lexema);
@@ -847,7 +857,7 @@ Ref : Ref tcori {if(ARRAY != obtenerTipoTTipos($1.tipo)){std::cout <<"cori " <<$
   $$.cod += $$.dir;
   
   //$$.tipo = obtenerTipoTTipos($1.tipo);
-  std::cout<<"Soy de tipo " <<$1.tipo <<std::endl;
+  //    std::cout<<"Soy de tipo " <<$$.tipo <<std::endl;
   
 }
 

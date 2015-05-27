@@ -80,8 +80,8 @@ void msgError(int nerror, int nlin,int ncol,const string s);
 ","               {return ret(tcoma);}
 "="               {return ret(tasig);}
 "&"               {return ret(treferencia);}
-"%d"              {return ret(tformato);}
-"%g"              {return ret(tformato);}
+"\"%d\""              {return ret(tformato);}
+"\"%g\""              {return ret(tformato);}
 "main"            {return ret(tmain);}
 "float"           {return ret(tfloat);}
 "int"             {return ret(tint);}
