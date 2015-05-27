@@ -157,7 +157,7 @@ FVM : tint tmain tpari tpard Bloque
     #ifdef DEBUG
     std::cout <<"Entro en Vsp : Unsp" <<std::endl;
     #endif
-    //    std::cout<<"HOLA" <<endl;
+    std::cout<<"HOLA" <<endl;
     
 };
 
@@ -230,6 +230,8 @@ Variable : tid {if(obtenerSimboloEnAmbito(tablaSimbolos.back(),$1.lexema).nombre
 #ifdef DEBUG
     std::cout <<"Entro en Tipo : real" <<std::endl;
 #endif
+    //    std::cout<<"VARIABLE: " <<$$.tipo <<std::endl;
+
     if($3.tipo == ARRAY)
       {
         std::vector<string> stringsAux;
@@ -827,6 +829,7 @@ Ref : Ref tcori {if(ARRAY != obtenerTipoTTipos($1.tipo)){std::cout <<"cori " <<$
 {
   if ($4.tipo != NENTERO)
     {
+      std::cout<<"TIPOS : " <<$1.tipo <<std::endl;
       msgError(ERR_EXP_ENT,$5.nlin,$5.ncol,$5.lexema);
     }
   ncolCorchete = $5.ncol;
