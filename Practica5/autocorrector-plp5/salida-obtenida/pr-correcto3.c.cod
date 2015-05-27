@@ -1,2 +1,321 @@
+mov #0 ; Guardo un numero Entero
+signacion ENTERO a REAL
+ A
+uli #
+NTgnacion ENTERO a REAL
+ @A
+A; Realizamos el if
+:
+ntax errorntax errormov  A; Factor : Ref 
+uli #
+;Le sumo un tipo
+umero Entero
+
+ntax errorntax errormov  A; Factor : Ref 
+uli #
+;Le sumo un tipo
+umero Entero
+
+mov #4 ; Guardo un numero Entero
+acion ENTERO a REAL
+ A; Cargo el primer termino en A
+lssion entera total.
+; Realizamos la operacion entera total.
+la asignacion REAL a ENTERO
+; Lo cargamos en la dir correspondiente.
+acion ENTERO a REAL
+ A
+jz ; Realizamos el if
+ error errormov #0 ; Guardo un numero Entero
+on ENTERO a REAL
+ A
+uli #
+T ENTERO a REAL
+ @A
+:
+rorrormov ! A; Factor : Ref 
+uli #
+;Le sumo un tipo
+ntero
+
+rorrormov ! A; Factor : Ref 
+uli #
+;Le sumo un tipo
+ntero
+
+mov #4 #; Guardo un numero Entero
+NTERO a REAL
+ A; Cargo el primer termino en A
+lssera total.
+; Realizamos la operacion entera total.
+nacion REAL a ENTERO
+; Lo cargamos en la dir correspondiente.
+NTERO a REAL
+ A
+jz  A; Realizamos el if
+rdron antes de leer REAL a ENT
+
+iscardingiscardingscardingscardingmov . A; Factor : Ref 
+uli #
+;Le sumo un tipo
+; Guardo un numero Real
+
+scardingscardingmov . A; Factor : Ref 
+uli #
+;Le sumo un tipo
+; Guardo un numero Real
+
+mov #1 0; Guardo un numero Entero
+ A; Cargo el primer termino en A
+add; Realizamos la operacion entera total.
+ ENTERO
+; Lo cargamos en la dir correspondiente.
+L
+ A
+uli #
+Tor
+ @A
+jmp  A; Realizamos el if
+:
+ingingngngmov 4 A; Factor : Ref 
+uli #
+;Le sumo un tipo
+do un numero Real
+
+ngngmov 4 A; Factor : Ref 
+uli #
+;Le sumo un tipo
+do un numero Real
+
+mov #1 6; Guardo un numero Entero
+ A; Cargo el primer termino en A
+additor; Realizo la conversión del primer termino
+; Realizamos la operacion entera total.
+O
+; Lo cargamos en la dir correspondiente.
+r
+ A
+uli #
+NTv A  @A
+jmp A; Realizamos el if
+; Realizamos el if
+:
+A  A; Realizamos el if
+jz lizamos el if
+
+rdra ENT
+
+ngngmov #0 D; Guardo un numero Entero
+ A
+uli #
+NT A; Empezamos la asignacion REAL a ENTERO
+ @A
+memory exhaustedmemory exhaustedmov #0 G; Guardo un numero Entero
+; Empezamos la asignacion REAL a ENTERO
+ A; Empezamos la asignacion ENTERO a REAL
+itor
+ #
+A; Empezamos la asignacion REAL a ENTERO
+ A
+uli #
+imprimir REAL a ENT
+ Empezamos la asignacion REAL a ENTERO
+ @A
+ealizamos el if
+:
+ory exhaustedory exhaustedmov I A; Factor : Ref 
+uli #
+;Le sumo un tipo
+v #0 
+ory exhaustedory exhaustedmov I A; Factor : Ref 
+uli #
+;Le sumo un tipo
+v #0 
+mov #4 K; Guardo un numero Entero
+mpezamos la asignacion REAL a ENTERO
+ A; Cargo el primer termino en A
+lssersión del primer termino
+; Realizamos la operacion entera total.
+ddi #; Lo cargamos en la dir correspondiente.
+mpezamos la asignacion REAL a ENTERO
+ A
+jz alizamos el if
+exhaustedexhaustedmov #0 N; Guardo un numero Entero
+zamos la asignacion REAL a ENTERO
+ A
+uli #
+Tmos la asignacion REAL a ENTERO
+ @A
+austedaustedmov #0 Q; Guardo un numero Entero
+s la asignacion REAL a ENTERO
+ A; Empezamos la asignacion ENTERO a REAL
+itor
+ @A
+
+os la asignacion REAL a ENTERO
+ A
+uli #
+ imprimir REAL a ENT
+ la asignacion REAL a ENTERO
+ @A
+ Realizamos el if
+:
+tedtedmov S A; Factor : Ref 
+uli #
+;Le sumo un tipo
+ 
+tedtedmov S A; Factor : Ref 
+uli #
+;Le sumo un tipo
+ 
+mov #4 U; Guardo un numero Entero
+a asignacion REAL a ENTERO
+ A; Cargo el primer termino en A
+lssl primer termino
+; Realizamos la operacion entera total.
+; Lo cargamos en la dir correspondiente.
+a asignacion REAL a ENTERO
+ A
+jz Realizamos el if
+Cleanup: discarding lookaheadCleanup: discarding lookaheadleanup: discarding lookaheadleanup: discarding lookaheadmov X A; Factor : Ref 
+uli #
+;Le sumo un tipo
+i 
+leanup: discarding lookaheadleanup: discarding lookaheadmov X A; Factor : Ref 
+uli #
+;Le sumo un tipo
+i 
+anup: discarding lookaheadanup: discarding lookaheadnup: discarding lookaheadnup: discarding lookaheadmov [ A; Factor : Ref 
+uli #
+;Le sumo un tipo
+; 
+
+nacion REAL a ENTERO
+ A
+ # lookahead; 
+mov A ]anup: discarding lookaheadanup: discarding lookaheadnup: discarding lookaheadnup: discarding lookaheadmov [ A; Factor : Ref 
+uli #
+;Le sumo un tipo
+; 
+
+nacion REAL a ENTERO
+ A
+ # lookahead; 
+mov A ]: discarding lookahead: discarding lookaheadmov ^ A; Factor : Ref 
+uli #
+;Le sumo un tipo
+
+ion REAL a ENTERO
+ A
+ #okahead; 
+mov A `anup: discarding lookaheadanup: discarding lookaheadnup: discarding lookaheadnup: discarding lookaheadmov [ A; Factor : Ref 
+uli #
+;Le sumo un tipo
+; 
+
+nacion REAL a ENTERO
+ A
+ # lookahead; 
+mov A ]anup: discarding lookaheadanup: discarding lookaheadnup: discarding lookaheadnup: discarding lookaheadmov [ A; Factor : Ref 
+uli #
+;Le sumo un tipo
+; 
+
+nacion REAL a ENTERO
+ A
+ # lookahead; 
+mov A ]: discarding lookahead: discarding lookaheadmov ^ A; Factor : Ref 
+uli #
+;Le sumo un tipo
+
+ion REAL a ENTERO
+ A
+ #okahead; 
+mov A `mov ` A; Factor : Ref 
+uli #
+;Le sumo un tipo
+yntax error
+gnacion REAL a ENTERO
+ A;Cargamos el primer operando.adds el segundo termino convertido.
+
+; Lo cargamos en la dir correspondiente.
+signacion REAL a ENTERO
+ A
+uli #
+ imprimir REAL a ENT
+AL a ENTERO
+ @A
+arding lookaheadarding lookaheadrding lookaheadrding lookaheadmov e A; Factor : Ref 
+uli #
+;Le sumo un tipo
+ error
+rding lookaheadrding lookaheadmov e A; Factor : Ref 
+uli #
+;Le sumo un tipo
+ error
+mov #1 g; Guardo un numero Entero
+a ENTERO
+ A; Cargo el primer termino en A
+addr ; Realizamos la operacion entera total.
+A; Realizo la conversion antes de imprimir REAL a ENT
+; Lo cargamos en la dir correspondiente.
+L a ENTERO
+ A
+uli #
+TNTERO
+ @A
+jmp  Realizamos el if
+Realizamos el if
+:
+wrrs el if
+
+wrl
+okaheadokaheadkaheadkaheadmov n A; Factor : Ref 
+uli #
+;Le sumo un tipo
+ror: discarding
+kaheadkaheadmov n A; Factor : Ref 
+uli #
+;Le sumo un tipo
+ror: discarding
+mov #1 p; Guardo un numero Entero
+ A; Cargo el primer termino en A
+addealizamos la operacion entera- real
+; Realizamos la operacion entera total.
+o la conversion antes de imprimir REAL a ENT
+; Lo cargamos en la dir correspondiente.
+O
+ A
+uli #
+NToi
+ @A
+ddmov t A; Factor : Ref 
+uli #
+;Le sumo un tipo
+iscarding
+mov t A; Factor : Ref 
+uli #
+;Le sumo un tipo
+iscarding
+leanup: poppingleanup: poppingmov v A; Factor : Ref 
+uli #
+;Le sumo un tipo
+carding
+ A;Cargamos el primer operando.addonvertido.
+
+nversion antes de imprimir REAL a ENT
+; Lo cargamos en la dir correspondiente.
+i
+ A
+uli #
+imprimir REAL a ENT
+ @A
+jmp ealizamos el if
+alizamos el if
+:
+wrr 
+wrl
+lizamos el if
+:
 halt
 

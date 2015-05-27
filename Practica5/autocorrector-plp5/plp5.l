@@ -18,7 +18,7 @@ LD   [0-9a-zA-Z]
 #include <string>
 #include <iostream>
 #include <vector>
-
+#include <sstream>
 using namespace std;
 
 #include "comun.h"

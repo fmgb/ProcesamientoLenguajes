@@ -1,2 +1,110 @@
+  mov $7.5 7; Guardo un numero Real
+A; Empezamos la asignacion ENTERO a REAL
+ A
+uli #
+ # Empezamos la asignacion ENTERO a REAL
+ @A
+ori ori ri ri mov 
+ A; Factor : Ref 
+uli #
+;Le sumo un tipo
+ #
+pezamos la asignacion ENTERO a REAL
+ A; Empezamos la asignacion REAL a ENTERO
+rtoi
+
+Empezamos la asignacion ENTERO a REAL
+ A
+uli #
+i #ezamos la asignacion ENTERO a REAL
+ @A
+amos la asignacion ENTERO a REAL
+ A; Realizamos el if
+jz 
+; 
+; 
+mov  A; Factor : Ref 
+uli #
+;Le sumo un tipo
+o un numero Entero
+
+; 
+; 
+mov  A; Factor : Ref 
+uli #
+;Le sumo un tipo
+o un numero Entero
+
+mov #3 ; Guardo un numero Entero
+mov #3 ; Guardo un numero Entero
+asignacion ENTERO a REAL
+ A; Cargo el primer termino en A
+mulacion entera total.
+; Realizamos la operacion entera total.
+s la asignacion REAL a ENTERO
+; Lo cargamos en la dir correspondiente.
+ asignacion ENTERO a REAL
+ A; Cargo el primer termino en A
+addcion entera total.
+; Realizamos la operacion entera total.
+ la asignacion REAL a ENTERO
+; Lo cargamos en la dir correspondiente.
+la asignacion ENTERO a REAL
+ A
+uli #
+ PRINTion ENTERO a REAL
+ @A
+ error errorerrorerrormov  A; Factor : Ref 
+uli #
+;Le sumo un tipo
+ Entero
+
+errorerrormov  A; Factor : Ref 
+uli #
+;Le sumo un tipo
+ Entero
+
+ ENTERO a REAL
+ A; Cargo el primer termino en A
+divntera total.
+; Realizamos la operacion entera total.
+ignacion REAL a ENTERO
+; Lo cargamos en la dir correspondiente.
+errorerrormov  A; Factor : Ref 
+uli #
+;Le sumo un tipo
+ Entero
+
+errorerrormov  A; Factor : Ref 
+uli #
+;Le sumo un tipo
+ Entero
+
+ ENTERO a REAL
+ A; Cargo el primer termino en A
+divntera total.
+; Realizamos la operacion entera total.
+ignacion REAL a ENTERO
+; Lo cargamos en la dir correspondiente.
+NTERO a REAL
+ A; Cargo el primer termino en A
+divera total.
+; Realizamos la operacion entera total.
+nacion REAL a ENTERO
+; Lo cargamos en la dir correspondiente.
+on ENTERO a REAL
+ A
+uli #
+PRINTRO a REAL
+ @A
+wrrersion antes de leer REAL a ENT
+
+wrl
+:
+wrr
+wrl
+wrrA; Realizo la conversion antes de leer REAL a ENT
+
+wrl
 halt
 

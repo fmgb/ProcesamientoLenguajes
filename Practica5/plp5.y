@@ -51,7 +51,7 @@
 #include <string>
 #include <iostream>
 #include <vector>
-
+#include <sstream>
 
     //#define DEBUG 0
 using namespace std;
@@ -158,9 +158,8 @@ FVM : tint tmain tpari tpard { anyadirAmbito("main");} Bloque
     #ifdef DEBUG
     std::cout <<"Entro en Vsp : Unsp" <<std::endl;
     #endif
-    $$.cod = $5.cod;
+    $$.cod = $6.cod;
     borrarAmbito();
-    
 };
 
 Tipo : tint
@@ -186,6 +185,7 @@ Bloque : tllavei BDecl SeqInstr tllaved
     std::cout <<"Entro en LV : LV V" <<std::endl;
 #endif
     $$.cod = $2.cod + $3.cod;
+    
 };
 
 BDecl : BDecl DVar
@@ -193,8 +193,8 @@ BDecl : BDecl DVar
 #ifdef DEBUG
     std::cout <<"Entro en LV : V" <<std::endl;
 #endif
+
     $$.cod = $1.cod + $2.cod;
-    
 };
 
 BDecl : 
@@ -217,7 +217,7 @@ LIdent : LIdent tcoma Variable
 #ifdef DEBUG
     std::cout <<"Entro en Lid : id" <<std::endl;
 #endif
-        
+    $$.cod = $1.cod + $2.cod + "\n ; ESTOY EN LIDENT. SI ANYADO UN a";
 };
 
 LIdent : Variable
@@ -298,6 +298,8 @@ SeqInstr: SeqInstr Instr
     std::cout <<"Entro en SeqInstr : SeqInstr Instr" <<std::endl;
 #endif
     $$.cod = $1.cod + $2.cod;
+    //std::cout<<"SeqInstr " <<$$.cod <<std::endl;
+    
 };
 
 SeqInstr :
@@ -359,11 +361,12 @@ Instr : Ref {if(obtenerTipoBasico(obtenerSimbolo($1.lexema).tipo).tipo == FUNCIO
         $$.cod += "\n";
       }
     $$.cod += "mov " + $1.dir;
-    $$.cod += " A";
+    $$.cod += " A\n";
     $$.cod += "muli #" + tipoTmp.tam;
+    $$.cod += "\n";
     $$.cod += "addi #" + $1.dbase;
     $$.cod += "mov " + tmp;
-    $$.cod += " @A";
+    $$.cod += " @A\n";
 };
 
 //CHECK ERRORS
@@ -795,9 +798,14 @@ Factor : tnreal
   #endif
   $$.tipo = NREAL;
   int tmp = nTmp();
+   
   $$.dir = tmp;
-  $$.cod += "mov $" + $1.lexema + " " ;
-  $$.cod += tmp;
+  $$.cod += "mov $" + $1.lexema;
+  $$.cod += " ";
+  stringstream ss;
+  ss << tmp;
+  
+  $$.cod += ss.str();
   $$.cod += "; Guardo un numero Real\n";
 }
 

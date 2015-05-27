@@ -51,7 +51,7 @@
 #include <string>
 #include <iostream>
 #include <vector>
-
+#include <sstream>
 
     //#define DEBUG 0
 using namespace std;
@@ -158,9 +158,8 @@ FVM : tint tmain tpari tpard { anyadirAmbito("main");} Bloque
     #ifdef DEBUG
     std::cout <<"Entro en Vsp : Unsp" <<std::endl;
     #endif
-    $$.cod = $5.cod;
+    $$.cod = $6.cod;
     borrarAmbito();
-    
 };
 
 Tipo : tint
@@ -186,6 +185,7 @@ Bloque : tllavei BDecl SeqInstr tllaved
     std::cout <<"Entro en LV : LV V" <<std::endl;
 #endif
     $$.cod = $2.cod + $3.cod;
+    
 };
 
 BDecl : BDecl DVar
@@ -193,8 +193,8 @@ BDecl : BDecl DVar
 #ifdef DEBUG
     std::cout <<"Entro en LV : V" <<std::endl;
 #endif
+
     $$.cod = $1.cod + $2.cod;
-    
 };
 
 BDecl : 
@@ -217,7 +217,7 @@ LIdent : LIdent tcoma Variable
 #ifdef DEBUG
     std::cout <<"Entro en Lid : id" <<std::endl;
 #endif
-        
+    $$.cod = $1.cod + $2.cod + "\n ; ESTOY EN LIDENT. SI ANYADO UN a";
 };
 
 LIdent : Variable
@@ -359,11 +359,12 @@ Instr : Ref {if(obtenerTipoBasico(obtenerSimbolo($1.lexema).tipo).tipo == FUNCIO
         $$.cod += "\n";
       }
     $$.cod += "mov " + $1.dir;
-    $$.cod += " A";
+    $$.cod += " A\n";
     $$.cod += "muli #" + tipoTmp.tam;
+    $$.cod += "\n";
     $$.cod += "addi #" + $1.dbase;
     $$.cod += "mov " + tmp;
-    $$.cod += " @A";
+    $$.cod += " @A\n";
 };
 
 //CHECK ERRORS
@@ -543,7 +544,11 @@ Expr : Expr trelop Esimple
     $$.cod += $1.cod + $3.cod;
     if($1.tipo == NENTERO && $3.tipo == NENTERO)
       {
-        $$.cod += "mov " + $1.dir;
+        $$.cod += "mov ";
+        stringstream ss;
+        ss << $1.dir;
+  
+        $$.cod += ss.str();
         $$.cod += " A; Cargo el primer termino en A\n";
         $$.cod += operacion;
         $$.cod += "i " + $3.dir;
@@ -555,32 +560,58 @@ Expr : Expr trelop Esimple
         $$.cod += " A; Cargo el primer termino en A\n";
         $$.cod += "itor; Realizo la conversión del primer termino\n";
         $$.cod += operacion;
-        $$.cod += "r " + $3.dir;
-        $$.cod += ";Realizamos la operacion entera- real\n";
+        $$.cod += "r ";
+        stringstream ss;
+        ss << $3.dir;
+        
+        $$.cod += ss.str();
+        $$.cod += ";Realizamos la operacion entera->real\n";
       }
     else if($1.tipo == NREAL && $3.tipo == NENTERO)
       {
         int tmpAux = nTmp();
-        $$.cod += "mov " + $3.dir;
+        $$.cod += "mov ";
+        stringstream ss;
+        ss << $3.dir;
+  
+        $$.cod += ss.str();
         $$.cod += " A; Cargamos el segundo operando.\n";
         $$.cod += "itor\n";
-        $$.cod += "mov A " + tmpAux;
+        $$.cod += "mov A ";
+        stringstream ss;
+        ss << tmpAux;
+        $$.cod += ss.str();
         $$.cod += "; Guardamos el segundo termino convertido.\n";
-        $$.cod += "mov " + $1.dir;
+        $$.cod += "mov ";
+        stringstream ss;
+        ss << $1.dir;
+        $$.cod += ss.str();
         $$.cod += " A\n";
         $$.cod += operacion;
-        $$.cod += "r " + tmpAux;
+        $$.cod += "r ";
+        stringstream ss;
+        ss << tmpAux;
+        $$.cod += ss.str();
         $$.cod += "; Realizamos la operacion real.\n";
       }
     else // REAL && REAL
       {
-        $$.cod += "mov " + $1.dir;
+        $$.cod += "mov ";
+        stringstream ss;
+        ss << $1.dir;
+        $$.cod += ss.str();
         $$.cod += " A;Cargamos el primer operando.";
         $$.cod += operacion;
-        $$.cod += "r " + $3.dir;
+        $$.cod += "r ";
+        stringstream ss;
+        ss << $3.dir;
+        $$.cod += ss.str();
         $$.cod += "\n";
       }
-    $$.cod += "mov A " + tmp;
+    $$.cod += "mov A ";
+    stringstream ss;
+    ss << tmp;
+    $$.cod += ss.str();
     $$.cod += "; Lo cargamos en la dir correspondiente.\n";
 
     
@@ -795,9 +826,15 @@ Factor : tnreal
   #endif
   $$.tipo = NREAL;
   int tmp = nTmp();
+  //  cout<<"NTMP" <<tmp <<std::endl;
+  
   $$.dir = tmp;
-  $$.cod += "mov $" + $1.lexema + " " ;
-  $$.cod += tmp;
+  $$.cod += "mov $" + $1.lexema;
+  $$.cod += " ";
+  stringstream ss;
+  ss << tmp;
+  
+  $$.cod += ss.str();
   $$.cod += "; Guardo un numero Real\n";
 }
 
