@@ -1,383 +1,149 @@
-mov #0 23;Estoy en Ref:tid
+mov #0 23; Estoy en Ref:tid
 mov #0 24; Guardo un numero Entero
-mov #0 25
 mov 23 A
 muli #1
-addi #21; Instr: Ref asig
-mov @A 25;Asig
-A; Realizamos el if
-
-mov #0 26;Estoy en Ref:tid
-mov #0 26;Estoy en Ref:tid
-
-mov 26 A; Factor : Ref 
-muli #1; Multiplicamos por el tamanyo del vector
-addi #21;Le sumo un tipo
+addi #21
+mov 24 @A
+L3
+mov #0 26; Estoy en Ref:tid
+mov #0 26; Estoy en Ref:tid
+mov 26 A
+muli #1
+addi #21
 mov @A 27
-mov #0 26;Estoy en Ref:tid
-mov #0 26;Estoy en Ref:tid
-
-mov 26 A; Factor : Ref 
-muli #1; Multiplicamos por el tamanyo del vector
-addi #21;Le sumo un tipo
+mov #0 26; Estoy en Ref:tid
+mov #0 26; Estoy en Ref:tid
+mov 26 A
+muli #1
+addi #21
 mov @A 27
 mov #4 28; Guardo un numero Entero
 mov 27 A; Cargo el primer termino en A
 lssi 28; Realizamos la operacion entera total.
 mov A 29; Lo cargamos en la dir correspondiente.
 mov 27 A
-jz ; Realizamos el if
-mov #0 30;Estoy en Ref:tid
+jz L4
+mov #4 28; Guardo un numero Entero
+jmp L3
+L4
+mov #0 31
+mov 31 A; Realizamos el if
+jz L9
+mov #0 30; Estoy en Ref:tid
 mov #0 31; Guardo un numero Entero
-mov #0 32
 mov 30 A
 muli #1
-addi #22; Instr: Ref asig
-mov @A 32;Asig
-
-mov #0 33;Estoy en Ref:tid
-mov #0 33;Estoy en Ref:tid
-
-mov 33 A; Factor : Ref 
-muli #1; Multiplicamos por el tamanyo del vector
-addi #22;Le sumo un tipo
+addi #22
+mov 31 @A
+L1
+mov #0 33; Estoy en Ref:tid
+mov #0 33; Estoy en Ref:tid
+mov 33 A
+muli #1
+addi #22
 mov @A 34
-mov #0 33;Estoy en Ref:tid
-mov #0 33;Estoy en Ref:tid
-
-mov 33 A; Factor : Ref 
-muli #1; Multiplicamos por el tamanyo del vector
-addi #22;Le sumo un tipo
+mov #0 33; Estoy en Ref:tid
+mov #0 33; Estoy en Ref:tid
+mov 33 A
+muli #1
+addi #22
 mov @A 34
 mov #4 35; Guardo un numero Entero
 mov 34 A; Cargo el primer termino en A
 lssi 35; Realizamos la operacion entera total.
 mov A 36; Lo cargamos en la dir correspondiente.
 mov 34 A
-jz  A; Realizamos el if
-rdr 43
-mov #0 45;Estoy en Ref:tid
-mov #0 46;Estoy en Ref:tid
-mov #0 46;Estoy en Ref:tid
-
-mov 46 A; Factor : Ref 
-muli #1; Multiplicamos por el tamanyo del vector
-addi #22;Le sumo un tipo
+jz L2
+mov #4 35; Guardo un numero Entero
+jmp L1
+L2
+mov #0 37; Estoy en Ref:tid
+mov #0 38; Estoy en Ref:tid
+mov #0 38; Estoy en Ref:tid
+mov 38 A
+muli #1
+addi #21
+mov @A 39
+mov #0 38; Estoy en Ref:tid
+mov #0 38; Estoy en Ref:tid
+mov 38 A
+muli #1
+addi #21
+mov @A 39
+mov #1 40; Guardo un numero Entero
+mov 39 A; Cargo el primer termino en A
+addi 40; Realizamos la operacion entera total.
+mov A 41; Lo cargamos en la dir correspondiente.
+mov 37 A
+muli #1
+addi #21
+mov 41 @A
+mov #0 38; Estoy en Ref:tid
+rdi 39
+mov 38 A
+addi 37
+mov 39 @A
+mov #0 40; Estoy en Ref:tid
+mov #0 41; Guardo un numero Entero
+mov 40 A
+muli #1
+addi #21
+mov 41 @A
+mov #0 43; Estoy en Ref:tid
+mov #0 44; Guardo un numero Entero
+mov 44 A
+itor
+mov A 45
+mov 43 A
+muli #1
+addi #36
+mov 45 @A
+L7
+mov #0 46; Estoy en Ref:tid
+mov #0 46; Estoy en Ref:tid
+mov 46 A
+muli #1
+addi #21
 mov @A 47
-mov #0 46;Estoy en Ref:tid
-mov #0 46;Estoy en Ref:tid
-
-mov 46 A; Factor : Ref 
-muli #1; Multiplicamos por el tamanyo del vector
-addi #22;Le sumo un tipo
+mov #0 46; Estoy en Ref:tid
+mov #0 46; Estoy en Ref:tid
+mov 46 A
+muli #1
+addi #21
 mov @A 47
-mov #1 48; Guardo un numero Entero
+mov #4 48; Guardo un numero Entero
 mov 47 A; Cargo el primer termino en A
-addi 48; Realizamos la operacion entera total.
+lssi 48; Realizamos la operacion entera total.
 mov A 49; Lo cargamos en la dir correspondiente.
-mov #0 50
-mov 45 A
+mov 47 A
+jz L8
+mov #4 48; Guardo un numero Entero
+jmp L7
+L8
+mov #0 50; Estoy en Ref:tid
+mov #0 50; Estoy en Ref:tid
+mov 50 A
 muli #1
-addi #22; Instr: Ref asig
-mov @A 50;Asig
-jmp  A; Realizamos el if
-
-mov #0 51;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-
-mov 52 A; Factor : Ref 
-muli #1; Multiplicamos por el tamanyo del vector
-addi #21;Le sumo un tipo
-mov @A 53
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-
-mov 52 A; Factor : Ref 
-muli #1; Multiplicamos por el tamanyo del vector
-addi #21;Le sumo un tipo
-mov @A 53
-mov #1 54; Guardo un numero Entero
-mov 53 A; Cargo el primer termino en A
-addi 54; Realizamos la operacion entera total.
-mov A 55; Lo cargamos en la dir correspondiente.
-mov #0 56
+addi #36
+mov @A 51
+mov #0 50; Estoy en Ref:tid
+mov #0 50; Estoy en Ref:tid
+mov 50 A
+muli #1
+addi #36
+mov @A 51
+mov 53 A; Cargamos el segundo operando.
+itor
 mov 51 A
-muli #1
-addi #21; Instr: Ref asig
-mov @A 56;Asig
-jmp A; Realizamos el if
-; Realizamos el if
-
-mov 58 A; Realizamos el if
-jz L9
-rdr 65
-mov #0 67;Estoy en Ref:tid
-mov #0 68; Guardo un numero Entero
-mov #0 69
-mov 67 A
-muli #1
-addi #21; Instr: Ref asig
-mov @A 69;Asig
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 71 A; Empezamos la asignacion ENTERO a REAL
+divr 55; Realizamos la operacion real.
+mov A 54; Lo cargamos en la dir correspondiente.
+mov 54 A 
 itor
-mov A 72
-mov #0 72
-mov 70 A
-muli #1
-addi #63; Instr: Ref asig
-mov @A 72;Asig
-ealizamos el if
-
-mov #0 73;Estoy en Ref:tid
-mov #0 73;Estoy en Ref:tid
-
-mov 73 A; Factor : Ref 
-muli #1; Multiplicamos por el tamanyo del vector
-addi #21;Le sumo un tipo
-mov @A 74
-mov #0 73;Estoy en Ref:tid
-mov #0 73;Estoy en Ref:tid
-
-mov 73 A; Factor : Ref 
-muli #1; Multiplicamos por el tamanyo del vector
-addi #21;Le sumo un tipo
-mov @A 74
-mov #4 75; Guardo un numero Entero
-mov 74 A; Cargo el primer termino en A
-lssi 75; Realizamos la operacion entera total.
-mov A 76; Lo cargamos en la dir correspondiente.
-mov 74 A
-jz alizamos el if
-mov #0 77;Estoy en Ref:tid
-mov #0 78; Guardo un numero Entero
-mov #0 79
-mov 77 A
-muli #1
-addi #22; Instr: Ref asig
-mov @A 79;Asig
-mov #0 80;Estoy en Ref:tid
-mov #0 81; Guardo un numero Entero
-mov 81 A; Empezamos la asignacion ENTERO a REAL
-itor
-mov A 82
-mov #0 82
-mov 80 A
-muli #1
-addi #62; Instr: Ref asig
-mov @A 82;Asig
- Realizamos el if
-
-mov #0 83;Estoy en Ref:tid
-mov #0 83;Estoy en Ref:tid
-
-mov 83 A; Factor : Ref 
-muli #1; Multiplicamos por el tamanyo del vector
-addi #22;Le sumo un tipo
-mov @A 84
-mov #0 83;Estoy en Ref:tid
-mov #0 83;Estoy en Ref:tid
-
-mov 83 A; Factor : Ref 
-muli #1; Multiplicamos por el tamanyo del vector
-addi #22;Le sumo un tipo
-mov @A 84
-mov #4 85; Guardo un numero Entero
-mov 84 A; Cargo el primer termino en A
-lssi 85; Realizamos la operacion entera total.
-mov A 86; Lo cargamos en la dir correspondiente.
-mov 84 A
-jz Realizamos el if
-mov #0 87;Estoy en Ref:tid
-mov #0 88;Estoy en Ref:tid
-mov #0 88;Estoy en Ref:tid
-
-mov 88 A; Factor : Ref 
-muli #1; Multiplicamos por el tamanyo del vector
-addi #62;Le sumo un tipo
-mov @A 89
-mov #0 88;Estoy en Ref:tid
-mov #0 88;Estoy en Ref:tid
-
-mov 88 A; Factor : Ref 
-muli #1; Multiplicamos por el tamanyo del vector
-addi #62;Le sumo un tipo
-mov @A 89
-mov #0 90;Estoy en Ref:tid
-mov #0 90;Estoy en Ref:tid
-mov #0 91;Estoy en Ref:tid
-mov #0 91;Estoy en Ref:tid
-
-mov 91 A; Factor : Ref 
-muli #1; Multiplicamos por el tamanyo del vector
-addi #21;Le sumo un tipo
-mov @A 92
-mov 90 A; [ ]
-muli #4
-addi 92; 
-mov A 93
-mov #0 90;Estoy en Ref:tid
-mov #0 90;Estoy en Ref:tid
-mov #0 91;Estoy en Ref:tid
-mov #0 91;Estoy en Ref:tid
-
-mov 91 A; Factor : Ref 
-muli #1; Multiplicamos por el tamanyo del vector
-addi #21;Le sumo un tipo
-mov @A 92
-mov 90 A; [ ]
-muli #4
-addi 92; 
-mov A 93
-mov #0 94;Estoy en Ref:tid
-mov #0 94;Estoy en Ref:tid
-
-mov 94 A; Factor : Ref 
-muli #1; Multiplicamos por el tamanyo del vector
-addi #22;Le sumo un tipo
-mov @A 95
-mov 93 A; [ ]
-muli #4
-addi 95; 
-mov A 96
-mov #0 90;Estoy en Ref:tid
-mov #0 90;Estoy en Ref:tid
-mov #0 91;Estoy en Ref:tid
-mov #0 91;Estoy en Ref:tid
-
-mov 91 A; Factor : Ref 
-muli #1; Multiplicamos por el tamanyo del vector
-addi #21;Le sumo un tipo
-mov @A 92
-mov 90 A; [ ]
-muli #4
-addi 92; 
-mov A 93
-mov #0 90;Estoy en Ref:tid
-mov #0 90;Estoy en Ref:tid
-mov #0 91;Estoy en Ref:tid
-mov #0 91;Estoy en Ref:tid
-
-mov 91 A; Factor : Ref 
-muli #1; Multiplicamos por el tamanyo del vector
-addi #21;Le sumo un tipo
-mov @A 92
-mov 90 A; [ ]
-muli #4
-addi 92; 
-mov A 93
-mov #0 94;Estoy en Ref:tid
-mov #0 94;Estoy en Ref:tid
-
-mov 94 A; Factor : Ref 
-muli #1; Multiplicamos por el tamanyo del vector
-addi #22;Le sumo un tipo
-mov @A 95
-mov 93 A; [ ]
-muli #4
-addi 95; 
-mov A 96
-
-mov 96 A; Factor : Ref 
-muli #1; Multiplicamos por el tamanyo del vector
-addi #4;Le sumo un tipo
-mov @A 97
-mov 89 A;Cargamos el primer operando.addr 97
-mov A 98; Lo cargamos en la dir correspondiente.
-mov #0 99
-mov 87 A
-muli #1
-addi #62; Instr: Ref asig
-mov @A 99;Asig
-mov #0 100;Estoy en Ref:tid
-mov #0 101;Estoy en Ref:tid
-mov #0 101;Estoy en Ref:tid
-
-mov 101 A; Factor : Ref 
-muli #1; Multiplicamos por el tamanyo del vector
-addi #22;Le sumo un tipo
-mov @A 102
-mov #0 101;Estoy en Ref:tid
-mov #0 101;Estoy en Ref:tid
-
-mov 101 A; Factor : Ref 
-muli #1; Multiplicamos por el tamanyo del vector
-addi #22;Le sumo un tipo
-mov @A 102
-mov #1 103; Guardo un numero Entero
-mov 102 A; Cargo el primer termino en A
-addi 103; Realizamos la operacion entera total.
-mov A 104; Lo cargamos en la dir correspondiente.
-mov #0 105
-mov 100 A
-muli #1
-addi #22; Instr: Ref asig
-mov @A 105;Asig
-jmp  Realizamos el if
-Realizamos el if
-
-wrr 107
+mov A 56
+wri 56
 wrl
-mov #0 109;Estoy en Ref:tid
-mov #0 110;Estoy en Ref:tid
-mov #0 110;Estoy en Ref:tid
-
-mov 110 A; Factor : Ref 
-muli #1; Multiplicamos por el tamanyo del vector
-addi #21;Le sumo un tipo
-mov @A 111
-mov #0 110;Estoy en Ref:tid
-mov #0 110;Estoy en Ref:tid
-
-mov 110 A; Factor : Ref 
-muli #1; Multiplicamos por el tamanyo del vector
-addi #21;Le sumo un tipo
-mov @A 111
-mov #1 112; Guardo un numero Entero
-mov 111 A; Cargo el primer termino en A
-addi 112; Realizamos la operacion entera total.
-mov A 113; Lo cargamos en la dir correspondiente.
-mov #0 114
-mov 109 A
-muli #1
-addi #21; Instr: Ref asig
-mov @A 114;Asig
-mov #0 115;Estoy en Ref:tid
-mov #0 116;Estoy en Ref:tid
-mov #0 116;Estoy en Ref:tid
-
-mov 116 A; Factor : Ref 
-muli #1; Multiplicamos por el tamanyo del vector
-addi #63;Le sumo un tipo
-mov @A 117
-mov #0 116;Estoy en Ref:tid
-mov #0 116;Estoy en Ref:tid
-
-mov 116 A; Factor : Ref 
-muli #1; Multiplicamos por el tamanyo del vector
-addi #63;Le sumo un tipo
-mov @A 117
-mov #0 118;Estoy en Ref:tid
-mov #0 118;Estoy en Ref:tid
-
-mov 118 A; Factor : Ref 
-muli #1; Multiplicamos por el tamanyo del vector
-addi #62;Le sumo un tipo
-mov @A 119
-mov 117 A;Cargamos el primer operando.addr 119
-mov A 120; Lo cargamos en la dir correspondiente.
-mov #0 121
-mov 115 A
-muli #1
-addi #63; Instr: Ref asig
-mov @A 121;Asig
-jmp ealizamos el if
-alizamos el if
-
-wrr 126
-wrl
-L9
+jmp L10
+L9; Realizamos con else.
+L10
 halt
 

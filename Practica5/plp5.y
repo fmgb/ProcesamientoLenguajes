@@ -186,12 +186,12 @@ Tipo : tfloat
     $$.tipo = NREAL;
 };
 
-Bloque : tllavei BDecl SeqInstr tllaved
+Bloque : tllavei {numVariables++;} BDecl SeqInstr tllaved
 {
 #ifdef DEBUG
     std::cout <<"Entro en LV : LV V" <<std::endl;
 #endif
-    $$.cod = $2.cod + $3.cod;
+    $$.cod = $3.cod + $4.cod;
     
 };
 
@@ -201,7 +201,7 @@ BDecl : BDecl DVar
     std::cout <<"Entro en LV : V" <<std::endl;
 #endif
 
-    $$.cod = $1.cod + $2.cod;
+    //$$.cod = $1.cod + $2.cod;
 };
 
 BDecl : 
@@ -289,9 +289,16 @@ V : tcori tnentero tcord V
 #ifdef DEBUG
     std::cout <<"Entro en  V : tcori tnentero tcord V" <<std::endl;
 #endif
-    int i = atoi($2.lexema.c_str());
+    stringstream ss($2.lexema);
+
+    
+    int i;
+    ss >> i;
+    
     if(i < 1)
       {
+        //        cout<<"HOLA" <<endl;
+        
         msgError(ERRDIM,$2.nlin,$2.ncol,$2.lexema);
       }
     $$.dbase = $4.dbase * i;
@@ -332,50 +339,54 @@ Instr : Bloque
     std::cout <<"Entro en Instr : if E then Instr ColaIf" <<std::endl;
 #endif
     $$.cod = $1.cod;
-    $$.dir = $1.dir;
+    /*$$.dir = $1.dir;
     $$.tipo = $1.tipo;
-    $$.dbase = $1.dbase;
+    $$.dbase = $1.dbase;*/
 };
 
 //FALTA LOS ERRORES DE LOS ARRAY
 //CHECK Posibilidades ASIG
-Instr : Ref {if(obtenerTipoBasico(obtenerSimbolo($1.lexema).tipo).tipo == FUNCION || obtenerTipoBasico(obtenerSimbolo($1.lexema).tipo).tipo == ARRAY) { /*imprimirTablaTipos(); std::cout <<"INTR: ASIG" <<$1.nlin <<std::endl <<$1.lexema <<std::endl;*/ msgError(ERREOF,$1.nlin,$1.ncol,$1.lexema);}} tasig Expr {if (obtenerSimbolo($4.lexema).tipo == ARRAY){/*cout <<"INTR: ASIG 2" <<std::endl;*/ msgError(ERREOF,$1.nlin,$1.ncol, $1.lexema);}} tpyc
+Instr : Ref {if(obtenerTipoBasico(obtenerSimbolo($1.lexema).tipo).tipo == FUNCION || obtenerTipoBasico(obtenerSimbolo($1.lexema).tipo).tipo == ARRAY) {msgError(ERRFALTAN,$1.nlin,$1.ncol,$1.lexema);}} tasig Expr {if (obtenerSimbolo($4.lexema).tipo == ARRAY){msgError(ERRSOBRAN,$1.nlin,$1.ncol, $1.lexema);}} tpyc
 {
 #ifdef DEBUG
     std::cout <<"Entro en Instr : Ref tasig Expr tpyc " <<std::endl;
 #endif
     int tmp = nTmp();
-    TTipo tipoTmp = obtenerTipoBasico($1.tipo);
+    //TTipo tipoTmp = obtenerTipoBasico($1.tipo);
     $$.dir = tmp;
     $$.cod = $1.cod + $4.cod; //Anyadir el codigo que viene de la expresion que
                       //queremos evaluar.
     if($1.tipo == NREAL && $4.tipo == NENTERO)
       {
-        $$.tipo = NREAL;
-        $$.cod += "mov " + iToS($4.dir);
-        $$.cod += " A; Empezamos la asignacion ENTERO a REAL\n";
-        $$.cod += "itor\n";
-        $$.cod += "mov A " + iToS(tmp);
-        $$.cod += "\n";
+        $$.cod = $1.cod +
+                                 $4.cod +
+                                 "mov " + iToS($4.dir) + " A" + "\n" +
+                                 "itor"  + "\n" +
+                                 "mov A " + iToS(tmp) + "\n" +
+                                 "mov " + iToS($1.dir) + " A" + "\n" +
+                                 "muli #" + iToS(obtenerTTamTTipos($1.tipo)) + "\n" +
+                                 "addi #" + iToS($1.dbase) + "\n" +
+                                 "mov " + iToS(tmp) + " @A" "\n";
       }
     else if($1.tipo == NENTERO && $4.tipo == NREAL)
       {
-        $$.tipo = NENTERO;
-        $$.cod += "mov " + iToS($4.dir);
-        $$.cod += " A; Empezamos la asignacion REAL a ENTERO\n";
-        $$.cod += "rtoi\n";
-        $$.cod += "mov A " + iToS(tmp);
-        $$.cod += "\n";
+        $$.cod = $1.cod +
+                                 $4.cod +
+                                 "mov " + iToS($4.dir) + " A" + "\n" +
+                                 "rtoi" + "\n" +
+                                 "mov A " + iToS(tmp) + "\n" +
+                                 "mov " + iToS($1.dir) + " A" + "\n" +
+                                 "muli #" + iToS(obtenerTipoTTipos($1.tipo)) + "\n" +
+                                 "addi #" + iToS($1.dbase) + "\n" +
+                                 "mov " + iToS(tmp) + " @A" "\n";
+      } else
+      {
+        $$.cod = $1.cod + $4.cod +
+          "mov " + iToS($1.dir) + " A" + "\n" +
+          "muli #" + iToS(obtenerTTamTTipos($1.tipo)) + "\n" +
+          "addi #" + iToS($1.dbase) + "\n" +
+          "mov " + iToS($4.dir) + " @A" + "\n";
       }
-    $$.cod += "mov #0 " + iToS(tmp) +"\n";
-    
-    $$.cod += "mov " + iToS($1.dir);
-    $$.cod += " A\n";
-    $$.cod += "muli #" + iToS(tipoTmp.tam);
-    $$.cod += "\n";
-    $$.cod += "addi #" + iToS($1.dbase) + "; Instr: Ref asig\n";
-    $$.cod += "mov @A " + iToS(tmp);
-    $$.cod += ";Asig\n";
 };
 
 //CHECK ERRORS
@@ -385,16 +396,24 @@ Instr : tprintf tpari tformato tcoma Expr { if(esArray($5.tipo)){ /*std::cout <<
     std::cout <<"Entro en Instr : tprintf tpari tformato tcoma Expr tpard tpyc" <<std::endl;
 #endif
     int tmp = nTmp();
-    $$.cod = "";
-    if($3.lexema == "%d" && $5.tipo == NREAL)
+    string op = "wr";
+    if($3.lexema == "\"%d\"")
+      op += "i ";
+    else
+      op += "r ";
+    if($3.lexema == "\"%d\"" && $5.tipo == NENTERO)
       {
-        $$.cod = "mov " + iToS($5.dir) + "A; Print";
-        $$.cod += "atoi; Realizo la conversion a entero.\n";
-        $$.cod += "mov A " + iToS(tmp);
-        $$.cod += "\n";
+        $$.cod = $5.cod + op + iToS($5.dir) + "\n" + "wrl\n";
       }
-    else if($3.lexema == "%g" && $5.tipo == NENTERO)
+    else if($3.lexema == "\"%d\"" && $5.tipo == NREAL)
       {
+        $$.cod = $5.cod + "mov " + iToS($5.dir) + " A \n" + "itor\n" +
+          "mov A " + iToS(tmp) + "\n" + op + iToS(tmp) + "\nwrl\n";
+      }
+    else if($3.lexema == "\"%g\"" && $5.tipo == NENTERO)
+      {
+        $$.cod = $5.cod + "mov " + iToS($5.dir) + " A\nitor\n" + "mov A " +iToS(tmp) + "\nwrl\n";
+        
         $$.cod = "mov " + iToS($5.dir) + "A; Print";
         $$.cod += "itor;Relizo la conversion a real.\n";
         $$.cod += "mov A " + iToS(tmp);
@@ -402,17 +421,8 @@ Instr : tprintf tpari tformato tcoma Expr { if(esArray($5.tipo)){ /*std::cout <<
       }
     else
       {
-        tmp = $5.dir;
+        $$.cod = $5.cod + op + iToS($5.dir) + "\nwrl\n";
       }
-    $$.cod += "wr";
-    if($3.lexema == "%d")
-      $$.cod += "i";
-    else
-      $$.cod += "r";
-    $$.cod += " " + iToS(tmp);
-    $$.cod += "\n";
-    $$.cod += "wrl\n";
-    
 };
 
 //CHECK ERRORRRRS
@@ -421,62 +431,64 @@ Instr : tscanf tpari tformato tcoma treferencia Ref { if(esArray($6.tipo)){/*std
 #ifdef DEBUG
     std::cout <<"Entro en Instr : while E do Instr" <<std::endl;
 #endif
-        int tmp = nTmp();
+    int tmp = nTmp();
+    string op = "rd";
+    if($3.lexema == "\"%d\""){
+          op += "i ";
+        }else {
+          op += "r ";
+        }
+    
     if($3.lexema == "\"%d\"" && $6.tipo == NREAL)
       {
-        $$.cod += "mov " + iToS($6.dir);
-        $$.cod += " A; Realizo la conversion antes de leer REAL a ENT\n";
-        $$.cod += "atoi\n";
-        $$.cod += "mov A " + iToS(tmp);
-        $$.cod += "\n";
+        $$.cod = $6.cod + op + iToS(tmp) + "\n" +
+          "mov " + iToS(tmp) + " A" +
+          "\nitor\n" + "mov A " + iToS(tmp) + "\n" +
+          "mov " + iToS($6.dir) + " A\n" +
+          "addi " + iToS($6.dbase) + "\n" +
+          "mov " + iToS(tmp) + " @A\n";
       }
     else if($3.lexema == "\"%g\"" && $6.tipo == NENTERO)
       {
-        $$.cod += "mov " + iToS($6.dir);
-        $$.cod += " A; Realizo la conversion antes de imprimir ENT a R\n";
-        $$.cod += "itor\n";
-        $$.cod += "mov A " + iToS(tmp);
-        $$.cod += "\n";
+        $$.cod += $6.cod + op + iToS(tmp) +"\nmov " + iToS(tmp)
+          + " A\n" + "itor\n" + "mov A " + iToS(tmp) + "\n" +
+          "mov " + iToS($6.dir) + " A\n" + "addi " + iToS($6.dbase)
+          + "\n" + "mov " + iToS(tmp) + "@A" + "\n";
       }
     else
       {
-        tmp = $6.dir;
+        $$.cod = $6.cod + op + iToS(tmp) + "\n" + "mov " + iToS($6.dir) + " A\n" +
+          "addi " + iToS($6.dbase) + "\n" + "mov " + iToS(tmp) + " @A\n";
       }
-    $$.cod += "rd";
-    if($3.lexema == "%d")
-      $$.cod += "i";
-    else
-      $$.cod += "r";
-    $$.cod += " " + iToS(tmp);
-    $$.cod += "\n";
 };
 
 //TODO :Realizar comprobaciones oportunas
 // TODO QUITAR ERROR
 Instr : tif tpari Expr {if($3.tipo != NENTERO){/* POR PONER UNO. NO SE
-                                                 ESPECIFICA EN EL ENUNCIADO*/ msgError(ERRDIM,$3.nlin, $3.ncol,$3.lexema);} } tpard {anyadirAmbito("IF"+numMemoria);} Instr {borrarAmbito();}Instr_prima
+                                                 ESPECIFICA EN EL ENUNCIADO */ cout<<"SDIAD" <<"\t" <<$3.tipo <<endl; msgError(ERRDIM,$3.nlin, $3.ncol,$3.lexema);} } tpard {anyadirAmbito("IF"+numMemoria);} Instr {borrarAmbito();}Instr_prima
 {
 #ifdef DEBUG
     std::cout <<"Entro en Instr : tif tpari Expr tpard Instr Instr_prima" <<std::endl;
 #endif
-    string s1 = "L" + iToS(nuevaEtiqueta());
-    string s2 = "L" + iToS(nuevaEtiqueta());
-    $$.cod += "mov " + iToS($3.dir) +" A; Realizamos el if\n";
-    $$.cod += "jz " + s1;
+    string etiq1 = "L" + iToS(nuevaEtiqueta());
+    string etiq2 = "L" + iToS(nuevaEtiqueta());
+    $$.cod += "mov #0 " + iToS($3.dir);
+    
+    $$.cod += "\nmov " + iToS($3.dir) +" A; Realizamos el if\n";
+    $$.cod += "jz " + etiq1;
     $$.cod += "\n";
     $$.cod += $7.cod;
     if($6.cod == "")
       {
-        $$.cod += s1 + "\n";
+        $$.cod += etiq1 + "\n";
       }
     else
       {
-        $$.cod += "jmp " + s2 + "\n";
-        $$.cod += s1 + "\n; Realizamos con else.";
+        $$.cod += "jmp " + etiq2 + "\n";
+        $$.cod += etiq1 + "; Realizamos con else.\n";
         $$.cod += $9.cod;
-        $$.cod += s2 + "\n";
+        $$.cod += etiq2 + "\n";
       }
-    
 };
 
 Instr_prima : telse {anyadirAmbito("ELSE" + numMemoria);} Instr
@@ -499,22 +511,22 @@ Instr_prima :
 
 //TODO : Realizar comprobaciones de Expr.
 //TODO Probar declaracion de variables aqui.
-Instr : twhile tpari Expr tpard Instr
+Instr : twhile tpari Expr tpard {anyadirAmbito("WHILE" + numMemoria);} Instr
 {
 #ifdef DEBUG
     std::cout <<"Entro en Instr : twhile tpari Expr tpard Instr" <<std::endl;
 #endif
-    string s1 = "L" + nuevaEtiqueta();
-    string s2 = "L" + nuevaEtiqueta();
-    $$.cod += s1 + "\n";
+    string etiq1 = "L" + iToS(nuevaEtiqueta());
+    string etiq2 = "L" + iToS(nuevaEtiqueta());
+    $$.cod += etiq1 + "\n";
     $$.cod += $3.cod;
     $$.cod += "mov " + iToS($3.dir);
     $$.cod += " A\n";
-    $$.cod += "jz " + s2;
+    $$.cod += "jz " + etiq2 +"\n";
     $$.cod += $5.cod;
-    $$.cod += "jmp " + s1;
-    $$.cod += s2 + "\n";
-    
+    $$.cod += "jmp " + etiq1 + "\n";
+    $$.cod += etiq2 + "\n";
+    borrarAmbito();
 };
 
 Expr : Expr trelop Esimple
@@ -567,21 +579,16 @@ Expr : Expr trelop Esimple
         $$.cod += "itor; Realizo la conversión del primer termino\n";
         $$.cod += operacion;
         $$.cod += "r " + iToS($3.dir);
-        $$.cod += ";Realizamos la operacion entera- real\n";
+        $$.cod += ";Realizamos la operacion entera-real\n";
       }
     else if($1.tipo == NREAL && $3.tipo == NENTERO)
-      {
+      {//CUIDADO TODO TEST
         int tmpAux = nTmp();
         $$.cod += "mov " + iToS($3.dir);
         $$.cod += " A; Cargamos el segundo operando.\n";
         $$.cod += "itor\n";
-        $$.cod += "mov A " + tmpAux;
-        $$.cod += "; Guardamos el segundo termino convertido.\n";
-        $$.cod += "mov " + iToS($1.dir);
-        $$.cod += " A\n";
-        $$.cod += operacion;
-        $$.cod += "r " + tmpAux;
-        $$.cod += "; Realizamos la operacion real.\n";
+        $$.cod += operacion + "r " + iToS($1.dir) + "\n";
+        
       }
     else // REAL && REAL
       {
@@ -593,8 +600,6 @@ Expr : Expr trelop Esimple
       }
     $$.cod += "mov A " + iToS(tmp);
     $$.cod += "; Lo cargamos en la dir correspondiente.\n";
-
-    
 };
 
 Expr : Esimple
@@ -639,31 +644,24 @@ Esimple : Esimple taddop Term
       {
         $$.cod += "mov " + iToS($1.dir);
         $$.cod += " A; Cargo el primer termino en A\n";
-        $$.cod += "itor; Realizo la conversión del primer termino\n";
-        $$.cod += operacion;
-        $$.cod += "r " + iToS($3.dir);
+        $$.cod += "itor\n";
+        $$.cod += "mov A " + iToS(tmp) + "\n";
+        $$.cod += $3.cod + "\n" + "mov " + iToS(tmp) + " A" + "\n" + operacion +
+          "r " + iToS($3.dir);
         $$.cod += ";Realizamos la operacion entera- real\n";
         $$.tipo = NREAL;
       }
     else if($1.tipo == NREAL && $3.tipo == NENTERO)
       {
         int tmpAux = nTmp();
-        $$.cod += "mov " + iToS($3.dir);
-        $$.cod += " A; Cargamos el segundo operando.\n";
-        $$.cod += "itor\n";
-        $$.cod += "mov A " + iToS(tmpAux);
-        $$.cod += "; Guardamos el segundo termino convertido.\n";
-        $$.cod += "mov " + iToS($1.dir);
-        $$.cod += " A\n";
-        $$.cod += operacion;
-        $$.cod += "r " + iToS(tmpAux);
-        $$.cod += "; Realizamos la operacion real.\n";
+        $$.cod = "mov " + iToS($3.dir) + " A" + "\n" + "itor" + "\n" +
+          "mov " + iToS($1.dir) + " A" + "\n" + operacion + "r " + iToS(tmp) + "\n" + "mov A " + iToS(tmp) + "\n";
         $$.tipo = NREAL;
       }
     else // REAL && REAL
       {
         $$.cod += "mov " + iToS($1.dir);
-        $$.cod += " A;Cargamos el primer operando.";
+        $$.cod += " A;Cargamos el primer operando.\n";
         $$.cod += operacion;
         $$.cod += "r " + iToS($3.dir);
         $$.cod += "\n";
@@ -701,6 +699,8 @@ Term : Term tmulop Factor
      $$.cod += $1.cod + $2.cod;
      if($1.tipo == NENTERO && $3.tipo == NENTERO)
       {
+        //        cout<<"0" <<endl;
+        
         $$.cod += "mov " + iToS($1.dir);
         $$.cod += " A; Cargo el primer termino en A\n";
         $$.cod += operacion;
@@ -710,9 +710,14 @@ Term : Term tmulop Factor
       }
     else if($1.tipo == NENTERO && $3.tipo == NREAL)
       {
+        int tmpAux = nTmp();
+        //        cout<<"1" <<endl;
+        
         $$.cod += "mov " + iToS($1.dir);
         $$.cod += " A; Cargo el primer termino en A\n";
         $$.cod += "itor; Realizo la conversión del primer termino\n";
+        $$.cod += "mov A " + iToS(tmpAux) + "\n";
+        $$.cod += $3.cod + "mov " +iToS(tmpAux) + " A\n";
         $$.cod += operacion;
         $$.cod += "r " + iToS($3.dir);
         $$.cod += ";Realizamos la operacion entera- real\n";
@@ -720,21 +725,22 @@ Term : Term tmulop Factor
       }
     else if($1.tipo == NREAL && $3.tipo == NENTERO)
       {
+        //        cout<<"3" <<endl;
+        
         int tmpAux = nTmp();
         $$.cod += "mov " + iToS($3.dir);
         $$.cod += " A; Cargamos el segundo operando.\n";
         $$.cod += "itor\n";
-        $$.cod += "mov A " + tmpAux;
-        $$.cod += "; Guardamos el segundo termino convertido.\n";
-        $$.cod += "mov " + iToS($1.dir);
-        $$.cod += " A\n";
+        $$.cod += "mov " + iToS($1.dir) + " A" + "\n";
         $$.cod += operacion;
-        $$.cod += "r " + tmpAux;
+        $$.cod += "r " + iToS(tmpAux);
         $$.cod += "; Realizamos la operacion real.\n";
         $$.tipo = NREAL;
       }
     else // REAL && REAL
       {
+        //        cout<<"4" <<endl;
+        
         $$.cod += "mov " + iToS($1.dir);
         $$.cod += " A;Cargamos el primer operando.";
         $$.cod += operacion;
@@ -752,8 +758,8 @@ Term : Factor
     std::cout <<"Entro en Term : Factor" <<std::endl;
 #endif
     $$.cod = $1.cod;
-    $$.dir = $1.dir;
-    $$.tipo = $1.tipo;
+    // $$.dir = $1.dir;
+    //    $$.tipo = $1.tipo;
 };
 
 Factor : Ref
@@ -762,7 +768,6 @@ Factor : Ref
     std::cout <<"Entro en Factor : Ref" <<std::endl;
 #endif
     // std::cout<<"FACTOR: " <<$1.lexema <<std::endl;
-    
     if(ARRAY == obtenerTipoTTipos($1.tipo))
       {
         msgError(ERRFALTAN,nlinCorchete, ncolCorchete, $1.lexema);
@@ -771,16 +776,11 @@ Factor : Ref
     int tmp = nTmp();
     // TTipo tipoTmp = obtenerTipoTTipos($1.tipo);
     $$.dir = tmp;
-    $$.cod += $1.cod + "\nmov ";
-    $$.cod += iToS($1.dir);
-    $$.cod += " A; Factor : Ref \n";
-    $$.cod += "muli #" + iToS(obtenerTTamTTipos($1.tipo));
-    $$.cod += "; Multiplicamos por el tamanyo del vector\n";
-    $$.cod += "addi #" + iToS($1.dbase);
-    $$.cod += ";Le sumo un tipo";
-    $$.cod += "\n";
-    $$.cod += "mov @A " + iToS(tmp);
-    $$.cod += "\n";
+    $$.cod += $1.cod +
+      "mov " + iToS($1.dir) + " A" + "\n" +
+      "muli #" + iToS(obtenerTTamTTipos($1.tipo)) + "\n" +
+      "addi #" + iToS($1.dbase) + "\n" +
+      "mov @A " + iToS(tmp) + "\n";
     $$.tipo = $1.tipo;
 };
 
@@ -810,10 +810,8 @@ Factor : tnreal
   $$.dir = tmp;
   $$.cod += "mov $" + $1.lexema;
   $$.cod += " ";
-  stringstream ss;
-  ss << tmp;
+  $$.cod += iToS(tmp);
   
-  $$.cod += ss.str();
   $$.cod += "; Guardo un numero Real\n";
 }
 
@@ -823,11 +821,14 @@ Factor : tpari Expr tpard
 #ifdef DEBUG
   std::cout <<"Entro en Factor: tpari Expr tard" <<std::endl;
 #endif
-  $$.cod = ";Factor : tpari Expr tpard\n";
-  $$.tipo = $2.tipo;
+  //$$.cod = ";Factor : tpari Expr tpard\n";
+  /*$$.tipo = $2.tipo;
   $$.dir = nTmp();
   $$.cod += $2.cod;
-  $$.cod += "\n";
+  $$.cod += "\n";*/
+  $$.cod = $2.cod;
+  $$.tipo = $2.tipo;
+  
 }
 
 Ref : tid
@@ -842,7 +843,7 @@ Ref : tid
   $$.dir = tmp;
   $$.tipo = sim.tipo;    
   $$.dbase = sim.dir;
-  $$.cod += "mov #0 " + iToS($$.dir) + "; Estoy en Ref:tid\n";
+  $$.cod = "mov #0 " + iToS(tmp) + "; Estoy en Ref:tid\n";
 }
 
 //TODO Cambiar Error
@@ -868,12 +869,13 @@ Ref : Ref tcori {if(ARRAY != obtenerTipoTTipos($1.tipo)){/*std::cout <<"cori " <
   $$.cod += "addi " + iToS($4.dir);
   $$.cod += "; \n";
   $$.cod += "mov A ";
-  $$.cod += iToS($$.dir) + "\n";
+  $$.cod += iToS(tmp) + "\n";
   
   //$$.tipo = obtenerTipoTTipos($1.tipo);
   //    std::cout<<"Soy de tipo " <<$$.tipo <<std::endl;
   
-}
+};
+
 
 %%
 
@@ -1156,16 +1158,16 @@ int main(int argc,char *argv[])
           TTipo tipoVacio;
           tipoVacio.tipo = NVACIO;
           tipoVacio.tam = 1;
-          tipoVacio.tbase = -1;
+          tipoVacio.tbase = 0;
           tablaTipos.push_back(tipoVacio);
           TTipo tipoEntero;
           tipoEntero.tipo = NENTERO;
           tipoEntero.tam = 1;
-          tipoEntero.tbase = -1;
+          tipoEntero.tbase = 1;
           tablaTipos.push_back(tipoEntero);
           TTipo tipoReal;
           tipoReal.tipo = NREAL;
-          tipoReal.tbase = -1;
+          tipoReal.tbase = 2;
           tipoReal.tam = 1;
           tablaTipos.push_back(tipoReal);
           yyin = fent;
