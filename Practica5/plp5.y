@@ -442,7 +442,7 @@ Instr : tscanf tpari tformato tcoma treferencia Ref { if(esArray($6.tipo)){std::
 
 //TODO :Realizar comprobaciones oportunas
 // TODO QUITAR ERROR
-Instr : tif tpari Expr {if($3.tipo != NENTERO){std::cout <<"INTR: IF" <<std::endl; msgError(ERREOF,$3.nlin, $3.ncol,$3.lexema);} } tpard {anyadirAmbito("IF"+numMemoria);} Instr Instr_prima
+Instr : tif tpari Expr {if($3.tipo != NENTERO){std::cout <<"INTR: IF" <<std::endl; msgError(ERREOF,$3.nlin, $3.ncol,$3.lexema);} } tpard {anyadirAmbito("IF"+numMemoria);} Instr {borrarAmbito();}Instr_prima
 {
 #ifdef DEBUG
     std::cout <<"Entro en Instr : tif tpari Expr tpard Instr Instr_prima" <<std::endl;
@@ -453,7 +453,7 @@ Instr : tif tpari Expr {if($3.tipo != NENTERO){std::cout <<"INTR: IF" <<std::end
     $$.cod += " A; Realizamos el if\n";
     $$.cod += "jz " + s1;
     $$.cod += "\n";
-    $$.cod += $6.cod;
+    $$.cod += $7.cod;
     if($6.cod == "")
       {
         $$.cod += s1 + ":\n";
@@ -462,18 +462,20 @@ Instr : tif tpari Expr {if($3.tipo != NENTERO){std::cout <<"INTR: IF" <<std::end
       {
         $$.cod += "jmp " + s2 + "\n";
         $$.cod += s1 + ":\n; Realizamos con else.";
-        $$.cod += $6.cod;
+        $$.cod += $9.cod;
         $$.cod += s2 + ":\n";
       }
     
 };
 
-Instr_prima : telse Instr
+Instr_prima : telse {anyadirAmbito("ELSE" + numMemoria);} Instr
 {
 #ifdef DEBUG
   std::cout<<"Entro e Instr_prima : telse Instr"
     #endif
-    $$.cod += $2.cod + "\n";
+    $$.cod += $3.cod + "\n";
+  borrarAmbito();
+  
 }
 
 Instr_prima : 
@@ -485,6 +487,7 @@ Instr_prima :
 };
 
 //TODO : Realizar comprobaciones de Expr.
+//TODO Probar declaracion de variables aqui.
 Instr : twhile tpari Expr tpard Instr
 {
 #ifdef DEBUG
