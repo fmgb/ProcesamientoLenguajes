@@ -1,42 +1,41 @@
 mov #0 6;Estoy en Ref:tid
-mov #0 6;Estoy en Ref:tid
 mov $7.5 7; Guardo un numero Real
+mov #0 8
 mov 6 A
 muli #1
 addi #4; Instr: Ref asig
-mov 8 @A
-mov #0 9;Estoy en Ref:tid
+mov @A 8;Asig
 mov #0 9;Estoy en Ref:tid
 mov #0 10;Estoy en Ref:tid
 mov #0 10;Estoy en Ref:tid
 
 mov 10 A; Factor : Ref 
-muli #1
+muli #1; Multiplicamos por el tamanyo del vector
 addi #4;Le sumo un tipo
 mov @A 11
 mov 11 A; Empezamos la asignacion REAL a ENTERO
 rtoi
 mov A 12
+mov #0 12
 mov 9 A
 muli #1
 addi #3; Instr: Ref asig
-mov 12 @A
+mov @A 12;Asig
 mov 14 A; Realizamos el if
 jz L1
-mov #0 19;Estoy en Ref:tid
 mov #0 19;Estoy en Ref:tid
 mov #0 20;Estoy en Ref:tid
 mov #0 20;Estoy en Ref:tid
 
 mov 20 A; Factor : Ref 
-muli #1
+muli #1; Multiplicamos por el tamanyo del vector
 addi #3;Le sumo un tipo
 mov @A 21
 mov #0 20;Estoy en Ref:tid
 mov #0 20;Estoy en Ref:tid
 
 mov 20 A; Factor : Ref 
-muli #1
+muli #1; Multiplicamos por el tamanyo del vector
 addi #3;Le sumo un tipo
 mov @A 21
 mov #3 22; Guardo un numero Entero
@@ -47,24 +46,24 @@ mov A 27; Lo cargamos en la dir correspondiente.
 mov 21 A; Cargo el primer termino en A
 addi 27; Realizamos la operacion entera total.
 mov A 28; Lo cargamos en la dir correspondiente.
+mov #0 29
 mov 19 A
 muli #1
 addi #17; Instr: Ref asig
-mov 29 @A
-mov #0 30;Estoy en Ref:tid
+mov @A 29;Asig
 mov #0 30;Estoy en Ref:tid
 mov #0 31;Estoy en Ref:tid
 mov #0 31;Estoy en Ref:tid
 
 mov 31 A; Factor : Ref 
-muli #1
+muli #1; Multiplicamos por el tamanyo del vector
 addi #17;Le sumo un tipo
 mov @A 32
 mov #0 31;Estoy en Ref:tid
 mov #0 31;Estoy en Ref:tid
 
 mov 31 A; Factor : Ref 
-muli #1
+muli #1; Multiplicamos por el tamanyo del vector
 addi #17;Le sumo un tipo
 mov @A 32
 mov 32 A; Cargo el primer termino en A
@@ -74,14 +73,14 @@ mov #0 31;Estoy en Ref:tid
 mov #0 31;Estoy en Ref:tid
 
 mov 31 A; Factor : Ref 
-muli #1
+muli #1; Multiplicamos por el tamanyo del vector
 addi #17;Le sumo un tipo
 mov @A 32
 mov #0 31;Estoy en Ref:tid
 mov #0 31;Estoy en Ref:tid
 
 mov 31 A; Factor : Ref 
-muli #1
+muli #1; Multiplicamos por el tamanyo del vector
 addi #17;Le sumo un tipo
 mov @A 32
 mov 32 A; Cargo el primer termino en A
@@ -90,10 +89,11 @@ mov A 34; Lo cargamos en la dir correspondiente.
 mov 34 A; Cargo el primer termino en A
 divi 35; Realizamos la operacion entera total.
 mov A 36; Lo cargamos en la dir correspondiente.
+mov #0 37
 mov 30 A
 muli #1
 addi #18; Instr: Ref asig
-mov 37 @A
+mov @A 37;Asig
 wrr 39
 wrl
 L1

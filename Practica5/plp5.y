@@ -53,7 +53,7 @@
 #include <vector>
 #include <sstream>
 
-    //#define DEBUG 0
+  //      #define DEBUG 0
 using namespace std;
 
 #include "comun.h"
@@ -347,7 +347,7 @@ Instr : Ref {if(obtenerTipoBasico(obtenerSimbolo($1.lexema).tipo).tipo == FUNCIO
     int tmp = nTmp();
     TTipo tipoTmp = obtenerTipoBasico($1.tipo);
     $$.dir = tmp;
-    $$.cod += $1.cod + $4.cod; //Anyadir el codigo que viene de la expresion que
+    $$.cod = $1.cod + $4.cod; //Anyadir el codigo que viene de la expresion que
                       //queremos evaluar.
     if($1.tipo == NREAL && $4.tipo == NENTERO)
       {
@@ -367,13 +367,15 @@ Instr : Ref {if(obtenerTipoBasico(obtenerSimbolo($1.lexema).tipo).tipo == FUNCIO
         $$.cod += "mov A " + iToS(tmp);
         $$.cod += "\n";
       }
+    $$.cod += "mov #0 " + iToS(tmp) +"\n";
+    
     $$.cod += "mov " + iToS($1.dir);
     $$.cod += " A\n";
     $$.cod += "muli #" + iToS(tipoTmp.tam);
     $$.cod += "\n";
     $$.cod += "addi #" + iToS($1.dbase) + "; Instr: Ref asig\n";
-    $$.cod += "mov " + iToS(tmp);
-    $$.cod += " @A\n";
+    $$.cod += "mov @A " + iToS(tmp);
+    $$.cod += ";Asig\n";
 };
 
 //CHECK ERRORS
@@ -383,19 +385,18 @@ Instr : tprintf tpari tformato tcoma Expr { if(esArray($5.tipo)){ /*std::cout <<
     std::cout <<"Entro en Instr : tprintf tpari tformato tcoma Expr tpard tpyc" <<std::endl;
 #endif
     int tmp = nTmp();
+    $$.cod = "";
     if($3.lexema == "%d" && $5.tipo == NREAL)
       {
-        $$.cod += "mov " + iToS($5.dir);
-        $$.cod += " A; Realizo la conversion antes de imprimir REAL a ENT\n";
-        $$.cod += "atoi\n";
+        $$.cod = "mov " + iToS($5.dir) + "A; Print";
+        $$.cod += "atoi; Realizo la conversion a entero.\n";
         $$.cod += "mov A " + iToS(tmp);
         $$.cod += "\n";
       }
     else if($3.lexema == "%g" && $5.tipo == NENTERO)
       {
-        $$.cod += "mov " + iToS($5.dir);
-        $$.cod += " A; Realizo la conversion antes de imprimir ENT a R\n";
-        $$.cod += "itor\n";
+        $$.cod = "mov " + iToS($5.dir) + "A; Print";
+        $$.cod += "itor;Relizo la conversion a real.\n";
         $$.cod += "mov A " + iToS(tmp);
         $$.cod += "\n";
       }
@@ -452,15 +453,15 @@ Instr : tscanf tpari tformato tcoma treferencia Ref { if(esArray($6.tipo)){/*std
 
 //TODO :Realizar comprobaciones oportunas
 // TODO QUITAR ERROR
-Instr : tif tpari Expr {if($3.tipo != NENTERO){/*std::cout <<"INTR: IF" <<std::endl;*/ msgError(ERREOF,$3.nlin, $3.ncol,$3.lexema);} } tpard {anyadirAmbito("IF"+numMemoria);} Instr {borrarAmbito();}Instr_prima
+Instr : tif tpari Expr {if($3.tipo != NENTERO){/* POR PONER UNO. NO SE
+                                                 ESPECIFICA EN EL ENUNCIADO*/ msgError(ERRDIM,$3.nlin, $3.ncol,$3.lexema);} } tpard {anyadirAmbito("IF"+numMemoria);} Instr {borrarAmbito();}Instr_prima
 {
 #ifdef DEBUG
     std::cout <<"Entro en Instr : tif tpari Expr tpard Instr Instr_prima" <<std::endl;
 #endif
     string s1 = "L" + iToS(nuevaEtiqueta());
     string s2 = "L" + iToS(nuevaEtiqueta());
-    $$.cod += "mov " + iToS($3.dir);
-    $$.cod += " A; Realizamos el if\n";
+    $$.cod += "mov " + iToS($3.dir) +" A; Realizamos el if\n";
     $$.cod += "jz " + s1;
     $$.cod += "\n";
     $$.cod += $7.cod;
@@ -482,7 +483,7 @@ Instr_prima : telse {anyadirAmbito("ELSE" + numMemoria);} Instr
 {
 #ifdef DEBUG
   std::cout<<"Entro e Instr_prima : telse Instr"
-    #endif
+#endif
     $$.cod += $3.cod + "\n";
   borrarAmbito();
   
@@ -505,14 +506,14 @@ Instr : twhile tpari Expr tpard Instr
 #endif
     string s1 = "L" + nuevaEtiqueta();
     string s2 = "L" + nuevaEtiqueta();
-    $$.cod += s1 + ":\n";
+    $$.cod += s1 + "\n";
     $$.cod += $3.cod;
     $$.cod += "mov " + iToS($3.dir);
     $$.cod += " A\n";
     $$.cod += "jz " + s2;
     $$.cod += $5.cod;
     $$.cod += "jmp " + s1;
-    $$.cod += s2 + ":\n";
+    $$.cod += s2 + "\n";
     
 };
 
@@ -768,13 +769,13 @@ Factor : Ref
       }
         
     int tmp = nTmp();
-    TTipo tipoTmp = obtenerTipoBasico($1.tipo);
+    // TTipo tipoTmp = obtenerTipoTTipos($1.tipo);
     $$.dir = tmp;
     $$.cod += $1.cod + "\nmov ";
     $$.cod += iToS($1.dir);
     $$.cod += " A; Factor : Ref \n";
-    $$.cod += "muli #" + iToS(tipoTmp.tam);
-    $$.cod += "\n";
+    $$.cod += "muli #" + iToS(obtenerTTamTTipos($1.tipo));
+    $$.cod += "; Multiplicamos por el tamanyo del vector\n";
     $$.cod += "addi #" + iToS($1.dbase);
     $$.cod += ";Le sumo un tipo";
     $$.cod += "\n";
@@ -793,7 +794,7 @@ Factor : tnentero
     int tmp = nTmp();
     
     $$.dir = tmp;
-    $$.cod = "mov #" + $1.lexema + " ";
+    $$.cod += "mov #" + $1.lexema + " ";
     $$.cod += iToS(tmp);
     $$.cod += "; Guardo un numero Entero\n";
 };
@@ -822,6 +823,7 @@ Factor : tpari Expr tpard
 #ifdef DEBUG
   std::cout <<"Entro en Factor: tpari Expr tard" <<std::endl;
 #endif
+  $$.cod = ";Factor : tpari Expr tpard\n";
   $$.tipo = $2.tipo;
   $$.dir = nTmp();
   $$.cod += $2.cod;
@@ -830,7 +832,6 @@ Factor : tpari Expr tpard
 
 Ref : tid
 {
-  //std::cout<<"REF: tid " <<$1.lexema <<std::endl;
   Simbolo sim  = obtenerSimbolo($1.lexema);
   if(sim.nombre == "")
     msgError(ERRNODECL,$1.nlin,$1.ncol,$1.lexema);
@@ -839,14 +840,9 @@ Ref : tid
     msgError(ERR_MAXTMP,$1.nlin,$1.ncol,$1.lexema);
   
   $$.dir = tmp;
-  $$.tipo = sim.tipo;// obtenerTipoTTipos(sim.tipo);
-  //    std::cerr<<"TIPO: "<< "Hasd" <<$$.tipo <<std::endl;
-  //  imprimirTablaTipos();
-  //  imprimirTablaSimbolos();
-  
+  $$.tipo = sim.tipo;    
   $$.dbase = sim.dir;
-  $$.cod = "mov #0 " + iToS(tmp) + ";Estoy en Ref:tid\n";
-  // $$.cod += "hla";
+  $$.cod += "mov #0 " + iToS($$.dir) + "; Estoy en Ref:tid\n";
 }
 
 //TODO Cambiar Error
@@ -867,7 +863,7 @@ Ref : Ref tcori {if(ARRAY != obtenerTipoTTipos($1.tipo)){/*std::cout <<"cori " <
   $$.dir = tmp;
   $$.cod += $1.cod + $4.cod;
   $$.cod += "mov " + iToS($1.dir);
-  $$.cod += " A\n";
+  $$.cod += " A; [ ]\n";
   $$.cod += "muli #" + iToS(obtenerTTamTTipos($1.tipo)) + "\n";
   $$.cod += "addi " + iToS($4.dir);
   $$.cod += "; \n";
@@ -1019,7 +1015,7 @@ void imprimirAmbito(Ambito ambito)
      std::cout <<"Ambito: \n\tNombre:\t " <<ambito.nombre <<std::endl;
      std::cout <<"\tSimbolos:" <<std::endl;
      for(int i = 0; i < ambito.simbolos.size(); i++)
-          std::cout<< "\t\t" <<i <<": " <<ambito.simbolos[i].nombre <<"\t" <<ambito.simbolos[i].tipo <<std::endl; 
+          std::cout<< "\t\t" <<i <<": " <<ambito.simbolos[i].nombre <<"\t" <<ambito.simbolos[i].tipo <<"\t" <<ambito.simbolos[i].dir <<std::endl; 
 }
 
 void imprimirTablaTipos()

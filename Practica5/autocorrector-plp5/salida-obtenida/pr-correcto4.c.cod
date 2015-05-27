@@ -1,5 +1,4 @@
 mov #0 7;Estoy en Ref:tid
-mov #0 7;Estoy en Ref:tid
 mov #1 8; Guardo un numero Entero
 mov #1 8; Guardo un numero Entero
 mov #3 9; Guardo un numero Entero
@@ -28,765 +27,387 @@ mov A 15; Lo cargamos en la dir correspondiente.
 mov 10 A; Cargo el primer termino en A
 addi 15; Realizamos la operacion entera total.
 mov A 16; Lo cargamos en la dir correspondiente.
+mov #0 17
 mov 7 A
 muli #1
 addi #6; Instr: Ref asig
-mov 17 @A
+mov @A 17;Asig
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #1 21; Guardo un numero Entero
-mov 20 A
+mov 20 A; [ ]
 muli #2
 addi 21; 
 mov A 22
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #1 21; Guardo un numero Entero
-mov 20 A
+mov 20 A; [ ]
 muli #2
 addi 21; 
 mov A 22
 mov #0 23; Guardo un numero Entero
-mov 22 A
+mov 22 A; [ ]
 muli #1
 addi 23; 
 mov A 24
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #1 21; Guardo un numero Entero
-mov 20 A
+mov 20 A; [ ]
 muli #2
 addi 21; 
 mov A 22
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #1 21; Guardo un numero Entero
-mov 20 A
+mov 20 A; [ ]
 muli #2
 addi 21; 
 mov A 22
 mov #0 23; Guardo un numero Entero
-mov 22 A
+mov 22 A; [ ]
 muli #1
 addi 23; 
 mov A 24
 mov #0 25; Guardo un numero Entero
-mov 24 A
+mov 24 A; [ ]
 muli #1
 addi 25; 
 mov A 26
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #1 21; Guardo un numero Entero
-mov 20 A
+mov 20 A; [ ]
 muli #2
 addi 21; 
 mov A 22
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #1 21; Guardo un numero Entero
-mov 20 A
+mov 20 A; [ ]
 muli #2
 addi 21; 
 mov A 22
 mov #0 23; Guardo un numero Entero
-mov 22 A
+mov 22 A; [ ]
 muli #1
 addi 23; 
 mov A 24
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #1 21; Guardo un numero Entero
-mov 20 A
+mov 20 A; [ ]
 muli #2
 addi 21; 
 mov A 22
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #1 21; Guardo un numero Entero
-mov 20 A
+mov 20 A; [ ]
 muli #2
 addi 21; 
 mov A 22
 mov #0 23; Guardo un numero Entero
-mov 22 A
+mov 22 A; [ ]
 muli #1
 addi 23; 
 mov A 24
 mov #0 25; Guardo un numero Entero
-mov 24 A
+mov 24 A; [ ]
 muli #1
 addi 25; 
 mov A 26
 mov #1 27; Guardo un numero Entero
-mov 26 A
+mov 26 A; [ ]
 muli #2
 addi 27; 
 mov A 28
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #1 21; Guardo un numero Entero
-mov 20 A
+mov 20 A; [ ]
 muli #2
 addi 21; 
 mov A 22
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #1 21; Guardo un numero Entero
-mov 20 A
+mov 20 A; [ ]
 muli #2
 addi 21; 
 mov A 22
 mov #0 23; Guardo un numero Entero
-mov 22 A
+mov 22 A; [ ]
 muli #1
 addi 23; 
 mov A 24
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #1 21; Guardo un numero Entero
-mov 20 A
+mov 20 A; [ ]
 muli #2
 addi 21; 
 mov A 22
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #1 21; Guardo un numero Entero
-mov 20 A
+mov 20 A; [ ]
 muli #2
 addi 21; 
 mov A 22
 mov #0 23; Guardo un numero Entero
-mov 22 A
+mov 22 A; [ ]
 muli #1
 addi 23; 
 mov A 24
 mov #0 25; Guardo un numero Entero
-mov 24 A
+mov 24 A; [ ]
 muli #1
 addi 25; 
 mov A 26
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #1 21; Guardo un numero Entero
-mov 20 A
+mov 20 A; [ ]
 muli #2
 addi 21; 
 mov A 22
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #1 21; Guardo un numero Entero
-mov 20 A
+mov 20 A; [ ]
 muli #2
 addi 21; 
 mov A 22
 mov #0 23; Guardo un numero Entero
-mov 22 A
+mov 22 A; [ ]
 muli #1
 addi 23; 
 mov A 24
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #1 21; Guardo un numero Entero
-mov 20 A
+mov 20 A; [ ]
 muli #2
 addi 21; 
 mov A 22
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #0 18;Estoy en Ref:tid
 mov #0 18;Estoy en Ref:tid
 mov #0 19; Guardo un numero Entero
-mov 18 A
+mov 18 A; [ ]
 muli #1
 addi 19; 
 mov A 20
 mov #1 21; Guardo un numero Entero
-mov 20 A
-muli #2
-addi 21; 
-mov A 22
-mov #0 23; Guardo un numero Entero
-mov 22 A
-muli #1
-addi 23; 
-mov A 24
-mov #0 25; Guardo un numero Entero
-mov 24 A
-muli #1
-addi 25; 
-mov A 26
-mov #1 27; Guardo un numero Entero
-mov 26 A
-muli #2
-addi 27; 
-mov A 28
-mov #0 29; Guardo un numero Entero
-mov 28 A
-muli #1
-addi 29; 
-mov A 30
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #1 21; Guardo un numero Entero
-mov 20 A
-muli #2
-addi 21; 
-mov A 22
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #1 21; Guardo un numero Entero
-mov 20 A
+mov 20 A; [ ]
 muli #2
 addi 21; 
 mov A 22
 mov #0 23; Guardo un numero Entero
-mov 22 A
-muli #1
-addi 23; 
-mov A 24
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #1 21; Guardo un numero Entero
-mov 20 A
-muli #2
-addi 21; 
-mov A 22
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #1 21; Guardo un numero Entero
-mov 20 A
-muli #2
-addi 21; 
-mov A 22
-mov #0 23; Guardo un numero Entero
-mov 22 A
+mov 22 A; [ ]
 muli #1
 addi 23; 
 mov A 24
 mov #0 25; Guardo un numero Entero
-mov 24 A
-muli #1
-addi 25; 
-mov A 26
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #1 21; Guardo un numero Entero
-mov 20 A
-muli #2
-addi 21; 
-mov A 22
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #1 21; Guardo un numero Entero
-mov 20 A
-muli #2
-addi 21; 
-mov A 22
-mov #0 23; Guardo un numero Entero
-mov 22 A
-muli #1
-addi 23; 
-mov A 24
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #1 21; Guardo un numero Entero
-mov 20 A
-muli #2
-addi 21; 
-mov A 22
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #1 21; Guardo un numero Entero
-mov 20 A
-muli #2
-addi 21; 
-mov A 22
-mov #0 23; Guardo un numero Entero
-mov 22 A
-muli #1
-addi 23; 
-mov A 24
-mov #0 25; Guardo un numero Entero
-mov 24 A
+mov 24 A; [ ]
 muli #1
 addi 25; 
 mov A 26
 mov #1 27; Guardo un numero Entero
-mov 26 A
-muli #2
-addi 27; 
-mov A 28
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #1 21; Guardo un numero Entero
-mov 20 A
-muli #2
-addi 21; 
-mov A 22
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #1 21; Guardo un numero Entero
-mov 20 A
-muli #2
-addi 21; 
-mov A 22
-mov #0 23; Guardo un numero Entero
-mov 22 A
-muli #1
-addi 23; 
-mov A 24
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #1 21; Guardo un numero Entero
-mov 20 A
-muli #2
-addi 21; 
-mov A 22
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #1 21; Guardo un numero Entero
-mov 20 A
-muli #2
-addi 21; 
-mov A 22
-mov #0 23; Guardo un numero Entero
-mov 22 A
-muli #1
-addi 23; 
-mov A 24
-mov #0 25; Guardo un numero Entero
-mov 24 A
-muli #1
-addi 25; 
-mov A 26
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #1 21; Guardo un numero Entero
-mov 20 A
-muli #2
-addi 21; 
-mov A 22
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #1 21; Guardo un numero Entero
-mov 20 A
-muli #2
-addi 21; 
-mov A 22
-mov #0 23; Guardo un numero Entero
-mov 22 A
-muli #1
-addi 23; 
-mov A 24
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #1 21; Guardo un numero Entero
-mov 20 A
-muli #2
-addi 21; 
-mov A 22
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #0 18;Estoy en Ref:tid
-mov #0 18;Estoy en Ref:tid
-mov #0 19; Guardo un numero Entero
-mov 18 A
-muli #1
-addi 19; 
-mov A 20
-mov #1 21; Guardo un numero Entero
-mov 20 A
-muli #2
-addi 21; 
-mov A 22
-mov #0 23; Guardo un numero Entero
-mov 22 A
-muli #1
-addi 23; 
-mov A 24
-mov #0 25; Guardo un numero Entero
-mov 24 A
-muli #1
-addi 25; 
-mov A 26
-mov #1 27; Guardo un numero Entero
-mov 26 A
+mov 26 A; [ ]
 muli #2
 addi 27; 
 mov A 28
 mov #0 29; Guardo un numero Entero
-mov 28 A
+mov 28 A; [ ]
 muli #1
 addi 29; 
 mov A 30
@@ -794,768 +415,390 @@ mov #0 31;Estoy en Ref:tid
 mov #0 31;Estoy en Ref:tid
 
 mov 31 A; Factor : Ref 
-muli #1
+muli #1; Multiplicamos por el tamanyo del vector
 addi #6;Le sumo un tipo
 mov @A 32
+mov #0 33
 mov 30 A
 muli #1
 addi #1; Instr: Ref asig
-mov 33 @A
+mov @A 33;Asig
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 37; Guardo un numero Entero
-mov 36 A
+mov 36 A; [ ]
 muli #2
 addi 37; 
 mov A 38
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 37; Guardo un numero Entero
-mov 36 A
+mov 36 A; [ ]
 muli #2
 addi 37; 
 mov A 38
 mov #0 39; Guardo un numero Entero
-mov 38 A
+mov 38 A; [ ]
 muli #1
 addi 39; 
 mov A 40
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 37; Guardo un numero Entero
-mov 36 A
+mov 36 A; [ ]
 muli #2
 addi 37; 
 mov A 38
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 37; Guardo un numero Entero
-mov 36 A
+mov 36 A; [ ]
 muli #2
 addi 37; 
 mov A 38
 mov #0 39; Guardo un numero Entero
-mov 38 A
+mov 38 A; [ ]
 muli #1
 addi 39; 
 mov A 40
 mov #0 41; Guardo un numero Entero
-mov 40 A
+mov 40 A; [ ]
 muli #1
 addi 41; 
 mov A 42
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 37; Guardo un numero Entero
-mov 36 A
+mov 36 A; [ ]
 muli #2
 addi 37; 
 mov A 38
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 37; Guardo un numero Entero
-mov 36 A
+mov 36 A; [ ]
 muli #2
 addi 37; 
 mov A 38
 mov #0 39; Guardo un numero Entero
-mov 38 A
+mov 38 A; [ ]
 muli #1
 addi 39; 
 mov A 40
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 37; Guardo un numero Entero
-mov 36 A
+mov 36 A; [ ]
 muli #2
 addi 37; 
 mov A 38
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 37; Guardo un numero Entero
-mov 36 A
+mov 36 A; [ ]
 muli #2
 addi 37; 
 mov A 38
 mov #0 39; Guardo un numero Entero
-mov 38 A
+mov 38 A; [ ]
 muli #1
 addi 39; 
 mov A 40
 mov #0 41; Guardo un numero Entero
-mov 40 A
+mov 40 A; [ ]
 muli #1
 addi 41; 
 mov A 42
 mov #0 43; Guardo un numero Entero
-mov 42 A
+mov 42 A; [ ]
 muli #2
 addi 43; 
 mov A 44
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 37; Guardo un numero Entero
-mov 36 A
+mov 36 A; [ ]
 muli #2
 addi 37; 
 mov A 38
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 37; Guardo un numero Entero
-mov 36 A
+mov 36 A; [ ]
 muli #2
 addi 37; 
 mov A 38
 mov #0 39; Guardo un numero Entero
-mov 38 A
+mov 38 A; [ ]
 muli #1
 addi 39; 
 mov A 40
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 37; Guardo un numero Entero
-mov 36 A
+mov 36 A; [ ]
 muli #2
 addi 37; 
 mov A 38
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 37; Guardo un numero Entero
-mov 36 A
+mov 36 A; [ ]
 muli #2
 addi 37; 
 mov A 38
 mov #0 39; Guardo un numero Entero
-mov 38 A
+mov 38 A; [ ]
 muli #1
 addi 39; 
 mov A 40
 mov #0 41; Guardo un numero Entero
-mov 40 A
+mov 40 A; [ ]
 muli #1
 addi 41; 
 mov A 42
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 37; Guardo un numero Entero
-mov 36 A
+mov 36 A; [ ]
 muli #2
 addi 37; 
 mov A 38
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 37; Guardo un numero Entero
-mov 36 A
+mov 36 A; [ ]
 muli #2
 addi 37; 
 mov A 38
 mov #0 39; Guardo un numero Entero
-mov 38 A
+mov 38 A; [ ]
 muli #1
 addi 39; 
 mov A 40
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 37; Guardo un numero Entero
-mov 36 A
+mov 36 A; [ ]
 muli #2
 addi 37; 
 mov A 38
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 34;Estoy en Ref:tid
 mov #0 34;Estoy en Ref:tid
 mov #0 35; Guardo un numero Entero
-mov 34 A
+mov 34 A; [ ]
 muli #1
 addi 35; 
 mov A 36
 mov #0 37; Guardo un numero Entero
-mov 36 A
-muli #2
-addi 37; 
-mov A 38
-mov #0 39; Guardo un numero Entero
-mov 38 A
-muli #1
-addi 39; 
-mov A 40
-mov #0 41; Guardo un numero Entero
-mov 40 A
-muli #1
-addi 41; 
-mov A 42
-mov #0 43; Guardo un numero Entero
-mov 42 A
-muli #2
-addi 43; 
-mov A 44
-mov #0 45; Guardo un numero Entero
-mov 44 A
-muli #1
-addi 45; 
-mov A 46
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 37; Guardo un numero Entero
-mov 36 A
-muli #2
-addi 37; 
-mov A 38
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 37; Guardo un numero Entero
-mov 36 A
+mov 36 A; [ ]
 muli #2
 addi 37; 
 mov A 38
 mov #0 39; Guardo un numero Entero
-mov 38 A
-muli #1
-addi 39; 
-mov A 40
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 37; Guardo un numero Entero
-mov 36 A
-muli #2
-addi 37; 
-mov A 38
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 37; Guardo un numero Entero
-mov 36 A
-muli #2
-addi 37; 
-mov A 38
-mov #0 39; Guardo un numero Entero
-mov 38 A
+mov 38 A; [ ]
 muli #1
 addi 39; 
 mov A 40
 mov #0 41; Guardo un numero Entero
-mov 40 A
-muli #1
-addi 41; 
-mov A 42
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 37; Guardo un numero Entero
-mov 36 A
-muli #2
-addi 37; 
-mov A 38
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 37; Guardo un numero Entero
-mov 36 A
-muli #2
-addi 37; 
-mov A 38
-mov #0 39; Guardo un numero Entero
-mov 38 A
-muli #1
-addi 39; 
-mov A 40
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 37; Guardo un numero Entero
-mov 36 A
-muli #2
-addi 37; 
-mov A 38
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 37; Guardo un numero Entero
-mov 36 A
-muli #2
-addi 37; 
-mov A 38
-mov #0 39; Guardo un numero Entero
-mov 38 A
-muli #1
-addi 39; 
-mov A 40
-mov #0 41; Guardo un numero Entero
-mov 40 A
+mov 40 A; [ ]
 muli #1
 addi 41; 
 mov A 42
 mov #0 43; Guardo un numero Entero
-mov 42 A
-muli #2
-addi 43; 
-mov A 44
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 37; Guardo un numero Entero
-mov 36 A
-muli #2
-addi 37; 
-mov A 38
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 37; Guardo un numero Entero
-mov 36 A
-muli #2
-addi 37; 
-mov A 38
-mov #0 39; Guardo un numero Entero
-mov 38 A
-muli #1
-addi 39; 
-mov A 40
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 37; Guardo un numero Entero
-mov 36 A
-muli #2
-addi 37; 
-mov A 38
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 37; Guardo un numero Entero
-mov 36 A
-muli #2
-addi 37; 
-mov A 38
-mov #0 39; Guardo un numero Entero
-mov 38 A
-muli #1
-addi 39; 
-mov A 40
-mov #0 41; Guardo un numero Entero
-mov 40 A
-muli #1
-addi 41; 
-mov A 42
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 37; Guardo un numero Entero
-mov 36 A
-muli #2
-addi 37; 
-mov A 38
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 37; Guardo un numero Entero
-mov 36 A
-muli #2
-addi 37; 
-mov A 38
-mov #0 39; Guardo un numero Entero
-mov 38 A
-muli #1
-addi 39; 
-mov A 40
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 37; Guardo un numero Entero
-mov 36 A
-muli #2
-addi 37; 
-mov A 38
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 34;Estoy en Ref:tid
-mov #0 34;Estoy en Ref:tid
-mov #0 35; Guardo un numero Entero
-mov 34 A
-muli #1
-addi 35; 
-mov A 36
-mov #0 37; Guardo un numero Entero
-mov 36 A
-muli #2
-addi 37; 
-mov A 38
-mov #0 39; Guardo un numero Entero
-mov 38 A
-muli #1
-addi 39; 
-mov A 40
-mov #0 41; Guardo un numero Entero
-mov 40 A
-muli #1
-addi 41; 
-mov A 42
-mov #0 43; Guardo un numero Entero
-mov 42 A
+mov 42 A; [ ]
 muli #2
 addi 43; 
 mov A 44
 mov #0 45; Guardo un numero Entero
-mov 44 A
+mov 44 A; [ ]
 muli #1
 addi 45; 
 mov A 46
@@ -1563,779 +806,401 @@ mov #0 47;Estoy en Ref:tid
 mov #0 47;Estoy en Ref:tid
 
 mov 47 A; Factor : Ref 
-muli #1
+muli #1; Multiplicamos por el tamanyo del vector
 addi #6;Le sumo un tipo
 mov @A 48
 mov #0 47;Estoy en Ref:tid
 mov #0 47;Estoy en Ref:tid
 
 mov 47 A; Factor : Ref 
-muli #1
+muli #1; Multiplicamos por el tamanyo del vector
 addi #6;Le sumo un tipo
 mov @A 48
 mov #1 49; Guardo un numero Entero
 mov 48 A; Cargo el primer termino en A
 addi 49; Realizamos la operacion entera total.
 mov A 50; Lo cargamos en la dir correspondiente.
+mov #0 51
 mov 46 A
 muli #1
 addi #1; Instr: Ref asig
-mov 51 @A
+mov @A 51;Asig
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #1 55; Guardo un numero Entero
-mov 54 A
+mov 54 A; [ ]
 muli #2
 addi 55; 
 mov A 56
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #1 55; Guardo un numero Entero
-mov 54 A
+mov 54 A; [ ]
 muli #2
 addi 55; 
 mov A 56
 mov #0 57; Guardo un numero Entero
-mov 56 A
+mov 56 A; [ ]
 muli #1
 addi 57; 
 mov A 58
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #1 55; Guardo un numero Entero
-mov 54 A
+mov 54 A; [ ]
 muli #2
 addi 55; 
 mov A 56
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #1 55; Guardo un numero Entero
-mov 54 A
+mov 54 A; [ ]
 muli #2
 addi 55; 
 mov A 56
 mov #0 57; Guardo un numero Entero
-mov 56 A
+mov 56 A; [ ]
 muli #1
 addi 57; 
 mov A 58
 mov #0 59; Guardo un numero Entero
-mov 58 A
+mov 58 A; [ ]
 muli #1
 addi 59; 
 mov A 60
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #1 55; Guardo un numero Entero
-mov 54 A
+mov 54 A; [ ]
 muli #2
 addi 55; 
 mov A 56
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #1 55; Guardo un numero Entero
-mov 54 A
+mov 54 A; [ ]
 muli #2
 addi 55; 
 mov A 56
 mov #0 57; Guardo un numero Entero
-mov 56 A
+mov 56 A; [ ]
 muli #1
 addi 57; 
 mov A 58
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #1 55; Guardo un numero Entero
-mov 54 A
+mov 54 A; [ ]
 muli #2
 addi 55; 
 mov A 56
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #1 55; Guardo un numero Entero
-mov 54 A
+mov 54 A; [ ]
 muli #2
 addi 55; 
 mov A 56
 mov #0 57; Guardo un numero Entero
-mov 56 A
+mov 56 A; [ ]
 muli #1
 addi 57; 
 mov A 58
 mov #0 59; Guardo un numero Entero
-mov 58 A
+mov 58 A; [ ]
 muli #1
 addi 59; 
 mov A 60
 mov #0 61; Guardo un numero Entero
-mov 60 A
+mov 60 A; [ ]
 muli #2
 addi 61; 
 mov A 62
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #1 55; Guardo un numero Entero
-mov 54 A
+mov 54 A; [ ]
 muli #2
 addi 55; 
 mov A 56
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #1 55; Guardo un numero Entero
-mov 54 A
+mov 54 A; [ ]
 muli #2
 addi 55; 
 mov A 56
 mov #0 57; Guardo un numero Entero
-mov 56 A
+mov 56 A; [ ]
 muli #1
 addi 57; 
 mov A 58
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #1 55; Guardo un numero Entero
-mov 54 A
+mov 54 A; [ ]
 muli #2
 addi 55; 
 mov A 56
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #1 55; Guardo un numero Entero
-mov 54 A
+mov 54 A; [ ]
 muli #2
 addi 55; 
 mov A 56
 mov #0 57; Guardo un numero Entero
-mov 56 A
+mov 56 A; [ ]
 muli #1
 addi 57; 
 mov A 58
 mov #0 59; Guardo un numero Entero
-mov 58 A
+mov 58 A; [ ]
 muli #1
 addi 59; 
 mov A 60
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #1 55; Guardo un numero Entero
-mov 54 A
+mov 54 A; [ ]
 muli #2
 addi 55; 
 mov A 56
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #1 55; Guardo un numero Entero
-mov 54 A
+mov 54 A; [ ]
 muli #2
 addi 55; 
 mov A 56
 mov #0 57; Guardo un numero Entero
-mov 56 A
+mov 56 A; [ ]
 muli #1
 addi 57; 
 mov A 58
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #1 55; Guardo un numero Entero
-mov 54 A
+mov 54 A; [ ]
 muli #2
 addi 55; 
 mov A 56
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #0 52;Estoy en Ref:tid
 mov #0 52;Estoy en Ref:tid
 mov #0 53; Guardo un numero Entero
-mov 52 A
+mov 52 A; [ ]
 muli #1
 addi 53; 
 mov A 54
 mov #1 55; Guardo un numero Entero
-mov 54 A
-muli #2
-addi 55; 
-mov A 56
-mov #0 57; Guardo un numero Entero
-mov 56 A
-muli #1
-addi 57; 
-mov A 58
-mov #0 59; Guardo un numero Entero
-mov 58 A
-muli #1
-addi 59; 
-mov A 60
-mov #0 61; Guardo un numero Entero
-mov 60 A
-muli #2
-addi 61; 
-mov A 62
-mov #0 63; Guardo un numero Entero
-mov 62 A
-muli #1
-addi 63; 
-mov A 64
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #1 55; Guardo un numero Entero
-mov 54 A
-muli #2
-addi 55; 
-mov A 56
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #1 55; Guardo un numero Entero
-mov 54 A
+mov 54 A; [ ]
 muli #2
 addi 55; 
 mov A 56
 mov #0 57; Guardo un numero Entero
-mov 56 A
-muli #1
-addi 57; 
-mov A 58
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #1 55; Guardo un numero Entero
-mov 54 A
-muli #2
-addi 55; 
-mov A 56
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #1 55; Guardo un numero Entero
-mov 54 A
-muli #2
-addi 55; 
-mov A 56
-mov #0 57; Guardo un numero Entero
-mov 56 A
+mov 56 A; [ ]
 muli #1
 addi 57; 
 mov A 58
 mov #0 59; Guardo un numero Entero
-mov 58 A
-muli #1
-addi 59; 
-mov A 60
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #1 55; Guardo un numero Entero
-mov 54 A
-muli #2
-addi 55; 
-mov A 56
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #1 55; Guardo un numero Entero
-mov 54 A
-muli #2
-addi 55; 
-mov A 56
-mov #0 57; Guardo un numero Entero
-mov 56 A
-muli #1
-addi 57; 
-mov A 58
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #1 55; Guardo un numero Entero
-mov 54 A
-muli #2
-addi 55; 
-mov A 56
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #1 55; Guardo un numero Entero
-mov 54 A
-muli #2
-addi 55; 
-mov A 56
-mov #0 57; Guardo un numero Entero
-mov 56 A
-muli #1
-addi 57; 
-mov A 58
-mov #0 59; Guardo un numero Entero
-mov 58 A
+mov 58 A; [ ]
 muli #1
 addi 59; 
 mov A 60
 mov #0 61; Guardo un numero Entero
-mov 60 A
-muli #2
-addi 61; 
-mov A 62
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #1 55; Guardo un numero Entero
-mov 54 A
-muli #2
-addi 55; 
-mov A 56
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #1 55; Guardo un numero Entero
-mov 54 A
-muli #2
-addi 55; 
-mov A 56
-mov #0 57; Guardo un numero Entero
-mov 56 A
-muli #1
-addi 57; 
-mov A 58
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #1 55; Guardo un numero Entero
-mov 54 A
-muli #2
-addi 55; 
-mov A 56
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #1 55; Guardo un numero Entero
-mov 54 A
-muli #2
-addi 55; 
-mov A 56
-mov #0 57; Guardo un numero Entero
-mov 56 A
-muli #1
-addi 57; 
-mov A 58
-mov #0 59; Guardo un numero Entero
-mov 58 A
-muli #1
-addi 59; 
-mov A 60
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #1 55; Guardo un numero Entero
-mov 54 A
-muli #2
-addi 55; 
-mov A 56
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #1 55; Guardo un numero Entero
-mov 54 A
-muli #2
-addi 55; 
-mov A 56
-mov #0 57; Guardo un numero Entero
-mov 56 A
-muli #1
-addi 57; 
-mov A 58
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #1 55; Guardo un numero Entero
-mov 54 A
-muli #2
-addi 55; 
-mov A 56
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #0 52;Estoy en Ref:tid
-mov #0 52;Estoy en Ref:tid
-mov #0 53; Guardo un numero Entero
-mov 52 A
-muli #1
-addi 53; 
-mov A 54
-mov #1 55; Guardo un numero Entero
-mov 54 A
-muli #2
-addi 55; 
-mov A 56
-mov #0 57; Guardo un numero Entero
-mov 56 A
-muli #1
-addi 57; 
-mov A 58
-mov #0 59; Guardo un numero Entero
-mov 58 A
-muli #1
-addi 59; 
-mov A 60
-mov #0 61; Guardo un numero Entero
-mov 60 A
+mov 60 A; [ ]
 muli #2
 addi 61; 
 mov A 62
 mov #0 63; Guardo un numero Entero
-mov 62 A
+mov 62 A; [ ]
 muli #1
 addi 63; 
 mov A 64
@@ -2343,779 +1208,401 @@ mov #0 65;Estoy en Ref:tid
 mov #0 65;Estoy en Ref:tid
 
 mov 65 A; Factor : Ref 
-muli #1
+muli #1; Multiplicamos por el tamanyo del vector
 addi #6;Le sumo un tipo
 mov @A 66
 mov #0 65;Estoy en Ref:tid
 mov #0 65;Estoy en Ref:tid
 
 mov 65 A; Factor : Ref 
-muli #1
+muli #1; Multiplicamos por el tamanyo del vector
 addi #6;Le sumo un tipo
 mov @A 66
 mov #2 67; Guardo un numero Entero
 mov 66 A; Cargo el primer termino en A
 addi 67; Realizamos la operacion entera total.
 mov A 68; Lo cargamos en la dir correspondiente.
+mov #0 69
 mov 64 A
 muli #1
 addi #1; Instr: Ref asig
-mov 69 @A
+mov @A 69;Asig
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 73; Guardo un numero Entero
-mov 72 A
+mov 72 A; [ ]
 muli #2
 addi 73; 
 mov A 74
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 73; Guardo un numero Entero
-mov 72 A
+mov 72 A; [ ]
 muli #2
 addi 73; 
 mov A 74
 mov #0 75; Guardo un numero Entero
-mov 74 A
+mov 74 A; [ ]
 muli #1
 addi 75; 
 mov A 76
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 73; Guardo un numero Entero
-mov 72 A
+mov 72 A; [ ]
 muli #2
 addi 73; 
 mov A 74
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 73; Guardo un numero Entero
-mov 72 A
+mov 72 A; [ ]
 muli #2
 addi 73; 
 mov A 74
 mov #0 75; Guardo un numero Entero
-mov 74 A
+mov 74 A; [ ]
 muli #1
 addi 75; 
 mov A 76
 mov #0 77; Guardo un numero Entero
-mov 76 A
+mov 76 A; [ ]
 muli #1
 addi 77; 
 mov A 78
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 73; Guardo un numero Entero
-mov 72 A
+mov 72 A; [ ]
 muli #2
 addi 73; 
 mov A 74
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 73; Guardo un numero Entero
-mov 72 A
+mov 72 A; [ ]
 muli #2
 addi 73; 
 mov A 74
 mov #0 75; Guardo un numero Entero
-mov 74 A
+mov 74 A; [ ]
 muli #1
 addi 75; 
 mov A 76
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 73; Guardo un numero Entero
-mov 72 A
+mov 72 A; [ ]
 muli #2
 addi 73; 
 mov A 74
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 73; Guardo un numero Entero
-mov 72 A
+mov 72 A; [ ]
 muli #2
 addi 73; 
 mov A 74
 mov #0 75; Guardo un numero Entero
-mov 74 A
+mov 74 A; [ ]
 muli #1
 addi 75; 
 mov A 76
 mov #0 77; Guardo un numero Entero
-mov 76 A
+mov 76 A; [ ]
 muli #1
 addi 77; 
 mov A 78
 mov #1 79; Guardo un numero Entero
-mov 78 A
+mov 78 A; [ ]
 muli #2
 addi 79; 
 mov A 80
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 73; Guardo un numero Entero
-mov 72 A
+mov 72 A; [ ]
 muli #2
 addi 73; 
 mov A 74
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 73; Guardo un numero Entero
-mov 72 A
+mov 72 A; [ ]
 muli #2
 addi 73; 
 mov A 74
 mov #0 75; Guardo un numero Entero
-mov 74 A
+mov 74 A; [ ]
 muli #1
 addi 75; 
 mov A 76
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 73; Guardo un numero Entero
-mov 72 A
+mov 72 A; [ ]
 muli #2
 addi 73; 
 mov A 74
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 73; Guardo un numero Entero
-mov 72 A
+mov 72 A; [ ]
 muli #2
 addi 73; 
 mov A 74
 mov #0 75; Guardo un numero Entero
-mov 74 A
+mov 74 A; [ ]
 muli #1
 addi 75; 
 mov A 76
 mov #0 77; Guardo un numero Entero
-mov 76 A
+mov 76 A; [ ]
 muli #1
 addi 77; 
 mov A 78
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 73; Guardo un numero Entero
-mov 72 A
+mov 72 A; [ ]
 muli #2
 addi 73; 
 mov A 74
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 73; Guardo un numero Entero
-mov 72 A
+mov 72 A; [ ]
 muli #2
 addi 73; 
 mov A 74
 mov #0 75; Guardo un numero Entero
-mov 74 A
+mov 74 A; [ ]
 muli #1
 addi 75; 
 mov A 76
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 73; Guardo un numero Entero
-mov 72 A
+mov 72 A; [ ]
 muli #2
 addi 73; 
 mov A 74
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 70;Estoy en Ref:tid
 mov #0 70;Estoy en Ref:tid
 mov #0 71; Guardo un numero Entero
-mov 70 A
+mov 70 A; [ ]
 muli #1
 addi 71; 
 mov A 72
 mov #0 73; Guardo un numero Entero
-mov 72 A
-muli #2
-addi 73; 
-mov A 74
-mov #0 75; Guardo un numero Entero
-mov 74 A
-muli #1
-addi 75; 
-mov A 76
-mov #0 77; Guardo un numero Entero
-mov 76 A
-muli #1
-addi 77; 
-mov A 78
-mov #1 79; Guardo un numero Entero
-mov 78 A
-muli #2
-addi 79; 
-mov A 80
-mov #0 81; Guardo un numero Entero
-mov 80 A
-muli #1
-addi 81; 
-mov A 82
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 73; Guardo un numero Entero
-mov 72 A
-muli #2
-addi 73; 
-mov A 74
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 73; Guardo un numero Entero
-mov 72 A
+mov 72 A; [ ]
 muli #2
 addi 73; 
 mov A 74
 mov #0 75; Guardo un numero Entero
-mov 74 A
-muli #1
-addi 75; 
-mov A 76
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 73; Guardo un numero Entero
-mov 72 A
-muli #2
-addi 73; 
-mov A 74
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 73; Guardo un numero Entero
-mov 72 A
-muli #2
-addi 73; 
-mov A 74
-mov #0 75; Guardo un numero Entero
-mov 74 A
+mov 74 A; [ ]
 muli #1
 addi 75; 
 mov A 76
 mov #0 77; Guardo un numero Entero
-mov 76 A
-muli #1
-addi 77; 
-mov A 78
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 73; Guardo un numero Entero
-mov 72 A
-muli #2
-addi 73; 
-mov A 74
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 73; Guardo un numero Entero
-mov 72 A
-muli #2
-addi 73; 
-mov A 74
-mov #0 75; Guardo un numero Entero
-mov 74 A
-muli #1
-addi 75; 
-mov A 76
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 73; Guardo un numero Entero
-mov 72 A
-muli #2
-addi 73; 
-mov A 74
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 73; Guardo un numero Entero
-mov 72 A
-muli #2
-addi 73; 
-mov A 74
-mov #0 75; Guardo un numero Entero
-mov 74 A
-muli #1
-addi 75; 
-mov A 76
-mov #0 77; Guardo un numero Entero
-mov 76 A
+mov 76 A; [ ]
 muli #1
 addi 77; 
 mov A 78
 mov #1 79; Guardo un numero Entero
-mov 78 A
-muli #2
-addi 79; 
-mov A 80
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 73; Guardo un numero Entero
-mov 72 A
-muli #2
-addi 73; 
-mov A 74
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 73; Guardo un numero Entero
-mov 72 A
-muli #2
-addi 73; 
-mov A 74
-mov #0 75; Guardo un numero Entero
-mov 74 A
-muli #1
-addi 75; 
-mov A 76
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 73; Guardo un numero Entero
-mov 72 A
-muli #2
-addi 73; 
-mov A 74
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 73; Guardo un numero Entero
-mov 72 A
-muli #2
-addi 73; 
-mov A 74
-mov #0 75; Guardo un numero Entero
-mov 74 A
-muli #1
-addi 75; 
-mov A 76
-mov #0 77; Guardo un numero Entero
-mov 76 A
-muli #1
-addi 77; 
-mov A 78
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 73; Guardo un numero Entero
-mov 72 A
-muli #2
-addi 73; 
-mov A 74
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 73; Guardo un numero Entero
-mov 72 A
-muli #2
-addi 73; 
-mov A 74
-mov #0 75; Guardo un numero Entero
-mov 74 A
-muli #1
-addi 75; 
-mov A 76
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 73; Guardo un numero Entero
-mov 72 A
-muli #2
-addi 73; 
-mov A 74
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 70;Estoy en Ref:tid
-mov #0 70;Estoy en Ref:tid
-mov #0 71; Guardo un numero Entero
-mov 70 A
-muli #1
-addi 71; 
-mov A 72
-mov #0 73; Guardo un numero Entero
-mov 72 A
-muli #2
-addi 73; 
-mov A 74
-mov #0 75; Guardo un numero Entero
-mov 74 A
-muli #1
-addi 75; 
-mov A 76
-mov #0 77; Guardo un numero Entero
-mov 76 A
-muli #1
-addi 77; 
-mov A 78
-mov #1 79; Guardo un numero Entero
-mov 78 A
+mov 78 A; [ ]
 muli #2
 addi 79; 
 mov A 80
 mov #0 81; Guardo un numero Entero
-mov 80 A
+mov 80 A; [ ]
 muli #1
 addi 81; 
 mov A 82
@@ -3123,24 +1610,25 @@ mov #0 83;Estoy en Ref:tid
 mov #0 83;Estoy en Ref:tid
 
 mov 83 A; Factor : Ref 
-muli #1
+muli #1; Multiplicamos por el tamanyo del vector
 addi #6;Le sumo un tipo
 mov @A 84
 mov #0 83;Estoy en Ref:tid
 mov #0 83;Estoy en Ref:tid
 
 mov 83 A; Factor : Ref 
-muli #1
+muli #1; Multiplicamos por el tamanyo del vector
 addi #6;Le sumo un tipo
 mov @A 84
 mov #3 85; Guardo un numero Entero
 mov 84 A; Cargo el primer termino en A
 addi 85; Realizamos la operacion entera total.
 mov A 86; Lo cargamos en la dir correspondiente.
+mov #0 87
 mov 82 A
 muli #1
 addi #1; Instr: Ref asig
-mov 87 @A
+mov @A 87;Asig
 wrr 89
 wrl
 wrr 149
