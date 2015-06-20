@@ -93,7 +93,8 @@ void imprimirTablaSimbolos();
  int nTmp();
  void initMem();
  bool rellenarMemoria(int memoriaNecesaria);
-
+ 
+ 
 void split(const string& s, char c,
            std::vector<string>& v) {
    string::size_type i = 0;
@@ -261,11 +262,14 @@ Variable : tid {if(obtenerSimboloEnAmbito(tablaSimbolos.back(),$1.lexema).nombre
               }
           }
         anyadirSimbolo($1.lexema, posTTipo);
+        //cout<<$3.dbase <<"HA" <<endl;
         if(!rellenarMemoria($3.dbase))
           {
             msgError(ERR_NOCABE,$1.nlin,$1.ncol,$1.lexema);
             
           }
+        
+        
       }
     else 
       {
@@ -346,7 +350,7 @@ Instr : Bloque
 
 //FALTA LOS ERRORES DE LOS ARRAY
 //CHECK Posibilidades ASIG
-Instr : Ref {if(obtenerTipoBasico(obtenerSimbolo($1.lexema).tipo).tipo == FUNCION || obtenerTipoBasico(obtenerSimbolo($1.lexema).tipo).tipo == ARRAY) {msgError(ERRFALTAN,$1.nlin,$1.ncol,$1.lexema);}} tasig Expr {if (obtenerSimbolo($4.lexema).tipo == ARRAY){msgError(ERRSOBRAN,$1.nlin,$1.ncol, $1.lexema);}} tpyc
+Instr : Ref {if(ARRAY == obtenerTipoTTipos($1.tipo)) msgError(ERRFALTAN,nlinCorchete, ncolCorchete, $1.lexema);} tasig Expr {if (obtenerSimbolo($4.lexema).tipo == ARRAY){msgError(ERRSOBRAN,$1.nlin,$1.ncol, $1.lexema);}} tpyc
 {
 #ifdef DEBUG
     std::cout <<"Entro en Instr : Ref tasig Expr tpyc " <<std::endl;
@@ -358,8 +362,7 @@ Instr : Ref {if(obtenerTipoBasico(obtenerSimbolo($1.lexema).tipo).tipo == FUNCIO
                       //queremos evaluar.
     if($1.tipo == NREAL && $4.tipo == NENTERO)
       {
-        $$.cod = $1.cod +
-                                 $4.cod +
+        $$.cod +=
                                  "mov " + iToS($4.dir) + " A" + "\n" +
                                  "itor"  + "\n" +
                                  "mov A " + iToS(tmp) + "\n" +
@@ -370,8 +373,7 @@ Instr : Ref {if(obtenerTipoBasico(obtenerSimbolo($1.lexema).tipo).tipo == FUNCIO
       }
     else if($1.tipo == NENTERO && $4.tipo == NREAL)
       {
-        $$.cod = $1.cod +
-                                 $4.cod +
+        $$.cod +=
                                  "mov " + iToS($4.dir) + " A" + "\n" +
                                  "rtoi" + "\n" +
                                  "mov A " + iToS(tmp) + "\n" +
@@ -381,7 +383,7 @@ Instr : Ref {if(obtenerTipoBasico(obtenerSimbolo($1.lexema).tipo).tipo == FUNCIO
                                  "mov " + iToS(tmp) + " @A" "\n";
       } else
       {
-        $$.cod = $1.cod + $4.cod +
+        $$.cod += 
           "mov " + iToS($1.dir) + " A" + "\n" +
           "muli #" + iToS(obtenerTTamTTipos($1.tipo)) + "\n" +
           "addi #" + iToS($1.dbase) + "\n" +
@@ -407,14 +409,14 @@ Instr : tprintf tpari tformato tcoma Expr { if(esArray($5.tipo)){ /*std::cout <<
       }
     else if($3.lexema == "\"%d\"" && $5.tipo == NREAL)
       {
-        $$.cod = $5.cod + "mov " + iToS($5.dir) + " A \n" + "itor\n" +
+        $$.cod = $5.cod + "mov " + iToS($5.dir) + " A \n" + "rtoi\n" +
           "mov A " + iToS(tmp) + "\n" + op + iToS(tmp) + "\nwrl\n";
       }
     else if($3.lexema == "\"%g\"" && $5.tipo == NENTERO)
       {
         $$.cod = $5.cod + "mov " + iToS($5.dir) + " A\nitor\n" + "mov A " +iToS(tmp) + "\nwrl\n";
         
-        $$.cod = "mov " + iToS($5.dir) + "A; Print";
+        $$.cod += "mov " + iToS($5.dir) + "A; Print";
         $$.cod += "itor;Relizo la conversion a real.\n";
         $$.cod += "mov A " + iToS(tmp);
         $$.cod += "\n";
@@ -441,7 +443,7 @@ Instr : tscanf tpari tformato tcoma treferencia Ref { if(esArray($6.tipo)){/*std
     
     if($3.lexema == "\"%d\"" && $6.tipo == NREAL)
       {
-        $$.cod = $6.cod + op + iToS(tmp) + "\n" +
+        $$.cod += $6.cod + op + iToS(tmp) + "\n" +
           "mov " + iToS(tmp) + " A" +
           "\nitor\n" + "mov A " + iToS(tmp) + "\n" +
           "mov " + iToS($6.dir) + " A\n" +
@@ -520,6 +522,8 @@ Instr : twhile tpari Expr tpard {anyadirAmbito("WHILE" + numMemoria);} Instr
     string etiq2 = "L" + iToS(nuevaEtiqueta());
     $$.cod += etiq1 + "\n";
     $$.cod += $3.cod;
+    //cout<<"ENTRO CON " <<$3.cod <<"\n" <<"\nINSTR\n" <<$6.cod <<endl;
+    
     $$.cod += "mov " + iToS($3.dir);
     $$.cod += " A\n";
     $$.cod += "jz " + etiq2 +"\n";
@@ -654,7 +658,7 @@ Esimple : Esimple taddop Term
     else if($1.tipo == NREAL && $3.tipo == NENTERO)
       {
         int tmpAux = nTmp();
-        $$.cod = "mov " + iToS($3.dir) + " A" + "\n" + "itor" + "\n" +
+        $$.cod += "mov " + iToS($3.dir) + " A" + "\n" + "itor" + "\n" +
           "mov " + iToS($1.dir) + " A" + "\n" + operacion + "r " + iToS(tmp) + "\n" + "mov A " + iToS(tmp) + "\n";
         $$.tipo = NREAL;
       }
@@ -774,6 +778,8 @@ Factor : Ref
       }
         
     int tmp = nTmp();
+    //$$.cod += "mov #0 " + iToS(tmp) + ";Factor:ref\n";
+    
     // TTipo tipoTmp = obtenerTipoTTipos($1.tipo);
     $$.dir = tmp;
     $$.cod += $1.cod +
@@ -792,6 +798,7 @@ Factor : tnentero
 
     $$.tipo = NENTERO;
     int tmp = nTmp();
+    $$.cod +="mov #0 " + iToS(tmp) + ";Inicio\n";
     
     $$.dir = tmp;
     $$.cod += "mov #" + $1.lexema + " ";
@@ -822,12 +829,13 @@ Factor : tpari Expr tpard
   std::cout <<"Entro en Factor: tpari Expr tard" <<std::endl;
 #endif
   //$$.cod = ";Factor : tpari Expr tpard\n";
-  /*$$.tipo = $2.tipo;
+  $$.tipo = $2.tipo;
   $$.dir = nTmp();
   $$.cod += $2.cod;
-  $$.cod += "\n";*/
-  $$.cod = $2.cod;
-  $$.tipo = $2.tipo;
+  $$.cod += "\n";
+  //
+  //$$.cod = $2.cod;
+  //$$.tipo = $2.tipo;
   
 }
 
@@ -842,7 +850,7 @@ Ref : tid
   
   $$.dir = tmp;
   $$.tipo = sim.tipo;    
-  $$.dbase = sim.dir;
+  $$.dbase =  sim.dir;
   $$.cod = "mov #0 " + iToS(tmp) + "; Estoy en Ref:tid\n";
 }
 
@@ -1006,8 +1014,8 @@ void borrarAmbito()
 {
   //int memoriaAmbito = tablaSimbolos.back().simbolos.front().dir;
   //numMemoria -= memoriaAmbito;
-  numMemoria = tablaSimbolos.back().posicionMemoriaInicio;
-  numVariables = tablaSimbolos.back().variablesInicio;
+  // numMemoria = tablaSimbolos.back().posicionMemoriaInicio;
+  //numVariables = tablaSimbolos.back().variablesInicio;
   //std::cout<<"HA BORRADO AMBITO" <<endl;
   tablaSimbolos.pop_back();
 }

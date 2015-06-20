@@ -1,0 +1,47 @@
+
+// program nuCorrecto3
+int main_i,main_j;
+double main_a,main_b;
+int f_k;
+double f() {
+main_b =r itor(0 );
+main_a =r itor(main_i)/r itor(main_j);
+
+if(main_a>=r 3.4 )
+
+if(main_a>r 4.5 )
+
+if(main_a==r 5.6 )
+
+if(main_a!=r 6.7 )
+
+if(main_a<=r 7.8 )
+
+if(main_a<r 8.9 )
+main_b =r r 33.33 /r itor(11 );
+{
+printf("%g\n",main_b);
+
+}
+main_i =i 100 ;
+while ( main_i>i 0 )
+{
+printf("%d\n",main_i);
+main_i =i main_i/i 2 ;
+
+}
+
+}
+int main() {
+main_i =i 56 ;
+main_j =i 10 ;
+main_b =r r (itor(1 +i 2 *i 3 )/r itor(3 ))-( itor(3 *i 4 /i 5 -i 7 )+r 8.1 );
+
+if(main_i<i main_j)
+main_a =r itor(77 );
+else
+main_a =r itor(88 );
+printf("%g\n",main_b);
+
+}
+

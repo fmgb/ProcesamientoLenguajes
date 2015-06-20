@@ -1,0 +1,58 @@
+program nuErrSem5;
+
+ var a,b:integer;
+ function uno:real;
+  function piramide:integer;
+   var n,i,j:integer;
+  begin
+   n := 4;
+   i := 0;
+   while i < n do
+    begin
+      j := 0;
+      while j < i do
+       begin
+        writeln(j);
+        j := j+1
+       end;
+      i := i+1
+    end;
+
+   i := n-1;
+   while i > 0 do
+    begin
+      j := 0;
+      while j < i do
+       begin
+        writeln(j);
+        j := j+1
+       end;
+      i := i-1
+    end
+  end;
+ begin (* uno *)
+   b := 8
+ end;
+ function uuno:integer;
+  function piramide:real;
+   var h:integer;
+  begin
+    h := a+2
+  end;
+  function uuno:real;  (* oscurede uuno:integer, pero es correcto *)
+   var a:integer;
+  begin
+    a := 7
+  end;
+  function piramide:integer;  (* error semantico, 'piramide' ya existe en este ambito *)
+   var j:real;
+  begin
+   j := 2-1-1-1-1-1.001
+  end;
+ begin
+  writeln(7.89)
+ end;
+begin (* programa principal *)
+  b := 3;
+  a := (b<3)*5  (* error sintáctico en < *)
+end

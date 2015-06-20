@@ -1,0 +1,43 @@
+program nuCorrecto3;
+ var i,j:integer;
+     a,b:real;
+ function f:real;
+  var k:integer;
+ begin
+   b := 0;
+   a := i/j;
+   if a >= 3.4 then
+     if a > 4.5 then
+       if a = 5.6 then
+         if a <> 6.7 then
+           if a <= 7.8 then
+             if a < 8.9 then
+               b := 33.33 / 11
+             endif
+           endif
+         endif
+       endif
+     endif
+   endif;
+   begin
+     writeln(b)
+   end;
+   i := 100;
+   while i > 0 do
+    begin
+      writeln(i);
+      i := i div 2
+    end
+ end;
+
+begin
+  i := 56;
+  j := 10;
+  b := (1+2*3/3)-(3*4 div 5 - 7 + 8.1);
+  if i<j then
+    a := 77
+  else
+    a := 88
+  endif;
+  writeln(b)
+end

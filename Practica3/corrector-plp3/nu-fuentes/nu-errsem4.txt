@@ -1,0 +1,10 @@
+program colores;
+  function rojo:integer;
+   var a,b,c:integer;
+  begin 
+    a := 7;
+    b := a+3.5 div  (* debe dar error en el 'div' *)
+         d          (* otro error que no debe salir *)
+                    (* y en la asignación hay otro error *)
+  end;
+

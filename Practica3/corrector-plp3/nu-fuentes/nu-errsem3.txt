@@ -1,0 +1,55 @@
+program colores;
+  function rojo:integer;
+   var a,b,c:integer;
+  begin (* rojo *)
+    a := 7;
+    b := a+3
+  end;
+
+  (* comentario
+      de
+ varias
+lineas
+**)
+
+
+  function verde:real;
+    function fosfo:integer;
+      var j:real;
+      function rito:real;
+        var k:integer;
+      begin (* rito *)
+        k := 643;
+        j := k / 10;
+	j := k div 10
+      end;
+      function mala: integer;
+        var j: real;
+      begin
+        j := 8.3 * verde  (* error semantico en 'verde' (no es una variable) *)
+      end;
+    begin (* fosfo *)
+      j := 34.5
+    end;
+    var m,n:real;
+    o,p:integer;
+  begin (* verde *)
+    o := (27-20) * 3;
+    m := o;
+    while o>10 do
+    begin
+      if 2*o = 22 then
+        p := 1
+      else
+        p := 0
+      endif;
+      o := o - 1
+    end
+  end;
+  
+  VAR A,B,C:inTEGER;
+  begin (* colores *)
+    a := 77;
+    writeln(a+3)
+  end
+

@@ -1,0 +1,194 @@
+mov #0 1207; Estoy en Ref:tid
+mov $7.5 1208; Guardo un numero Real
+mov 1207 A
+muli #1
+addi #1205
+mov 1208 @A
+mov #0 1210; Estoy en Ref:tid
+mov #0 1211; Estoy en Ref:tid
+mov #0 1211; Estoy en Ref:tid
+mov 1211 A
+muli #1
+addi #1205
+mov @A 1212
+mov 1212 A
+rtoi
+mov A 1213
+mov 1210 A
+muli #1
+addi #3
+mov 1213 @A
+mov #0 1214; Estoy en Ref:tid
+mov #0 1214; Estoy en Ref:tid
+mov #0 1215;Inicio
+mov #20 1215; Guardo un numero Entero
+mov 1214 A; [ ]
+muli #30
+addi 1215; 
+mov A 1216
+mov #0 1214; Estoy en Ref:tid
+mov #0 1214; Estoy en Ref:tid
+mov #0 1215;Inicio
+mov #20 1215; Guardo un numero Entero
+mov 1214 A; [ ]
+muli #30
+addi 1215; 
+mov A 1216
+mov #0 1217;Inicio
+mov #20 1217; Guardo un numero Entero
+mov 1216 A; [ ]
+muli #40
+addi 1217; 
+mov A 1218
+rdi 1219
+mov 1219 A
+itor
+mov A 1219
+mov 1218 A
+addi 4
+mov 1219 @A
+mov #0 1220; Estoy en Ref:tid
+mov #0 1220; Estoy en Ref:tid
+mov #0 1221;Inicio
+mov #20 1221; Guardo un numero Entero
+mov 1220 A; [ ]
+muli #30
+addi 1221; 
+mov A 1222
+mov #0 1220; Estoy en Ref:tid
+mov #0 1220; Estoy en Ref:tid
+mov #0 1221;Inicio
+mov #20 1221; Guardo un numero Entero
+mov 1220 A; [ ]
+muli #30
+addi 1221; 
+mov A 1222
+mov #0 1223;Inicio
+mov #20 1223; Guardo un numero Entero
+mov 1222 A; [ ]
+muli #40
+addi 1223; 
+mov A 1224
+mov #0 1220; Estoy en Ref:tid
+mov #0 1220; Estoy en Ref:tid
+mov #0 1221;Inicio
+mov #20 1221; Guardo un numero Entero
+mov 1220 A; [ ]
+muli #30
+addi 1221; 
+mov A 1222
+mov #0 1220; Estoy en Ref:tid
+mov #0 1220; Estoy en Ref:tid
+mov #0 1221;Inicio
+mov #20 1221; Guardo un numero Entero
+mov 1220 A; [ ]
+muli #30
+addi 1221; 
+mov A 1222
+mov #0 1223;Inicio
+mov #20 1223; Guardo un numero Entero
+mov 1222 A; [ ]
+muli #40
+addi 1223; 
+mov A 1224
+mov 1224 A
+muli #1
+addi #4
+mov @A 1225
+wrr 1225
+wrl
+mov #0 1228
+mov 1228 A; Realizamos el if
+jz L1
+mov #0 1233; Estoy en Ref:tid
+mov #0 1234; Estoy en Ref:tid
+mov #0 1234; Estoy en Ref:tid
+mov 1234 A
+muli #1
+addi #3
+mov @A 1235
+mov #0 1234; Estoy en Ref:tid
+mov #0 1234; Estoy en Ref:tid
+mov 1234 A
+muli #1
+addi #3
+mov @A 1235
+mov #0 1236;Inicio
+mov #3 1236; Guardo un numero Entero
+mov #0 1236;Inicio
+mov #3 1236; Guardo un numero Entero
+mov 1236 A; Cargo el primer termino en A
+muli 1240; Realizamos la operacion entera total.
+mov A 1241; Lo cargamos en la dir correspondiente.
+mov 1235 A; Cargo el primer termino en A
+addi 1241; Realizamos la operacion entera total.
+mov A 1242; Lo cargamos en la dir correspondiente.
+mov 1233 A
+muli #1
+addi #1231
+mov 1242 @A
+mov #0 1244; Estoy en Ref:tid
+mov #0 1245; Estoy en Ref:tid
+mov #0 1245; Estoy en Ref:tid
+mov 1245 A
+muli #1
+addi #1231
+mov @A 1246
+mov #0 1245; Estoy en Ref:tid
+mov #0 1245; Estoy en Ref:tid
+mov 1245 A
+muli #1
+addi #1231
+mov @A 1246
+mov 1246 A; Cargo el primer termino en A
+divi 1247; Realizamos la operacion entera total.
+mov A 1248; Lo cargamos en la dir correspondiente.
+mov #0 1245; Estoy en Ref:tid
+mov #0 1245; Estoy en Ref:tid
+mov 1245 A
+muli #1
+addi #1231
+mov @A 1246
+mov #0 1245; Estoy en Ref:tid
+mov #0 1245; Estoy en Ref:tid
+mov 1245 A
+muli #1
+addi #1231
+mov @A 1246
+mov 1246 A; Cargo el primer termino en A
+divi 1247; Realizamos la operacion entera total.
+mov A 1248; Lo cargamos en la dir correspondiente.
+mov 1248 A; Cargo el primer termino en A
+divi 1249; Realizamos la operacion entera total.
+mov A 1250; Lo cargamos en la dir correspondiente.
+mov 1244 A
+muli #1
+addi #1232
+mov 1250 @A
+mov #0 1252; Estoy en Ref:tid
+mov #0 1252; Estoy en Ref:tid
+mov 1252 A
+muli #1
+addi #1232
+mov @A 1253
+wri 1253
+wrl
+L1
+mov #0 1255; Estoy en Ref:tid
+mov #0 1255; Estoy en Ref:tid
+mov 1255 A
+muli #1
+addi #1205
+mov @A 1256
+wrr 1256
+wrl
+mov #0 1258; Estoy en Ref:tid
+mov #0 1258; Estoy en Ref:tid
+mov 1258 A
+muli #1
+addi #3
+mov @A 1259
+wri 1259
+wrl
+halt
+

@@ -34,80 +34,82 @@ mov 20 A
 muli #1
 addi #3
 mov @A 21
+mov #0 22;Inicio
 mov #3 22; Guardo un numero Entero
+mov #0 22;Inicio
 mov #3 22; Guardo un numero Entero
 mov 22 A; Cargo el primer termino en A
-muli 0; Realizamos la operacion entera total.
-mov A 26; Lo cargamos en la dir correspondiente.
-mov 21 A; Cargo el primer termino en A
-addi 26; Realizamos la operacion entera total.
+muli 26; Realizamos la operacion entera total.
 mov A 27; Lo cargamos en la dir correspondiente.
+mov 21 A; Cargo el primer termino en A
+addi 27; Realizamos la operacion entera total.
+mov A 28; Lo cargamos en la dir correspondiente.
 mov 19 A
 muli #1
 addi #17
-mov 27 @A
-mov #0 29; Estoy en Ref:tid
+mov 28 @A
 mov #0 30; Estoy en Ref:tid
-mov #0 30; Estoy en Ref:tid
-mov 30 A
+mov #0 31; Estoy en Ref:tid
+mov #0 31; Estoy en Ref:tid
+mov 31 A
 muli #1
 addi #17
-mov @A 31
-mov #0 30; Estoy en Ref:tid
-mov #0 30; Estoy en Ref:tid
-mov 30 A
+mov @A 32
+mov #0 31; Estoy en Ref:tid
+mov #0 31; Estoy en Ref:tid
+mov 31 A
 muli #1
 addi #17
-mov @A 31
-mov 31 A; Cargo el primer termino en A
-divi 32; Realizamos la operacion entera total.
-mov A 33; Lo cargamos en la dir correspondiente.
-mov #0 30; Estoy en Ref:tid
-mov #0 30; Estoy en Ref:tid
-mov 30 A
+mov @A 32
+mov 32 A; Cargo el primer termino en A
+divi 33; Realizamos la operacion entera total.
+mov A 34; Lo cargamos en la dir correspondiente.
+mov #0 31; Estoy en Ref:tid
+mov #0 31; Estoy en Ref:tid
+mov 31 A
 muli #1
 addi #17
-mov @A 31
-mov #0 30; Estoy en Ref:tid
-mov #0 30; Estoy en Ref:tid
-mov 30 A
+mov @A 32
+mov #0 31; Estoy en Ref:tid
+mov #0 31; Estoy en Ref:tid
+mov 31 A
 muli #1
 addi #17
-mov @A 31
-mov 31 A; Cargo el primer termino en A
-divi 32; Realizamos la operacion entera total.
-mov A 33; Lo cargamos en la dir correspondiente.
-mov 33 A; Cargo el primer termino en A
-divi 34; Realizamos la operacion entera total.
-mov A 35; Lo cargamos en la dir correspondiente.
-mov 29 A
+mov @A 32
+mov 32 A; Cargo el primer termino en A
+divi 33; Realizamos la operacion entera total.
+mov A 34; Lo cargamos en la dir correspondiente.
+mov 34 A; Cargo el primer termino en A
+divi 35; Realizamos la operacion entera total.
+mov A 36; Lo cargamos en la dir correspondiente.
+mov 30 A
 muli #1
 addi #18
-mov 35 @A
-mov #0 37; Estoy en Ref:tid
-mov #0 37; Estoy en Ref:tid
-mov 37 A
+mov 36 @A
+mov #0 38; Estoy en Ref:tid
+mov #0 38; Estoy en Ref:tid
+mov 38 A
 muli #1
 addi #18
-mov @A 38
-wri 38
+mov @A 39
+wri 39
 wrl
 L1
-mov #0 17; Estoy en Ref:tid
-mov #0 17; Estoy en Ref:tid
-mov 17 A
+mov #0 41; Estoy en Ref:tid
+mov #0 41; Estoy en Ref:tid
+mov 41 A
 muli #1
 addi #4
-mov @A 18
-wrr 18
+mov @A 42
+wrr 42
 wrl
-mov #0 20; Estoy en Ref:tid
-mov #0 20; Estoy en Ref:tid
-mov 20 A
+mov #0 44; Estoy en Ref:tid
+mov #0 44; Estoy en Ref:tid
+mov 44 A
 muli #1
 addi #3
-mov @A 21
-wri 21
+mov @A 45
+wri 45
 wrl
 halt
 

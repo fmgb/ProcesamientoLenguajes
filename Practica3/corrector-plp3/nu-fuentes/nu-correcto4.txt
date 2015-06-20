@@ -1,0 +1,76 @@
+program nuCorrecto4;
+
+ var glo1,gloBal2:integer;
+ 
+ function uno:integer;
+  var a:integer;
+  function dos:real;
+   function tres:real;
+    function cuatro:real;
+     var a,b:real;
+     function cinco:real;
+      function seis:real;
+       function siete:real;
+        function ocho:real;
+         function nueve:real;
+          function diez:real;
+           function once:real;
+            function doce:real;
+             var i12:integer; 
+            begin
+              b := 12/4
+            end;
+           begin
+             writeln(11)
+           end;
+          begin
+            writeln(2*5)
+          end;
+         begin
+           a := 3*3
+         end;
+        begin
+          writeln(2+2+2+2)
+        end;
+       begin
+         glo1 := 15 div 2
+       end;
+      begin
+        gloBal2 := 41 div 6
+      end;
+     begin
+       writeln(15-7-3)
+     end;
+    begin
+      glo1 := glo1 - 3
+    end;
+   begin
+     glo1 := gloBal2 div 2
+   end;
+  begin
+    writeln(22 div 11)
+  end;
+ begin
+   begin
+     begin
+       a := 12 div 11
+     end
+   end
+ end;
+var i,suma,n:integer;
+begin (* programa principal *)
+ 
+ n := 6;
+ i := 0;
+ suma := 0;
+ while i<n do
+   begin
+     suma := suma + i;
+     i := i + 1
+   end; 
+ if (n * (n-1)) div 2 <> suma then
+   writeln(0)
+ else
+   writeln(1)
+ endif
+end

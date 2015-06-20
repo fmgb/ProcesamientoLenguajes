@@ -1,0 +1,62 @@
+program nuCorrecto2;
+
+ function uno:real;
+  var a:integer;
+  function dos:real;
+   var a:integer;
+   function tres:real;
+    var a:integer;
+   begin
+     a := 7*5+a
+   end;
+   function ttres:real;
+    var a:real;
+    function cuatro:integer;
+     var a:integer;
+    begin
+      a := 2 div (3-5*4)
+    end;
+   begin
+     a := 7
+   end;
+   var b,c:real;
+  begin
+    b := c+3;
+    c := 2/3
+  end;
+  var d,e,f:real;
+ begin
+  a := 7777 div 1111
+ end;
+
+ function uuno:integer;
+  var a:integer;
+  function dos:integer;
+   var b:integer;
+   function tres:integer;
+    var c:integer;
+    function cuatro:integer;
+     var d:integer;
+    begin
+      d := (2*a)+b div (c-7)
+    end;
+   begin
+     c := 8
+   end;
+  begin
+    if a < 3 then
+      b := 5
+    else
+     begin
+       b := 6;
+       b := a+b
+     end
+    endif
+  end;
+ begin
+   a := 3
+ end;
+
+begin (* programa principal *)
+  writeln (27-20-7)
+end

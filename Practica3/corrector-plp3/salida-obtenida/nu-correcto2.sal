@@ -1,0 +1,63 @@
+
+// program nuCorrecto2
+int uno_a;
+int uno_dos_a;
+int uno_dos_tres_a;
+double uno_dos_tres() {
+uno_dos_tres_a =i 7 *i 5 +i uno_dos_tres_a;
+
+}
+double uno_dos_ttres_a;
+int uno_dos_ttres_cuatro_a;
+int uno_dos_ttres_cuatro() {
+uno_dos_ttres_cuatro_a =i 2 /i (3 -i 5 *i 4 );
+
+}
+double uno_dos_ttres() {
+uno_dos_ttres_a =r itor(7 );
+
+}
+double uno_dos_b,uno_dos_c;
+double uno_dos() {
+uno_dos_b =r uno_dos_c+r itor( 3 );
+uno_dos_c =r itor(2 )/r itor(3 );
+
+}
+double uno_d,uno_e,uno_f;
+double uno() {
+uno_a =i 7777 /i 1111 ;
+
+}
+int uuno_a;
+int uuno_dos_b;
+int uuno_dos_tres_c;
+int uuno_dos_tres_cuatro_d;
+int uuno_dos_tres_cuatro() {
+uuno_dos_tres_cuatro_d =i (2 *i uuno_a)+i uuno_dos_b/i (uuno_dos_tres_c-i 7 );
+
+}
+int uuno_dos_tres() {
+uuno_dos_tres_c =i 8 ;
+
+}
+int uuno_dos() {
+
+if(uuno_a<i 3 )
+uuno_dos_b =i 5 ;
+else
+{
+uuno_dos_b =i 6 ;
+uuno_dos_b =i uuno_a+i uuno_dos_b;
+
+}
+
+}
+int uuno() {
+uuno_a =i 3 ;
+
+}
+int main() {
+printf("%d\n",27 -i 20 -i 7 );
+
+}
+

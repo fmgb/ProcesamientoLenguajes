@@ -1,0 +1,2143 @@
+ENTRO CON mov #0 47; Estoy en Ref:tid
+mov #0 47; Estoy en Ref:tid
+mov 47 A
+muli #1
+addi #2
+mov @A 48
+mov #0 47; Estoy en Ref:tid
+mov #0 47; Estoy en Ref:tid
+mov 47 A
+muli #1
+addi #2
+mov @A 48
+mov #0 49; Estoy en Ref:tid
+mov #0 49; Estoy en Ref:tid
+mov 49 A
+muli #1
+addi #3
+mov @A 50
+mov 48 A; Cargo el primer termino en A
+lssi 50; Realizamos la operacion entera total.
+mov A 51; Lo cargamos en la dir correspondiente.
+
+
+INSTR
+mov #0 52; Estoy en Ref:tid
+mov #0 52; Estoy en Ref:tid
+mov #0 53; Estoy en Ref:tid
+mov #0 53; Estoy en Ref:tid
+mov 53 A
+muli #1
+addi #1
+mov @A 54
+mov 52 A; [ ]
+muli #5
+addi 54; 
+mov A 55
+mov #0 52; Estoy en Ref:tid
+mov #0 52; Estoy en Ref:tid
+mov #0 53; Estoy en Ref:tid
+mov #0 53; Estoy en Ref:tid
+mov 53 A
+muli #1
+addi #1
+mov @A 54
+mov 52 A; [ ]
+muli #5
+addi 54; 
+mov A 55
+mov #0 56; Estoy en Ref:tid
+mov #0 56; Estoy en Ref:tid
+mov 56 A
+muli #1
+addi #2
+mov @A 57
+mov 55 A; [ ]
+muli #5
+addi 57; 
+mov A 58
+mov #0 59; Guardo un numero Entero
+mov 58 A
+muli #1
+addi #4
+mov 59 @A
+mov #0 61; Estoy en Ref:tid
+mov #0 62; Estoy en Ref:tid
+mov #0 62; Estoy en Ref:tid
+mov 62 A
+muli #1
+addi #2
+mov @A 63
+mov #0 62; Estoy en Ref:tid
+mov #0 62; Estoy en Ref:tid
+mov 62 A
+muli #1
+addi #2
+mov @A 63
+mov #1 64; Guardo un numero Entero
+mov 63 A; Cargo el primer termino en A
+addi 64; Realizamos la operacion entera total.
+mov A 65; Lo cargamos en la dir correspondiente.
+mov 61 A
+muli #1
+addi #2
+mov 65 @A
+
+ENTRO CON mov #0 39; Estoy en Ref:tid
+mov #0 39; Estoy en Ref:tid
+mov 39 A
+muli #1
+addi #1
+mov @A 40
+mov #0 39; Estoy en Ref:tid
+mov #0 39; Estoy en Ref:tid
+mov 39 A
+muli #1
+addi #1
+mov @A 40
+mov #0 41; Estoy en Ref:tid
+mov #0 41; Estoy en Ref:tid
+mov 41 A
+muli #1
+addi #3
+mov @A 42
+mov 40 A; Cargo el primer termino en A
+lssi 42; Realizamos la operacion entera total.
+mov A 43; Lo cargamos en la dir correspondiente.
+
+
+INSTR
+mov #0 44; Estoy en Ref:tid
+mov #0 45; Guardo un numero Entero
+mov 44 A
+muli #1
+addi #2
+mov 45 @A
+L1
+mov #0 47; Estoy en Ref:tid
+mov #0 47; Estoy en Ref:tid
+mov 47 A
+muli #1
+addi #2
+mov @A 48
+mov #0 47; Estoy en Ref:tid
+mov #0 47; Estoy en Ref:tid
+mov 47 A
+muli #1
+addi #2
+mov @A 48
+mov #0 49; Estoy en Ref:tid
+mov #0 49; Estoy en Ref:tid
+mov 49 A
+muli #1
+addi #3
+mov @A 50
+mov 48 A; Cargo el primer termino en A
+lssi 50; Realizamos la operacion entera total.
+mov A 51; Lo cargamos en la dir correspondiente.
+mov 48 A
+jz L2
+mov #0 49; Estoy en Ref:tid
+mov #0 49; Estoy en Ref:tid
+mov 49 A
+muli #1
+addi #3
+mov @A 50
+jmp L1
+L2
+mov #0 52; Estoy en Ref:tid
+mov #0 53; Estoy en Ref:tid
+mov #0 53; Estoy en Ref:tid
+mov 53 A
+muli #1
+addi #1
+mov @A 54
+mov #0 53; Estoy en Ref:tid
+mov #0 53; Estoy en Ref:tid
+mov 53 A
+muli #1
+addi #1
+mov @A 54
+mov #1 55; Guardo un numero Entero
+mov 54 A; Cargo el primer termino en A
+addi 55; Realizamos la operacion entera total.
+mov A 56; Lo cargamos en la dir correspondiente.
+mov 52 A
+muli #1
+addi #1
+mov 56 @A
+
+ENTRO CON mov #0 47; Estoy en Ref:tid
+mov #0 47; Estoy en Ref:tid
+mov 47 A
+muli #1
+addi #1
+mov @A 48
+mov #0 47; Estoy en Ref:tid
+mov #0 47; Estoy en Ref:tid
+mov 47 A
+muli #1
+addi #1
+mov @A 48
+mov #0 49; Estoy en Ref:tid
+mov #0 49; Estoy en Ref:tid
+mov 49 A
+muli #1
+addi #3
+mov @A 50
+mov 48 A; Cargo el primer termino en A
+lssi 50; Realizamos la operacion entera total.
+mov A 51; Lo cargamos en la dir correspondiente.
+
+
+INSTR
+mov #0 52; Estoy en Ref:tid
+mov #0 52; Estoy en Ref:tid
+mov #0 53; Estoy en Ref:tid
+mov #0 53; Estoy en Ref:tid
+mov 53 A
+muli #1
+addi #1
+mov @A 54
+mov 52 A; [ ]
+muli #5
+addi 54; 
+mov A 55
+mov #0 52; Estoy en Ref:tid
+mov #0 52; Estoy en Ref:tid
+mov #0 53; Estoy en Ref:tid
+mov #0 53; Estoy en Ref:tid
+mov 53 A
+muli #1
+addi #1
+mov @A 54
+mov 52 A; [ ]
+muli #5
+addi 54; 
+mov A 55
+mov #0 56; Estoy en Ref:tid
+mov #0 56; Estoy en Ref:tid
+mov 56 A
+muli #1
+addi #1
+mov @A 57
+mov 55 A; [ ]
+muli #5
+addi 57; 
+mov A 58
+mov #1 59; Guardo un numero Entero
+mov 58 A
+muli #1
+addi #4
+mov 59 @A
+mov #0 61; Estoy en Ref:tid
+mov #0 62; Estoy en Ref:tid
+mov #0 62; Estoy en Ref:tid
+mov 62 A
+muli #1
+addi #1
+mov @A 63
+mov #0 62; Estoy en Ref:tid
+mov #0 62; Estoy en Ref:tid
+mov 62 A
+muli #1
+addi #1
+mov @A 63
+mov #1 64; Guardo un numero Entero
+mov 63 A; Cargo el primer termino en A
+addi 64; Realizamos la operacion entera total.
+mov A 65; Lo cargamos en la dir correspondiente.
+mov 61 A
+muli #1
+addi #1
+mov 65 @A
+
+ENTRO CON mov #0 55; Estoy en Ref:tid
+mov #0 55; Estoy en Ref:tid
+mov 55 A
+muli #1
+addi #1
+mov @A 56
+mov #0 55; Estoy en Ref:tid
+mov #0 55; Estoy en Ref:tid
+mov 55 A
+muli #1
+addi #1
+mov @A 56
+mov #0 57; Estoy en Ref:tid
+mov #0 57; Estoy en Ref:tid
+mov 57 A
+muli #1
+addi #3
+mov @A 58
+mov 56 A; Cargo el primer termino en A
+lssi 58; Realizamos la operacion entera total.
+mov A 59; Lo cargamos en la dir correspondiente.
+
+
+INSTR
+mov #0 60; Estoy en Ref:tid
+mov #0 60; Estoy en Ref:tid
+mov #0 61; Estoy en Ref:tid
+mov #0 61; Estoy en Ref:tid
+mov 61 A
+muli #1
+addi #1
+mov @A 62
+mov 60 A; [ ]
+muli #5
+addi 62; 
+mov A 63
+mov #0 60; Estoy en Ref:tid
+mov #0 60; Estoy en Ref:tid
+mov #0 61; Estoy en Ref:tid
+mov #0 61; Estoy en Ref:tid
+mov 61 A
+muli #1
+addi #1
+mov @A 62
+mov 60 A; [ ]
+muli #5
+addi 62; 
+mov A 63
+mov #0 64; Guardo un numero Entero
+mov 63 A; [ ]
+muli #5
+addi 64; 
+mov A 65
+mov #1 66; Guardo un numero Entero
+mov 65 A
+muli #1
+addi #4
+mov 66 @A
+mov #0 68; Estoy en Ref:tid
+mov #0 69; Estoy en Ref:tid
+mov #0 69; Estoy en Ref:tid
+mov 69 A
+muli #1
+addi #1
+mov @A 70
+mov #0 69; Estoy en Ref:tid
+mov #0 69; Estoy en Ref:tid
+mov 69 A
+muli #1
+addi #1
+mov @A 70
+mov #1 71; Guardo un numero Entero
+mov 70 A; Cargo el primer termino en A
+addi 71; Realizamos la operacion entera total.
+mov A 72; Lo cargamos en la dir correspondiente.
+mov 68 A
+muli #1
+addi #1
+mov 72 @A
+
+ENTRO CON mov #0 63; Estoy en Ref:tid
+mov #0 63; Estoy en Ref:tid
+mov 63 A
+muli #1
+addi #1
+mov @A 64
+mov #0 63; Estoy en Ref:tid
+mov #0 63; Estoy en Ref:tid
+mov 63 A
+muli #1
+addi #1
+mov @A 64
+mov #0 65; Estoy en Ref:tid
+mov #0 65; Estoy en Ref:tid
+mov 65 A
+muli #1
+addi #3
+mov @A 66
+mov 64 A; Cargo el primer termino en A
+lssi 66; Realizamos la operacion entera total.
+mov A 67; Lo cargamos en la dir correspondiente.
+
+
+INSTR
+mov #0 68; Estoy en Ref:tid
+mov #0 68; Estoy en Ref:tid
+mov #0 69; Estoy en Ref:tid
+mov #0 69; Estoy en Ref:tid
+mov 69 A
+muli #1
+addi #3
+mov @A 70
+mov #0 69; Estoy en Ref:tid
+mov #0 69; Estoy en Ref:tid
+mov 69 A
+muli #1
+addi #3
+mov @A 70
+mov #1 71; Guardo un numero Entero
+mov 70 A; Cargo el primer termino en A
+subi 71; Realizamos la operacion entera total.
+mov A 72; Lo cargamos en la dir correspondiente.
+mov 68 A; [ ]
+muli #5
+addi 72; 
+mov A 73
+mov #0 68; Estoy en Ref:tid
+mov #0 68; Estoy en Ref:tid
+mov #0 69; Estoy en Ref:tid
+mov #0 69; Estoy en Ref:tid
+mov 69 A
+muli #1
+addi #3
+mov @A 70
+mov #0 69; Estoy en Ref:tid
+mov #0 69; Estoy en Ref:tid
+mov 69 A
+muli #1
+addi #3
+mov @A 70
+mov #1 71; Guardo un numero Entero
+mov 70 A; Cargo el primer termino en A
+subi 71; Realizamos la operacion entera total.
+mov A 72; Lo cargamos en la dir correspondiente.
+mov 68 A; [ ]
+muli #5
+addi 72; 
+mov A 73
+mov #0 74; Estoy en Ref:tid
+mov #0 74; Estoy en Ref:tid
+mov 74 A
+muli #1
+addi #1
+mov @A 75
+mov 73 A; [ ]
+muli #5
+addi 75; 
+mov A 76
+mov #1 77; Guardo un numero Entero
+mov 76 A
+muli #1
+addi #4
+mov 77 @A
+mov #0 79; Estoy en Ref:tid
+mov #0 80; Estoy en Ref:tid
+mov #0 80; Estoy en Ref:tid
+mov 80 A
+muli #1
+addi #1
+mov @A 81
+mov #0 80; Estoy en Ref:tid
+mov #0 80; Estoy en Ref:tid
+mov 80 A
+muli #1
+addi #1
+mov @A 81
+mov #1 82; Guardo un numero Entero
+mov 81 A; Cargo el primer termino en A
+addi 82; Realizamos la operacion entera total.
+mov A 83; Lo cargamos en la dir correspondiente.
+mov 79 A
+muli #1
+addi #1
+mov 83 @A
+
+ENTRO CON mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 91; Estoy en Ref:tid
+mov #0 91; Estoy en Ref:tid
+mov 91 A
+muli #1
+addi #3
+mov @A 92
+mov 90 A; Cargo el primer termino en A
+lssi 92; Realizamos la operacion entera total.
+mov A 93; Lo cargamos en la dir correspondiente.
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 91; Estoy en Ref:tid
+mov #0 91; Estoy en Ref:tid
+mov 91 A
+muli #1
+addi #3
+mov @A 92
+mov 90 A; Cargo el primer termino en A
+lssi 92; Realizamos la operacion entera total.
+mov A 93; Lo cargamos en la dir correspondiente.
+mov 0 A; Cargo el primer termino en A
+muli 0; Realizamos la operacion entera total.
+mov A 99; Lo cargamos en la dir correspondiente.
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 91; Estoy en Ref:tid
+mov #0 91; Estoy en Ref:tid
+mov 91 A
+muli #1
+addi #3
+mov @A 92
+mov 90 A; Cargo el primer termino en A
+lssi 92; Realizamos la operacion entera total.
+mov A 93; Lo cargamos en la dir correspondiente.
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 91; Estoy en Ref:tid
+mov #0 91; Estoy en Ref:tid
+mov 91 A
+muli #1
+addi #3
+mov @A 92
+mov 90 A; Cargo el primer termino en A
+lssi 92; Realizamos la operacion entera total.
+mov A 93; Lo cargamos en la dir correspondiente.
+mov 0 A; Cargo el primer termino en A
+muli 0; Realizamos la operacion entera total.
+mov A 99; Lo cargamos en la dir correspondiente.
+mov 99 A; Cargo el primer termino en A
+muli 0; Realizamos la operacion entera total.
+mov A 104; Lo cargamos en la dir correspondiente.
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 91; Estoy en Ref:tid
+mov #0 91; Estoy en Ref:tid
+mov 91 A
+muli #1
+addi #3
+mov @A 92
+mov 90 A; Cargo el primer termino en A
+lssi 92; Realizamos la operacion entera total.
+mov A 93; Lo cargamos en la dir correspondiente.
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 91; Estoy en Ref:tid
+mov #0 91; Estoy en Ref:tid
+mov 91 A
+muli #1
+addi #3
+mov @A 92
+mov 90 A; Cargo el primer termino en A
+lssi 92; Realizamos la operacion entera total.
+mov A 93; Lo cargamos en la dir correspondiente.
+mov 0 A; Cargo el primer termino en A
+muli 0; Realizamos la operacion entera total.
+mov A 99; Lo cargamos en la dir correspondiente.
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 91; Estoy en Ref:tid
+mov #0 91; Estoy en Ref:tid
+mov 91 A
+muli #1
+addi #3
+mov @A 92
+mov 90 A; Cargo el primer termino en A
+lssi 92; Realizamos la operacion entera total.
+mov A 93; Lo cargamos en la dir correspondiente.
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 91; Estoy en Ref:tid
+mov #0 91; Estoy en Ref:tid
+mov 91 A
+muli #1
+addi #3
+mov @A 92
+mov 90 A; Cargo el primer termino en A
+lssi 92; Realizamos la operacion entera total.
+mov A 93; Lo cargamos en la dir correspondiente.
+mov 0 A; Cargo el primer termino en A
+muli 0; Realizamos la operacion entera total.
+mov A 99; Lo cargamos en la dir correspondiente.
+mov 99 A; Cargo el primer termino en A
+muli 0; Realizamos la operacion entera total.
+mov A 104; Lo cargamos en la dir correspondiente.
+mov 104 A; Cargo el primer termino en A
+muli 0; Realizamos la operacion entera total.
+mov A 109; Lo cargamos en la dir correspondiente.
+
+
+INSTR
+mov #0 107; Guardo un numero Entero
+mov #0 117
+mov 117 A; Realizamos el if
+jz L27
+mov #0 52; Estoy en Ref:tid
+mov #0 52; Estoy en Ref:tid
+mov #0 53; Estoy en Ref:tid
+mov #0 53; Estoy en Ref:tid
+mov 53 A
+muli #1
+addi #1
+mov @A 54
+mov 52 A; [ ]
+muli #5
+addi 54; 
+mov A 55
+mov #0 52; Estoy en Ref:tid
+mov #0 52; Estoy en Ref:tid
+mov #0 53; Estoy en Ref:tid
+mov #0 53; Estoy en Ref:tid
+mov 53 A
+muli #1
+addi #1
+mov @A 54
+mov 52 A; [ ]
+muli #5
+addi 54; 
+mov A 55
+mov #0 56; Estoy en Ref:tid
+mov #0 56; Estoy en Ref:tid
+mov 56 A
+muli #1
+addi #2
+mov @A 57
+mov 55 A; [ ]
+muli #5
+addi 57; 
+mov A 58
+mov #0 59; Guardo un numero Entero
+mov 58 A
+muli #1
+addi #4
+mov 59 @A
+mov #0 61; Estoy en Ref:tid
+mov #0 62; Estoy en Ref:tid
+mov #0 62; Estoy en Ref:tid
+mov 62 A
+muli #1
+addi #2
+mov @A 63
+mov #0 62; Estoy en Ref:tid
+mov #0 62; Estoy en Ref:tid
+mov 62 A
+muli #1
+addi #2
+mov @A 63
+mov #1 64; Guardo un numero Entero
+mov 63 A; Cargo el primer termino en A
+addi 64; Realizamos la operacion entera total.
+mov A 65; Lo cargamos en la dir correspondiente.
+mov 61 A
+muli #1
+addi #2
+mov 65 @A
+mov #0 119; Estoy en Ref:tid
+mov #0 120; Guardo un numero Entero
+mov 119 A
+muli #1
+addi #118
+mov 120 @A
+mov #0 136
+mov 136 A; Realizamos el if
+jz L13
+mov #0 148
+mov 148 A; Realizamos el if
+jz L11
+mov #0 149; Estoy en Ref:tid
+mov #0 150; Estoy en Ref:tid
+mov #0 150; Estoy en Ref:tid
+mov 150 A
+muli #1
+addi #1
+mov @A 151
+mov #0 150; Estoy en Ref:tid
+mov #0 150; Estoy en Ref:tid
+mov 150 A
+muli #1
+addi #1
+mov @A 151
+mov #1 152; Guardo un numero Entero
+mov 151 A; Cargo el primer termino en A
+addi 152; Realizamos la operacion entera total.
+mov A 153; Lo cargamos en la dir correspondiente.
+mov 149 A
+muli #1
+addi #1
+mov 153 @A
+mov #0 155; Estoy en Ref:tid
+mov #0 156; Estoy en Ref:tid
+mov #0 156; Estoy en Ref:tid
+mov 156 A
+muli #1
+addi #2
+mov @A 157
+mov #0 156; Estoy en Ref:tid
+mov #0 156; Estoy en Ref:tid
+mov 156 A
+muli #1
+addi #2
+mov @A 157
+mov #1 158; Guardo un numero Entero
+mov 157 A; Cargo el primer termino en A
+addi 158; Realizamos la operacion entera total.
+mov A 159; Lo cargamos en la dir correspondiente.
+mov 155 A
+muli #1
+addi #2
+mov 159 @A
+mov #0 161; Estoy en Ref:tid
+mov #0 162; Estoy en Ref:tid
+mov #0 162; Estoy en Ref:tid
+mov 162 A
+muli #1
+addi #30
+mov @A 163
+mov #0 162; Estoy en Ref:tid
+mov #0 162; Estoy en Ref:tid
+mov 162 A
+muli #1
+addi #30
+mov @A 163
+mov #1 164; Guardo un numero Entero
+mov 163 A; Cargo el primer termino en A
+addi 164; Realizamos la operacion entera total.
+mov A 165; Lo cargamos en la dir correspondiente.
+mov 161 A
+muli #1
+addi #30
+mov 165 @A
+mov #0 167; Estoy en Ref:tid
+mov #1 168; Guardo un numero Entero
+mov 167 A
+muli #1
+addi #118
+mov 168 @A
+jmp L12
+L11; Realizamos con else.
+L12
+jmp L14
+L13; Realizamos con else.
+L14
+mov #0 148
+mov 148 A; Realizamos el if
+jz L17
+mov #0 158
+mov 158 A; Realizamos el if
+jz L15
+mov #0 159; Estoy en Ref:tid
+mov #0 160; Estoy en Ref:tid
+mov #0 160; Estoy en Ref:tid
+mov 160 A
+muli #1
+addi #1
+mov @A 161
+mov #0 160; Estoy en Ref:tid
+mov #0 160; Estoy en Ref:tid
+mov 160 A
+muli #1
+addi #1
+mov @A 161
+mov #1 162; Guardo un numero Entero
+mov 161 A; Cargo el primer termino en A
+addi 162; Realizamos la operacion entera total.
+mov A 163; Lo cargamos en la dir correspondiente.
+mov 159 A
+muli #1
+addi #1
+mov 163 @A
+mov #0 165; Estoy en Ref:tid
+mov #0 166; Estoy en Ref:tid
+mov #0 166; Estoy en Ref:tid
+mov 166 A
+muli #1
+addi #30
+mov @A 167
+mov #0 166; Estoy en Ref:tid
+mov #0 166; Estoy en Ref:tid
+mov 166 A
+muli #1
+addi #30
+mov @A 167
+mov #1 168; Guardo un numero Entero
+mov 167 A; Cargo el primer termino en A
+addi 168; Realizamos la operacion entera total.
+mov A 169; Lo cargamos en la dir correspondiente.
+mov 165 A
+muli #1
+addi #30
+mov 169 @A
+mov #0 171; Estoy en Ref:tid
+mov #1 172; Guardo un numero Entero
+mov 171 A
+muli #1
+addi #118
+mov 172 @A
+jmp L16
+L15; Realizamos con else.
+L16
+jmp L18
+L17; Realizamos con else.
+L18
+mov #0 160
+mov 160 A; Realizamos el if
+jz L21
+mov #0 170
+mov 170 A; Realizamos el if
+jz L19
+mov #0 171; Estoy en Ref:tid
+mov #0 172; Estoy en Ref:tid
+mov #0 172; Estoy en Ref:tid
+mov 172 A
+muli #1
+addi #2
+mov @A 173
+mov #0 172; Estoy en Ref:tid
+mov #0 172; Estoy en Ref:tid
+mov 172 A
+muli #1
+addi #2
+mov @A 173
+mov #1 174; Guardo un numero Entero
+mov 173 A; Cargo el primer termino en A
+addi 174; Realizamos la operacion entera total.
+mov A 175; Lo cargamos en la dir correspondiente.
+mov 171 A
+muli #1
+addi #2
+mov 175 @A
+mov #0 177; Estoy en Ref:tid
+mov #0 178; Estoy en Ref:tid
+mov #0 178; Estoy en Ref:tid
+mov 178 A
+muli #1
+addi #30
+mov @A 179
+mov #0 178; Estoy en Ref:tid
+mov #0 178; Estoy en Ref:tid
+mov 178 A
+muli #1
+addi #30
+mov @A 179
+mov #1 180; Guardo un numero Entero
+mov 179 A; Cargo el primer termino en A
+addi 180; Realizamos la operacion entera total.
+mov A 181; Lo cargamos en la dir correspondiente.
+mov 177 A
+muli #1
+addi #30
+mov 181 @A
+mov #0 183; Estoy en Ref:tid
+mov #1 184; Guardo un numero Entero
+mov 183 A
+muli #1
+addi #118
+mov 184 @A
+jmp L20
+L19; Realizamos con else.
+L20
+jmp L22
+L21; Realizamos con else.
+L22
+mov #0 162
+mov 162 A; Realizamos el if
+jz L25
+mov #0 165; Estoy en Ref:tid
+mov #0 165; Estoy en Ref:tid
+mov 165 A
+muli #1
+addi #1
+mov @A 166
+wri 166
+wrl
+mov #0 168; Estoy en Ref:tid
+mov #0 168; Estoy en Ref:tid
+mov 168 A
+muli #1
+addi #2
+mov @A 169
+wri 169
+wrl
+jmp L26
+L25; Realizamos con else.
+mov #0 179
+mov 179 A; Realizamos el if
+jz L23
+mov #0 180; Estoy en Ref:tid
+mov #1 181; Guardo un numero Entero
+mov 180 A
+muli #1
+addi #31
+mov 181 @A
+jmp L24
+L23; Realizamos con else.
+mov #0 180; Estoy en Ref:tid
+mov #2 181; Guardo un numero Entero
+mov 180 A
+muli #1
+addi #32
+mov 181 @A
+
+L24
+
+L26
+jmp L28
+L27; Realizamos con else.
+L28
+
+ENTRO CON mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 145; Estoy en Ref:tid
+mov #0 145; Estoy en Ref:tid
+mov 145 A
+muli #1
+addi #3
+mov @A 146
+mov 144 A; Cargo el primer termino en A
+lssi 146; Realizamos la operacion entera total.
+mov A 147; Lo cargamos en la dir correspondiente.
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 145; Estoy en Ref:tid
+mov #0 145; Estoy en Ref:tid
+mov 145 A
+muli #1
+addi #3
+mov @A 146
+mov 144 A; Cargo el primer termino en A
+lssi 146; Realizamos la operacion entera total.
+mov A 147; Lo cargamos en la dir correspondiente.
+mov 0 A; Cargo el primer termino en A
+muli 0; Realizamos la operacion entera total.
+mov A 153; Lo cargamos en la dir correspondiente.
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 145; Estoy en Ref:tid
+mov #0 145; Estoy en Ref:tid
+mov 145 A
+muli #1
+addi #3
+mov @A 146
+mov 144 A; Cargo el primer termino en A
+lssi 146; Realizamos la operacion entera total.
+mov A 147; Lo cargamos en la dir correspondiente.
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 145; Estoy en Ref:tid
+mov #0 145; Estoy en Ref:tid
+mov 145 A
+muli #1
+addi #3
+mov @A 146
+mov 144 A; Cargo el primer termino en A
+lssi 146; Realizamos la operacion entera total.
+mov A 147; Lo cargamos en la dir correspondiente.
+mov 0 A; Cargo el primer termino en A
+muli 0; Realizamos la operacion entera total.
+mov A 153; Lo cargamos en la dir correspondiente.
+mov 153 A; Cargo el primer termino en A
+muli 0; Realizamos la operacion entera total.
+mov A 158; Lo cargamos en la dir correspondiente.
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 145; Estoy en Ref:tid
+mov #0 145; Estoy en Ref:tid
+mov 145 A
+muli #1
+addi #3
+mov @A 146
+mov 144 A; Cargo el primer termino en A
+lssi 146; Realizamos la operacion entera total.
+mov A 147; Lo cargamos en la dir correspondiente.
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 145; Estoy en Ref:tid
+mov #0 145; Estoy en Ref:tid
+mov 145 A
+muli #1
+addi #3
+mov @A 146
+mov 144 A; Cargo el primer termino en A
+lssi 146; Realizamos la operacion entera total.
+mov A 147; Lo cargamos en la dir correspondiente.
+mov 0 A; Cargo el primer termino en A
+muli 0; Realizamos la operacion entera total.
+mov A 153; Lo cargamos en la dir correspondiente.
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 145; Estoy en Ref:tid
+mov #0 145; Estoy en Ref:tid
+mov 145 A
+muli #1
+addi #3
+mov @A 146
+mov 144 A; Cargo el primer termino en A
+lssi 146; Realizamos la operacion entera total.
+mov A 147; Lo cargamos en la dir correspondiente.
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 145; Estoy en Ref:tid
+mov #0 145; Estoy en Ref:tid
+mov 145 A
+muli #1
+addi #3
+mov @A 146
+mov 144 A; Cargo el primer termino en A
+lssi 146; Realizamos la operacion entera total.
+mov A 147; Lo cargamos en la dir correspondiente.
+mov 0 A; Cargo el primer termino en A
+muli 0; Realizamos la operacion entera total.
+mov A 153; Lo cargamos en la dir correspondiente.
+mov 153 A; Cargo el primer termino en A
+muli 0; Realizamos la operacion entera total.
+mov A 158; Lo cargamos en la dir correspondiente.
+mov 158 A; Cargo el primer termino en A
+muli 0; Realizamos la operacion entera total.
+mov A 163; Lo cargamos en la dir correspondiente.
+
+
+INSTR
+mov #0 161; Guardo un numero Entero
+mov #0 171
+mov 171 A; Realizamos el if
+jz L49
+mov #0 173; Estoy en Ref:tid
+mov #0 174; Guardo un numero Entero
+mov 173 A
+muli #1
+addi #172
+mov 174 @A
+mov #0 190
+mov 190 A; Realizamos el if
+jz L35
+mov #0 202
+mov 202 A; Realizamos el if
+jz L33
+mov #0 203; Estoy en Ref:tid
+mov #0 204; Estoy en Ref:tid
+mov #0 204; Estoy en Ref:tid
+mov 204 A
+muli #1
+addi #1
+mov @A 205
+mov #0 204; Estoy en Ref:tid
+mov #0 204; Estoy en Ref:tid
+mov 204 A
+muli #1
+addi #1
+mov @A 205
+mov #1 206; Guardo un numero Entero
+mov 205 A; Cargo el primer termino en A
+addi 206; Realizamos la operacion entera total.
+mov A 207; Lo cargamos en la dir correspondiente.
+mov 203 A
+muli #1
+addi #1
+mov 207 @A
+mov #0 209; Estoy en Ref:tid
+mov #0 210; Estoy en Ref:tid
+mov #0 210; Estoy en Ref:tid
+mov 210 A
+muli #1
+addi #2
+mov @A 211
+mov #0 210; Estoy en Ref:tid
+mov #0 210; Estoy en Ref:tid
+mov 210 A
+muli #1
+addi #2
+mov @A 211
+mov #1 212; Guardo un numero Entero
+mov 211 A; Cargo el primer termino en A
+addi 212; Realizamos la operacion entera total.
+mov A 213; Lo cargamos en la dir correspondiente.
+mov 209 A
+muli #1
+addi #2
+mov 213 @A
+mov #0 215; Estoy en Ref:tid
+mov #0 216; Estoy en Ref:tid
+mov #0 216; Estoy en Ref:tid
+mov 216 A
+muli #1
+addi #30
+mov @A 217
+mov #0 216; Estoy en Ref:tid
+mov #0 216; Estoy en Ref:tid
+mov 216 A
+muli #1
+addi #30
+mov @A 217
+mov #1 218; Guardo un numero Entero
+mov 217 A; Cargo el primer termino en A
+addi 218; Realizamos la operacion entera total.
+mov A 219; Lo cargamos en la dir correspondiente.
+mov 215 A
+muli #1
+addi #30
+mov 219 @A
+mov #0 221; Estoy en Ref:tid
+mov #1 222; Guardo un numero Entero
+mov 221 A
+muli #1
+addi #172
+mov 222 @A
+jmp L34
+L33; Realizamos con else.
+L34
+jmp L36
+L35; Realizamos con else.
+L36
+mov #0 202
+mov 202 A; Realizamos el if
+jz L39
+mov #0 212
+mov 212 A; Realizamos el if
+jz L37
+mov #0 213; Estoy en Ref:tid
+mov #0 214; Estoy en Ref:tid
+mov #0 214; Estoy en Ref:tid
+mov 214 A
+muli #1
+addi #1
+mov @A 215
+mov #0 214; Estoy en Ref:tid
+mov #0 214; Estoy en Ref:tid
+mov 214 A
+muli #1
+addi #1
+mov @A 215
+mov #1 216; Guardo un numero Entero
+mov 215 A; Cargo el primer termino en A
+addi 216; Realizamos la operacion entera total.
+mov A 217; Lo cargamos en la dir correspondiente.
+mov 213 A
+muli #1
+addi #1
+mov 217 @A
+mov #0 219; Estoy en Ref:tid
+mov #0 220; Estoy en Ref:tid
+mov #0 220; Estoy en Ref:tid
+mov 220 A
+muli #1
+addi #30
+mov @A 221
+mov #0 220; Estoy en Ref:tid
+mov #0 220; Estoy en Ref:tid
+mov 220 A
+muli #1
+addi #30
+mov @A 221
+mov #1 222; Guardo un numero Entero
+mov 221 A; Cargo el primer termino en A
+addi 222; Realizamos la operacion entera total.
+mov A 223; Lo cargamos en la dir correspondiente.
+mov 219 A
+muli #1
+addi #30
+mov 223 @A
+mov #0 225; Estoy en Ref:tid
+mov #1 226; Guardo un numero Entero
+mov 225 A
+muli #1
+addi #172
+mov 226 @A
+jmp L38
+L37; Realizamos con else.
+L38
+jmp L40
+L39; Realizamos con else.
+L40
+mov #0 214
+mov 214 A; Realizamos el if
+jz L43
+mov #0 224
+mov 224 A; Realizamos el if
+jz L41
+mov #0 225; Estoy en Ref:tid
+mov #0 226; Estoy en Ref:tid
+mov #0 226; Estoy en Ref:tid
+mov 226 A
+muli #1
+addi #2
+mov @A 227
+mov #0 226; Estoy en Ref:tid
+mov #0 226; Estoy en Ref:tid
+mov 226 A
+muli #1
+addi #2
+mov @A 227
+mov #1 228; Guardo un numero Entero
+mov 227 A; Cargo el primer termino en A
+addi 228; Realizamos la operacion entera total.
+mov A 229; Lo cargamos en la dir correspondiente.
+mov 225 A
+muli #1
+addi #2
+mov 229 @A
+mov #0 231; Estoy en Ref:tid
+mov #0 232; Estoy en Ref:tid
+mov #0 232; Estoy en Ref:tid
+mov 232 A
+muli #1
+addi #30
+mov @A 233
+mov #0 232; Estoy en Ref:tid
+mov #0 232; Estoy en Ref:tid
+mov 232 A
+muli #1
+addi #30
+mov @A 233
+mov #1 234; Guardo un numero Entero
+mov 233 A; Cargo el primer termino en A
+addi 234; Realizamos la operacion entera total.
+mov A 235; Lo cargamos en la dir correspondiente.
+mov 231 A
+muli #1
+addi #30
+mov 235 @A
+mov #0 237; Estoy en Ref:tid
+mov #1 238; Guardo un numero Entero
+mov 237 A
+muli #1
+addi #172
+mov 238 @A
+jmp L42
+L41; Realizamos con else.
+L42
+jmp L44
+L43; Realizamos con else.
+L44
+mov #0 216
+mov 216 A; Realizamos el if
+jz L47
+mov #0 219; Estoy en Ref:tid
+mov #0 219; Estoy en Ref:tid
+mov 219 A
+muli #1
+addi #1
+mov @A 220
+wri 220
+wrl
+mov #0 222; Estoy en Ref:tid
+mov #0 222; Estoy en Ref:tid
+mov 222 A
+muli #1
+addi #2
+mov @A 223
+wri 223
+wrl
+jmp L48
+L47; Realizamos con else.
+mov #0 233
+mov 233 A; Realizamos el if
+jz L45
+mov #0 234; Estoy en Ref:tid
+mov #1 235; Guardo un numero Entero
+mov 234 A
+muli #1
+addi #31
+mov 235 @A
+jmp L46
+L45; Realizamos con else.
+mov #0 234; Estoy en Ref:tid
+mov #2 235; Guardo un numero Entero
+mov 234 A
+muli #1
+addi #32
+mov 235 @A
+
+L46
+
+L48
+jmp L50
+L49; Realizamos con else.
+L50
+
+mov #0 33; Estoy en Ref:tid
+mov #5 34; Guardo un numero Entero
+mov 33 A
+muli #1
+addi #3
+mov 34 @A
+mov #0 36; Estoy en Ref:tid
+mov #0 37; Guardo un numero Entero
+mov 36 A
+muli #1
+addi #1
+mov 37 @A
+L3
+mov #0 39; Estoy en Ref:tid
+mov #0 39; Estoy en Ref:tid
+mov 39 A
+muli #1
+addi #1
+mov @A 40
+mov #0 39; Estoy en Ref:tid
+mov #0 39; Estoy en Ref:tid
+mov 39 A
+muli #1
+addi #1
+mov @A 40
+mov #0 41; Estoy en Ref:tid
+mov #0 41; Estoy en Ref:tid
+mov 41 A
+muli #1
+addi #3
+mov @A 42
+mov 40 A; Cargo el primer termino en A
+lssi 42; Realizamos la operacion entera total.
+mov A 43; Lo cargamos en la dir correspondiente.
+mov 40 A
+jz L4
+mov #0 41; Estoy en Ref:tid
+mov #0 41; Estoy en Ref:tid
+mov 41 A
+muli #1
+addi #3
+mov @A 42
+jmp L3
+L4
+mov #0 44; Estoy en Ref:tid
+mov #0 45; Guardo un numero Entero
+mov 44 A
+muli #1
+addi #1
+mov 45 @A
+L5
+mov #0 47; Estoy en Ref:tid
+mov #0 47; Estoy en Ref:tid
+mov 47 A
+muli #1
+addi #1
+mov @A 48
+mov #0 47; Estoy en Ref:tid
+mov #0 47; Estoy en Ref:tid
+mov 47 A
+muli #1
+addi #1
+mov @A 48
+mov #0 49; Estoy en Ref:tid
+mov #0 49; Estoy en Ref:tid
+mov 49 A
+muli #1
+addi #3
+mov @A 50
+mov 48 A; Cargo el primer termino en A
+lssi 50; Realizamos la operacion entera total.
+mov A 51; Lo cargamos en la dir correspondiente.
+mov 48 A
+jz L6
+mov #0 49; Estoy en Ref:tid
+mov #0 49; Estoy en Ref:tid
+mov 49 A
+muli #1
+addi #3
+mov @A 50
+jmp L5
+L6
+mov #0 52; Estoy en Ref:tid
+mov #0 53; Guardo un numero Entero
+mov 52 A
+muli #1
+addi #1
+mov 53 @A
+L7
+mov #0 55; Estoy en Ref:tid
+mov #0 55; Estoy en Ref:tid
+mov 55 A
+muli #1
+addi #1
+mov @A 56
+mov #0 55; Estoy en Ref:tid
+mov #0 55; Estoy en Ref:tid
+mov 55 A
+muli #1
+addi #1
+mov @A 56
+mov #0 57; Estoy en Ref:tid
+mov #0 57; Estoy en Ref:tid
+mov 57 A
+muli #1
+addi #3
+mov @A 58
+mov 56 A; Cargo el primer termino en A
+lssi 58; Realizamos la operacion entera total.
+mov A 59; Lo cargamos en la dir correspondiente.
+mov 56 A
+jz L8
+mov #0 57; Estoy en Ref:tid
+mov #0 57; Estoy en Ref:tid
+mov 57 A
+muli #1
+addi #3
+mov @A 58
+jmp L7
+L8
+mov #0 60; Estoy en Ref:tid
+mov #1 61; Guardo un numero Entero
+mov 60 A
+muli #1
+addi #1
+mov 61 @A
+L9
+mov #0 63; Estoy en Ref:tid
+mov #0 63; Estoy en Ref:tid
+mov 63 A
+muli #1
+addi #1
+mov @A 64
+mov #0 63; Estoy en Ref:tid
+mov #0 63; Estoy en Ref:tid
+mov 63 A
+muli #1
+addi #1
+mov @A 64
+mov #0 65; Estoy en Ref:tid
+mov #0 65; Estoy en Ref:tid
+mov 65 A
+muli #1
+addi #3
+mov @A 66
+mov 64 A; Cargo el primer termino en A
+lssi 66; Realizamos la operacion entera total.
+mov A 67; Lo cargamos en la dir correspondiente.
+mov 64 A
+jz L10
+mov #0 65; Estoy en Ref:tid
+mov #0 65; Estoy en Ref:tid
+mov 65 A
+muli #1
+addi #3
+mov @A 66
+jmp L9
+L10
+mov #0 68; Estoy en Ref:tid
+mov #1 69; Guardo un numero Entero
+mov 68 A
+muli #1
+addi #30
+mov 69 @A
+mov #0 71; Estoy en Ref:tid
+mov #0 72; Guardo un numero Entero
+mov 71 A
+muli #1
+addi #31
+mov 72 @A
+mov #0 74; Estoy en Ref:tid
+mov #0 75; Guardo un numero Entero
+mov 74 A
+muli #1
+addi #32
+mov 75 @A
+mov #0 77; Estoy en Ref:tid
+mov #0 78; Guardo un numero Entero
+mov 77 A
+muli #1
+addi #1
+mov 78 @A
+mov #0 80; Estoy en Ref:tid
+mov #0 81; Guardo un numero Entero
+mov 80 A
+muli #1
+addi #2
+mov 81 @A
+mov #0 83; Estoy en Ref:tid
+mov #0 83; Estoy en Ref:tid
+mov 83 A
+muli #1
+addi #1
+mov @A 84
+wri 84
+wrl
+mov #0 86; Estoy en Ref:tid
+mov #0 86; Estoy en Ref:tid
+mov 86 A
+muli #1
+addi #2
+mov @A 87
+wri 87
+wrl
+L29
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 91; Estoy en Ref:tid
+mov #0 91; Estoy en Ref:tid
+mov 91 A
+muli #1
+addi #3
+mov @A 92
+mov 90 A; Cargo el primer termino en A
+lssi 92; Realizamos la operacion entera total.
+mov A 93; Lo cargamos en la dir correspondiente.
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 91; Estoy en Ref:tid
+mov #0 91; Estoy en Ref:tid
+mov 91 A
+muli #1
+addi #3
+mov @A 92
+mov 90 A; Cargo el primer termino en A
+lssi 92; Realizamos la operacion entera total.
+mov A 93; Lo cargamos en la dir correspondiente.
+mov 0 A; Cargo el primer termino en A
+muli 0; Realizamos la operacion entera total.
+mov A 99; Lo cargamos en la dir correspondiente.
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 91; Estoy en Ref:tid
+mov #0 91; Estoy en Ref:tid
+mov 91 A
+muli #1
+addi #3
+mov @A 92
+mov 90 A; Cargo el primer termino en A
+lssi 92; Realizamos la operacion entera total.
+mov A 93; Lo cargamos en la dir correspondiente.
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 91; Estoy en Ref:tid
+mov #0 91; Estoy en Ref:tid
+mov 91 A
+muli #1
+addi #3
+mov @A 92
+mov 90 A; Cargo el primer termino en A
+lssi 92; Realizamos la operacion entera total.
+mov A 93; Lo cargamos en la dir correspondiente.
+mov 0 A; Cargo el primer termino en A
+muli 0; Realizamos la operacion entera total.
+mov A 99; Lo cargamos en la dir correspondiente.
+mov 99 A; Cargo el primer termino en A
+muli 0; Realizamos la operacion entera total.
+mov A 104; Lo cargamos en la dir correspondiente.
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 91; Estoy en Ref:tid
+mov #0 91; Estoy en Ref:tid
+mov 91 A
+muli #1
+addi #3
+mov @A 92
+mov 90 A; Cargo el primer termino en A
+lssi 92; Realizamos la operacion entera total.
+mov A 93; Lo cargamos en la dir correspondiente.
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 91; Estoy en Ref:tid
+mov #0 91; Estoy en Ref:tid
+mov 91 A
+muli #1
+addi #3
+mov @A 92
+mov 90 A; Cargo el primer termino en A
+lssi 92; Realizamos la operacion entera total.
+mov A 93; Lo cargamos en la dir correspondiente.
+mov 0 A; Cargo el primer termino en A
+muli 0; Realizamos la operacion entera total.
+mov A 99; Lo cargamos en la dir correspondiente.
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 91; Estoy en Ref:tid
+mov #0 91; Estoy en Ref:tid
+mov 91 A
+muli #1
+addi #3
+mov @A 92
+mov 90 A; Cargo el primer termino en A
+lssi 92; Realizamos la operacion entera total.
+mov A 93; Lo cargamos en la dir correspondiente.
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 89; Estoy en Ref:tid
+mov #0 89; Estoy en Ref:tid
+mov 89 A
+muli #1
+addi #1
+mov @A 90
+mov #0 91; Estoy en Ref:tid
+mov #0 91; Estoy en Ref:tid
+mov 91 A
+muli #1
+addi #3
+mov @A 92
+mov 90 A; Cargo el primer termino en A
+lssi 92; Realizamos la operacion entera total.
+mov A 93; Lo cargamos en la dir correspondiente.
+mov 0 A; Cargo el primer termino en A
+muli 0; Realizamos la operacion entera total.
+mov A 99; Lo cargamos en la dir correspondiente.
+mov 99 A; Cargo el primer termino en A
+muli 0; Realizamos la operacion entera total.
+mov A 104; Lo cargamos en la dir correspondiente.
+mov 104 A; Cargo el primer termino en A
+muli 0; Realizamos la operacion entera total.
+mov A 109; Lo cargamos en la dir correspondiente.
+mov 109 A
+jz L30
+mov #0 105; Estoy en Ref:tid
+mov #0 105; Estoy en Ref:tid
+mov 105 A
+muli #1
+addi #32
+mov @A 106
+mov #0 105; Estoy en Ref:tid
+mov #0 105; Estoy en Ref:tid
+mov 105 A
+muli #1
+addi #32
+mov @A 106
+mov #0 107; Guardo un numero Entero
+mov 106 A; Cargo el primer termino en A
+eqli 107; Realizamos la operacion entera total.
+mov A 108; Lo cargamos en la dir correspondiente.
+jmp L29
+L30
+mov #0 111
+mov 111 A; Realizamos el if
+jz L31
+mov #0 112; Estoy en Ref:tid
+mov #0 113; Guardo un numero Entero
+mov #0 113; Guardo un numero Entero
+mov #1 114; Guardo un numero Entero
+mov 113 A; Cargo el primer termino en A
+subi 114; Realizamos la operacion entera total.
+mov A 115; Lo cargamos en la dir correspondiente.
+mov 112 A
+muli #1
+addi #30
+mov 115 @A
+jmp L32
+L31; Realizamos con else.
+L32
+mov #0 112; Estoy en Ref:tid
+mov #0 112; Estoy en Ref:tid
+mov 112 A
+muli #1
+addi #30
+mov @A 113
+wri 113
+wrl
+mov #0 115; Estoy en Ref:tid
+mov #0 115; Estoy en Ref:tid
+mov #1 116; Guardo un numero Entero
+mov 115 A; [ ]
+muli #5
+addi 116; 
+mov A 117
+mov #0 115; Estoy en Ref:tid
+mov #0 115; Estoy en Ref:tid
+mov #1 116; Guardo un numero Entero
+mov 115 A; [ ]
+muli #5
+addi 116; 
+mov A 117
+mov #1 118; Guardo un numero Entero
+mov 117 A; [ ]
+muli #5
+addi 118; 
+mov A 119
+mov #0 120; Guardo un numero Entero
+mov 119 A
+muli #1
+addi #4
+mov 120 @A
+mov #0 122; Estoy en Ref:tid
+mov #1 123; Guardo un numero Entero
+mov 122 A
+muli #1
+addi #30
+mov 123 @A
+mov #0 125; Estoy en Ref:tid
+mov #0 126; Guardo un numero Entero
+mov 125 A
+muli #1
+addi #31
+mov 126 @A
+mov #0 128; Estoy en Ref:tid
+mov #0 129; Guardo un numero Entero
+mov 128 A
+muli #1
+addi #32
+mov 129 @A
+mov #0 131; Estoy en Ref:tid
+mov #0 132; Guardo un numero Entero
+mov 131 A
+muli #1
+addi #1
+mov 132 @A
+mov #0 134; Estoy en Ref:tid
+mov #0 135; Guardo un numero Entero
+mov 134 A
+muli #1
+addi #2
+mov 135 @A
+mov #0 137; Estoy en Ref:tid
+mov #0 137; Estoy en Ref:tid
+mov 137 A
+muli #1
+addi #1
+mov @A 138
+wri 138
+wrl
+mov #0 140; Estoy en Ref:tid
+mov #0 140; Estoy en Ref:tid
+mov 140 A
+muli #1
+addi #2
+mov @A 141
+wri 141
+wrl
+L51
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 145; Estoy en Ref:tid
+mov #0 145; Estoy en Ref:tid
+mov 145 A
+muli #1
+addi #3
+mov @A 146
+mov 144 A; Cargo el primer termino en A
+lssi 146; Realizamos la operacion entera total.
+mov A 147; Lo cargamos en la dir correspondiente.
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 145; Estoy en Ref:tid
+mov #0 145; Estoy en Ref:tid
+mov 145 A
+muli #1
+addi #3
+mov @A 146
+mov 144 A; Cargo el primer termino en A
+lssi 146; Realizamos la operacion entera total.
+mov A 147; Lo cargamos en la dir correspondiente.
+mov 0 A; Cargo el primer termino en A
+muli 0; Realizamos la operacion entera total.
+mov A 153; Lo cargamos en la dir correspondiente.
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 145; Estoy en Ref:tid
+mov #0 145; Estoy en Ref:tid
+mov 145 A
+muli #1
+addi #3
+mov @A 146
+mov 144 A; Cargo el primer termino en A
+lssi 146; Realizamos la operacion entera total.
+mov A 147; Lo cargamos en la dir correspondiente.
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 145; Estoy en Ref:tid
+mov #0 145; Estoy en Ref:tid
+mov 145 A
+muli #1
+addi #3
+mov @A 146
+mov 144 A; Cargo el primer termino en A
+lssi 146; Realizamos la operacion entera total.
+mov A 147; Lo cargamos en la dir correspondiente.
+mov 0 A; Cargo el primer termino en A
+muli 0; Realizamos la operacion entera total.
+mov A 153; Lo cargamos en la dir correspondiente.
+mov 153 A; Cargo el primer termino en A
+muli 0; Realizamos la operacion entera total.
+mov A 158; Lo cargamos en la dir correspondiente.
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 145; Estoy en Ref:tid
+mov #0 145; Estoy en Ref:tid
+mov 145 A
+muli #1
+addi #3
+mov @A 146
+mov 144 A; Cargo el primer termino en A
+lssi 146; Realizamos la operacion entera total.
+mov A 147; Lo cargamos en la dir correspondiente.
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 145; Estoy en Ref:tid
+mov #0 145; Estoy en Ref:tid
+mov 145 A
+muli #1
+addi #3
+mov @A 146
+mov 144 A; Cargo el primer termino en A
+lssi 146; Realizamos la operacion entera total.
+mov A 147; Lo cargamos en la dir correspondiente.
+mov 0 A; Cargo el primer termino en A
+muli 0; Realizamos la operacion entera total.
+mov A 153; Lo cargamos en la dir correspondiente.
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 145; Estoy en Ref:tid
+mov #0 145; Estoy en Ref:tid
+mov 145 A
+muli #1
+addi #3
+mov @A 146
+mov 144 A; Cargo el primer termino en A
+lssi 146; Realizamos la operacion entera total.
+mov A 147; Lo cargamos en la dir correspondiente.
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 143; Estoy en Ref:tid
+mov #0 143; Estoy en Ref:tid
+mov 143 A
+muli #1
+addi #1
+mov @A 144
+mov #0 145; Estoy en Ref:tid
+mov #0 145; Estoy en Ref:tid
+mov 145 A
+muli #1
+addi #3
+mov @A 146
+mov 144 A; Cargo el primer termino en A
+lssi 146; Realizamos la operacion entera total.
+mov A 147; Lo cargamos en la dir correspondiente.
+mov 0 A; Cargo el primer termino en A
+muli 0; Realizamos la operacion entera total.
+mov A 153; Lo cargamos en la dir correspondiente.
+mov 153 A; Cargo el primer termino en A
+muli 0; Realizamos la operacion entera total.
+mov A 158; Lo cargamos en la dir correspondiente.
+mov 158 A; Cargo el primer termino en A
+muli 0; Realizamos la operacion entera total.
+mov A 163; Lo cargamos en la dir correspondiente.
+mov 163 A
+jz L52
+mov #0 159; Estoy en Ref:tid
+mov #0 159; Estoy en Ref:tid
+mov 159 A
+muli #1
+addi #32
+mov @A 160
+mov #0 159; Estoy en Ref:tid
+mov #0 159; Estoy en Ref:tid
+mov 159 A
+muli #1
+addi #32
+mov @A 160
+mov #0 161; Guardo un numero Entero
+mov 160 A; Cargo el primer termino en A
+eqli 161; Realizamos la operacion entera total.
+mov A 162; Lo cargamos en la dir correspondiente.
+jmp L51
+L52
+mov #0 165
+mov 165 A; Realizamos el if
+jz L53
+mov #0 166; Estoy en Ref:tid
+mov #0 167; Guardo un numero Entero
+mov #0 167; Guardo un numero Entero
+mov #1 168; Guardo un numero Entero
+mov 167 A; Cargo el primer termino en A
+subi 168; Realizamos la operacion entera total.
+mov A 169; Lo cargamos en la dir correspondiente.
+mov 166 A
+muli #1
+addi #30
+mov 169 @A
+jmp L54
+L53; Realizamos con else.
+L54
+mov #0 166; Estoy en Ref:tid
+mov #0 166; Estoy en Ref:tid
+mov 166 A
+muli #1
+addi #30
+mov @A 167
+wri 167
+wrl
+halt
+

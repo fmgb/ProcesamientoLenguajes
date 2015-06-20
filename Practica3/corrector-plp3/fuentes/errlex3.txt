@@ -1,0 +1,4 @@
+program colores;
+  function rojo:integer;
+   var a,b,c:integer;
+  begin (* rojo *

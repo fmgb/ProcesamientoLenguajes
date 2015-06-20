@@ -1,0 +1,67 @@
+// program nuCorrecto4
+
+
+int main_glo1,main_gloBal2;
+int uno_a;
+double uno_dos_tres_cuatro_a,uno_dos_tres_cuatro_b;
+int uno_dos_tres_cuatro_cinco_seis_siete_ocho_nueve_diez_once_doce_i12;
+double uno_dos_tres_cuatro_cinco_seis_siete_ocho_nueve_diez_once_doce() {
+uno_dos_tres_cuatro_b =r itor(12) /r itor(4);
+}
+double uno_dos_tres_cuatro_cinco_seis_siete_ocho_nueve_diez_once() {
+printf("%d\n",11);
+}
+double uno_dos_tres_cuatro_cinco_seis_siete_ocho_nueve_diez() {
+printf("%d\n",2 *i 5);
+}
+double uno_dos_tres_cuatro_cinco_seis_siete_ocho_nueve() {
+uno_dos_tres_cuatro_a =r itor(3 *i 3);
+}
+double uno_dos_tres_cuatro_cinco_seis_siete_ocho() {
+printf("%d\n",2 +i 2 +i 2 +i 2);
+}
+double uno_dos_tres_cuatro_cinco_seis_siete() {
+main_glo1 =i 15 /i 2;
+}
+double uno_dos_tres_cuatro_cinco_seis() {
+main_gloBal2 =i 41 /i 6;
+}
+double uno_dos_tres_cuatro_cinco() {
+printf("%d\n",15 -i 7 -i 3);
+}
+double uno_dos_tres_cuatro() {
+main_glo1 =i main_glo1 -i 3;
+}
+double uno_dos_tres() {
+main_glo1 =i main_gloBal2 /i 2;
+}
+double uno_dos() {
+printf("%d\n",22 /i 11);
+}
+int uno() {
+{
+{
+uno_a =i 12 /i 11;
+}
+
+}
+
+}
+
+int main_i,main_suma,main_n;
+int main() {
+main_n =i 6;
+main_i =i 0;
+main_suma =i 0;
+while ( main_i <i main_n)
+{
+main_suma =i main_suma +i main_i;
+main_i =i main_i +i 1;
+}
+
+if ((main_n *i (main_n -i 1)) /i 2 !=i main_suma)
+printf("%d\n",0);
+else
+printf("%d\n",1);
+}
+
